@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
@@ -21,7 +21,7 @@ group :assets do
 end
 
 
-gem 'jquery-rails', '~> 2.0.0'
+gem 'jquery-rails'
 gem 'execjs'
 gem 'libv8', '~> 3.11.8'
 gem "therubyracer", '>= 0.11.0beta1', :require => 'v8'
