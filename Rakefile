@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Vlc::Application.load_tasks
+VLC::Application.load_tasks
