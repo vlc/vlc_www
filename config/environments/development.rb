@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-SampleVlc::Application.configure do
-=======
 VLC::Application.configure do
->>>>>>> 1e146f8f5a66fd5612847412419cae8df2268d66
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
