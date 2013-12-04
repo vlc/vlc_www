@@ -1,11 +1,11 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'mysql2', '>= 0.3'
 
 
 # Gems used only for assets and not required
@@ -20,10 +20,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
 gem 'jquery-rails'
 gem 'execjs'
-gem 'refinerycms', '~> 2.0.0'
-gem 'globalize3', '0.3.0'
 gem 'libv8', '~> 3.11.8'
 gem "therubyracer", '>= 0.11.0beta1', :require => 'v8'
 # To use ActiveModel has_secure_password
@@ -40,3 +39,5 @@ gem "therubyracer", '>= 0.11.0beta1', :require => 'v8'
 
 # To use debugger
 # gem 'debugger'
+gem 'refinerycms', '~> 2.0.0'
+gem 'globalize3', '0.3.0'

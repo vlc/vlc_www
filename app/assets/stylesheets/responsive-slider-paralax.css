@@ -33,10 +33,10 @@
 
 @font-face{
 	font-family: 'Friz Quadrata TT';
-	src: url('../fonts/Friz_Quadrata_TT/Friz Quadrata SC TT.eot');
-	src: local('Friz Quadrata TT'), url('../fonts/Friz_Quadrata_TT/Friz Quadrata SC TT.ttf') format('truetype'),
-	url('../fonts/Friz_Quadrata_TT/Friz Quadrata SC TT.woff') format('woff'),
-	url('../fonts/Friz_Quadrata_TT/Friz Quadrata SC TT.svg') format('svg');
+	src: url('../fonts/FrizQuadrata_TT/LiberationSans-Regular.eot');
+	src: local('Friz Quadrata TT'), url('../fonts/FrizQuadrata_TT/Friz Quadrata TT.ttf') format('truetype'),
+	url('../fonts/FrizQuadrata_TT/Friz Quadrata TT.woff') format('woff'),
+	url('../fonts/FrizQuadrata_TT/Friz Quadrata TT.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -69,10 +69,10 @@
   background-size: cover;
   background-position: 0 0;
   border-bottom:6px solid #8E8B78;
-  /*cursor: url(../images/openhand.cur.bmp) 4 4, move;*/
+  /*cursor: url(../assets/openhand.cur.bmp) 4 4, move;*/
 }
 .responsive-slider-parallax .slides-container.drag {
- /* cursor: url(../images/closedhand.cur.bmp) 4 4, move;*/
+ /* cursor: url(../assets/closedhand.cur.bmp) 4 4, move;*/
 }
 .responsive-slider-parallax .slides-container ul {
   list-style-type: none;
@@ -111,16 +111,17 @@
 }
 .responsive-slider-parallax .slides-container ul li .slide-body .caption.header {
   top: 18%;
-  left: 2%;
+  left: 0%;
 }
 .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2 {
   /*font-size: 40px;*/
-  font-size:45px; /* equal to 45 px */
+  font-size:36px; /* equal to 45 px */
   
   /*background: #FF6600;*/
   color:#d96701;
   /*padding: 0 3px 0 3px;*/
-  font-family:'Liberation Sans Narrow';
+  font-family:"Helvetica";
+  
 }
 .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2 i {
   font-size: 35px;
@@ -147,14 +148,14 @@
  /* bottom: -8px;
   right: -20px;*/
   /*font-weight: bold;*/
-  font-size:18px;
-  font-family: 'Arial Narrow';
-  color: #000000;
-  margin-left:10px;
+  font-size:16px;
+  font-family:Helvetica;
+  color: #333333;
+  margin-left:0px;
   /*text-shadow: 0px 1px 0px #ffffff;
   padding: 0 3px 0 3px;
   background: #ffffff;*/
-  margin-top:23px;
+  margin-top:18px;
 }
 /*@media (min-width: 481px) and (max-width: 767px) {
   .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub {
@@ -416,9 +417,9 @@
 .bottomgroup
 {
 	  background: url("../assets/holder.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
-    left: 2%;
+    left:0%;
    /* margin-top: 37px;*/
-    min-height: 170px;
+    min-height: 120px;
     top: 34%;
     width: 100%;
 	
@@ -426,27 +427,27 @@
 
 .groupsub1
 {
-	background: none repeat scroll 0 0 #8E8B78;
+	background: none repeat scroll 0 0 #606060;
     color: #FFFFFF;
     float: left;
-    font-family: 'Liberation Sans Narrow';
-    font-size: 18px;
+    font-family: 'Helvetica';
+    font-size: 16px;
     margin-left: 0px;
     padding: 7px;        
-    top: 8%;
+    top: 2%;
 	left:2%;
 }
 
 .groupsub2
 {
-	background: none repeat scroll 0 0 #8E8B78;
+	background: none repeat scroll 0 0 #606060;
     color: #FFFFFF;
     float: left;
-    font-family: 'Liberation Sans Narrow';
-    font-size: 18px;
+    font-family: 'Helvetica';
+    font-size: 16px;
     margin-left: 0px;
     padding: 7px;        
-    top: 28%;
+    top: 32%;
 	left:2%;
 }
 
@@ -455,7 +456,7 @@
 	background: none repeat scroll 0 0 #8E8B78;
     color: #FFFFFF;
     float: left;
-    font-family: 'Liberation Sans Narrow';
+    font-family: 'Helvetica';
     font-size: 18px;
     margin-left: 0px;
     padding: 7px;        
@@ -466,10 +467,10 @@
 .groupsub4
 {	
     float: left;
-    font-family: 'Liberation Sans Narrow';
+    font-family: 'Helvetica';
     font-size: 18px;
     margin-left: 0px;
     padding: 7px;        
-    top: 68%;
+    top: 58%;
 	left:1.3%;
 }

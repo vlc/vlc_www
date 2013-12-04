@@ -201,7 +201,7 @@ border:solid red 0px;
 	 width: 100%;
 }
 .contentheading{
-	font-size: 25px;
+	font-size: 20px;
 }
 .leftrightContainer{
 	width: 100%;
@@ -246,23 +246,47 @@ border:solid red 0px;
 	padding-bottom:0;
 }
 
-	.rightnewstitle{
-		right:0px;
-		left:0px;
-	}
-	.subcontentheading{
-		font-size: 15px;
-	}
-	.headerSectionPart p{
-		font-size: 14px;
-	}
-	.NewsHeading{
-		font-size: 19px;
-	}	
+.rightnewstitle{
+	right:0px;
+	left:0px;
+}
+.subcontentheading{
+	font-size: 16px;
+	line-height: 19px;
+}
+.headerSectionPart p{
+	font-size: 14px;
+}
+.NewsHeading{
+	font-size: 17px;
+}	
 
 .contentsection{
 	
 	
 	margin-right: 0;
     width: 100% !important;
+}
+
+/*****ranjan 3rd dec****/
+.content-top{
+	font-size: 18px;
+    line-height: 24px;
+}
+.content-bottom {
+    color: #666666;
+    font-size: 14px;
+   
+}
+h3.footerheadd, h3.footerheaddnew{
+	text-align:center;
+}
+.footerul li, .seperatorr, .linkedin{
+	text-align:center;
+}
+.footerbelow4 > div{
+	text-align:center;
+}
+.newsinnerbody{
+	font-size: 20px;
 }

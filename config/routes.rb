@@ -1,15 +1,14 @@
-Vlc::Application.routes.draw do
+VLC::Application.routes.draw do
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
-  mount Refinery::Core::Engine, :at => '/'
-  get '/home' => 'home#home'
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
+  root :to => "home#index"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -20,7 +19,7 @@ Vlc::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  resources :home
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -63,4 +62,6 @@ Vlc::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+  mount Refinery::Core::Engine, :at => '/' # you can change the value of the path, by default set to "/refinery"
 end

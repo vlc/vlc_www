@@ -213,6 +213,38 @@ border:solid red 1px;*/
 	left: -157px;
 }
 
+/***ranjan addedd 3rd dec***/
+h3.footerheadd, h3.footerheaddnew{
+	text-align:center;
+}
+.footerul li, .seperatorr, .linkedin{
+	text-align:center;
+}
+.footerbelow4 > div{
+	text-align:center;
+}
+.inputdiv {
+    text-align: center;
+}
+.plainbgright{
+	padding-bottom:0px;
+}
+.InnerPlainbgRight{
+	padding-bottom:0px;
+}
+.testi80{
+	width: 63%;
+}
+.testi60{
+	width:54%;
+}
+.testi40{
+	width:46%;
+}
+.headerSection{
+	 padding-bottom: 5%;
+}
+
 
 }
 
@@ -296,10 +328,11 @@ border:solid red 1px;*/
 
 .contentmodu1,.contentmodu2,.contentmodu3,.contentmodu4
 {
-	width:50%;
+	width:46%;
 	float:left;
 	
-	margin:0 0 13px;
+	margin:1% 0 13px;
+	
 	text-align:center;
 }
 
@@ -360,7 +393,35 @@ border:solid red 1px;*/
 	padding-bottom:0;
 }
 
+/**ranjan addedd 3rd dec**/
+.gray-newsletter{
+	margin-top:7px;
 }
+.floatleft{
+	float:none;
+	text-align:center;
+}
+.floatright{
+	float:none;
+	text-align:center;
+}
+.inputdiv {
+    text-align: left;
+}
+.testi80{
+	width: 63%;
+}
+.testi60{
+	width:54%;
+}
+.testi40{
+	width:46%;
+}
+.headerSection{
+	 padding-bottom: 5%;
+}
+
+
 
 /**ranjan added**/
 @media (min-width: 751px) and (max-width: 960px) {
@@ -388,6 +449,11 @@ border:solid red 1px;*/
 		bottom: 39px;
 		 left: -59px;
 	}
+	.headerSection{
+	 padding-bottom: 5%;
+}
+	
+	
 }
 
 @media (min-width: 751px) and (max-width: 1080px) {
@@ -425,6 +491,11 @@ border:solid red 1px;*/
 {
 	display:none;
 }
+.headerSection{
+	 padding-bottom: 5%;
+}
+
+
 	
 }
 

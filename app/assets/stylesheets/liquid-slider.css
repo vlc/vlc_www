@@ -27,7 +27,7 @@
 * markup.
 *******************************************************/
 .ls-preloader {  
-  background: url(../img/loading.gif) #eaeae2 no-repeat center 75px;
+  background: url(../assets/loading.gif) #eaeae2 no-repeat center 75px;
   opacity:1;
   /* Do not edit below this line */
   width:100%;
