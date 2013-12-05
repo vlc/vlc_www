@@ -9,3 +9,6 @@
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Homes extension
+Refinery::Homes::Engine.load_seed
