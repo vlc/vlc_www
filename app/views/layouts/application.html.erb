@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>VLC</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= render '/refinery/head' %>
-</head>
-<body  >
+  <head>
+    <title>VLC</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render '/refinery/head' %>
+  </head>
+  <body  >
+    <div class="main-wrapper">
 
-<div id="page_container" class="container-fluid">
-  <header id="header">
-    <%= render "/refinery/header" %>
-  </header>
-  <section id="page">
-    <%= yield %>
-  </section>
-  <footer class="footer">
-    <%= render "/refinery/footer" %>
-  </footer>
-</div>
+<%#*<div id="page_container" class="container-fluid">%>
+      <header id="header">
+        <%= render "/refinery/header" %>
+      </header>
+      <section id="page">
+        <%= yield %>
+      </section>
+      <footer class="footer">
+        <%= render "/refinery/footer" %>
+      </footer>
+    </div>
 
-</body>
+  </body>
 
 
 
