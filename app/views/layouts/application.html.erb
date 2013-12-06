@@ -6,13 +6,20 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+  <%= render '/refinery/head' %>
 </head>
 <body  >
-<div class="main-wrapper">
-  <%= render "/refinery/header" %>
-  <%= yield %>
-  <%= render "/refinery/footer" %>
+
+<div id="page_container" class="container-fluid">
+  <header id="header">
+    <%= render "/refinery/header" %>
+  </header>
+  <section id="page">
+    <%= yield %>
+  </section>
+  <footer class="footer">
+    <%= render "/refinery/footer" %>
+  </footer>
 </div>
 
 </body>
