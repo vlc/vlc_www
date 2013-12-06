@@ -1,5 +1,4 @@
 GEM
-
   remote: https://rubygems.org/
   specs:
     actionmailer (3.2.13)
@@ -179,7 +178,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   execjs
   globalize3 (= 0.3.0)
-
   jquery-rails
   libv8 (~> 3.11.8)
   mysql2 (>= 0.3)
