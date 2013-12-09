@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      zeniths:
+        title: Zeniths
+    zeniths:
+      admin:
+        zeniths:
+          actions:
+            create_new: Lag en ny Zenith
+            reorder: Endre rekkefølgen på Zeniths
+            reorder_done: Ferdig å endre rekkefølgen Zeniths
+          records:
+            title: Zeniths
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Zeniths enda. Klikk på "Lag en ny Zenith" for å legge til din første zenith.
+          zenith:
+            view_live_html: Vis hvordan denne zenith ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne zenith
+            delete: Fjern denne zenith permanent
+      zeniths:
+        show:
+          other: Andre Zeniths
+  activerecord:
+    attributes:
+      'refinery/zeniths/zenith':
+        name: Name
+        description: Description

@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      zeniths:
+        title: Zeniths
+    zeniths:
+      admin:
+        zeniths:
+          actions:
+            create_new: Add New Zenith
+            reorder: Reorder Zeniths
+            reorder_done: Done Reordering Zeniths
+          records:
+            title: Zeniths
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Zeniths yet. Click "Add New Zenith" to add your first zenith.
+          zenith:
+            view_live_html: View this zenith live <br/><em>(opens in a new window)</em>
+            edit: Edit this zenith
+            delete: Remove this zenith forever
+      zeniths:
+        show:
+          other: Other Zeniths
+  activerecord:
+    attributes:
+      'refinery/zeniths/zenith':
+        name: Name
+        description: Description

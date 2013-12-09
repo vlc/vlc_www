@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      zeniths:
+        title: Zeniths
+#        article: masculino/femenino
+    zeniths:
+      admin:
+        zeniths:
+          actions:
+            create_new: Crear nuevo zenith
+            reorder: Reordenar zeniths
+            reorder_done: Reordenación de zeniths completada
+          records:
+            title: Zeniths
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay zeniths todavía. Pulsa en "Crear nuevo Zenith" para crear tu primer zenith.
+          zenith:
+            view_live_html: Ver este zenith como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este zenith
+            delete: Borrar este zenith para siempre
+      zeniths:
+        show:
+          other: Otros zeniths
+  activerecord:
+    attributes:
+      'refinery/zeniths/zenith':
+        name: Name
+        description: Description

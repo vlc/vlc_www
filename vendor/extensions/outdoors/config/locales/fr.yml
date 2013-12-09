@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      outdoors:
+        title: Outdoors
+    outdoors:
+      admin:
+        outdoors:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Outdoor
+            reorder: Réordonner les Outdoors
+            reorder_done: Fin de réordonnancement des Outdoors
+          records:
+            title: Outdoors
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Outdoor. Cliquer sur "Créer un(e) nouve(au/l/lle) Outdoor" pour créer votre premi(er/ère) outdoor.'
+          outdoor:
+            view_live_html: Voir ce(t/tte) outdoor <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) outdoor
+            delete: Supprimer définitivement ce(t/tte) outdoor
+      outdoors:
+        show:
+          other: Autres Outdoors
+  activerecord:
+    attributes:
+      'refinery/outdoors/outdoor':
+        name: Name
+        description: Description

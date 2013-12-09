@@ -1,0 +1,28 @@
+sk:
+  refinery:
+    plugins:
+      outdoors:
+        title: Outdoors
+    outdoors:
+      admin:
+        outdoors:
+          actions:
+            create_new: Pridať Outdoor
+            reorder: Preusporiadať Outdoors
+            reorder_done: Koniec radenia Outdoors
+          records:
+            title: Outdoors
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Outdoors. Kliknite na "Pridať Outdoor" pre pridanie prvého outdoor.
+          outdoor:
+            view_live_html: Zobraziť náhľad outdoor<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť outdoor
+            delete: Zmazať outdoor
+      outdoors:
+        show:
+          other: Daľšie Outdoors
+  activerecord:
+    attributes:
+      'refinery/outdoors/outdoor':
+        name: Name
+        description: Description

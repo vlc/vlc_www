@@ -48,4 +48,7 @@ gem 'refinerycms', '~> 2.0.0'
 gem 'globalize3', '0.3.0'
 
 
-gem 'refinerycms-add_pages', :path => 'vendor/extensions'
+gem 'refinerycms-services', :path => 'vendor/extensions'
+gem 'refinerycms-zeniths', :path => 'vendor/extensions'
+gem 'refinerycms-outdoors', :path => 'vendor/extensions'
+gem 'refinerycms-companies', :path => 'vendor/extensions'

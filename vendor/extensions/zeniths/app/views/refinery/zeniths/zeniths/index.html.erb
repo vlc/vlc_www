@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="zeniths">
+    <% @zeniths.each do |zenith| %>
+      <li>
+        <%= link_to zenith.name, refinery.zeniths_zenith_path(zenith) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

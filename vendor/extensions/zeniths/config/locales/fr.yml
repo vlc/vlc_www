@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      zeniths:
+        title: Zeniths
+    zeniths:
+      admin:
+        zeniths:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Zenith
+            reorder: Réordonner les Zeniths
+            reorder_done: Fin de réordonnancement des Zeniths
+          records:
+            title: Zeniths
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Zenith. Cliquer sur "Créer un(e) nouve(au/l/lle) Zenith" pour créer votre premi(er/ère) zenith.'
+          zenith:
+            view_live_html: Voir ce(t/tte) zenith <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) zenith
+            delete: Supprimer définitivement ce(t/tte) zenith
+      zeniths:
+        show:
+          other: Autres Zeniths
+  activerecord:
+    attributes:
+      'refinery/zeniths/zenith':
+        name: Name
+        description: Description

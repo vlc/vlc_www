@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      zeniths:
+        title: Zeniths
+    zeniths:
+      admin:
+        zeniths:
+          actions:
+            create_new: 建立新的 Zenith
+            reorder: 对 Zeniths 重新排序
+            reorder_done: 对 Zeniths 的重新排序结束
+          records:
+            title: Zeniths
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Zeniths yet. Click "Add New Zenith" to add your first zenith.
+            no_items_yet: 目前没有 Zeniths . 点击 "Add New Zenith" 创建一个zenith.
+          zenith:
+            view_live_html: 查看 zenith 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 zenith
+            delete: 永久删除 zenith
+      zeniths:
+        show:
+          other: 其他 Zeniths
+  activerecord:
+    attributes:
+      'refinery/zeniths/zenith':
+        name: Name
+        description: Description
