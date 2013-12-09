@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      add_pages:
+        title: Add Pages
+    add_pages:
+      admin:
+        add_pages:
+          actions:
+            create_new: Add New Add Page
+            reorder: Reorder Add Pages
+            reorder_done: Done Reordering Add Pages
+          records:
+            title: Add Pages
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Add Pages yet. Click "Add New Add Page" to add your first add page.
+          add_page:
+            view_live_html: View this add page live <br/><em>(opens in a new window)</em>
+            edit: Edit this add page
+            delete: Remove this add page forever
+      add_pages:
+        show:
+          other: Other Add Pages
+  activerecord:
+    attributes:
+      'refinery/add_pages/add_page':
+        name: Name
+        description: Description

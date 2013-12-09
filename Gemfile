@@ -46,3 +46,6 @@ gem "therubyracer", '>= 0.11.0beta1', :require => 'v8'
 # gem 'debugger'
 gem 'refinerycms', '~> 2.0.0'
 gem 'globalize3', '0.3.0'
+
+
+gem 'refinerycms-add_pages', :path => 'vendor/extensions'

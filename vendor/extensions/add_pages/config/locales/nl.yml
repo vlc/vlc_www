@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      add_pages:
+        title: Add Pages
+    add_pages:
+      admin:
+        add_pages:
+          actions:
+            create_new: Maak een nieuwe Add Page
+            reorder: Wijzig de volgorde van de Add Pages
+            reorder_done: Klaar met het wijzingen van de volgorde van de Add Pages
+          records:
+            title: Add Pages
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Add Pages. Druk op 'Maak een nieuwe Add Page' om de eerste aan te maken.
+          add_page:
+            view_live_html: Bekijk deze add page op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze add page
+            delete: Verwijder deze add page voor eeuwig
+      add_pages:
+        show:
+          other: Andere Add Pages
+  activerecord:
+    attributes:
+      'refinery/add_pages/add_page':
+        name: Name
+        description: Description

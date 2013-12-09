@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::AddPages::Admin::AddPagesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.add_pages_admin_add_pages_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_add_pages_admin_add_page_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::AddPages::Admin::AddPagesController.sortable? && ::Refinery::AddPages::AddPage.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Add Pages"),
+                 refinery.add_pages_admin_add_pages_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Add Pages"),
+                 refinery.add_pages_admin_add_pages_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
