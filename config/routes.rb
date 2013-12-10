@@ -19,7 +19,7 @@ VLC::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :home
+
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -64,4 +64,7 @@ VLC::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   mount Refinery::Core::Engine, :at => '/' # you can change the value of the path, by default set to "/refinery"
+
+
+
 end

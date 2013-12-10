@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131205051256) do
+ActiveRecord::Schema.define(:version => 201312050511257) do
+
+  create_table "refinery_add_pages", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_admins", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_companies", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_homes", :force => true do |t|
     t.string   "name"
@@ -32,6 +56,14 @@ ActiveRecord::Schema.define(:version => 20131205051256) do
     t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "refinery_outdoors", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|
@@ -96,6 +128,15 @@ ActiveRecord::Schema.define(:version => 20131205051256) do
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
 
+  create_table "refinery_redirects", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.string   "url"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"
@@ -117,6 +158,14 @@ ActiveRecord::Schema.define(:version => 20131205051256) do
 
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
+
+  create_table "refinery_services", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
@@ -144,6 +193,14 @@ ActiveRecord::Schema.define(:version => 20131205051256) do
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+
+  create_table "refinery_zeniths", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
