@@ -5,7 +5,7 @@ gem 'rails', '~> 3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '>= 0.3'
+gem 'pg', '0.12.2'
 
 
 # Gems used only for assets and not required
@@ -52,3 +52,4 @@ gem 'refinerycms-services', :path => 'vendor/extensions'
 gem 'refinerycms-zeniths', :path => 'vendor/extensions'
 gem 'refinerycms-outdoors', :path => 'vendor/extensions'
 gem 'refinerycms-companies', :path => 'vendor/extensions'
+gem "capistrano","2.14.2"
