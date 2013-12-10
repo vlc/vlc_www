@@ -33,6 +33,11 @@ $('.consultingservices').mouseleave(function(){
 		$(this).find('.header-submenu-wrap').stop(true, true).hide();
 		//$(this).find('.submenu-pointer').hide();
 });
+
+
+
+
+
 /* For drop down menu **/
 
 /* for checking responsive width **/
@@ -41,7 +46,15 @@ var window_widhths = $(window).width();
 	$('.width_show').html(window_widhths);
 	
 /* for checking responsive width **/	
-
+/* Sebmenu image toggle */
+$('.submenu-box').hover(function(){
+	$(this).find('.hideImage').show(); 
+	$(this).find('.showImage').hide(); 
+},function(){
+	$(this).find('.hideImage').hide(); 
+	$(this).find('.showImage').show();
+});
+/* Sebmenu image toggle */
 
 });	
 

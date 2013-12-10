@@ -18,19 +18,10 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
   </head>
   <body  >
     <div class="main-wrapper">
-
-<%#*<div id="page_container" class="container-fluid">%>
-      <header id="header">
-        <%= render "/refinery/header" %>
-      </header>
-      <section id="page">
-        <%= yield %>
-      </section>
-      <footer class="footer">
-        <%= render "/refinery/footer" %>
-      </footer>
+      <%= render "/refinery/header" %>
+      <%= yield %>
+      <%= render "/refinery/footer" %>
     </div>
-
   </body>
 
 

@@ -69,10 +69,10 @@
   background-size: cover;
   background-position: 0 0;
   border-bottom:6px solid #8E8B78;
-  /*cursor: url(../assets/openhand.cur.bmp) 4 4, move;*/
+  /*cursor: url(../images/openhand.cur.bmp) 4 4, move;*/
 }
 .responsive-slider-parallax .slides-container.drag {
- /* cursor: url(../assets/closedhand.cur.bmp) 4 4, move;*/
+ /* cursor: url(../images/closedhand.cur.bmp) 4 4, move;*/
 }
 .responsive-slider-parallax .slides-container ul {
   list-style-type: none;
