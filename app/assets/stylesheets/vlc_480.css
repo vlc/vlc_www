@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -86,7 +86,7 @@
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 width:auto;
 border:solid red 0px;
-	
+
 }
 .img-html5
 {
@@ -97,8 +97,8 @@ border:solid red 0px;
   .responsive-slider-parallax .slider-control.right {
     display: none;
   }
-  
-.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2 
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2
 {
 	font-size:20px !important;
 }
@@ -126,8 +126,8 @@ border:solid red 0px;
     float: left;
     /*padding: 2% 5%;*/
     width: 100%;
-	
-	
+
+
 }
 
 .footerbelow1,.footerbelow2
@@ -180,15 +180,15 @@ border:solid red 0px;
 }
 
 .responsive-slider-parallax .slides-container ul {
-  
+
   white-space: nowrap;
- 
-}
+
+};
 
 /*****ranjan added  30th nov *****/
 
 .contentsection{
-	
+
 	border:solid red 1px;
 	margin-right: 0;
     width: 100% !important;
@@ -227,7 +227,7 @@ border:solid red 0px;
 	padding-top: 3%;
 }
 .ContentImage {
-   
+
     margin-bottom: 7px;
 }
 .rightnewstitle{
@@ -259,11 +259,11 @@ border:solid red 0px;
 }
 .NewsHeading{
 	font-size: 17px;
-}	
+}
 
 .contentsection{
-	
-	
+
+
 	margin-right: 0;
     width: 100% !important;
 }
@@ -276,7 +276,7 @@ border:solid red 0px;
 .content-bottom {
     color: #666666;
     font-size: 14px;
-   
+
 }
 h3.footerheadd, h3.footerheaddnew{
 	text-align:center;

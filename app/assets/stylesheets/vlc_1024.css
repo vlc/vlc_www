@@ -1,11 +1,11 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 .main-wrapper-fixed {
     padding: 0 1%;
     width: 98%;
-	
+
 }
 
 .caption
@@ -18,7 +18,7 @@
 /* Mobile 480 to 530px */
 
 @media (min-width: 481px) and (max-width: 530px) {
-	
+
 	.header-submenu-wrap
 {
 	display:none !important;
@@ -94,7 +94,7 @@
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 /*width:280px;
 border:solid red 1px;*/
-	
+
 }
 .img-html5
 {
@@ -104,8 +104,8 @@ border:solid red 1px;*/
   .responsive-slider-parallax .slider-control.right {
     display: none;
   }
-  
-.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2 
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2
 {
 	font-size:20px !important;
 }
@@ -133,8 +133,8 @@ border:solid red 1px;*/
     float: left;
     /*padding: 2% 5%;*/
     width: 100%;
-	
-	
+
+
 }
 
 .footerbelow1,.footerbelow2
@@ -249,7 +249,7 @@ h3.footerheadd, h3.footerheaddnew{
 }
 
 @media (min-width: 531px) and (max-width: 750px) {
-	
+
 	.header-submenu-wrap
 {
 	display:none !important;
@@ -330,9 +330,9 @@ h3.footerheadd, h3.footerheaddnew{
 {
 	width:46%;
 	float:left;
-	
+
 	margin:1% 0 13px;
-	
+
 	text-align:center;
 }
 
@@ -421,7 +421,7 @@ h3.footerheadd, h3.footerheaddnew{
 	 padding-bottom: 5%;
 }
 
-}
+
 
 /**ranjan added**/
 @media (min-width: 751px) and (max-width: 960px) {
@@ -452,12 +452,12 @@ h3.footerheadd, h3.footerheaddnew{
 	.headerSection{
 	 padding-bottom: 5%;
 }
-	
-	
+
+
 }
 
 @media (min-width: 751px) and (max-width: 1080px) {
-	
+
 	.header-submenu-wrap
 {
 	display:none !important;
@@ -496,6 +496,5 @@ h3.footerheadd, h3.footerheaddnew{
 }
 
 
-	
-}
 
+}
