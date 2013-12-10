@@ -217,7 +217,7 @@ DEPENDENCIES
   jquery-rails
   libv8 (~> 3.11.8)
   pg (= 0.12.2)
-  rails (~> 3.2.3)
+  rails (~> 3.2.13)
   refinerycms (~> 2.0.0)
   refinerycms-companies!
   refinerycms-outdoors!
