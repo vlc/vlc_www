@@ -20,10 +20,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+# group :development do
+#   gem 'better_errors'
+#   gem 'binding_of_caller'
+# end
 
 
 gem 'jquery-rails'
@@ -48,7 +48,4 @@ gem 'refinerycms', '~> 2.0.0'
 gem 'globalize3', '0.3.0'
 
 
-gem 'refinerycms-services', :path => 'vendor/extensions'
-gem 'refinerycms-zeniths', :path => 'vendor/extensions'
-gem 'refinerycms-outdoors', :path => 'vendor/extensions'
-gem 'refinerycms-companies', :path => 'vendor/extensions'
+gem 'refinerycms-add_pages', :path => 'vendor/extensions'
