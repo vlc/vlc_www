@@ -15,7 +15,9 @@
 /tmp
 # Rails
 vendor/bundle
-database.yml
+config/database.yml
+config/deploy.rb
+Capfile
 .bundle
 db/*.sqlite3
 db/*.sqlite3-journal
