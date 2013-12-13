@@ -135,7 +135,7 @@
 .responsive-slider-parallax .slides-container ul {
 	white-space: nowrap;
 }
-
+;
 .contentsection {
 	border: solid red 1px;
 	margin-right: 0;
@@ -266,3 +266,21 @@ h3.footerheadd, h3.footerheaddnew {
 .breadcrumbs_menu li {
 	margin-top: 3px;
 }
+
+/*---------------balraj-----------------------*/
+.cityaddressright{
+	margin-right:0px;
+	margin-bottom: 10px;
+}
+.cityaddress {
+    float: left;
+    width: 100%;
+}
+.contactnoparent {
+    float: left;
+    width: 50%;
+}
+.slidebarcontact{
+	padding-bottom:5%;
+}
+/****balraj end***/

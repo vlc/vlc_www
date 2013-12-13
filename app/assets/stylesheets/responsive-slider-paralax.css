@@ -65,7 +65,7 @@
 .responsive-slider-parallax .slides-container {
   position: relative;
   overflow: hidden;
-  background-image: url(../assets/background-paralax.jpg);
+  background-image: url(../images/background-paralax.jpg);
   background-size: cover;
   background-position: 0 0;
   border-bottom:6px solid #8E8B78;
@@ -416,7 +416,7 @@
 
 .bottomgroup
 {
-	  background: url("../assets/holder.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+	  background: url("../images/holder.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
     left:0%;
    /* margin-top: 37px;*/
     min-height: 120px;
