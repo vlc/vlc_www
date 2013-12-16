@@ -30,6 +30,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
   </body>
 
   <script type="text/javascript">
+    // documetation tab
     $(document).ready(function() {
 
       $(".tab_type li").click(function(){
@@ -49,7 +50,26 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
         $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
       });
     });
+
+// history under company
+
+    $(window).load(function(){
+      if($('.projectBoxContainer').length){
+        $('.projectBoxContainer').each(function(){
+          var leftheight = $(this).find('.left').outerHeight();
+          var righttheight = $(this).find('.right').outerHeight();
+          if( leftheight > righttheight){
+            $(this).find('.right').outerHeight(leftheight);
+          }
+          else{
+            $(this).find('.left').outerHeight(righttheight);
+          }
+        });
+      }
+    });
   </script>
+
+
 
 
 </html>
