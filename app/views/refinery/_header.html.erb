@@ -7,11 +7,11 @@
       <div class="menutoggle"> MENU </div>
 
       <ul class="menu_ulist">
-        <li class="navi-menu homemenu">
+        <li class="navi-menu homemenu <%= (params[:action] and params[:action].split("/")[0]) == "home" ? 'menuActive' :'' %>">
           <a href="/"> <img src="../../assets/home_icon01.png" alt="Home" title="Home"/></a>
         </li>
         <li class="navi-menu consultingservices <%= (params[:path] and params[:path].split("/")[0]) == "services" ? 'menuActive' :'' %>">
-          <a title="Consulting Services"> Consulting Services</a>
+          <a href="/services" title="Consulting Services"> Consulting Services</a>
           <div class="header-submenu-wrap">
             <div class="sublink-multiple-dropdown-outer">
               <div class="sublink-multiple-wrapper">
@@ -95,7 +95,7 @@
           </div>
         </li>
         <li class="navi-menu consultingservices <%= (params[:path] and params[:path].split("/")[0]) == "zenith" ? 'menuActive' :'' %>">
-          <a title="Zenith Transport Models"> Zenith Transport Models</a>
+          <a href="/zenith" title="Zenith Transport Models"> Zenith Transport Models</a>
           <div class="header-submenu-wrap">
             <div class="sublink-multiple-dropdown-outer">
               <div class="sublink-multiple-wrapper">
@@ -227,7 +227,7 @@
           </div>
         </li>
         <li class="navi-menu consultingservices <%= (params[:path] and params[:path].split("/")[0]) == "outdoor" ? 'menuActive' :'' %>">
-          <a title="Outdoor Audiance Measurement"> Outdoor Audiance Measurement</a>
+          <a href="/outdoor" title="Outdoor Audiance Measurement"> Outdoor Audiance Measurement</a>
           <div class="header-submenu-wrap">
             <div class="sublink-multiple-dropdown-outer">
               <div class="sublink-multiple-wrapper">
@@ -299,7 +299,7 @@
           </div>
         </li>
         <li class="navi-menu consultingservices <%= (params[:path] and params[:path].split("/")[0]) == "company" ? 'menuActive' :'' %>">
-          <a title="Company">Company</a>
+          <a href="/company" title="Company">Company</a>
           <div class="header-submenu-wrap">
             <div class="sublink-multiple-dropdown-outer">
               <div class="sublink-multiple-wrapper">
@@ -360,8 +360,8 @@
             </div>
           </div>
         </li>
-        <li class="navi-menu">
-          <a title="Contact"> Contact</a>
+        <li class="navi-menu <%= (params[:path] and params[:path].split("/")[0]) == "contact" ? 'menuActive' :'' %>">
+          <a href="/contact" title="Contact"> Contact</a>
         </li>
       </ul>
     </div>
