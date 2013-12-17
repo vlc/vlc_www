@@ -1880,3 +1880,6 @@ textarea.comntextarea {
 #body_content_title{
     display: none
 }
+.navi-menu.homemenu.homeinactive {
+    background: none repeat scroll 0 0 #E1DFD3;
+}

@@ -7,7 +7,7 @@
       <div class="menutoggle"> MENU </div>
 
       <ul class="menu_ulist">
-        <li class="navi-menu homemenu <%= (params[:action] and params[:action].split("/")[0]) == "home" ? 'menuActive' :'' %>">
+        <li class="navi-menu homemenu <%= (params[:action] and params[:action].split("/")[0]) == "home" ? 'homeactive' :'homeinactive' %>">
           <a href="/"> <img src="../../assets/home_icon01.png" alt="Home" title="Home"/></a>
         </li>
         <li class="navi-menu consultingservices <%= (params[:path] and params[:path].split("/")[0]) == "services" ? 'menuActive' :'' %>">
