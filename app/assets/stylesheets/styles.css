@@ -1886,3 +1886,6 @@ textarea.comntextarea {
 .testimonial_right.clientReview.tetimonialmiddle{
 	padding: 2% 0 2% 3%;
 }
+p.nojustify{
+	text-align:left;
+}
