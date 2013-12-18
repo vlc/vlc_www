@@ -1,107 +1,788 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="keywords" content="VLC" />
+    <meta name="description" content="VLC" />
+
+    <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+    <meta http-equiv="content-style-type" content="text/css" />
+
+    <title>VLC</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="shortcut icon" href="common/images/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/styles/styles.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (max-width: 1024px)" href="assets/styles/vlc_1024.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 480px)" href="assets/styles/vlc_480.css" />
+    <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio : 1.5),
+          only screen and (min-device-pixel-ratio : 1.5)" href="assets/styles/vlc_480.css" />
+
+    <link rel="stylesheet" href="assets/styles/reveal.css" type="text/css" />
+
+    <script type="text/javascript" src="assets/scripts/jquery-1.10.2.js"></script>
+
+    <script type="text/javascript" src="assets/scripts/jquery-migrate-1.2.1.min.js"></script>
 
 
-<div class="banner-wrapper">
-  <div class="innerbanner"> </div>
-</div>
+    <!-- jQuery Library + UI Tools + Form Tools: Always keep this file above any other js file.-->
+    <script type="text/javascript" src="assets/scripts/vlcscript.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.BlackAndWhite.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.reveal.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="main-wrapper">
+
+      <div class="width_show"></div>
+      <!--header start here-->
+      <div class="header-wrapper">
+        <div class="main-wrapper-fixed headerwrapper"> <span class="header-left floatleft"> <a href="index.html"> <img src="assets/images/VLC_logo.png" alt="Logo VLC" id="logo" title="VLC" /> </a> </span>
+          <div class="header-right floatright">
+            <div class="menutoggle"> MENU </div>
+            <ul class="menu_ulist">
+              <li class="navi-menu homemenu"> <a href="index.html"> <img src="assets/images/home_icon01.png" alt="Home" title="Home"/></a> </li>
+              <li class="navi-menu consultingservices">
+                <a title="Consulting Services"> Consulting Services</a>
+                <div class="header-submenu-wrap">
+                  <div class="sublink-multiple-dropdown-outer">
+                    <div class="sublink-multiple-wrapper">
+
+                      <div class="fulldivmenu">
 
 
+                        <div class="menudiv50">
+                          <a href="overview.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/01_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/01a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Overview</h1>
+                                <p>Veitch Lister has provided the transport planning industry</p>
+                              </div>
+                            </div>   </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="TransportPlanning.html">   <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/02_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/02a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Transport Planning</h1>
+                                <p>Software like Aldus PageMaker including versions of Ipsum</p>
+                              </div>
+                            </div> </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="TransportEconomics.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/03_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/03a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Other Services</h1>
+                                <p>There are many variations of passages of Ipsum available </p>
+                              </div>
+                            </div> </a>
+                        </div>
+
+                        <div class="menudiv50">
+                          <a href="Demand_Forecasting.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Demand Forecasting</h1>
+                                <p>Lorem Ipsum is simply dummy text of the printing</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="LandUse&DemographicForecasting Services.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/05_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/05a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Land Use & Demographic Forecasting </h1>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="Projects.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/06_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/06a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Projects</h1>
+                                <p>It is a long established fact that a reader will be distract</p>
+                              </div>
+                            </div></a>
+                        </div>
 
 
-
-<div class="mainContent-wrapper">
-  <div class="main-wrapper-fixed contentwrapper">
-    <div class="contentfulll">
-      <div class="contentsection">
-        <div class="breadcrumbs_menu">
-          <ul class="breadcrumbul">
-            <li><a href="/">Home</a>
-            </li>
-            <li><a href="/company">Company</a>
-            </li>
-            <li><strong>Careers</strong>
-            </li>
-          </ul>
-          <hr class="horizontalLine" />
-        </div>
-        <div class="UpperContentSection">
-          <div class="contentheading">Join the VLC team</div>
-          <p class="careerparagraph">VLC is a leading transport planning and model development firm working on Australia's high-profile projects.</p>
-          <p class="pragraph">VLC employees are passionate about producing quality results, from transport planning projects to well calibrated multi-modal models. VLC offers excellent employment opportunities in a values-based company. </p>
-          <p class="pragraph padbot">Work alongside some of industry's leaders in transport planning and engineering.</p>
-          <div class="leftrightContainer">
-            <div class="leftContentSection">
-              <div class="headerSection">
-                <div class="headerSectionPart"> <img src="../assets/headericon.jpg" alt="Icon" />
-                  <p>Employment Enquiry</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="contentHeaderSection contentHeaderSections">
-                  <p>As one of Australia's premier transport planning consultancies, Veitch Lister Consulting has exciting opportunities for talented and motivated people at all stages of their careers.</p>
-                  <p>We are a highly motivated team, looking for people passionate about transportation, IT and mathematics.</p>
-                  <p class="nojustify">Send your CV and academic transcript to<a href="mailto:recruitment@veitchlister.com.au">recruitment@veitchlister.com.au</a>, <br>and further your career at Veitch Lister Consulting.</p>
+              </li>
+              <li class="navi-menu consultingservices">
+                <a title="Zenith Transport Models"> Zenith Transport Models</a>
+                <div class="header-submenu-wrap">
+                  <div class="sublink-multiple-dropdown-outer">
+                    <div class="sublink-multiple-wrapper">
+
+                      <div class="fulldivmenu">
+
+
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/01_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/01a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Overview</h1>
+                                <p>Measure the Audience of an Outdoor Media Campaign</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_WhatsNew.html">   <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/02_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/02a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>What’s New</h1>
+                                <p>Outdoor Audience Measurement Design & Methodology</p>
+                              </div>
+                            </div> </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_Features.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/03_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/03a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Features</h1>
+                                <p>Outdoor Audience Measurement Accuracy</p>
+                              </div>
+                            </div> </a>
+                        </div>
+
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_Markets.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Markets</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_Projects.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Projects</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_Documentation.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Documentation</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_Licensing.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Licensing</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_TrafficEstimates.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Traffic Estimates</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_R&D.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>R & D</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="ZenithTransportModels_Support.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Support</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="RightContentSection">
-              <div class="headerSection">
-                <div class="headerSectionPart"> <img src="../assets/headericon.jpg" alt="Icon" />
-                  <p>Student Employment</p>
+              </li>
+              <li class="navi-menu consultingservices">
+                <a title="Outdoor Audience Measurement"> Outdoor Audience Measurement</a>
+                <div class="header-submenu-wrap">
+                  <div class="sublink-multiple-dropdown-outer">
+                    <div class="sublink-multiple-wrapper">
+
+                      <div class="fulldivmenu">
+
+
+                        <div class="menudiv50">
+                          <a href="OutdoorOverview.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/01_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/01a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Overview</h1>
+                                <p>Measure the Audience of an Outdoor Media Campaign</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="DesignMethodology.html">   <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/02_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/02a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Design & Methodology</h1>
+                                <p>Outdoor Audience Measurement Design & Methodology</p>
+                              </div>
+                            </div> </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="Accuracy.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/03_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/03a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Accuracy</h1>
+                                <p>Outdoor Audience Measurement Accuracy</p>
+                              </div>
+                            </div> </a>
+                        </div>
+
+                        <div class="menudiv50">
+                          <a href="ResearchPartners.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Research & Partners</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="contentHeaderSection">
-                  <p>As one of Australia's premier transport planning consultancies, Veitch Lister Consulting has exciting opportunities for talented and motivated students. VLC has a long history of creating employment opportunities for students in areas that pertain to their studies.</p>
+              </li>
+              <li class="navi-menu consultingservices">
+                <a title="Company">Company</a>
+                <div class="header-submenu-wrap">
+                  <div class="sublink-multiple-dropdown-outer">
+                    <div class="sublink-multiple-wrapper">
+
+                      <div class="fulldivmenu">
+
+
+                        <div class="menudiv50">
+                          <a href="Company.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/01_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/01a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Overview</h1>
+                                <p>Measure the Audience of an Outdoor Media Campaign</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="History.html">   <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/02_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/02a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>History</h1>
+                                <p>Outdoor Audience Measurement Design & Methodology</p>
+                              </div>
+                            </div> </a>
+                        </div>
+                        <div class="menudiv50">
+                          <a href="Customer.html"> <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/03_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/03a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Customers</h1>
+                                <p>Outdoor Audience Measurement Accuracy</p>
+                              </div>
+                            </div> </a>
+                        </div>
+
+                        <div class="menudiv50">
+                          <a href="Careers.html">  <div class="submenu-box">
+                              <div class="imagebox">
+                                <img class="showImage" src="assets/images/04_icons.png"  alt="01image"/>
+                                <img class="hideImage" src="assets/images/04a_icons.png"  alt="01image"/>
+                              </div>
+                              <div class="submenubox">
+                                <h1>Careers</h1>
+                                <p>Outdoor Audience Measurement Research & Partners</p>
+                              </div>
+                            </div></a>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <!-- <div class="arrowicon"><img src="../assets/tarrow.png" alt="Icon" /></div>
-               <div class="testimonial_right">
-                 <div class="inner_testimonial">
-                   <div class="imagedivv">
-                     <img src="../assets/rightcomma.png" alt="Testimonials" />
-                   </div>
-                   <div class="testi80">I worked on projects which tested my </div>
-                   <div class="testi60">problem solving skills and gave </div>
-                   <div class="testi80"> me experience in applying them to the </div>
-                   <div class="lastdiv"> <span class="testi40">the real world. </span> <span class="imageright"><img src="../assets/leftcomma.png" alt="Testimonials" /></span>
-                   </div>
-                   <div class="givenby"> <a href="#" class="whats-orange">Robert Kerr</a> </div>
-                   <div class="lastpara">Bachelor of Mechanical Engineerig and Science, University of Queensland.</div>
-                 </div>
-               </div>-->
-            </div>
+              </li>
+              <li class="navi-menu">
+                <a href="Contact.html" title="Contact"> Contact</a>
+              </li>
+            </ul>
           </div>
-          <div class="leftrightContainer">
-            <div class="arrowicon"><img src="../../assets/tarrow.png"  alt="Icon"/></div>
-            <div class="testimonial_right clientReview tetimonialmiddle">
-              <div class="inner_testimonial">
-                <div class="imagedivv">
-                  <img src="../../assets/rightcomma.png" alt="Testimonials"/>
-                </div>
-                <div class="testi80">I worked on projects which tested my problem solving skills and gave me</div>
-                <div class="lastdiv"> <span class="testi40">experience in applying them to the the real world. </span> <span class="imageright"><img src="../../assets/leftcomma.png" alt="Testimonials" /></span></div>
-                <div class="givenby"> <a href="#" class="whats-orange">Robert Kerr</a> </div>
-                <div class="lastpara">Bachelor of Mechanical Engineerig and Science, University of Queensland.</div>
+        </div>
+      </div>
+      <!--header ends here-->
+
+
+      <!--slideshow banner-->
+      <div class="banner-wrapper">
+        <div class="innerbanner"> </div>
+      </div>
+      <!-- Responsive slider - END -->
+
+      <!--slideshow banner ends-->
+
+      <!--mainContent ends here-->
+      <div class="mainContent-wrapper">
+        <div class="main-wrapper-fixed contentwrapper" >
+          <div class="contentfulll">
+            <div class="contentsection">
+              <div class="breadcrumbs_menu">
+                <ul class="breadcrumbul">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="overview.html">Consulting Services</a></li>
+                  <li><a href="Demand_Forecasting.html">Demand Forecasting</a></li>
+                  <li><strong>Toll Road Demand Forecasting</strong></li>
+                </ul>
+
+                <hr class="horizontalLine"/>
               </div>
+              <div class="UpperContentSection BorderNone">
+                <div class="contentheading">Toll Road Demand Forecasting</div>
+                <div class="leftrightContainer">
+
+
+                  <div class="projectContiner">
+                    <div class="headerTittle">East West Link <span>Melbourne, VLC</span></div>
+                    <div class="headerImage bwWrapper projectImg" data-reveal-id="myModal" data-animation="fade">
+                      <a href="#"><img src="assets/images/project01.jpg"  alt="test"/></a>
+                    </div>
+                    <div class="thumbhover">
+                      <p>This comprehensive modelling software allows detailed time-period modelling of both private and public transaport.</p>
+                    </div>
+                  </div>
+
+                  <div class="projectContiner">
+                    <div class="headerTittle">East Link <span>Melbourne, VLC</span></div>
+                    <div class="headerImage bwWrapper projectImg" data-reveal-id="myModal2" data-animation="fade">
+                      <a href="#"><img src="assets/images/project01.jpg"  alt="test"/></a>
+                    </div>
+                    <div class="thumbhover">
+                      <p>This comprehensive modelling software allows detailed time-period modelling of both private and public transaport.</p>
+                    </div>
+                  </div>
+
+                  <div class="projectContiner">
+                    <div class="headerTittle">City Link <span>Melbourne, VLC</span></div>
+                    <div class="headerImage bwWrapper projectImg">
+                      <a href="#"><img src="assets/images/project01.jpg"  alt="test"/></a>
+                    </div>
+                    <div class="thumbhover">
+                      <p>This comprehensive modelling software allows detailed time-period modelling of both private and public transaport.</p>
+                    </div>
+                  </div>
+
+                  <div class="projectContiner">
+                    <div class="headerTittle">Cross-City Link <span>Melbourne, VLC</span></div>
+                    <div class="headerImage bwWrapper projectImg">
+                      <a href="#"><img src="assets/images/project01.jpg"  alt="test"/></a>
+                    </div>
+                    <div class="thumbhover">
+                      <p>This comprehensive modelling software allows detailed time-period modelling of both private and public transaport.</p>
+                    </div>
+
+
+                  </div>
+
+                  <div class="projectContiner">
+                    <div class="headerTittle">Lane Cove Tunnel <span>Sydney, VLC</span></div>
+                    <div class="headerImage bwWrapper projectImg">
+                      <a href="#"><img src="assets/images/project01.jpg"  alt="test"/></a>
+                    </div>
+                    <div class="thumbhover">
+                      <p>This comprehensive modelling software allows detailed time-period modelling of both private and public transaport.</p>
+                    </div>
+
+
+                  </div>
+                  <!--<div class="InnerRightContentSection">
+
+                      <div class="headerSection">
+                          <div class="headerTittle">East West Link <span>Melbourne, VLC</span></div>
+                          <div class="headerImage">
+                                        	<a href="#"><img src="assets/images/project01.jpg"  alt="test"/></a>
+                                    	</div>
+
+                      </div>
+                  </div>-->
+                </div>
+                <div class="bottomContentSection">
+                  <div class="backnext">
+
+                    <a class="whats-orange" href="javascript:void(0)">>></a>
+                    <a class="more-gray" href="javascript:void(0)">back </a>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+            </div>
+            <div class="sidebaright">
+              <div class="sidebarmenu">
+                <div class="sidebarmenuheading">
+                  <h1>Demand Forecasting</h1>
+                </div>
+                <div class="sidebarmenutypes activesidebarmenu">
+                  <a class="active" href="Demand_Forecasting.html">Toll Road Demand Forecasting</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="PublicTransportDemandForecasting.html">Public Transport Demand Forecasting</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="MultiModalTravelDemandForecasting.html">Multi-modal Travel Demand Forecasting</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="MicrosimulationModelling.html">Microsimulation Modelling</a>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
       </div>
-      <div class="sidebaright">
-        <div class="sidebarmenu">
-          <div class="sidebarmenuheading">
-            <h1>Company</h1>
+      <!--mainContent ends here-->
+
+
+
+      <!--footer ends here-->
+      <div class="foote-wrapper">
+        <div class="main-wrapper-fixed footerwrapper">
+          <div class="footerbelow1">
+            <h3 class="footerheadd"> Main links </h3>
+            <ul class="footerul">
+              <li>
+                <a href="#"> VLC Home</a>
+              </li>
+              <li>
+                <a href="#"> Company</a>
+              </li>
+              <li>
+                <a href="#"> Consulting Services</a>
+              </li>
+              <li>
+                <a href="#"> Zenith Transport Models</a>
+              </li>
+              <li>
+                <a href="#"> Outdoor Audience Management</a>
+              </li>
+              <li>
+                <a href="#"> Sitemap</a>
+              </li>
+              <li>
+                <a href="#"> Contact</a>
+              </li>
+            </ul>
           </div>
-          <div class="sidebarmenutypes"> <a class="active" href="/company">Overview</a> </div>
-          <div class="sidebarmenutypes"> <a href="history">History</a> </div>
-          <div class="sidebarmenutypes"> <a href="customers">Customers</a> </div>
-          <div class="sidebarmenutypes activesidebarmenu"> <a href="careers">Careers</a> </div>
+          <div class="footerbelow2">
+            <h3 class="footerheadd"> Other Links </h3>
+            <ul class="footerul">
+              <li>
+                <a href="#"> Login</a>
+              </li>
+              <li>
+                <a href="#"> Zenith Forum</a>
+              </li>
+              <li>
+                <a href="#"> News</a>
+              </li>
+
+            </ul>
+
+            <h3 class="footerheadd legalhead"> Legal </h3>
+            <ul class="footerul">
+              <li>
+                <a href="#"> Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#"> Legal Declaimer</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="footerbelow3">
+            <h3 class="footerheaddnew"> <span class="smaltext"> Get Quarterly </span><span class="bigtextspan"> Newsletter</span></h3>
+            <div class="inputdiv">
+              <input type="text" name="news_email" placeholder="Email Address" class="common-input" />
+              <input type="button" class="common-gray-button gray-newsletter"   value="Subscribe" />
+            </div>
+
+            <div class="inputdivdown seperatorr">
+              Stay up to date with the latest from VLC
+            </div>
+
+            <!--<div class="inputdivdown">
+              Stay up to date with the latest from VLC
+            </div>
+            <div class="seperatorr">
+                   	<input type="button" class="common-gray-button" value="Submit" />
+            </div>-->
+
+            <div class="linkedin">
+              <a href="#"><img src="assets/images/in.png" alt="Linked in" class="alignimg"/></a> Connect with VLC on LinkedIn
+            </div>
+
+
+          </div>
+          <div class="footerbelow4">
+            <h3 class="footerheadd"> Quick Contact </h3>
+            <div class="inputdivcommon">
+              <input type="text" name="news_email" placeholder="Name" class="common-input common-inputbig" />
+            </div>
+            <div class="inputdivcommon">
+              <input type="text" name="news_email" placeholder="Email Address" class="common-input common-inputbig" />
+            </div>
+            <div class="inputdivcommon">
+              <textarea rows="3" cols="2" placeholder="Message" class="comntextarea"></textarea>
+            </div>
+            <div>
+              <input type="button" class="common-gray-button"   value="Submit" />
+            </div>
+
+          </div>
         </div>
-        <div class="sidebarmenu">
-          <div class="sidebarmenuheading">
-            <h1>Current Opportunities</h1>
+      </div>
+      <!--footer ends here-->
+
+      <div class="foote-wrapper-copyright">
+        <div class="main-wrapper-fixed footerwrappercopyright">
+          <div class="copyrightcommon">
+            <div class="floatleft">
+              &copy; Copyright 2013 Veitch Lister Consulting Pty Ltd. All Rights Reserved
+            </div>
+            <div class="floatright">
+              <a target="_blank" href="http://colorcuboid.com/"> Powered by <img class="ccimg" src="assets/images/colorcuboid.png"  alt="Colorcubopid Design" title="ColorCuboid Designs" /> &nbsp;ColorCuboid Designs </a>
+            </div>
           </div>
-          <div class="sidebarmenutypes"> <a class="active" href="/company/careers/current_opportunities">Principal Transport Planner</a> </div>
+        </div>
+      </div>
+
+    </div>	<!--bodyWrapper ends here-->
+    <div class="popupopen reveal-modal" id="myModal">
+      <a class="close-reveal-modal">&#215;</a>
+      <div class="Innerpopupopen">
+        <div class="projectInformation">
+
+          <div class="ContentImage">
+            <img alt="test" src="assets/images/project01.jpg"/>
+          </div>
+          <div class="ContentDetail">
+            <div class="clientRow">
+              <div class="Client">
+                Client
+              </div>
+              <div class="Clientname">
+                Melbourne Authority
+              </div>
+            </div>
+            <div class="clientRow">
+              <div class="Client">
+                Link
+              </div>
+              <div class="Clientname">
+                <a href="#">Linking Melbourne Authority</a>
+                <a href="#">East West Link</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="headerTittle">
+            East West Link
+            <span>Melbourne, VLC</span>
+          </div>
+          <div class="projectDetail">
+            <p>VLC were commissioned in 2008 by the Linking Melbourne Authority (then the Southern and Eastern Integrated Transport Authority) to examine transport network options to increase the east-west capacity of the transport network to the immediate north of the Melbourne CBD. The firm produced travel forecasts for these various options. This has involved the testing of a wide range of future scenarios and the provision of model outputs to facilitate economic evaluation. As a part of this work, VLC upgraded previous standard consumer surplus evaluation data to include benefits such as agglomeration, labour supply, reliability, resource cost corrections and toll road revenue. This work provided direct input to Sir Rod Eddington's report to the Victorian State Government.</p>
+            <p>One of the options analysed was a 16 kilometre arterial road connecting the Eastern Freeway with the Western Ring Road in the vicinity of its interchange with the Deer Park Bypass.</p>
+            <p>The Linking Melbourne Authority has recently reengaged VLC to examine further, less ambitious options for improving road capacity to the north of Melbourne's CBD. This work also addresses potential toll revenues. </p>
+            <p>Work on this project, as well as the Zenith model, was subjected to a rigorous peer review process lead by international toll road expert Robert Bain of RBConsult.</p>
+          </div>
+
+        </div>
+
+        <div class="bottomContentSection">
+          <div class="bottomheader">
+            <img alt="Icon" src="assets/images/headericon.jpg"/>
+            <p>Other Projects</p>
+          </div>
+          <div class="imagecontainer">
+            <div class="headerImage">
+              <a href="javascript:void(0)">
+                <img src="assets/images/blank_img.jpg" alt="test" />
+              </a>
+            </div>
+            <div class="headerImage">
+              <a href="javascript:void(0)">
+                <img src="assets/images/blank_img.jpg" alt="test" />
+              </a>
+            </div>
+            <div class="headerImage">
+              <a href="javascript:void(0)">
+                <img src="assets/images/blank_img.jpg" alt="test" />
+              </a>
+            </div>
+            <div class="headerImage">
+              <a href="javascript:void(0)">
+                <img src="assets/images/blank_img.jpg" alt="test" />
+              </a>
+            </div>
+            <div class="headerImage">
+              <a href="javascript:void(0)">
+                <img src="assets/images/blank_img.jpg" alt="test" />
+              </a>
+            </div>
+            <div class="headerImage">
+              <a href="javascript:void(0)">
+                <img src="assets/images/blank_img.jpg" alt="test" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
 
+
+    <!-- for slider top -->
+
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      $( document ).ready( function() {
+        $('.projectImg').hover(function(){
+          $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");
+        });
+      });
+
+      $(window).load(function(){
+        $('.bwWrapper').BlackAndWhite({
+          hoverEffect : true, // default true
+          // set the path to BnWWorker.js for a superfast implementation
+          webworkerPath : false,
+          // for the images with a fluid width and height
+          responsive:true,
+          // to invert the hover effect
+          invertHoverEffect: false,
+          // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+          intensity:1,
+          speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+            fadeIn: 200, // 200ms for fadeIn animations
+            fadeOut: 800 // 800ms for fadeOut animations
+          },
+          onImageReady:function(img) {
+            // this callback gets executed anytime an image is converted
+          }
+        });
+      });
+
+    </script>
+
+  </body>
+</html>
