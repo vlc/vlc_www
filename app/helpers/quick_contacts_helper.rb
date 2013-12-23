@@ -1,0 +1,2 @@
+module QuickContactsHelper
+end

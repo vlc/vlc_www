@@ -5,6 +5,12 @@ VLC::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
+  resources :quick_contacts do
+    collection do
+      post :create_quick_contact
+      post :save_news_letters_email
+    end
+  end
   mount Refinery::Core::Engine, :at => '/'
 
   # The priority is based upon order of creation:

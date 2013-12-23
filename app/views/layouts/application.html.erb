@@ -12,19 +12,13 @@
 <%#=stylesheet_link_tag  "styles_480", :media => "only screen and (max-width: 480px)" %>
 <%#=stylesheet_link_tag  "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5)" %>
-
     <%= render '/refinery/head' %>
-
     <%= csrf_meta_tags %>
-
   </head>
   <body  >
     <div class="main-wrapper">
-
       <%= render "/refinery/header" %>
-
       <%= yield %>
-
       <%= render "/refinery/footer" %>
     </div>
   </body>
@@ -32,6 +26,8 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
   <script type="text/javascript">
     // documetation tab
     $(document).ready(function() {
+
+      $('#tab5').css("display","none");
 
       $(".tab_type li").click(function(){
 
@@ -49,6 +45,11 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
         $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
       });
+
+
+
+
+
     });
 
     // history under company
@@ -95,11 +96,41 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
         }
       });
     });
-	
+
+    // Dec 19th added
+    <!-- for slider top -->
+
+
+
+
+    $( document ).ready( function() {
+      $('.projectImg').hover(function(){
+        $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");
+      });
+    });
+
+    $(window).load(function(){
+      $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true, // default true
+        // set the path to BnWWorker.js for a superfast implementation
+        webworkerPath : false,
+        // for the images with a fluid width and height
+        responsive:true,
+        // to invert the hover effect
+        invertHoverEffect: false,
+        // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+        intensity:1,
+        speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+          fadeIn: 200, // 200ms for fadeIn animations
+          fadeOut: 800 // 800ms for fadeOut animations
+        },
+        onImageReady:function(img) {
+          // this callback gets executed anytime an image is converted
+        }
+      });
+    });
+
   </script>
-
-
-
 
 </html>
 
