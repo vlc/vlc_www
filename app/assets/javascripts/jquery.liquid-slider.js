@@ -966,7 +966,7 @@ if (typeof Object.create !== 'function') {
     fadeOutDuration: 1000,
 
     autoSlide: true,
-    autoSlideDirection: 'left',
+    autoSlideDirection: 'right',
     autoSlideInterval: 6000,
     forceAutoSlide: false,
     pauseOnHover: false,
