@@ -224,12 +224,12 @@
     $('#slider1').liquidSlider();
     $('#slider2').liquidSlider();
     $('.ls-wrapper.arrows.ls-responsive').addClass("sizeFix");
-    $('.next').on("click",function(){
+    $('.pre').on("click",function(){
       $('#slider1-wrapper .ls-nav-left-arrow a').trigger("click");
       $('#slider2-wrapper .ls-nav-left-arrow a').trigger("click");
 
     });
-    $('.pre').on("click",function(){
+    $('.next').on("click",function(){
       $('#slider1-wrapper .ls-nav-right-arrow a').trigger("click");
       $('#slider2-wrapper .ls-nav-right-arrow a').trigger("click");
 

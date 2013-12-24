@@ -142,6 +142,12 @@ a {
 .floatright {
     float: right;
 }
+.left-floated {
+    float: left;
+}
+.justify-text {
+    text-align: justify !important;
+}
 .header-wrapper {
     background: none repeat scroll 0 0 #FFFFFF;
     clear: both;
@@ -415,7 +421,7 @@ a {
 .footerbelow4 {
     float: left;
     width: 23%;
-    padding-bottom: 29px;
+    padding-bottom: 14px;
     padding-top: 50px;/*margin-right:1%;*/
 }
 h3.footerheadd {
@@ -518,6 +524,14 @@ h3.legalhead {
     padding-bottom: 12%;
     padding-top: 5%;
     width: 100%;
+}
+.footerbelow3 .linkedin {
+    padding-bottom: 31px;
+    padding-top: 12px;
+}
+.footerbelow3 .inputdivdown.seperatorr {
+    padding-bottom: 13px;
+    padding-top: 0;
 }
 .seperatorr {
     border-bottom: 1px solid #2F2F2F;
@@ -1027,6 +1041,9 @@ textarea.comntextarea {
     text-align: justify;
     margin-bottom: 8px;
     float:left;
+}
+.fontsize13, .RightContentSection p.fontsize13 {
+    font-size: 13px;
 }
 .contentheading {
     color: #FF7800;
@@ -1885,7 +1902,7 @@ textarea.comntextarea {
     display: none
 }
 .navi-menu.homemenu.homeinactive {
-    background: none repeat scroll 0 0 #E1DFD3;
+    background: none repeat scroll 0 0 #FFFFFF;
 }
 .testimonial_right.clientReview.tetimonialmiddle{
     padding: 2% 0 2% 3%;
@@ -1959,4 +1976,7 @@ label.error {
 }
 .contentbottomfull .more-lindiv .more-gray {
     font-size: 14px;
+}
+.leftrightContainer .contentHeaderSection .ullist li {
+    margin-bottom: 5px;
 }
