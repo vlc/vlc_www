@@ -5,16 +5,12 @@ class QuickContactsController < ApplicationController
   end
 
   def save_news_letters_email
-        66666666
-    puts "ssssssssssss"
-    if Newsletter.create(:email => params[:email])
-      puts "gggggg"
+    @newsletter = Newsletter.create(:email => params[:email])
+    if @newsletter.save
       render :text => "Succeccfully updated"
     else
-      puts "hhhhhh"
       render :text => "Email is already taken"
     end
-
   end
 
 end

@@ -1,12 +1,8 @@
 <!--footer ends here-->
-
-<!--footer ends here-->
-
-<!--footer ends here-->
 <div class="foote-wrapper">
   <div class="main-wrapper-fixed footerwrapper">
     <div class="footerbelow1">
-      <h3 class="footerheadd"> Main links </h3>
+      <h3 class="footerheadd"> Main Links </h3>
       <ul class="footerul">
         <li>
           <a href="/"> VLC Home</a>
@@ -24,7 +20,7 @@
           <a href="/outdoor"> Outdoor Audience Management</a>
         </li>
         <li>
-          <a href="#"> Sitemap</a>
+          <a href="/sitemap"> Sitemap</a>
         </li>
         <li>
           <a href="/contact"> Contact</a>
@@ -41,7 +37,7 @@
           <a href="#"> Zenith Forum</a>
         </li>
         <li>
-          <a href="#"> News</a>
+          <a href="http://www.linkedin.com/company/veitch-lister-consulting"> News</a>
         </li>
 
       </ul>
@@ -49,10 +45,10 @@
       <h3 class="footerheadd legalhead"> Legal </h3>
       <ul class="footerul">
         <li>
-          <a href="#"> Privacy Policy</a>
+          <a href="#">Privacy Policy</a>
         </li>
         <li>
-          <a href="#"> Legal Declaimer</a>
+          <a href="#">Legal Disclaimer</a>
         </li>
 
       </ul>
@@ -65,10 +61,13 @@
           <input type="text" name="email" id="news_email" placeholder="Email Address" class="common-input" />
           <input type="submit" class="common-gray-button gray-newsletter"   value="Subscribe" />
         </div>
+        <div class="inputdivcommon">
+          <span id="disp_succ_msg"></span>
+        </div>
       </form>
 
       <div class="inputdivdown seperatorr">
-        Stay up to date with the latest from VLC
+        Sign up to VLC's Newsletter
       </div>
 
       <!-- <div class="inputdivdown">
@@ -79,11 +78,11 @@
        </div>-->
 
       <div class="linkedin">
-        Connect with VLC on LinkedIn<a href="http://www.linkedin.com/company/veitch-lister-consulting"><img src="../../assets/in.png" alt="Linked in" class="alignimg"/></a>
+        Follow VLC on LinkedIn<a href="http://www.linkedin.com/company/veitch-lister-consulting"><img src="../../assets/in.png" alt="Linked in" class="alignimg"/></a>
       </div>
     </div>
 
-    <form id="ContactForm" remote="true">
+    <form id="ContactForm" remote="true" type="get">
       <div class="footerbelow4">
         <h3 class="footerheadd"> Quick Contact </h3>
         <div class="inputdivcommon">
@@ -96,7 +95,7 @@
           <textarea rows="3" cols="2" name="message" placeholder="Message" id="contact_message" class="comntextarea"></textarea>
         </div>
         <div>
-          <input type="submit" class="common-gray-button"   value="Submit" />
+          <input type="submit" class="common-gray-button" value="Submit" />
         </div>
         <div class="inputdivcommon">
           <span id="dispaly_message"></span>
@@ -134,13 +133,6 @@
 <!-- for slider top -->
 <script type="text/javascript">
   $( document ).ready( function() {
-<%#*$('.responsive-slider-parallax').responsiveSlider({%>
-<%#*autoplay: false,%>
-<%#*interval: 5000,%>
-<%#*transitionTime: 300,%>
-<%#*parallax:true%>
-<%#*});%>
-
     $('.responsive-slider-parallax').responsiveSlider({
       autoplay: false,
       interval: 5000,
@@ -172,14 +164,30 @@
         },
         email:
           {
-          required:"Please enter a valid email address",
-          email: "Your email address must be in the format of name@domain.com"
+          required:"Please enter email address",
+          email: "Please enter a valid email address"
         },
 
         message:
           {
           required: "Please enter your messgae"
         }
+      },
+      submitHandler: function(e){
+        inv1 = document.getElementById('contact_name').value;
+        inv2 = document.getElementById('contact_email').value;
+        inv3 =  document.getElementById('contact_message').value;
+        $.ajax({
+          url: "/quick_contacts/create_quick_contact?name="+inv1+"&email="+inv2+"&message="+inv3,
+          type: 'get',
+          success: function(html){
+            $("#dispaly_message").html(html);
+            $('#contact_name').val('')
+            $('#contact_email').val('')
+            $('#contact_message').val('')
+          }
+        });
+        e.preventdefault;
       }
     });
 
@@ -197,61 +205,22 @@
           required:"Please enter a valid email address",
           email: "Your email address must be in the format of name@domain.com"
         }
-      }
-  
-    })
-
-  });
-
-  $(function(){
-    $('#ContactForm').submit(function(e){
-      if ( $( "#ContactForm" ).valid())
-      {
-        inv1 = document.getElementById('contact_name').value;
-        inv2 = document.getElementById('contact_email').value;
-        inv3 =  document.getElementById('contact_message').value;
-        $.ajax({
-
-          url: "/quick_contacts/create_quick_contact?name="+inv1+"&email="+inv2+"&message="+inv3,
-          type: 'post',
-          success: function(html){
-            alert("dfsf");
-            $("#dispaly_message").html(html);
-            $('#contact_name').val('')
-            $('#contact_email').val('')
-            $('#contact_message').val('')
-          }
-        });
-      }else
-      {
-        return false
-      }
-    })
-  });
-
-  $(function(){
-    $('#NewsletterForm').submit(function(e){
-      if( $('#NewsletterForm').valid()){
-        alert("ssss")
+      },
+      submitHandler: function(e){
         inv1 = document.getElementById('news_email').value;
-        alert("dddddd");
         $.ajax({
           url: "/quick_contacts/save_news_letters_email?email="+inv1,
-          type: 'post',
+          type: 'get',
           success: function(html){
-            alert("true");
             $("#disp_succ_msg").html(html);
             $('#news_email').val('')
           }
         });
-      }else{
-        e.preventDefault();
-        return false;
+        e.preventdefault;
       }
+  
     })
-  });
-
-  $(function(){
+  
     $('#slider1').liquidSlider();
     $('#slider2').liquidSlider();
     $('.ls-wrapper.arrows.ls-responsive').addClass("sizeFix");
