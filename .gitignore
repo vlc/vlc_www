@@ -13,6 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/tmp/**/*
 # Rails
 vendor/bundle
 config/database.yml
