@@ -1,0 +1,286 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Header section*/
+
+
+
+.header-left {
+	width: 100%;
+	text-align: center;
+}
+.header-right {
+	top: 0px;
+	width: 100%;
+}
+/* Header section*/
+
+/* Menu section*/
+.header-submenu-wrap {
+	display: none !important;
+}
+.menutoggle {
+	background: none repeat scroll 0 0 #E89513;
+	color: #FFFFFF;
+	display: block;
+	margin-bottom: 10px;
+	padding: 1%;
+	text-align: center;
+	width: 98%;
+	cursor: pointer;
+}
+.menu_ulist {
+	display: none;
+}
+.menu_ulist {
+	margin-top: 0px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.menu_ulist li {
+	width: 100%;
+	text-align: center;
+	padding: 0px;
+}
+.menu_ulist li a {
+	float: none;
+	padding: 5px 0px;
+	margin: auto;
+	display: inline-block;
+	width: 100%;
+}
+.menu_ulist li a {
+	background: #e9eaea;
+	border-bottom: 1px solid #999999;
+}
+.menu_ulist li a:hover {
+	color: #E89513;
+}
+/* Menu section*/
+
+/* Slideshow section*/
+
+.caption {
+	white-space: normal !important;
+}
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+	width: auto;
+	border: solid red 0px;
+}
+.img-html5 {
+	display: none;
+}
+.responsive-slider-parallax .slider-control.left,  .responsive-slider-parallax .slider-control.right {
+	display: none;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2 {
+	font-size: 20px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub {
+	font-size: 14px !important;
+}
+/* bottom 4 modules**/
+
+.contentmodu1, .contentmodu2, .contentmodu3, .contentmodu4 {
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-bottom: 10px;
+	text-align: center;
+}
+/* footer below 4 modulke**/
+
+.footerbelow1, .footerbelow2, .footerbelow3, .footerbelow4 {
+	clear: both;
+	float: left;
+	/*padding: 2% 5%;*/
+	width: 100%;
+}
+.footerbelow1, .footerbelow2 {
+	width: 90%;
+	padding: 5%;
+}
+.footerbelow3, .footerbelow4 {
+	width: 90%;
+	padding: 5%;
+}
+/* copyright**/
+
+.copyrightcommon .floatleft, .copyrightcommon .floatright {
+	width: 100%;
+	float: left;
+	clear: both;
+	text-align: center;
+	margin-bottom: 10px;/*padding:0 1%;*/
+}
+.newsleft {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.newsright {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.borderr {
+	display: none;
+}
+.newsmiddle {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+.responsive-slider-parallax .slides-container ul {
+	white-space: nowrap;
+}
+;
+.contentsection {
+	border: solid red 1px;
+	margin-right: 0;
+	width: 100% !important;
+}
+.sidebaright {
+	width: 100%;
+}
+.UpperContentSection {
+	width: 100%;
+}
+.contentheading {
+	font-size: 20px;
+}
+.leftrightContainer {
+	width: 100%;
+}
+.leftContentSection {
+	margin-right: 0;
+	width: 100%;
+}
+.RightContentSection {
+	width: 100%;
+}
+.RightContentSection p {
+	font-size: 13px;
+}
+.headerSection {
+	padding-bottom: 5%;
+}
+.RightheaderSectionPart {
+	padding-bottom: 2%;
+	padding-top: 2%;
+}
+.RightcontentHeaderSection {
+	padding-top: 3%;
+}
+.ContentImage {
+	margin-bottom: 7px;
+}
+.rightnewstitle {
+	bottom: 46px;
+	left: -152px;
+}
+.inner_testimonial {
+	padding-top: 4%;
+	padding-bottom: 8%;
+}
+.InnerPlainbgRight {
+	top: -60px;
+	padding-bottom: 0;
+}
+.plainbgright {
+	padding-bottom: 0;
+}
+.rightnewstitle {
+	right: 0px;
+	left: 0px;
+}
+.subcontentheading {
+	font-size: 16px;
+	line-height: 19px;
+}
+.headerSectionPart p {
+	font-size: 14px;
+}
+.NewsHeading {
+	font-size: 17px;
+}
+.contentsection {
+	margin-right: 0;
+	width: 100% !important;
+}
+.content-top {
+	font-size: 18px;
+	line-height: 24px;
+}
+.content-bottom {
+	color: #666666;
+	font-size: 14px;
+}
+h3.footerheadd, h3.footerheaddnew {
+	text-align: center;
+}
+.footerul li, .seperatorr, .linkedin {
+	text-align: center;
+}
+.footerbelow4 > div {
+	text-align: center;
+}
+.newsinnerbody {
+	font-size: 20px;
+}
+.InnerleftContentSection {
+	width: 100%;
+	margin-right: 0;
+}
+.InnerRightContentSection {
+	width: 100%;
+	margin-right: 0;
+}
+.bottomheader {
+	width: 97%;
+}
+.imagecontainer .headerImage {
+	margin-right: 1.9%;
+}
+.sidebarmenu {
+	border-top: none;
+	margin-bottom: 1%;
+	margin-top: 5%;
+}
+.sidebarmenu .headerImage:nth-child(3) {
+	margin-right: 2.9%;
+}
+.fullheadersection .headerSectionPart {
+	width: 97%;
+}
+.projectContiner {
+	width: 95%;
+	margin-right: 0;
+}
+.tab_type li {
+	margin-top: 3px;
+	text-align: center;
+	width: 98%;
+}
+.breadcrumbs_menu li {
+	margin-top: 3px;
+}
+
+/*---------------balraj-----------------------*/
+.cityaddressright{
+	margin-right:0px;
+	margin-bottom: 10px;
+}
+.cityaddress {
+    float: left;
+    width: 100%;
+}
+.contactnoparent {
+    float: left;
+    width: 50%;
+}
+.slidebarcontact{
+	padding-bottom:5%;
+}
+/****balraj end***/

@@ -1,0 +1,240 @@
+<!--footer ends here-->
+<div class="foote-wrapper">
+  <div class="main-wrapper-fixed footerwrapper">
+    <div class="footerbelow1">
+      <h3 class="footerheadd"> Main Links </h3>
+      <ul class="footerul">
+        <li>
+          <a href="/"> VLC Home</a>
+        </li>
+        <li>
+          <a href="/company"> Company</a>
+        </li>
+        <li>
+          <a href="/services"> Consulting Services</a>
+        </li>
+        <li>
+          <a href="/zenith"> Zenith Transport Models</a>
+        </li>
+        <li>
+          <a href="/outdoor"> Outdoor Audience Management</a>
+        </li>
+        <li>
+          <a href="/sitemap"> Sitemap</a>
+        </li>
+        <li>
+          <a href="/contact"> Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footerbelow2">
+      <h3 class="footerheadd"> Other Links </h3>
+      <ul class="footerul">
+        <li>
+          <a href="<%= VLC_URL %>/refinery"> Login</a>
+        </li>
+        <li>
+          <a href="#"> Zenith Forum</a>
+        </li>
+        <li>
+          <a target="_blank" href="http://www.linkedin.com/company/veitch-lister-consulting"> News</a>
+        </li>
+
+      </ul>
+
+      <h3 class="footerheadd legalhead"> Legal </h3>
+      <ul class="footerul">
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Legal Disclaimer</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footerbelow3">
+      <h3 class="footerheaddnew"> <span class="smaltext"> Get Quarterly </span><span class="bigtextspan"> Newsletter</span></h3>
+      <form id="NewsletterForm" remote="true">
+        <div class="inputdiv">
+          <input type="text" name="email" id="news_email" placeholder="Email Address" class="common-input" />
+          <input type="submit" class="common-gray-button gray-newsletter"   value="Subscribe" />
+        </div>
+        <div class="inputdivcommon">
+          <span id="disp_succ_msg"></span>
+        </div>
+      </form>
+
+      <div class="inputdivdown seperatorr">
+        Sign up to VLC's Newsletter
+      </div>
+
+      <!-- <div class="inputdivdown">
+         Lorem Ipsum dolor sit amet
+       </div>
+       <div class="seperatorr">
+                 <input type="button" class="common-gray-button" value="Submit" />
+       </div>-->
+
+      <div class="linkedin">
+        Follow VLC on LinkedIn<a target="_blank" href="http://www.linkedin.com/company/veitch-lister-consulting"><img src="../../assets/in.png" alt="Linked in" class="alignimg"/></a>
+      </div>
+    </div>
+
+    <form id="ContactForm" remote="true" type="get">
+      <div class="footerbelow4">
+        <h3 class="footerheadd"> Quick Contact </h3>
+        <div class="inputdivcommon">
+          <input type="text" name="name" placeholder="Name" id="contact_name" class="common-input common-inputbig" />
+        </div>
+        <div class="inputdivcommon">
+          <input type="text" name="email" placeholder="Email Address" id="contact_email" class="common-input common-inputbig" />
+        </div>
+        <div class="inputdivcommon">
+          <textarea rows="3" cols="2" name="message" placeholder="Message" id="contact_message" class="comntextarea"></textarea>
+        </div>
+        <div>
+          <input type="submit" class="common-gray-button" value="Submit" />
+        </div>
+        <div class="inputdivcommon">
+          <span id="dispaly_message"></span>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+<!--footer ends here-->
+
+<div class="foote-wrapper-copyright">
+  <div class="main-wrapper-fixed footerwrappercopyright">
+    <div class="copyrightcommon">
+      <div class="floatleft">
+        &copy; Copyright 2013 Veitch Lister Consulting Pty Ltd. All Rights Reserved
+      </div>
+      <div class="floatright">
+        <a target="_blank" href="http://colorcuboid.com/"> Powered by <img class="ccimg" src="../../assets/colorcuboid.png"  alt="Colorcubopid Design" title="ColorCuboid Designs" /> &nbsp;ColorCuboid Designs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- for slider top -->
+<script src="../../assets/jquery.event.move.js" type="text/javascript"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../assets/responsive-slider.js" type="text/javascript"></script>
+<!--<script src="assets/scripts/responsive-slidernew.js" type="text/javascript"></script>-->
+<script type="text/javascript" src="../../assets/jquery.validate.js"></script>
+<script src="../../assets/jquery.touchSwipe.min.js" type="text/javascript"></script>
+<script src="../../assets/jquery.liquid-slider.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../assets/jquery.validate.js"></script>
+<!-- for slider top -->
+<script type="text/javascript">
+  $( document ).ready( function() {
+    $('.responsive-slider-parallax').responsiveSlider({
+      autoplay: false,
+      interval: 5000,
+      transitionTime: 300
+
+    });
+    // jquery validations for quick conact
+
+    $("#ContactForm").validate({
+      rules:{
+        name:
+          {
+          required: true
+        },
+        email:
+          {
+          required: true,
+          email: true
+        },
+        message:
+          {
+          required: true
+        }
+      },
+      messages: {
+        name:
+          {
+          required: "Please enter your name"
+        },
+        email:
+          {
+          required:"Please enter email address",
+          email: "Please enter a valid email address"
+        },
+
+        message:
+          {
+          required: "Please enter your messgae"
+        }
+      },
+      submitHandler: function(e){
+        inv1 = document.getElementById('contact_name').value;
+        inv2 = document.getElementById('contact_email').value;
+        inv3 =  document.getElementById('contact_message').value;
+        $.ajax({
+          url: "/quick_contacts/create_quick_contact?name="+inv1+"&email="+inv2+"&message="+inv3,
+          type: 'get',
+          success: function(html){
+            $("#dispaly_message").html(html);
+            $('#contact_name').val('')
+            $('#contact_email').val('')
+            $('#contact_message').val('')
+          }
+        });
+        e.preventdefault;
+      }
+    });
+
+    $("#NewsletterForm").validate({
+      rules:{
+        email:
+          {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        email:
+          {
+          required:"Please enter a valid email address",
+          email: "Your email address must be in the format of name@domain.com"
+        }
+      },
+      submitHandler: function(e){
+        inv1 = document.getElementById('news_email').value;
+        $.ajax({
+          url: "/quick_contacts/save_news_letters_email?email="+inv1,
+          type: 'get',
+          success: function(html){
+            $("#disp_succ_msg").html(html);
+            $('#news_email').val('')
+          }
+        });
+        e.preventdefault;
+      }
+
+    })
+
+    $('#slider1').liquidSlider();
+    $('#slider2').liquidSlider();
+    $('.ls-wrapper.arrows.ls-responsive').addClass("sizeFix");
+    $('.pre').on("click",function(){
+      $('#slider1-wrapper .ls-nav-left-arrow a').trigger("click");
+      $('#slider2-wrapper .ls-nav-left-arrow a').trigger("click");
+
+    });
+    $('.next').on("click",function(){
+      $('#slider1-wrapper .ls-nav-right-arrow a').trigger("click");
+      $('#slider2-wrapper .ls-nav-right-arrow a').trigger("click");
+
+    });
+  });
+
+</script>
+
