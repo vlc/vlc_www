@@ -415,7 +415,7 @@ a {
 .footerbelow4 {
     float: left;
     width: 23%;
-    padding-bottom: 50px;
+    padding-bottom: 29px;
     padding-top: 50px;/*margin-right:1%;*/
 }
 h3.footerheadd {
@@ -731,6 +731,7 @@ textarea.comntextarea {
 .sidebaright {
     float: right;
     width: 30%;
+    margin-top: 4px;
 }
 .testimonial_right {
     background: url(../assets/news_bgnew.jpg) repeat-x scroll left top #EBEAE2;
@@ -1124,6 +1125,9 @@ textarea.comntextarea {
     border: medium none;
     color: #EBEBE2;
     height: 1px;
+}
+.breadcrumbs_menu .horizontalLine {
+    margin: 10px 0;
 }
 .navi-menu.homemenu {
     background: none repeat scroll 0 0 #FF7800;
@@ -1946,4 +1950,13 @@ p.nojustify{
 label.error {
     color: #FF7800;
     float:left;
+}
+.contentbottomfull a, .contentbottomfull a .moduleheading {
+    text-decoration: none;
+}
+.contentbottomfull a:focus, .contentbottomfull a:active {
+    outline:none;
+}
+.contentbottomfull .more-lindiv .more-gray {
+    font-size: 14px;
 }
