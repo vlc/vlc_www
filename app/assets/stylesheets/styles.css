@@ -1045,6 +1045,9 @@ textarea.comntextarea {
 .fontsize13, .RightContentSection p.fontsize13 {
     font-size: 13px;
 }
+.fontsize14, .RightContentSection p.fontsize14 {
+    font-size: 14px;
+}
 .contentheading {
     color: #FF7800;
     font-family: 'Helvetica';
@@ -1526,6 +1529,7 @@ textarea.comntextarea {
     width: 100%;
     height: auto;
     padding: 15px 20px;
+    text-align: justify;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
