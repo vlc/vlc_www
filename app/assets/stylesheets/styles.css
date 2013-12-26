@@ -148,6 +148,9 @@ a {
 .justify-text {
     text-align: justify !important;
 }
+.bold-text {
+    font-weight: bold !important;
+}
 .header-wrapper {
     background: none repeat scroll 0 0 #FFFFFF;
     clear: both;
@@ -825,8 +828,9 @@ textarea.comntextarea {
 }
 /***** Drop down menu ***/
 .menu_ulist li a {
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
+    width: 100%;
 }
 .fulldivmenu {
     clear: both;
@@ -841,13 +845,16 @@ textarea.comntextarea {
     width: 49%;
 }
 .submenu-box {
+    display: table;
     float: left;
-    padding: 4%;
+    padding: 2% 4%;
     width: 92%;
 }
 .imagebox {
-    float: left;
+    display: table-cell;
+    float: none;
     padding-right: 3%;
+    vertical-align: middle;
     width: 19%;
 }
 .imagebox :hover {
@@ -857,8 +864,10 @@ textarea.comntextarea {
     background: #EBEAE2;
 }
 .submenubox {
-    float: left;
+    display: table-cell;
+    float: none;
     padding-left: 1%;
+    vertical-align: middle;
     width: 77%;
 }
 .submenubox h1 {
@@ -1993,4 +2002,22 @@ label.error {
 .a-link:hover {
     color: #333333;
     text-decoration: none;
+}
+.greyBoxTextArea .greyBoxContact a {
+    color: #FF7800;
+    text-decoration: underline;
+}
+.greyBoxTextArea .greyBoxContact a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+.tab_searchContainer .tab_search {
+    text-align: justify;
+}
+.testimonial_right.clientReview .inner_testimonial .testi80 {
+    width: auto;
+    padding: 7px 5px;
+}
+.projectContiner .headerImage .blacklarge p {
+    margin-left: 11px;
 }
