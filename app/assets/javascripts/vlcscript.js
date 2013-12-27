@@ -56,6 +56,26 @@ $('.submenu-box').hover(function(){
 });
 /* Sebmenu image toggle */
 
+
+
+    //multimodaldemand page left right container heigh adjust
+
+    if($('.projectContiner_outer').size()){
+        $('.leftrightContainer .projectContiner_outer').each(function(){
+            var left_content = $(this).find('.left-content .headerImage');
+            var right_content = $(this).find('.right-content .headerImage');
+            if(left_content.outerHeight() == right_content.outerHeight() ){
+            }
+
+            else if(left_content.outerHeight() > right_content.outerHeight() ){
+            }
+            else {
+                left_content.outerHeight(right_content.outerHeight());
+            }
+        });
+    }
+
+
 });	
 
 

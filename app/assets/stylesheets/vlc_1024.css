@@ -45,6 +45,21 @@
 .imagecontainer .headerImage {
 	margin-right: 2.9% !important;
 }
+.navi-menu a {
+    padding: 15.2px 9px;
+}
+textarea.comntextarea{
+    max-width: 93%;
+    min-width: 93%;
+    width: 93%;
+}
+.footerbelow3 .inputdiv .common-gray-button.gray-newsletter{
+    margin: 4px 0 0;
+}
+.linkedin{
+    padding-bottom: 8%;
+    padding-top: 2%;
+}
 }
 
 /* Mobile 480 to 530px */
