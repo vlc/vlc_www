@@ -507,6 +507,7 @@ h3.legalhead {
     padding: 6px;
     color: #999999;
     width: 161px;
+    font-family: arial;
 }
 .common-inputbig {
     width: 100%;
@@ -2097,4 +2098,7 @@ textarea {
 }
 a {
     outline: 0;
+}
+.contentheading.mainHeading{
+     margin-bottom: 10px;
 }

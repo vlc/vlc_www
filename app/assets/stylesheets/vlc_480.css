@@ -295,7 +295,7 @@ textarea.comntextarea{
     height:32px;
 }
 .foote-wrapper{
-    background: url("../../assets/footerMobile_bg.jpg") repeat scroll left top rgba(0, 0, 0, 0);
+    background: url("../assets/footerMobile_bg.jpg") repeat scroll left top rgba(0, 0, 0, 0);
 }
 .inputdiv{
     text-align:center;
