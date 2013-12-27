@@ -2102,3 +2102,8 @@ a {
 .contentheading.mainHeading{
      margin-bottom: 10px;
 }
+.video-embed-wrapper {
+    clear: both;
+    float: left;
+    width: 100%;
+}
