@@ -40,7 +40,10 @@
 	padding-bottom: 5%;
 }
 .tab_type li {
-	margin-top: 3px;
+    margin-top: 3px;
+    font-size: 11px;
+    margin-right: 1%;
+    padding: 1.2%;
 }
 .imagecontainer .headerImage {
 	margin-right: 2.9% !important;

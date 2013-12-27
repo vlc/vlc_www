@@ -284,3 +284,19 @@ h3.footerheadd, h3.footerheaddnew {
 	padding-bottom:5%;
 }
 /****balraj end***/
+
+textarea.comntextarea{
+    max-width: 99%;
+    min-width: 99%;
+    width: 99%;
+}
+
+.ModelStatistics .colorHeading{
+    height:32px;
+}
+.foote-wrapper{
+    background: url("../../assets/footerMobile_bg.jpg") repeat scroll left top rgba(0, 0, 0, 0);
+}
+.inputdiv{
+    text-align:center;
+}

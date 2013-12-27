@@ -1921,7 +1921,7 @@ textarea.comntextarea {
     display: none
 }
 .navi-menu.homemenu.homeinactive {
-    background: none repeat scroll 0 0 #E1DFD3;
+    background: none repeat scroll 0 0 #FFFFFF;
 }
 .testimonial_right.clientReview.tetimonialmiddle{
     padding: 2% 0 2% 3%;
@@ -2031,4 +2031,70 @@ label.error {
     clear: both;
     float: left;
     width: 100%;
+}
+.ImageTitle.specialEvents-places {
+    position: relative;
+    top: 71px;
+}
+.site_map_boxes .ullist li {
+    clear: both;
+    float: left;
+}
+.padingTopZero {
+    padding-top: 0;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+input::-webkit-input-placeholder{
+    color:#999999;
+}
+textarea::-webkit-input-placeholder{
+    color:#999999;
+}
+input:focus::-webkit-input-placeholder {
+    color:transparent;
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:focus:-moz-placeholder {
+    color:transparent;
+}
+
+/* Mozilla Firefox 19+ */
+input:focus::-moz-placeholder {
+    color:transparent;
+}
+
+/* Internet Explorer 10+ */
+input:focus:-ms-input-placeholder {
+    color:transparent;
+}
+textarea:focus::-webkit-input-placeholder {
+    color:transparent;
+}
+
+/* Mozilla Firefox 4 to 18 */
+textarea:focus:-moz-placeholder {
+    color:transparent;
+}
+
+/* Mozilla Firefox 19+ */
+textarea:focus::-moz-placeholder {
+    color:transparent;
+}
+
+/* Internet Explorer 10+ */
+textarea:focus:-ms-input-placeholder {
+    color:transparent;
+}
+textarea {
+    overflow: auto;
+}
+.common-gray-button{
+    height:30px;
+}
+a {
+    outline: 0;
 }
