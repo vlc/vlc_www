@@ -300,3 +300,51 @@ textarea.comntextarea{
 .inputdiv{
     text-align:center;
 }
+
+
+
+
+
+/*Ganesh */
+
+.inner_testimonial {
+    display: none;
+}
+.inner_testimonial.inner_testimonial_mobile {
+    display: block;
+}
+.inner_testimonial.inner_testimonial_mobile .imageright {
+    float: right;
+}
+.inner_testimonial.inner_testimonial_mobile .testi80 {
+    margin-left: 9%;
+    width: 82%;
+    line-height: 15px;
+}
+
+
+@media (min-width:320px) and (max-width:360px) {
+    .innerbanner {
+        background: url(../assets/inside_banner_bg_360.jpg) no-repeat top center;
+        width: 100%;
+        height: 125px;
+    }
+    .innerbannerZenith {
+        background: url(../assets/inside_banner_zenith_bg_360.jpg) no-repeat top center;
+        width: 100%;
+        height: 125px;
+    }
+}
+
+@media (min-width:250px) and (max-width:320px) {
+    .innerbanner {
+        background: url(../assets/inside_banner_bg_320.jpg) no-repeat top center;
+        width: 100%;
+        height: 125px;
+    }
+    .innerbannerZenith {
+        background: url(../assets/inside_banner_zenith_bg_320.jpg) no-repeat top center;
+        width: 100%;
+        height: 125px;
+    }
+}

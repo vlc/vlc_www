@@ -773,6 +773,9 @@ textarea.comntextarea {
     padding-top: 10%;
     width: 93%;
 }
+.inner_testimonial.inner_testimonial_mobile {
+    display: none;
+}
 .testi80 {
     background: none repeat scroll 0 0 #FFFFFF;
     clear: both;
