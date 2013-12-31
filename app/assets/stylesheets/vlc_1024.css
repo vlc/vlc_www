@@ -27,8 +27,11 @@
 .navi-menu {
 /*padding:10px*/
 }
-.common-input, common-inputbig {
-	width: 93%;
+.common-input {
+	width: 54%;
+}
+.common-inputbig {
+    width: 93%;
 }
 .responsive-slider-parallax .slider-control.right, .responsive-slider-parallax .slider-control.left {
 /*display:none !important*/
@@ -63,6 +66,27 @@ textarea.comntextarea{
     padding-bottom: 8%;
     padding-top: 2%;
 }
+
+    .thumbhover {
+        bottom: 33px;
+        left: 8px;
+    }
+    div.popupopen.reveal-modal {
+        left: 42%;
+        width: 67% !important;
+    }
+   .outdoorContact .cityaddress {
+        width:100%;
+    }
+    .projectContiner .headerTittle {
+        min-height: 0;
+    }
+    .headerSectionPart p {
+        font-size: 13px;
+    }
+
+
+
 }
 
 /* Mobile 480 to 530px */
@@ -264,6 +288,7 @@ h3.footerheadd, h3.footerheaddnew {
 .header-left {
 	width: 100% !important;
 	text-align: center;
+    float: left !important;
 }
 .header-right {
 	top: 0px !important;
@@ -446,7 +471,47 @@ h3.footerheadd, h3.footerheaddnew {
 }
  .fullheadersection .headerSectionPart {
  width:100%;
+
 }
+.navi-menu a{
+    padding: 15.2px 6px;
+
+}
+.common-input {
+    width: 51%;
+}
+.common-inputbig {
+    width: 93%;
+}
+.inputdiv .common-gray-button{
+    width: 82px;
+    font-size: 11px;
+}
+    .thumbhover {
+         bottom: 27px;
+    }
+    div.popupopen.reveal-modal {
+        left: 44%;
+        width: 77% !important;
+    }
+    .cityaddress{
+        width: 36%;
+    }
+
+    .contentHeaderSection p{
+        font-size: 12px;
+    }
+    .projectContiner .headerTittle {
+        min-height: 0;
+    }
+    .headerSectionPart p {
+        font-size: 13px;
+    }
+    .headerSectionPart img{
+         display:none;
+    }
+
+
 }
 
 
@@ -466,7 +531,7 @@ h3.footerheadd, h3.footerheaddnew {
     line-height: 19px;
 }
 .headerSectionPart p {
-    font-size: 14px;
+    font-size: 13px;
 }
 .contentheading {
     font-size: 22px;
@@ -503,7 +568,7 @@ div.popupopen.reveal-modal {
     width: 80%;
 }
 .thumbhover {
-    bottom: 27px;
+   /* bottom: 27px;*/
 }
 .ContentDetail {
     float: left;
@@ -515,7 +580,7 @@ div.popupopen.reveal-modal {
     margin-right: 1% !important;
 }
 .projectContiner .headerTittle {
-    min-height: 50px;
+    min-height: 0px;
 }
 .tab_type li {
     margin-right: 3px;
@@ -528,4 +593,13 @@ div.popupopen.reveal-modal {
 }
 .video-embed-wrapper iframe {
     max-width: 100%;
+}
+
+
+
+@media (min-width:360px) and (max-width:640px) {
+    .tab .tab_type li {
+        font-size: 13px;
+        margin-right: 11px;
+    }
 }

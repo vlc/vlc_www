@@ -148,7 +148,9 @@
 	width: 100%;
 }
 .contentheading {
-	font-size: 20px;
+	font-size: 18px;
+    line-height: 21px;
+    text-align: left;
 }
 .leftrightContainer {
 	width: 100%;
@@ -161,7 +163,7 @@
 	width: 100%;
 }
 .RightContentSection p {
-	font-size: 13px;
+	font-size: 12px;
 }
 .headerSection {
 	padding-bottom: 5%;
@@ -266,6 +268,11 @@ h3.footerheadd, h3.footerheaddnew {
 .breadcrumbs_menu li {
 	margin-top: 3px;
 }
+.rightnewstitle {
+    bottom: 32px;
+    margin-bottom: 10px;
+    height: 41px;
+}
 
 /*---------------balraj-----------------------*/
 .cityaddressright{
@@ -300,15 +307,60 @@ textarea.comntextarea{
 .inputdiv{
     text-align:center;
 }
+.contentHeaderSection p {
+    font-size: 12px;
 
-
-
+}
+.ullist li span {
+    font-size: 12px;
+}
+.sidebarmenuheading{
+    font-size: 16px;
+}
+.sidebarmenutypes a{
+    font-size: 12px;
+}
+.blacksmall p, .blacklarge p{
+    font-size: 14px;
+}
+.justify-text.careerJustify .pragraph{
+    font-size: 11px;
+}
+.pragraph{
+    font-size: 12px;
+}
+.projectBox.left, .projectBox.right{
+       height:auto !important;
+}
+.projectBox{
+          width:91%;
+}
+.UpperContentSection {
+    padding: 0 3%;
+    width: 92%;
+}
+.menuActive a {
+    color: #FF7800 !important;
+}
+.careerparagraph{
+    font-size: 12px;
+}
+.contentHeaderSection p.nojustify{
+    font-size: 11px;
+}
+.lastpara{
+    font-size: 11px;
+}
+.clientReview.tetimonialmiddle .testi40, .clientReview.tetimonialmiddle .testi80{
+            text-align: left;
+    font-size: 11px;
+}
 
 
 /*Ganesh */
 
 .inner_testimonial {
-    display: none;
+    display: block;
 }
 .inner_testimonial.inner_testimonial_mobile {
     display: block;
@@ -321,6 +373,106 @@ textarea.comntextarea{
     width: 82%;
     line-height: 15px;
 }
+.thumbhover{
+    bottom: 20px;
+    left: 8px;
+}
+div.popupopen.reveal-modal {
+    left: 93%;
+    width: 50%;
+}
+.ContentDetail {
+
+    width: 100%;
+}
+.Client{
+    width: 94%;
+}
+
+.right-menu-toggle {
+    display: block;
+}
+.sidebaright {
+    display: none;
+    position: absolute;
+    left: 4px;
+    width: 85%;
+    margin-top: -7px;
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+.sidebarmenu {
+    margin-top: 0;
+}
+
+.image-maps-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100% !important;
+}
+.headerImage .image-maps-wrapper img {
+    float: none;
+    height: auto !important;
+    margin: 0 auto;
+    max-width: 100% !important;
+    width: 320px !important;
+}
+.projectContiner .headerTittle {
+    min-height: inherit;
+}
+.leftrightContainer .projectContiner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.video-embed-wrapper {
+    clear: both;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.video-embed-wrapper iframe {
+    float: none;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 320px;
+}
+.pre_desktop_view {
+    display: none;
+}
+.pre_mobile_view {
+  display: block;
+}
+.sidebarmenuheading {
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.leftrightContainer .imagecontainer .headerImage.BorderNone {
+    clear: both;
+    float: left;
+    margin: 7px 0 !important;
+    text-align: center;
+    width: 100%;
+}
+.leftrightContainer .imagecontainer .headerImage.BorderNone img {
+    float: none;
+    width: auto;
+}
+.headerSectionPart img {
+    display: none; /* Removed bullet point in Mobile view to avoid alignemnt issue */
+}
+.tab_searchContainer .tab_search .tablist .ullist.utab {
+    width: 90%;
+}
+.tab .tab_type li {
+    font-size: 13px;
+}
+.site_map_boxes{
+    width:100%;
+}
+
 
 
 @media (min-width:320px) and (max-width:360px) {
@@ -334,6 +486,11 @@ textarea.comntextarea{
         width: 100%;
         height: 125px;
     }
+    .thumbhover{
+        bottom: 20px;
+        left: 8px;
+    }
+
 }
 
 @media (min-width:250px) and (max-width:320px) {
@@ -346,5 +503,9 @@ textarea.comntextarea{
         background: url(../assets/inside_banner_zenith_bg_320.jpg) no-repeat top center;
         width: 100%;
         height: 125px;
+    }
+    div.popupopen.reveal-modal {
+        left: 101%;
+        width: 54%;
     }
 }
