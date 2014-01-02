@@ -603,3 +603,14 @@ div.popupopen.reveal-modal {
         margin-right: 11px;
     }
 }
+@media (min-width:520px) and (max-width:620px) {
+    div.popupopen.reveal-modal {
+        left: 55%;
+        width: 70%;
+    }
+}
+@media (min-width:810px) and (max-width:950px) {
+    .thumbhover {
+        bottom: 30px;
+    }
+}

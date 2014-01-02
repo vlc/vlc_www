@@ -487,7 +487,7 @@ div.popupopen.reveal-modal {
         height: 125px;
     }
     .thumbhover{
-        bottom: 20px;
+        bottom: 29px;
         left: 8px;
     }
 
@@ -507,5 +507,9 @@ div.popupopen.reveal-modal {
     div.popupopen.reveal-modal {
         left: 101%;
         width: 54%;
+    }
+    .thumbhover{
+        bottom: 29px;
+        left: 8px;
     }
 }
