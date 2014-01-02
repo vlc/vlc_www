@@ -84,6 +84,9 @@ textarea.comntextarea{
     .headerSectionPart p {
         font-size: 13px;
     }
+    .ImageTitle{
+        width: 100%;
+    }
 
 
 
@@ -280,6 +283,10 @@ h3.footerheadd, h3.footerheaddnew {
 .tab_type li {
 	margin-top: 3px;
 }
+    .ImageTitle{
+        width: 100%;
+    }
+
 }
  @media (min-width: 531px) and (max-width: 750px) {
 .header-submenu-wrap {
@@ -434,6 +441,9 @@ h3.footerheadd, h3.footerheaddnew {
 .tab_type li {
 	margin-top: 3px;
 }
+     .ImageTitle{
+         width: 100%;
+     }
 
 }
 /***ranjan added 4th dec****/
@@ -510,6 +520,9 @@ h3.footerheadd, h3.footerheaddnew {
     .headerSectionPart img{
          display:none;
     }
+    .ImageTitle{
+        width: 100%;
+    }
 
 
 }
@@ -539,7 +552,7 @@ h3.footerheadd, h3.footerheaddnew {
 .innerbanner {
     background: url(../assets/inside_banner_bg_768.jpg) no-repeat top center;
     width: 100%;
-    height: 125px;
+   height: 125px;
 }
 .innerbannerZenith {
     background: url(../assets/inside_banner_zenith_bg_768.jpg) no-repeat top center;
@@ -602,11 +615,19 @@ div.popupopen.reveal-modal {
         font-size: 13px;
         margin-right: 11px;
     }
+    .cityaddress {
+        float: left;
+        width: 23%;
+    }
 }
 @media (min-width:520px) and (max-width:620px) {
     div.popupopen.reveal-modal {
         left: 55%;
         width: 70%;
+    }
+    .cityaddress {
+        float: left;
+        width: 23%;
     }
 }
 @media (min-width:810px) and (max-width:950px) {
