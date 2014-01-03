@@ -84,6 +84,10 @@ textarea.comntextarea{
     .headerSectionPart p {
         font-size: 13px;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
     .testimonial_right.clientReview .inner_testimonial{
     display:block;
 }
@@ -91,6 +95,10 @@ textarea.comntextarea{
     .ImageTitle{
         width: 100%;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
 
 
 
@@ -288,6 +296,10 @@ h3.footerheadd, h3.footerheaddnew {
 .tab_type li {
 	margin-top: 3px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
 .testimonial_right.clientReview .inner_testimonial{
     display:block;
 }
@@ -327,6 +339,10 @@ h3.footerheadd, h3.footerheaddnew {
             font-size: 12px;
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
 }
  @media (min-width: 531px) and (max-width: 750px) {
 .header-submenu-wrap {
@@ -522,6 +538,10 @@ h3.footerheadd, h3.footerheaddnew {
      .ImageTitle{
          width: 100%;
      }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
 
 }
 /***ranjan added 4th dec****/
@@ -598,6 +618,10 @@ h3.footerheadd, h3.footerheaddnew {
     .headerSectionPart img{
          display:none;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
     .pre_mobile_view {
         display: block;
     }
@@ -633,12 +657,20 @@ h3.footerheadd, h3.footerheaddnew {
     text-align: center;
     width: 100%;
 }
+<<<<<<< HEAD
     .ImageTitle{
         width: 100%;
     }
     .projectContiner .headerTittle {
             font-size: 13px;
         }
+=======
+
+    .ImageTitle{
+        width: 100%;
+    }
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
 
 
 }

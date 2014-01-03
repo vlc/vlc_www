@@ -135,7 +135,7 @@
 .responsive-slider-parallax .slides-container ul {
 	white-space: nowrap;
 }
-;
+
 .contentsection {
 	/*border: solid red 1px;*/
 	margin-right: 0;
@@ -477,6 +477,10 @@ div.popupopen.reveal-modal {
 .site_map_boxes{
     width:100%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e099264bcde2713a9f601d61bcc2bb476183f935
 .biggerparagraph{
     font-size: 12px;
 }
@@ -517,6 +521,7 @@ div.popupopen.reveal-modal {
     bottom: 32px;
     margin-bottom: 10px;
     height: 41px;
+}
 }
 
 @media (min-width:360px) and (max-width:420px) {
