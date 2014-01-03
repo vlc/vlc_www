@@ -2150,3 +2150,12 @@ a {
 p.emailtop{
     float:none;
 }
+.image-maps-wrapper{
+      width:100% !important;
+
+}
+/*.innerbanner img.InnerBnannerImages {
+    float: left;
+    height:auto !important;
+    width: 100%;
+} */

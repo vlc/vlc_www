@@ -421,7 +421,7 @@ div.popupopen.reveal-modal {
     height: auto !important;
     margin: 0 auto;
     max-width: 100% !important;
-    width: 320px !important;
+    /*width: 320px !important;*/
 }
 .projectContiner .headerTittle {
     min-height: inherit;
@@ -477,8 +477,18 @@ div.popupopen.reveal-modal {
 .site_map_boxes{
     width:100%;
 }
+<<<<<<< HEAD
 .biggerparagraph{
     font-size: 12px;
+=======
+.ImageTitle{
+    width: 100%;
+}
+.innerbanner img.InnerBnannerImages {
+    float: left;
+    height:auto !important;
+    width: 100%;
+>>>>>>> f9469ad30f4bbfbcb935512c3075165e3f0e3528
 }
 
 
@@ -514,7 +524,7 @@ div.popupopen.reveal-modal {
 }
 
 @media (min-width:250px) and (max-width:320px) {
-    .innerbanner {
+   .innerbanner {
         background: url(../assets/inside_banner_bg_320.jpg) no-repeat top center;
         width: 100%;
         height: 125px;
