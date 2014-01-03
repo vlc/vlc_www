@@ -135,9 +135,9 @@
 .responsive-slider-parallax .slides-container ul {
 	white-space: nowrap;
 }
-;
+
 .contentsection {
-	border: solid red 1px;
+	/*border: solid red 1px;*/
 	margin-right: 0;
 	width: 100% !important;
 }
@@ -485,6 +485,12 @@ div.popupopen.reveal-modal {
 .ImageTitle{
     width: 100%;
 }
+.htabpar{
+    top: 25px;
+}
+.buttons{
+     top: -7px;
+}
 .innerbanner img.InnerBnannerImages {
     float: left;
     height:auto !important;
@@ -512,6 +518,7 @@ div.popupopen.reveal-modal {
     bottom: 32px;
     margin-bottom: 10px;
     height: 41px;
+}
 }
 
 @media (min-width:360px) and (max-width:420px) {

@@ -2159,3 +2159,8 @@ p.emailtop{
     height:auto !important;
     width: 100%;
 } */
+
+.lastpara.review{
+    text-align: left;
+    width: 100%;
+}
