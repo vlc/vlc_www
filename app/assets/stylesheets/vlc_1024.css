@@ -322,12 +322,12 @@ h3.footerheadd, h3.footerheaddnew {
 .menuActive a {
     color: #FF7800 !important;
 }
-=======
+
     .ImageTitle{
         width: 100%;
     }
 
->>>>>>> f9469ad30f4bbfbcb935512c3075165e3f0e3528
+
 }
  @media (min-width: 531px) and (max-width: 750px) {
 .header-submenu-wrap {
@@ -519,11 +519,11 @@ h3.footerheadd, h3.footerheaddnew {
     color: #FF7800 !important;
 }
 
-=======
+
      .ImageTitle{
          width: 100%;
      }
->>>>>>> f9469ad30f4bbfbcb935512c3075165e3f0e3528
+
 
 }
 /***ranjan added 4th dec****/
@@ -636,11 +636,11 @@ h3.footerheadd, h3.footerheaddnew {
     text-align: center;
     width: 100%;
 }
-=======
+
     .ImageTitle{
         width: 100%;
     }
->>>>>>> f9469ad30f4bbfbcb935512c3075165e3f0e3528
+
 
 
 }
