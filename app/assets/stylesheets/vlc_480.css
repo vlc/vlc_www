@@ -135,7 +135,7 @@
 .responsive-slider-parallax .slides-container ul {
 	white-space: nowrap;
 }
-;
+
 .contentsection {
 	border: solid red 1px;
 	margin-right: 0;
@@ -512,6 +512,7 @@ div.popupopen.reveal-modal {
     bottom: 32px;
     margin-bottom: 10px;
     height: 41px;
+}
 }
 
 @media (min-width:360px) and (max-width:420px) {
