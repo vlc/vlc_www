@@ -24,7 +24,7 @@
 	background: none repeat scroll 0 0 #E89513;
 	color: #FFFFFF;
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom:0px;
 	padding: 1%;
 	text-align: center;
 	width: 98%;
@@ -179,7 +179,7 @@
 	margin-bottom: 7px;
 }
 .rightnewstitle {
-	bottom: 46px;
+	bottom: 36px;
 	left: -152px;
 }
 .inner_testimonial {
@@ -192,7 +192,9 @@
 }
 .plainbgright {
 	padding-bottom: 0;
+        background: none repeat scroll 0 0 #EBEAE2;
 }
+
 .rightnewstitle {
 	right: 0px;
 	left: 0px;
@@ -268,11 +270,7 @@ h3.footerheadd, h3.footerheaddnew {
 .breadcrumbs_menu li {
 	margin-top: 3px;
 }
-.rightnewstitle {
-    bottom: 32px;
-    margin-bottom: 10px;
-    height: 41px;
-}
+
 
 /*---------------balraj-----------------------*/
 .cityaddressright{
@@ -319,12 +317,18 @@ textarea.comntextarea{
 }
 .sidebarmenutypes a{
     font-size: 12px;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+.sidebarmenutypes a:hover, .activesidebarmenu a{
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 .blacksmall p, .blacklarge p{
     font-size: 14px;
 }
 .justify-text.careerJustify .pragraph{
-    font-size: 11px;
+    font-size: 12px;
 }
 .pragraph{
     font-size: 12px;
@@ -346,7 +350,7 @@ textarea.comntextarea{
     font-size: 12px;
 }
 .contentHeaderSection p.nojustify{
-    font-size: 11px;
+    font-size: 12px;
 }
 .lastpara{
     font-size: 11px;
@@ -355,6 +359,7 @@ textarea.comntextarea{
             text-align: left;
     font-size: 11px;
 }
+
 
 
 /*Ganesh */
@@ -472,6 +477,9 @@ div.popupopen.reveal-modal {
 .site_map_boxes{
     width:100%;
 }
+.biggerparagraph{
+    font-size: 12px;
+}
 
 
 
@@ -490,7 +498,19 @@ div.popupopen.reveal-modal {
         bottom: 29px;
         left: 8px;
     }
+    .rightnewstitle {
+    bottom: 32px;
+    margin-bottom: 10px;
+    height: 41px;
+}
 
+@media (min-width:360px) and (max-width:420px) {
+    .rightnewstitle {
+        bottom: 36px;
+    }
+    .InnerPlainbgRight {
+        top: -52px;
+    }
 }
 
 @media (min-width:250px) and (max-width:320px) {
@@ -512,4 +532,17 @@ div.popupopen.reveal-modal {
         bottom: 29px;
         left: 8px;
     }
+    .rightnewstitle {
+        bottom: 32px;
+        margin-bottom: 10px;
+        height: 41px;
+    }
+    
 }
+@media (min-width:300px) and (max-width:340px) {
+    .gray-newsletter {
+        margin: 5px 0 0 -4px;
+    }
+}
+
+

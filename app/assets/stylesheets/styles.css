@@ -1208,6 +1208,7 @@ textarea.comntextarea {
 }
 .navi-menu.homemenu a {
     padding: 13px 8px;
+    width:96%;
 }
 .sidebarmenu {
     border-top: 1px solid #EBEBE2;
