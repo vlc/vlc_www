@@ -137,7 +137,7 @@
 }
 ;
 .contentsection {
-	border: solid red 1px;
+	/*border: solid red 1px;*/
 	margin-right: 0;
 	width: 100% !important;
 }
@@ -477,18 +477,23 @@ div.popupopen.reveal-modal {
 .site_map_boxes{
     width:100%;
 }
-<<<<<<< HEAD
 .biggerparagraph{
     font-size: 12px;
-=======
+}
+
 .ImageTitle{
     width: 100%;
+}
+.htabpar{
+    top: 25px;
+}
+.buttons{
+     top: -7px;
 }
 .innerbanner img.InnerBnannerImages {
     float: left;
     height:auto !important;
     width: 100%;
->>>>>>> f9469ad30f4bbfbcb935512c3075165e3f0e3528
 }
 
 
