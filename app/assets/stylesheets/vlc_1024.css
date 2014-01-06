@@ -922,6 +922,7 @@ div.popupopen.reveal-modal {
 
     
     }
+}
 
 /*** for tablet landscape *******/
 @media (min-width:900px) and (max-width:1024px) {
@@ -937,6 +938,7 @@ div.popupopen.reveal-modal {
         max-width:63% !important;
     }
 }
+
 
 /*** srividya added ***********/
 
