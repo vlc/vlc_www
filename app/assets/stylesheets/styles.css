@@ -767,14 +767,14 @@ textarea.comntextarea {
 
 /* added newly for inner page **/
 .innerbanner {
-    background: url(../assets/inside_banner_bg.jpg) no-repeat top center;
+   /* background: url(../assets/inside_banner_bg.jpg) no-repeat top center;
     width: 100%;
-    height: 125px;
+    height: 125px;  */
 }
 .innerbannerZenith {
-    background: url(../assets/inside_banner_bg02.jpg) no-repeat top center;
+    /*background: url(../assets/inside_banner_bg02.jpg) no-repeat top center;
     width: 100%;
-    height: 125px;
+    height: 125px;  */
 }
 
 .contentfulll {
@@ -2164,3 +2164,57 @@ p.emailtop{
     text-align: left;
     width: 100%;
 }
+/****inner banner styles****/
+
+.innerbanner, .innerbannerZenith {
+     background: url(../assets/new_inside_banner_bg.jpg) no-repeat top center;
+     width: 100%;
+     height: 125px;
+    float:left;
+}
+.innerbanner img{
+    float:left;
+    width:100%;
+}
+.innerTextDiv{
+    float:left;
+    width:50%;
+    position:relative;
+}
+.innerTextDivRow {
+    background: none repeat scroll 0 0 #101113;
+    clear: both;
+    color: #FFFFFF;
+    float: left;
+    font-family: arial;
+    font-size: 17px;
+    margin-bottom: 2px;
+    padding: 8px 4px;
+}
+.InnerBoxContainer {
+    float:left;
+    width:100%;
+    margin-top: 30px;
+}
+.InnerzenithLogo {
+    float: right;
+    margin-top: 38px;
+
+}
+.InnerzenithLogo img{
+    float:left;
+    width:100%;
+    position: relative;
+}
+.innerImageBanner{
+    float:left;
+    width:100%;
+}
+.innerImageBanner .innerTextDiv{
+               width:100%;
+}
+.innerImageBanner.zenithInnerImageBanner .innerTextDiv{
+    width: 75%;
+}
+
+/****inner banner styles****/

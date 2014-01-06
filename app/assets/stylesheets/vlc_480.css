@@ -179,8 +179,8 @@
 	margin-bottom: 7px;
 }
 .rightnewstitle {
-	bottom: 36px;
-	left: -152px;
+    bottom: 40px;
+    left: -152px;
 }
 .inner_testimonial {
 	padding-top: 4%;
@@ -379,11 +379,11 @@ textarea.comntextarea{
     line-height: 15px;
 }
 .thumbhover{
-    bottom: 20px;
+    bottom: 28px;
     left: 8px;
 }
 div.popupopen.reveal-modal {
-    left: 93%;
+    left: 80%;
     width: 50%;
 }
 .ContentDetail {
@@ -492,58 +492,42 @@ div.popupopen.reveal-modal {
      top: -7px;
 }
 .innerbanner img.InnerBnannerImages {
-    float: left;
+   /* float: left;
     height:auto !important;
-    width: 100%;
+    width: 100%;*/
+}
+.projectDetail p{
+    font-size: 12px;
+}
+.innerTextDivRow{
+    font-size: 12px;
+    padding: 6px 4px;
+}
+.InnerzenithLogo{
+    width: 33%;
+}
+.innerImageBanner.zenithInnerImageBanner .InnerzenithLogo{
+    width: 30%;
+}
+.innerImageBanner.zenithInnerImageBanner .innerTextDiv{
+    width: 67%;
+}
+.testi80, .testi60, .testi40{
+    font-size: 11px;
 }
 
 
 
 @media (min-width:320px) and (max-width:360px) {
     .innerbanner {
-        background: url(../assets/inside_banner_bg_360.jpg) no-repeat top center;
+      /*  background: url(../assets/inside_banner_bg_360.jpg) no-repeat top center;
         width: 100%;
-        height: 125px;
+        height: 125px;*/
     }
     .innerbannerZenith {
-        background: url(../assets/inside_banner_zenith_bg_360.jpg) no-repeat top center;
+       /* background: url(../assets/inside_banner_zenith_bg_360.jpg) no-repeat top center;
         width: 100%;
-        height: 125px;
-    }
-    .thumbhover{
-        bottom: 29px;
-        left: 8px;
-    }
-    .rightnewstitle {
-    bottom: 32px;
-    margin-bottom: 10px;
-    height: 41px;
-}
-}
-
-@media (min-width:360px) and (max-width:420px) {
-    .rightnewstitle {
-        bottom: 36px;
-    }
-    .InnerPlainbgRight {
-        top: -52px;
-    }
-}
-
-@media (min-width:250px) and (max-width:320px) {
-   .innerbanner {
-        background: url(../assets/inside_banner_bg_320.jpg) no-repeat top center;
-        width: 100%;
-        height: 125px;
-    }
-    .innerbannerZenith {
-        background: url(../assets/inside_banner_zenith_bg_320.jpg) no-repeat top center;
-        width: 100%;
-        height: 125px;
-    }
-    div.popupopen.reveal-modal {
-        left: 101%;
-        width: 54%;
+        height: 125px;*/
     }
     .thumbhover{
         bottom: 29px;
@@ -554,12 +538,58 @@ div.popupopen.reveal-modal {
         margin-bottom: 10px;
         height: 41px;
     }
+    .InnerPlainbgRight {
+
+        top: -49px;
+    }
+}
+
+@media (min-width:360px) and (max-width:420px) {
+    .rightnewstitle {
+        bottom: 36px;
+    }
+    .InnerPlainbgRight {
+        top: -52px;
+    }
+    div.popupopen.reveal-modal {
+        left: 91%;
+
+    }
+}
+
+@media (min-width:250px) and (max-width:320px) {
+   .innerbanner {
+       /* background: url(../assets/inside_banner_bg_320.jpg) no-repeat top center;
+        width: 100%;
+        height: 125px;   */
+    }
+    .innerbannerZenith {
+      /*  background: url(../assets/inside_banner_zenith_bg_320.jpg) no-repeat top center;
+        width: 100%;
+        height: 125px;  */
+    }
+    div.popupopen.reveal-modal {
+        left: 101%;
+        width: 54%;
+    }
+    .rightnewstitle {
+        bottom: 26px;
+        height: 41px;
+    }
     
 }
 @media (min-width:300px) and (max-width:340px) {
     .gray-newsletter {
         margin: 5px 0 0 -4px;
     }
-}
 
+    .groupsub2
+    {
+        top:42% !important;
+    }
+    .groupsub4
+    {
+        top:65% !important;
+    }
+}
 

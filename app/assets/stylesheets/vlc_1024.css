@@ -10,6 +10,12 @@
 	white-space: normal !important;
 }
 
+.tab_type li {
+    font-size: 14px;
+    margin-right: 1%;
+    padding: 1%;
+}
+
 @media (min-width:751px) and (max-width:1080px) {
 .header-submenu-wrap {
 	display: none !important;
@@ -43,10 +49,10 @@
 	padding-bottom: 5%;
 }
 .tab_type li {
-    margin-top: 3px;
+ /*   margin-top: 3px;
     font-size: 11px;
     margin-right: 1%;
-    padding: 1.2%;
+    padding: 1.2%;*/
 }
 .imagecontainer .headerImage {
 	margin-right: 2.9% !important;
@@ -288,7 +294,7 @@ h3.footerheadd, h3.footerheaddnew {
 	width: 97%;
 }
 .tab_type li {
-	margin-top: 3px;
+	/*margin-top: 3px;*/
 }
 
 .testimonial_right.clientReview .inner_testimonial{
@@ -483,7 +489,7 @@ h3.footerheadd, h3.footerheaddnew {
 	margin-right: 2.9% !important;
 }
 .tab_type li {
-	margin-top: 3px;
+	/*margin-top: 3px;*/
 }
 
 .testimonial_right.clientReview .inner_testimonial{
@@ -640,16 +646,45 @@ h3.footerheadd, h3.footerheaddnew {
     width: 100%;
 }
 
-    .ImageTitle{
-        width: 100%;
+.ImageTitle{
+    width: 100%;
+}
+.projectContiner .headerTittle {
+        font-size: 13px;
     }
-    .projectContiner .headerTittle {
-            font-size: 13px;
-        }
 
 
-    .ImageTitle{
-        width: 100%;
+.ImageTitle{
+    width: 100%;
+}
+
+    .inner_testimonial{
+        padding-bottom: 3%;
+        padding-top: 2%;
+    }
+    .testi80 {
+        width: 48%;
+    }
+    .testi60 {
+        width: 41%;
+    }
+    .testi40 {
+        width: 38%;
+    }
+    .sidebarmenu {
+        margin-bottom: 10px;
+
+    }
+    .sidebaright{
+        width:66% !important;
+    }
+    .plainbgright{
+        background: none repeat scroll 0 0 #EBEAE2;
+        padding-bottom: 0;
+    }
+    .rightnewstitle {
+        bottom: 49px;
+
     }
 
 
@@ -680,14 +715,14 @@ h3.footerheadd, h3.footerheaddnew {
     font-size: 22px;
 }
 .innerbanner {
-    background: url(../assets/inside_banner_bg_768.jpg) no-repeat top center;
+  /*  background: url(../assets/inside_banner_bg_768.jpg) no-repeat top center;
     width: 100%;
-   height: 125px;
+   height: 125px;*/
 }
 .innerbannerZenith {
-    background: url(../assets/inside_banner_zenith_bg_768.jpg) no-repeat top center;
+  /*  background: url(../assets/inside_banner_zenith_bg_768.jpg) no-repeat top center;
     width: 100%;
-    height: 125px;
+    height: 125px; */
 }
 
 .inner_testimonial {
@@ -726,7 +761,9 @@ div.popupopen.reveal-modal {
     min-height: 0px;
 }
 .tab_type li {
-    margin-right: 3px;
+   /* font-size: 14px;
+    margin-right: 2px;
+    padding: 1% 2%;*/
 }
 .projectBoxContainer .projectBox {
     margin-right: 1%;
@@ -741,10 +778,6 @@ div.popupopen.reveal-modal {
 
 
 @media (min-width:360px) and (max-width:640px) {
-    .tab .tab_type li {
-        font-size: 11px;
-        margin-right: 6px;
-    }
     .cityaddress {
         float: left;
         width: 23%;
@@ -752,13 +785,18 @@ div.popupopen.reveal-modal {
 }
 @media (min-width:520px) and (max-width:620px) {
     div.popupopen.reveal-modal {
-        left: 55%;
+        left: 61%;
         width: 70%;
     }
     .cityaddress {
         float: left;
         width: 23%;
     }
+    .ContentDetail {
+
+        width: 100%;
+    }
+
     
 }
 @media (min-width:810px) and (max-width:950px) {
@@ -789,10 +827,7 @@ div.popupopen.reveal-modal {
 }
 
 @media (min-width:550px) and (max-width:610px) {
-        .tab .tab_type li {
-            font-size: 12px;
-            margin-right:3px;
-        }
+
         .site_map_boxes .headerSectionPart img {
             display:none;
         }
@@ -802,5 +837,104 @@ div.popupopen.reveal-modal {
         .projectContiner .headerTittle {
             font-size: 12px;
         }
+        .thumbhover {
+            bottom: 28px;
+            left: 8px;
+        }
 }
+
+@media (min-width:548px) and (max-width:568px) {
+    .tab_type li {
+        font-size: 12px;
+        margin-right: 2px;
+        padding: 3px;
+    }
+    .InnerzenithLogo{
+        width: 25%;
+    }
+    .innerImageBanner.zenithInnerImageBanner .InnerzenithLogo{
+        width: 30%;
+    }
+    .innerImageBanner.zenithInnerImageBanner .innerTextDiv{
+        width: 68%;
+    }
+    .innerImageBanner.zenithInnerImageBanner .innerTextDivRow{
+        font-size: 14px;
+    }
+    .InnerPlainbgRight {
+        padding-bottom: 0;
+        top: -74px;
+    }
+
+}
+@media (min-width:580px) and (max-width:605px) {
+    .tab_type li {
+        font-size: 13px;
+        margin-right: 4px;
+        padding: 3px;
+    }
+    .InnerzenithLogo{
+        width: 25%;
+    }
+    .innerImageBanner.zenithInnerImageBanner .InnerzenithLogo{
+        width: 30%;
+    }
+    .innerImageBanner.zenithInnerImageBanner .innerTextDiv{
+        width: 68%;
+    }
+    .innerImageBanner.zenithInnerImageBanner .innerTextDivRow{
+        font-size: 15px;
+    }
+    .InnerPlainbgRight {
+        padding-bottom: 0;
+        top: -74px;
+    }
+
+
+}
+
+/*** srividya added ***********/
+/*** for tablet porttrait *******/
+@media (min-width:730px) and (max-width:800px) {
+    .img-html5 {
+        display: block;
+        position: absolute !important;
+        left: 48% !important;
+        top: 33% !important;
+        white-space: normal !important;
+    }
+    .responsive-slider-parallax .slides-container ul li .slide-body .caption.img-html5 img
+    {
+        max-width:48% !important;
+    }
+
+    .thumbhover {
+        bottom: 37px;
+    }
+    .tab_type li {
+        font-size: 15px;
+        margin-right: 1%;
+        padding: 1% 1.5%;
+    }
+}
+
+/*** for tablet landscape *******/
+@media (min-width:900px) and (max-width:1024px) {
+    .img-html5 {
+        display: block;
+        position: absolute !important;
+        left:66% !important;
+        top: 51% !important;
+        white-space: normal !important;
+    }
+    .responsive-slider-parallax .slides-container ul li .slide-body .caption.img-html5 img
+    {
+        max-width:63% !important;
+    }
+}
+
+/*** srividya added ***********/
+
+
+
 
