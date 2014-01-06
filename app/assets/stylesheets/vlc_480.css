@@ -515,8 +515,19 @@ div.popupopen.reveal-modal {
 .testi80, .testi60, .testi40{
     font-size: 11px;
 }
+/***customer testimonial**/
+.inner_testimonial.customerTestimonial{
+    display:none;
+}
+.whitetestimonialContainer{
 
+    display:block;
+}
+.whitetestimonialContainer .imageright{
+    clear:both;
+}
 
+/***customer testimonial**/
 
 @media (min-width:320px) and (max-width:360px) {
     .innerbanner {
