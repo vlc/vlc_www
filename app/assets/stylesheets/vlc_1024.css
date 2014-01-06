@@ -740,7 +740,7 @@ h3.footerheadd, h3.footerheaddnew {
     line-height: 15px;
 }
 .greyBoxTextArea {
-    text-justify: left;
+    text-align: left;
 }
 div.popupopen.reveal-modal {
     width: 80%;
