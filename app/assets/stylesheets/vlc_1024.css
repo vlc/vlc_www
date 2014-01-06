@@ -841,6 +841,7 @@ div.popupopen.reveal-modal {
             bottom: 28px;
             left: 8px;
         }
+        
 }
 
 @media (min-width:548px) and (max-width:568px) {
@@ -861,10 +862,16 @@ div.popupopen.reveal-modal {
     .innerImageBanner.zenithInnerImageBanner .innerTextDivRow{
         font-size: 14px;
     }
-    .InnerPlainbgRight {
+    .InnerPlainbgRight {    
         padding-bottom: 0;
         top: -74px;
     }
+    .pre_desktop_view {
+            display: none;
+        }
+        .pre_mobile_view {
+            display: block;
+        }
 
 }
 @media (min-width:580px) and (max-width:605px) {
@@ -889,6 +896,12 @@ div.popupopen.reveal-modal {
         padding-bottom: 0;
         top: -74px;
     }
+    .pre_desktop_view {
+            display: none;
+        }
+        .pre_mobile_view {
+            display: block;
+        }
 
 
 }
