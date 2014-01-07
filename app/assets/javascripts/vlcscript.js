@@ -117,6 +117,28 @@ $('.submenu-box').hover(function(){
         $('.right-menu-toggle a').addClass('closed-view');
     }
 
+
+
+
+    //tab on project pop up page
+
+    $(".headerImage.projectSelect").click(function(){
+
+			   $(this).parents(".imagecontainer").find(".headerImage.projectSelect").removeClass("selected_project");
+
+			   $(this).addClass("selected_project");
+
+				var idpass = $(this).attr("rel");
+				console.log(idpass);
+
+			   $('.projectInformation').find(".projectPartConatiner").fadeOut(0);
+
+			   $('.projectInformation').find("#" + idpass ).fadeIn('slow');
+
+     });
+
+
+
 });	
 
 

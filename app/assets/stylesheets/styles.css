@@ -2262,3 +2262,7 @@ p.emailtop{
     width:100%;
     float:left;
 }
+
+.headerImage.projectSelect.selected_project{
+	border: 8px solid #FF7800;
+}
