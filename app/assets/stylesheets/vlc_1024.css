@@ -873,6 +873,14 @@ div.popupopen.reveal-modal {
         display: block;
     }
 
+    .projectContiner .headerTittle {
+        font-size: 11px;
+    }
+    .projectContiner .headerTittle span {
+        font-size: 12px;
+        
+    }
+
 }
 @media (min-width:580px) and (max-width:605px) {
     .tab_type li {
