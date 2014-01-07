@@ -2237,3 +2237,28 @@ p.emailtop{
 .ulist.subulistsitemap li span{
     color:#333333;
 }
+
+/***7th jan***/
+.sliderimages{
+    float:left;
+    width:100%;
+    padding-top: 15px;
+}
+
+.sliderimageRow{
+    float:left;
+    width:24%;
+    margin-right: 8px;
+
+}
+.sliderimageRow.lastslider{
+	margin-right:0px;
+}
+.sliderimageRow img{
+    float:left;
+    width:100%;
+}
+.Innerpopupopen iframe{
+    width:100%;
+    float:left;
+}
