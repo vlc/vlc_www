@@ -13,7 +13,10 @@
 .tab_type li {
     font-size: 14px;
     margin-right: 1%;
-    padding: 1%;
+    padding: 1% 0.9%;
+}
+.testi40{
+    width: 55%;
 }
 
 @media (min-width:751px) and (max-width:1080px) {
@@ -669,7 +672,7 @@
         width: 41%;
     }
     .testi40 {
-        width: 38%;
+        width: 49%;
     }
     .sidebarmenu {
         margin-bottom: 10px;
@@ -848,7 +851,7 @@ div.popupopen.reveal-modal {
     .tab_type li {
         font-size: 12px;
         margin-right: 2px;
-        padding: 3px;
+        padding: 2.8px;
     }
     .InnerzenithLogo{
         width: 25%;
@@ -873,12 +876,32 @@ div.popupopen.reveal-modal {
         display: block;
     }
 
+    .projectContiner .headerTittle {
+        font-size: 11px;
+    }
+    .projectContiner .headerTittle span {
+        font-size: 12px;
+        
+    }
+    .testimonial_right.clientReview .inner_testimonial {
+        display: none;
+    }
+    .whitetestimonialContainer {
+        display: block;
+    }
+    .imageright{
+        clear:both;
+    }
+    .testi80 {
+       padding-right: 5px;
+     }
+
 }
 @media (min-width:580px) and (max-width:605px) {
     .tab_type li {
-        font-size: 13px;
+        font-size: 12px;
         margin-right: 4px;
-        padding: 3px;
+        padding: 5px;
     }
     .InnerzenithLogo{
         width: 25%;
@@ -902,6 +925,18 @@ div.popupopen.reveal-modal {
     .pre_mobile_view {
         display: block;
     }
+    .testimonial_right.clientReview .inner_testimonial {
+        display: none;
+    }
+    .whitetestimonialContainer {
+        display: block;
+    }
+    .imageright{
+        clear:both;
+    }
+    .testi80 {
+       padding-right: 5px;
+     }
 
 
 }
@@ -925,9 +960,9 @@ div.popupopen.reveal-modal {
         bottom: 37px;
     }
     .tab_type li {
-        font-size: 15px;
+        font-size: 14px;
         margin-right: 1%;
-        padding: 1% 1.5%;
+        padding: 1% 1.6%;
     }
 
     .banner3new
