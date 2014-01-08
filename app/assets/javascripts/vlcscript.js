@@ -128,10 +128,18 @@ $('.submenu-box').hover(function(){
 
 			   $(this).addClass("selected_project");
 
-				var idpass = $(this).attr("rel");
-				console.log(idpass);
+				var idpass = $(this).attr("class");
+                                 
 
-			   $('.projectInformation').find(".projectPartConatiner").fadeOut(0);
+                                 idpass = idpass.replace('headerImage projectSelect','');
+                                 
+                                  idpass = idpass.replace(' selected_project','');
+
+                                   idpass = idpass.trim();
+                                   
+				//console.log(idpass);
+                               
+                         $('.projectInformation').find(".projectPartConatiner").fadeOut(0);
 
 			   $('.projectInformation').find("#" + idpass ).fadeIn('slow');
 
