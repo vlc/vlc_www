@@ -344,7 +344,7 @@ textarea.comntextarea{
     width: 92%;
 }
 .menuActive a {
-    color: #FF7800 !important;
+    color: #EC8B00 !important;
 }
 .careerparagraph{
     font-size: 12px;
@@ -533,7 +533,7 @@ div.popupopen.reveal-modal {
    width:100%;
 }
 .navi-menu.homemenu.homeactive a{
-    background: none repeat scroll 0 0 #FF7800;
+    background: none repeat scroll 0 0 #EC8B00;
 }
 
 /***customer testimonial**/

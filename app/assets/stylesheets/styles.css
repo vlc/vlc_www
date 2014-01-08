@@ -53,7 +53,7 @@ body {
     overflow: hidden;
 }
 a {
-    color: #FF7800;
+    color: #EC8B00;
 }
 /*@font-face{
 	font-family: 'Liberation Sans Regular';
@@ -92,9 +92,9 @@ a {
     font-style: normal;
 }
 @font-face {
-    font-family: 'Helvetica Narrow';
+    font-family: 'Helvetica';
     src: url('../fonts/Helvetica_Narrow/5342086068.eot');
-    src: local('Helvetica Narrow'), url('../fonts/Helvetica_Narrow/5342086068.ttf') format('truetype'),  url('../fonts/Helvetica_Narrow/5342086068.woff') format('woff'),  url('../fonts/Helvetica_Narrow/5342086068.svg') format('svg');
+    src: local('Helvetica'), url('../fonts/Helvetica_Narrow/5342086068.ttf') format('truetype'),  url('../fonts/Helvetica_Narrow/5342086068.woff') format('woff'),  url('../fonts/Helvetica_Narrow/5342086068.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -260,7 +260,7 @@ body #fadelayer {
     width: 100%;
 }
 .content-top {
-    color: #FF7800;
+    color: #EC8B00;
     font-family: 'Helvetica';
     font-size: 26px;
     line-height: 33px;
@@ -337,7 +337,7 @@ body #fadelayer {
 }
 .whats-orange {
     font-size: 14px;
-    background: #ff7800;
+    background: #EC8B00;
     padding: 3px 7px;
     color: #fff;
     text-decoration: none;
@@ -418,7 +418,7 @@ body #fadelayer {
 .newssubtitle {
     font-family: 'Liberation Sans Narrow';
     font-size: 17px;
-    color: #ff7800;
+    color: #EC8B00;
 }
 .newssubtitle {
     font-family: 'Liberation Sans Narrow';
@@ -463,7 +463,7 @@ body #fadelayer {
     padding-top: 50px;/*margin-right:1%;*/
 }
 h3.footerheadd {
-    color: #FF7800;
+    color: #EC8B00;
     font-family: 'Helvetica';
     font-size: 16px;
     opacity: 0.7;
@@ -479,10 +479,10 @@ h3.footerheadd {
     -khtml-opacity: 0.7;
 }
 h3.footerheadd a:hover {
-    color: #ff7800;
+    color: #EC8B00;
 }
 h3.footerheaddnew {
-    color: #ff7800;
+    color: #EC8B00;
     font-family: 'Helvetica';
     padding-top: 0px;
     padding-bottom: 20px;
@@ -528,12 +528,13 @@ h3.legalhead {
     width: 100px;
 }
 .common-gray-button:hover {
-    background: #ff7800;
+    background: #EC8B00;
     opacity: 0.7;
     color: #FFF;
 }
 .gray-newsletter {
-    margin: 0 0 0 -4px;
+   /* margin: 0 0 0 -4px;*/
+   margin:0px;
 }
 .common-input {
     background: #0e0e0e;
@@ -654,7 +655,7 @@ textarea.comntextarea {
     color: #999999;
 }
 .foote-wrapper a:hover {
-    color: #FF7800;
+    color: #EC8B00;
     opacity: 0.7;
 }
 .alignimg:hover, common-gray-button:hover {
@@ -1006,7 +1007,7 @@ textarea.comntextarea {
     margin-bottom: 2px;
 }
 .NewsSubHeading {
-    color: #ff7800;
+    color: #EC8B00;
     clear: both;
     font-size: 13px;
     font-family: Arial;
@@ -1049,7 +1050,7 @@ textarea.comntextarea {
     line-height: 21px;
 }
 .breadcrumbs_menu li a:hover {
-    color: #ff7800;
+    color: #EC8B00;
 }
 .breadcrumbs_menu li strong {
     background: none repeat scroll 0 0 #EBEAE2;
@@ -1103,14 +1104,14 @@ textarea.comntextarea {
     font-size: 14px;
 }
 .contentheading {
-    color: #FF7800;
+    color: #EC8B00;
     font-family: 'Helvetica';
     font-size: 25px;
     font-weight: normal;
     line-height: 33px;
 }
 .subcontentheading {
-    color: #FF7800;
+    color: #EC8B00;
     font-family: 'Helvetica';
     font-size: 19px;
     line-height: 27px;
@@ -1204,7 +1205,7 @@ textarea.comntextarea {
     margin: 10px 0;
 }
 .navi-menu.homemenu {
-    background: none repeat scroll 0 0 #FF7800;
+    background: none repeat scroll 0 0 #EC8B00;
 }
 .navi-menu.homemenu a {
     padding: 13px 8px;
@@ -1248,7 +1249,7 @@ textarea.comntextarea {
 }
 .sidebarmenutypes a:hover, .activesidebarmenu a {
     background: none repeat scroll 0 0 #333333;
-    border-left: 5px solid #FF7800;
+    border-left: 5px solid #EC8B00;
     color: #FFFFFF;
     padding: 3% 0 3% 5%;
     width: 93.2%;
@@ -1402,14 +1403,14 @@ textarea.comntextarea {
     text-decoration: none;
 }
 .Clientname a:hover {
-    color: #FF7800;
+    color: #EC8B00;
     text-decoration: underline;
 }
 .projectInformation .headerTittle {
     font-size: 20px;
     width: 100%;
     padding: 2% 0 1%;
-    color: #FF7800;
+    color: #EC8B00;
     float: left;
     border-bottom: 1px solid #EBEBE2;
     font-family: 'Helvetica';
@@ -1493,7 +1494,7 @@ textarea.comntextarea {
     color: #666666;
 }
 .pragraph p a:hover {
-    color: #FF7800;
+    color: #EC8B00;
     text-decoration: none;
 }
 .ImageTitle {
@@ -1557,7 +1558,7 @@ textarea.comntextarea {
     width: 94%;
 }
 .tab_type li:hover, .tab_type li.selected_tab {
-    background: none repeat scroll 0 0 #FF7800;
+    background: none repeat scroll 0 0 #EC8B00;
 }
 .tab_search {
     float: left;
@@ -1649,7 +1650,7 @@ textarea.comntextarea {
     border-left: 5px solid #E1DFD3;
 }
 .subSideMenu a:hover {
-    color: #FF7800;
+    color: #EC8B00;
     background: #444444;
 }
 /*****balraj***/
@@ -1674,7 +1675,7 @@ textarea.comntextarea {
     margin-left:2px;
 }
 .slidebarcontact p a:hover{
-    color:#FF7800;
+    color:#EC8B00;
     text-decoration: none;;
 }
 .addressdivcity{
@@ -1763,7 +1764,7 @@ textarea.comntextarea {
     -moz-text-decoration-color: -moz-use-text-color;
     -moz-text-decoration-line: none;
     -moz-text-decoration-style: solid;
-    color: #FF7800;
+    color: #EC8B00;
     cursor:pointer;
 }
 .orwidth{
@@ -1788,7 +1789,7 @@ textarea.comntextarea {
     z-index: 9999;
 }
 .menuActive{
-    background: none repeat scroll 0 0 #FF7800;
+    background: none repeat scroll 0 0 #EC8B00;
 
 }
 .menuActive a{
@@ -1797,7 +1798,7 @@ textarea.comntextarea {
 /*****12th dec***/
 .activesubSidemenu a{
     background: none repeat scroll 0 0 #444444;
-    color:#FF7800;
+    color:#EC8B00;
 }
 .downloadBrochure {
     background: none repeat scroll 0 0 #E1DFD3;
@@ -1868,7 +1869,7 @@ textarea.comntextarea {
     color:#666666;
 }
 .anchorclass:hover{
-    color:#FF7800;
+    color:#EC8B00;
     text-decoration:none;
 
 }
@@ -1950,7 +1951,7 @@ textarea.comntextarea {
     margin-right: 0;
 }
 .ImageTitle > span {
-    color: #FF7800;
+    color: #EC8B00;
 }
 .projectBoxContainer{
     float:left;
@@ -1998,7 +1999,7 @@ p.nojustify{
     color:#333333;
 }
 .site_map_boxes .headerSectionPart p a:hover, .site_map_boxes .contentHeaderSection .ullist li a:hover{
-    color:#FF7800;
+    color:#EC8B00;
 
 }
 .site_map_boxes .contentHeaderSection{
@@ -2024,7 +2025,7 @@ p.nojustify{
     margin-bottom: 20px;
 }
 label.error {
-    color: #FF7800;
+    color: #EC8B00;
     float:left;
 }
 .contentbottomfull a, .contentbottomfull a .moduleheading {
@@ -2041,7 +2042,7 @@ label.error {
 }
 
 .a-link {
-    color: #FF7800;
+    color: #EC8B00;
     text-decoration: underline;
 }
 
@@ -2050,7 +2051,7 @@ label.error {
     text-decoration: none;
 }
 .greyBoxTextArea .greyBoxContact a {
-    color: #FF7800;
+    color: #EC8B00;
     text-decoration: underline;
 }
 .greyBoxTextArea .greyBoxContact a:hover {
@@ -2264,5 +2265,5 @@ p.emailtop{
 }
 
 .headerImage.projectSelect.selected_project{
-	border: 8px solid #FF7800;
+	border: 8px solid #EC8B00;
 }
