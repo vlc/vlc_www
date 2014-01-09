@@ -192,7 +192,7 @@ a {
 }
 .navi-menu a {
     font-size: 14px;
-    font-family: Helvetica;
+    font-family: Arial;
     color: #333333;
     padding: 15.2px 12px;
     float: left;
@@ -1108,7 +1108,7 @@ textarea.comntextarea {
     font-family: 'Helvetica';
     font-size: 25px;
     font-weight: normal;
-    line-height: 33px;
+    line-height:26px;
 }
 .subcontentheading {
     color: #EC8B00;
@@ -1175,7 +1175,7 @@ textarea.comntextarea {
 .contentHeaderSection p {
     font-size: 13px;
     line-height: 16px;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 8px;
 }
 .ullist {
@@ -1235,13 +1235,13 @@ textarea.comntextarea {
     clear: both;
     float: left;
     margin-bottom: 1%;
-    width: 100%;
+    width: 100%;.contentheading
 }
 .sidebarmenutypes a {
     background: none repeat scroll 0 0 #E1DFD3;
     color: #333333;
     float: left;
-    font-family: helvetica;
+    font-family: arial;
     font-size: 14px;
     padding: 3% 0 3% 7%;
     text-decoration: none;
@@ -1585,7 +1585,7 @@ textarea.comntextarea {
     width: 100%;
     height: auto;
     padding: 15px 20px;
-    text-align: justify;
+    text-align: left;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2187,7 +2187,7 @@ p.emailtop{
     clear: both;
     color: #FFFFFF;
     float: left;
-    font-family: arial;
+    font-family: helvetica;
     font-size: 17px;
     margin-bottom: 2px;
     padding: 8px 4px;
@@ -2273,4 +2273,11 @@ p.AlignLeft{
 }
 .outdoorContact .cityaddress{
     width:100%;
+}
+.BelowSpace{
+    margin-bottom:15px;
+}
+.anchor:hover{
+    text-decoration: none;
+    color:#333333;
 }
