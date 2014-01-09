@@ -139,9 +139,9 @@ $('.submenu-box').hover(function(){
                                    
 				//console.log(idpass);
                                
-                         $('.projectInformation').find(".projectPartConatiner").fadeOut(0);
+                         $(this).parents('.popupopen').find('.projectInformation').find(".projectPartConatiner").fadeOut(0);
 
-			   $('.projectInformation').find("#" + idpass ).fadeIn('slow');
+			   $(this).parents('.popupopen').find('.projectInformation').find("#" + idpass ).fadeIn('slow');
 
      });
 

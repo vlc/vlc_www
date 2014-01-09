@@ -1501,7 +1501,7 @@ textarea.comntextarea {
     float: left;
     font-size: 13px;
     font-weight: bold;
-    margin-left: 3%;
+    margin-left:0%;
     margin-top: 2.9%;
     width: auto;
 }
@@ -2075,7 +2075,7 @@ label.error {
 }
 .ImageTitle.specialEvents-places {
     position: relative;
-    top: 71px;
+    top:0px;
 }
 .site_map_boxes .ullist li {
     clear: both;
@@ -2221,6 +2221,7 @@ p.emailtop{
 /****inner banner styles****/
 .ZMTCell p a:hover{
    text-decoration: none;
+   color: #333333;
 }
 
 /***customer testimonial****/
@@ -2266,4 +2267,10 @@ p.emailtop{
 
 .headerImage.projectSelect.selected_project{
 	border: 8px solid #EC8B00;
+}
+p.AlignLeft{
+    text-align: left !important;
+}
+.outdoorContact .cityaddress{
+    width:100%;
 }
