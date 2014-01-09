@@ -147,6 +147,25 @@ $('.submenu-box').hover(function(){
 
 
 
+     //Project page popup close reset data
+
+    // $('body').on('click','.project-popup .close-reveal-modal', function(){
+       //  var current_project_id = $(this).parents('.project-popup').find('.project-value').val();
+       //  $(this).parents('.project-popup').find('.projectInformation .projectPartConatiner').fadeOut(function(){
+        //     $(this).parents('.project-popup').find('#' + current_project_id).fadeIn();
+         //    $(this).parents('.project-popup').find('.projectSelect').removeClass('selected_project');
+          //   $(this).parents('.project-popup').find('.imagecontainer').children('.' + current_project_id).addClass('selected_project');
+       //  });
+    // })
+
+
+     //n outer fade layer click
+   //  $('body').on('click','.reveal-modal-bg', function(){
+         
+   //  })
+
+
+
 });	
 
 
