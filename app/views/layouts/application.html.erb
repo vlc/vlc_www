@@ -51,9 +51,11 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
       <%= render "/refinery/footer" %>
     </div>
 <% else%>
+    <div class="main-wrapper">
     <%= render "/refinery/header" %>
     <%= yield %>
     <%= render "/refinery/footer" %>
+        </div>
 <% end %>
 </body>
 
