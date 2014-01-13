@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>VLC</title>
+<head>
+  <title>VLC</title>
 <%#*<script src="http://code.jquery.com/jquery-1.9.0.js"></script>%>
-    <!-- <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script> -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <!-- <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script> -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <%#= stylesheet_link_tag    "application" %>
 <%#= javascript_include_tag "application", "jquery" %>
 
@@ -12,51 +12,85 @@
 <%#=stylesheet_link_tag  "styles_480", :media => "only screen and (max-width: 480px)" %>
 <%#=stylesheet_link_tag  "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5)" %>
-    <%= render '/refinery/head' %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body  >
+  <%= render '/refinery/head' %>
+  <%= csrf_meta_tags %>
+</head>
+<body  >
+<% if (params[:path] and params[:path].split("/")[0])  == "test" %>
     <div class="main-wrapper">
       <%= render "/refinery/header" %>
-      <%= yield %>
+      <div class="banner-wrapper">
+        <div class="innerbannerZenith">
+          <div class="main-wrapper-fixed">
+            <div class="innerImageBanner zenithInnerImageBanner">
+              <div class="innerTextDiv">
+                <div class="InnerBoxContainer">
+                  <div class="innerTextDivRow">
+                    Veitch Lister Counsulting,
+                  </div>
+                  <div class="innerTextDivRow">
+                    the Transport Planning, Modelling &amp; Data Experts.
+                  </div>
+                </div>
+              </div>
+              <div class="InnerzenithLogo">
+                <img title="Zenith" alt="Zenith Logo" src="../assets/zenith3.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContent-wrapper">
+        <div class="main-wrapper-fixed contentwrapper">
+          <div class="contentfulll">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
       <%= render "/refinery/footer" %>
     </div>
-  </body>
+<% else%>
+    <%= render "/refinery/header" %>
+    <%= yield %>
+    <%= render "/refinery/footer" %>
+<% end %>
+</body>
 
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-45774217-1', 'veitchlister.com.au');
-      ga('send', 'pageview');
+    ga('create', 'UA-45774217-1', 'veitchlister.com.au');
+    ga('send', 'pageview');
 
-  </script>
+</script>
 
 
-  <script type="text/javascript">
+<script type="text/javascript">
     // documetation tab
     $(document).ready(function() {
 
-      $('#tab5').css("display","none");
+        $('#tab5').css("display","none");
 
-      $(".tab_type li").click(function(){
+        $(".tab_type li").click(function(){
 
-        $(this).parents(".tab_type").find("li").removeClass("selected_tab");
+            $(this).parents(".tab_type").find("li").removeClass("selected_tab");
 
-        $(this).addClass("selected_tab");
+            $(this).addClass("selected_tab");
 
-        var idpass = $(this).attr("class");
+            var idpass = $(this).attr("class");
 
-        idpass = idpass.replace(' selected_tab','');
+            idpass = idpass.replace(' selected_tab','');
 
-        //alert(idpass);
+            //alert(idpass);
 
-        $(this).parents('.tab').next(".tab_searchContainer").find(".tab_search").fadeOut(0);
+            $(this).parents('.tab').next(".tab_searchContainer").find(".tab_search").fadeOut(0);
 
-        $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
-      });
+            $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
+        });
 
 
 
@@ -67,62 +101,62 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
     // history under company
 
     $(window).load(function(){
-      if($('.projectBoxContainer').length){
-        $('.projectBoxContainer').each(function(){
-          var leftheight = $(this).find('.left').outerHeight();
-          var righttheight = $(this).find('.right').outerHeight();
-          if( leftheight > righttheight){
-            $(this).find('.right').outerHeight(leftheight);
-          }
-          else{
-            $(this).find('.left').outerHeight(righttheight);
-          }
-        });
-      }
+        if($('.projectBoxContainer').length){
+            $('.projectBoxContainer').each(function(){
+                var leftheight = $(this).find('.left').outerHeight();
+                var righttheight = $(this).find('.right').outerHeight();
+                if( leftheight > righttheight){
+                    $(this).find('.right').outerHeight(leftheight);
+                }
+                else{
+                    $(this).find('.left').outerHeight(righttheight);
+                }
+            });
+        }
     });
     /// Js for Popup in project pages
 
     $(document).ready( function() {
-      
-      $('.projectContiner .projectImg').mouseenter(function(){
-        console.log('mouseenter');
-        $(this).next('.thumbhover').stop(true, true).slideUp("slow");
-      });
 
-      $('.projectContiner .projectImg').mouseleave(function(){
-        console.log('mouseleave');
-        $(this).next('.thumbhover').stop(true, true).slideDown("slow");
-      });
+        $('.projectContiner .projectImg').mouseenter(function(){
+            console.log('mouseenter');
+            $(this).next('.thumbhover').stop(true, true).slideUp("slow");
+        });
 
-      $('.projectContiner .thumbhover').mouseenter(function(){
-        $(this).stop(true, true).show();
-      })
+        $('.projectContiner .projectImg').mouseleave(function(){
+            console.log('mouseleave');
+            $(this).next('.thumbhover').stop(true, true).slideDown("slow");
+        });
 
-      $('.projectContiner .thumbhover').mouseleave(function(){
-        $(this).stop(true, true).hide();
-      })
+        $('.projectContiner .thumbhover').mouseenter(function(){
+            $(this).stop(true, true).show();
+        })
+
+        $('.projectContiner .thumbhover').mouseleave(function(){
+            $(this).stop(true, true).hide();
+        })
 
     });
 
     $(window).load(function(){
-      $('.bwWrapper').BlackAndWhite({
-        hoverEffect : true, // default true
-        // set the path to BnWWorker.js for a superfast implementation
-        webworkerPath : false,
-        // for the images with a fluid width and height
-        responsive:true,
-        // to invert the hover effect
-        invertHoverEffect: false,
-        // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-        intensity:1,
-        speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-          fadeIn: 200, // 200ms for fadeIn animations
-          fadeOut: 800 // 800ms for fadeOut animations
-        },
-        onImageReady:function(img) {
-          // this callback gets executed anytime an image is converted
-        }
-      });
+        $('.bwWrapper').BlackAndWhite({
+            hoverEffect : true, // default true
+            // set the path to BnWWorker.js for a superfast implementation
+            webworkerPath : false,
+            // for the images with a fluid width and height
+            responsive:true,
+            // to invert the hover effect
+            invertHoverEffect: false,
+            // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+            intensity:1,
+            speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+                fadeIn: 200, // 200ms for fadeIn animations
+                fadeOut: 800 // 800ms for fadeOut animations
+            },
+            onImageReady:function(img) {
+                // this callback gets executed anytime an image is converted
+            }
+        });
     });
 
     // Dec 19th added
@@ -132,35 +166,35 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
 
     $( document ).ready( function() {
-      $('.projectImg').hover(function(){
-        $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");  
-      });
+        $('.projectImg').hover(function(){
+            $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");
+        });
     });
 
     $(window).load(function(){
-      $('.bwWrapper').BlackAndWhite({
-        hoverEffect : true, // default true
-        // set the path to BnWWorker.js for a superfast implementation
-        webworkerPath : false,
-        // for the images with a fluid width and height
-        responsive:true,
-        // to invert the hover effect
-        invertHoverEffect: false,
-        // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-        intensity:1,
-        speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-          fadeIn: 200, // 200ms for fadeIn animations
-          fadeOut: 800 // 800ms for fadeOut animations
-        },
-        onImageReady:function(img) {
-          // this callback gets executed anytime an image is converted
-        }
-      });
+        $('.bwWrapper').BlackAndWhite({
+            hoverEffect : true, // default true
+            // set the path to BnWWorker.js for a superfast implementation
+            webworkerPath : false,
+            // for the images with a fluid width and height
+            responsive:true,
+            // to invert the hover effect
+            invertHoverEffect: false,
+            // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+            intensity:1,
+            speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+                fadeIn: 200, // 200ms for fadeIn animations
+                fadeOut: 800 // 800ms for fadeOut animations
+            },
+            onImageReady:function(img) {
+                // this callback gets executed anytime an image is converted
+            }
+        });
     });
 
 
 
-  </script>
+</script>
 
 </html>
 
