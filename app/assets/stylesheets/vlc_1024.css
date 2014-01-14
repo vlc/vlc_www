@@ -18,6 +18,10 @@
 .testi40{
     width: 55%;
 }
+.footerbelow3 .inputdivdown.seperatorr {
+        padding-bottom: 8px;
+
+ }
 
 @media (min-width:751px) and (max-width:1080px) {
     .header-submenu-wrap {
@@ -895,6 +899,10 @@ div.popupopen.reveal-modal {
     .testi80 {
        padding-right: 5px;
      }
+     .footerbelow3 .inputdivdown.seperatorr {
+        padding-bottom: 4px;
+        
+     }
 
 }
 @media (min-width:580px) and (max-width:605px) {
@@ -936,6 +944,10 @@ div.popupopen.reveal-modal {
     }
     .testi80 {
        padding-right: 5px;
+     }
+     .footerbelow3 .inputdivdown.seperatorr {
+        padding-bottom: 4px;
+
      }
 
 
