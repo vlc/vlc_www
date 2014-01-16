@@ -121,6 +121,10 @@
   color:#d96701;
   /*padding: 0 3px 0 3px;*/
   font-family:"Helvetica";
+
+  margin-bottom: 0px;
+  margin-top:0px;
+  font-weight: normal;
   
 }
 .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2 i {

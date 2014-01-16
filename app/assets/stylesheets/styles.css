@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, img, object, iframe, blockquote, abbr, acronym, address, big, cite, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -181,7 +181,9 @@ a {
 .menu_ulist {
     display: block;
     float: left;
+    margin-bottom: 0;
     margin-top: 26px;
+    padding-left: 0;
     width: 100%;
 }
 .navi-menu {
@@ -236,6 +238,8 @@ body #fadelayer {
 }
 .pre_desktop_view {
     display: block;
+    margin-bottom: 0px;
+    margin-top:0px;
 }
 .pre_mobile_view {
     display: none;
@@ -477,6 +481,10 @@ h3.footerheadd {
     -moz-opacity: 0.7;
     /* Safari 1.x */
     -khtml-opacity: 0.7;
+
+    margin-bottom: 0px;
+    margin-top:0px;
+    font-weight: normal;
 }
 h3.footerheadd a:hover {
     color: #EC8B00;
@@ -496,12 +504,18 @@ h3.footerheaddnew {
     -moz-opacity: 0.7;
     /* Safari 1.x */
     -khtml-opacity: 0.7;
+    margin-top:0px;
+    margin-bottom: 0px;
+    font-weight:normal;
 }
 .bigtextspan {
     font-size: 16px;
 }
 h3.legalhead {
     margin-top: 15px;
+}
+.footerul{
+    padding-left: 0px;
 }
 .footerul li {
     padding-top: 5px;
@@ -918,6 +932,10 @@ textarea.comntextarea {
 }
 .submenubox h1 {
     color: #333333;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .submenubox p {
     color: #666666;
@@ -1004,20 +1022,26 @@ textarea.comntextarea {
     color: #333333;
     font-family: 'Helvetica';
     font-size: 18px;
+    font-weight: normal;
     margin-bottom: 2px;
+    margin-top: 0;
 }
 .NewsSubHeading {
-    color: #EC8B00;
     clear: both;
-    font-size: 13px;
+    color: #EC8B00;
     font-family: Arial;
+    font-size: 13px;
     margin-bottom: 6px;
+    margin-top: 0;
+    font-weight: normal;
 }
 .NewsContiner p {
     clear: both;
     color: #666666;
     font-size: 13px;
     line-height: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
     text-align: left;
 }
 .BorderNone {
@@ -1056,10 +1080,11 @@ textarea.comntextarea {
     background: none repeat scroll 0 0 #EBEAE2;
     color: #333333;
     font-size: 12px;
+    font-weight: normal;
+    line-height: 21px;
     padding: 3px 5px;
     text-align: center;
     text-decoration: none;
-    line-height: 21px;
 }
 .UpperContentSection {
     border-bottom: 1px solid #EBEBE2;
@@ -1093,9 +1118,10 @@ textarea.comntextarea {
 }
 .RightContentSection p {
     font-size: 14px;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 8px;
     float:left;
+    margin-top:0px;
 }
 .fontsize13, .RightContentSection p.fontsize13 {
     font-size: 13px;
@@ -1156,6 +1182,7 @@ textarea.comntextarea {
     float: left;
     font-size: 15px;
     margin-bottom: 0px;
+    margin-top:0px;
 }
 .RightcontentHeaderSection {
     float: left;
@@ -1177,11 +1204,14 @@ textarea.comntextarea {
     line-height: 16px;
     text-align: left;
     margin-bottom: 8px;
+    margin-top:0px;
 }
 .ullist {
-    width: 100%;
     float: left;
+    margin-bottom: 0;
     margin-top: 5px;
+    padding-left: 0;
+    width: 100%;
 }
 .ullist li {
     background: url("../assets/list.jpg") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
@@ -1192,8 +1222,11 @@ textarea.comntextarea {
     font-size: 13px;
 }
 .breadcrumbul {
-    float: left;
     clear: both;
+    float: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
 }
 .horizontalLine {
     background: none repeat scroll 0 0 #EBEBE2;
@@ -1231,6 +1264,12 @@ textarea.comntextarea {
     padding-top: 6%;
     width: 93%;
 }
+.sidebarmenuheading h1 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 .sidebarmenutypes {
     clear: both;
     float: left;
@@ -1263,6 +1302,7 @@ textarea.comntextarea {
     padding-bottom: 2%;
     padding-top: 1%;
     width: 100%;
+    margin-bottom: 0px;
 }
 .InnerleftContentSection {
     float: left;
@@ -1292,6 +1332,8 @@ textarea.comntextarea {
     color: #333333;
     float: left;
     font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 .bottomheader img {
     float: left;
@@ -1323,6 +1365,10 @@ textarea.comntextarea {
     right: 0;
     width: 100%;
     display: none;
+}
+.thumbhover > p {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .projectContiner {
     float: left;
@@ -1430,7 +1476,8 @@ textarea.comntextarea {
     font-size: 13px;
     line-height: 16px;
     margin-bottom: 15px;
-    text-align: justify;
+    text-align: left;
+    margin-top:0px;
 }
 .sidebarmenu .headerImage:nth-child(3) {
     margin-right: 0px;
@@ -1484,6 +1531,7 @@ textarea.comntextarea {
     font-size: 16px;
     margin-left: 16px;
     margin-top: 6px;
+    margin-bottom: 0px;
 }
 .pragraph p {
     float: left;
@@ -1513,6 +1561,7 @@ textarea.comntextarea {
     line-height: 16px;
     color: #666666;
     margin-top: 6px;
+    margin-bottom: 0px;
 }
 .sidebarbg {
     background: none repeat scroll 0 0 #E1DFD3;
@@ -1538,6 +1587,9 @@ textarea.comntextarea {
 .tab_type ul {
     float: left;
     width: 100%;
+    padding-left: 0px;
+    margin-bottom:0px;
+    margin-top: 0px;
 }
 .tab_type li {
     background: none repeat scroll 0 0 #0F0F0E;
@@ -1567,6 +1619,8 @@ textarea.comntextarea {
 .heading {
     color: #333333;
     font-size: 15px;
+    margin-bottom: 0px;
+    margin-top:0px;
 }
 .ullist.utab li {
     background: url("../assets/dot.jpg") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
@@ -1626,12 +1680,16 @@ textarea.comntextarea {
 }
 .ZMTDocumentTable > .ZMTCell p {
     padding: 8px 5px;
+    margin-bottom: 0px;
+    margin-top:0px
 }
 .ZMTCell.header p {
     color: #333333;
     float: left;
     font-size: 15px;
     padding: 2% 1% 2% 2%;
+    margin-bottom: 0px;
+    margin-top:0px;
 }
 .ZMTCell.header img {
     float: left;
@@ -1667,6 +1725,8 @@ textarea.comntextarea {
     font-weight: bold;
     color: #666666;
     float:left;
+    margin-top:0px;
+    margin-bottom: 0px;
 }
 
 .slidebarcontact p a{
@@ -1845,6 +1905,8 @@ textarea.comntextarea {
 .cityaddress p {
     color: #666666;
     font-size: 13px;
+    margin-bottom: 0px;
+    margin-top:0px;
 }
 .Quickheading{
     color: #666666;
@@ -2059,7 +2121,7 @@ label.error {
     text-decoration: none;
 }
 .tab_searchContainer .tab_search {
-    text-align: justify;
+    text-align: left;
 }
 .testimonial_right.clientReview .inner_testimonial .testi80 {
     width: auto;
@@ -2150,6 +2212,8 @@ a {
 
 p.emailtop{
     float:none;
+    margin-top:0px;
+    margin-bottom: 0px;
 }
 .image-maps-wrapper{
       width:100% !important;
@@ -2235,6 +2299,7 @@ p.emailtop{
     float: left;
     margin-left: 6%;
     width: 90%;
+    padding-left: 0px;
 }
 .ulist.subulistsitemap li span{
     color:#333333;
@@ -2280,4 +2345,63 @@ p.AlignLeft{
 .anchor:hover{
     text-decoration: none;
     color:#333333;
+}
+.headerImage.innerpadding > p {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 13px;
+}
+.leftrightContainer p{
+    margin-top:0px;
+    float:left;
+}
+.colorHeading p, .blankHeading p{
+    margin-bottom: 0px;
+}
+.rubycodeContiner p{
+    margin-bottom: 0px;
+}
+.sidebarmenu .greyBoxParagraph p{
+    margin-bottom:0px;
+    margin-top:0px;
+}
+.pragraphFormate p{
+    clear:both;
+}
+.paragraphTopBottom{
+    padding-top:0px;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+/****15th dec**/
+.text-align-center{
+    text-align: center;
+    width:100%;
+    float: left;
+}
+.text-align-left{
+    text-align: left;
+    width:100%;
+    float: left;
+}
+.text-align-right {
+    float: left;
+    text-align: right;
+    width: 100%;
+}
+.text-align-justify {
+    float: left;
+    text-align: justify;
+    width: 100%;
+}
+.font-size-small {
+    font-size: 80%;
+}
+.font-size-normal {
+    font-size: 100%;
+}
+.font-size-large {
+    font-size: 150%;
 }
