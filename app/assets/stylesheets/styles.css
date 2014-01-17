@@ -146,7 +146,7 @@ a {
     float: left;
 }
 .justify-text {
-    text-align: justify !important;
+    text-align: left !important;
 }
 .bold-text {
     font-weight: bold !important;
@@ -313,8 +313,8 @@ body #fadelayer {
 }
 .moduleheading {
     font-size: 16px;
-    padding-top: 17px;
-    padding-bottom: 12px;
+    padding-top:8px;
+    padding-bottom:6px;
     font-family: 'Helvetica';
     color: #333333;
 }
@@ -516,6 +516,7 @@ h3.legalhead {
 }
 .footerul{
     padding-left: 0px;
+    margin-top:0px;
 }
 .footerul li {
     padding-top: 5px;
@@ -1140,7 +1141,7 @@ textarea.comntextarea {
     color: #EC8B00;
     font-family: 'Helvetica';
     font-size: 19px;
-    line-height: 27px;
+    line-height: 21px;
 }
 .headerSection {
     float: left;
@@ -1530,7 +1531,7 @@ textarea.comntextarea {
     font-family: Helvetica;
     font-size: 16px;
     margin-left: 16px;
-    margin-top: 6px;
+    margin-top: 6px !important;
     margin-bottom: 0px;
 }
 .pragraph p {
@@ -1832,6 +1833,7 @@ textarea.comntextarea {
 }
 .martop{
     margin-top:3%;
+    float:left;
 }
 .clear{
     clear:both;
@@ -1876,9 +1878,10 @@ textarea.comntextarea {
 }
 .downloadBrochure a{
     text-decoration:none;
-    padding: 13% 2%;
+    /*padding: 13% 2%;*/
+     padding: 8% 11%;
     float:left;
-    font-family: helvetica;
+    font-family: arial;
     font-size: 14px;
     color: #333333;
 
@@ -1923,8 +1926,8 @@ textarea.comntextarea {
 .biggerparagraph{
     float:left;
     font-size: 14px;
-    margin-bottom: 8px;
-    text-align: justify;
+    margin-bottom: 12px;
+    text-align: left;
 }
 .anchorclass{
     text-decoration:underline;
@@ -1948,13 +1951,15 @@ textarea.comntextarea {
     width:100%;
 
     border-bottom: 1px solid #EDEDED;
-    padding: 3% 0;
+    padding: 1% 0;
 }
 .rubycodeContiner .headerImage.innerpadding{
     padding: 6% 5%;
 }
 .rubycodeContiner .projectContiner{
-    padding-bottom:0px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding-bottom: 0;
 }
 .rubycodeContiner a{
     float:left;
@@ -2205,8 +2210,10 @@ a {
      margin-bottom: 10px;
 }
 .video-embed-wrapper {
-    clear: both;
+   clear: both;
     float: left;
+    margin-bottom: 14px;
+    margin-top: 2px;
     width: 100%;
 }
 
@@ -2362,7 +2369,7 @@ p.AlignLeft{
     margin-bottom: 0px;
 }
 .sidebarmenu .greyBoxParagraph p{
-    margin-bottom:0px;
+    margin-bottom:5px;
     margin-top:0px;
 }
 .pragraphFormate p{
@@ -2375,7 +2382,7 @@ p.AlignLeft{
     margin-top: 0;
 }
 
-/****15th dec**/
+/****refinery changes**/
 .text-align-center{
     text-align: center;
     width:100%;
@@ -2404,4 +2411,51 @@ p.AlignLeft{
 }
 .font-size-large {
     font-size: 150%;
+}
+
+/****refinery changes**/
+
+.contentHeaderSection.contentheaderpadding {
+    padding-bottom:2%;
+    padding-top:1%;
+}
+.contentHeaderSection.otherspectialcontent{
+    padding-top:2%;
+}
+.ullist.marginulist {
+   margin-bottom: 10px;
+   margin-top: 0;
+}
+.subcontentheading.adjustmarginheading{
+    float:left;
+    margin-bottom:5px;
+    margin-top:5px;
+}
+.leftrightContainer.marginleftrightcontainer{
+    margin-bottom: 18px;
+}
+p.paragraphtopbottom {
+    float: left;
+    margin-bottom: 5px !important;
+    margin-top: 10px !important;
+}
+.addressdivcity.quickborder.adressmargintop{
+    margin-top: 5px;
+}
+.RightContentSection.sub-desc-page > p {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+p.margin-history{
+    margin-bottom: 3px;
+    margin-top:2px;
+}
+.contentheading.customerheading {
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 18px;
+}
+.careerparagraph.margincareers {
+    margin-bottom: 7px;
+    margin-top: 5px;
 }

@@ -68,7 +68,7 @@
   background-image: url(../assets/background-paralax.jpg);
   background-size: cover;
   background-position: 0 0;
-  border-bottom:6px solid #8E8B78;
+  border-bottom:6px solid #aeaeae;
   /*cursor: url(../assets/openhand.cur.bmp) 4 4, move;*/
 }
 .responsive-slider-parallax .slides-container.drag {
