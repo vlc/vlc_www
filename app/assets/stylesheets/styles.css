@@ -315,7 +315,7 @@ body #fadelayer {
     font-size: 16px;
     padding-top:8px;
     padding-bottom:6px;
-    font-family: 'Helvetica';
+    font-family: arial;
     color: #333333;
 }
 .modulecontent {
@@ -333,19 +333,19 @@ body #fadelayer {
     padding: 3px 7px;
     color: #000;
     text-decoration: none;
-    font-family: 'Helvetica';
+    font-family:arial;
 }
 .more-gray:hover, .whats-orange:hover {
     background: #606060;
     color: #ffffff;
 }
 .whats-orange {
-    font-size: 14px;
+    font-size: 13px;
     background: #EC8B00;
     padding: 3px 7px;
     color: #fff;
     text-decoration: none;
-    font-family: 'Helvetica';
+    font-family: arial;
 }
 .news-wrapper {
     /*background-image: url(../assets/news_bg.png);
@@ -409,7 +409,7 @@ body #fadelayer {
     top: 24px;
 }
 .newstitle {
-    font-family: 'Helvetica';
+    font-family: arial;
     font-size: 18px;
 }
 .newstitle {
@@ -1021,8 +1021,8 @@ textarea.comntextarea {
 .NewsHeading {
     clear: both;
     color: #333333;
-    font-family: 'Helvetica';
-    font-size: 18px;
+    font-family:arial;
+    font-size: 17px;
     font-weight: normal;
     margin-bottom: 2px;
     margin-top: 0;
@@ -1430,7 +1430,7 @@ textarea.comntextarea {
     background: none repeat scroll 0 0 #EBEBE2;
     clear: both;
     float: left;
-    font-family: helvetica;
+    font-family: arial;
     font-size: 15px;
     margin-bottom: 1%;
     padding: 2% 1% 2% 2%;
@@ -2102,7 +2102,7 @@ label.error {
     outline:none;
 }
 .contentbottomfull .more-lindiv .more-gray {
-    font-size: 14px;
+    font-size: 13px;
 }
 .leftrightContainer .contentHeaderSection .ullist li {
     margin-bottom: 5px;
@@ -2458,4 +2458,28 @@ p.margin-history{
 .careerparagraph.margincareers {
     margin-bottom: 7px;
     margin-top: 5px;
+}
+.howtogetZenith{
+    background: none repeat scroll 0 0 #EC8B00;
+}
+.howtogetZenith .greyBoxParagraph{
+    color:#ffffff;
+}
+.howtogetZenith .greyBoxHeading{
+    color:#ffffff;
+     margin-bottom: 5px;
+}
+.howtogetZenith .greyBoxContact{
+    color:#ffffff;
+}
+ .howtogetZenith .greyBoxContact a{
+    color:#ffffff;
+}
+.howtogetZenith .greyBoxContact a:hover{
+    text-decoration: none;
+}
+
+.subcontentheading.documentheading {
+    margin-bottom: 8px;
+    float:left;
 }
