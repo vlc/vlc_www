@@ -2323,6 +2323,7 @@ p.emailtop{
     float:left;
     width:24%;
     margin-right: 8px;
+    margin-bottom:8px;
 
 }
 .sliderimageRow.lastslider{
@@ -2482,4 +2483,29 @@ p.margin-history{
 .subcontentheading.documentheading {
     margin-bottom: 8px;
     float:left;
+}
+
+/****20th jan**/
+.right_content_old {
+    float: right;
+    width: 30%;
+}
+.right_content_ner .right_content_old {
+	width: 100%;
+	float: left;
+}
+/***21st jan**/
+.leftrightContainer.outdoorvideo .ContentImage{
+    width: 97%;
+    margin-bottom: 10px;
+}
+.leftrightContainer.outdoorvideo .ContentImage iframe {
+    float: left;
+    width: 100%;
+}
+.leftrightContainer.outdoorvideo .pragraph{
+    border-top: 1px solid #CCCCCC;
+    margin-top: 6px;
+    padding-top: 20px;
+
 }

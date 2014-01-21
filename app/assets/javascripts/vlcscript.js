@@ -164,6 +164,23 @@ $('.submenu-box').hover(function(){
          
    //  })
 
+  
+
+//hiding menu from sidebarright
+ $('.sidebarmenu.newsidebarmenu').addClass("bottom_org_content");
+  var tst = $('.sidebarmenu.newsidebarmenu').html();
+  $('.sidebarmenu.newsidebarmenu').clone(true, true).appendTo('.right_content_ner');
+  $('.right_content_ner').find('.bottom_org_content').removeClass("bottom_org_content");
+  $('.sidebarmenu.newsidebarmenu.bottom_org_content').remove();
+
+
+//cloning of testimonial
+$('.right_content_old').clone(true, true).appendTo('.right_content_ner');
+  $('.contentfulll > .right_content_old').remove();
+
+  
+ 
+
 
 
 });	

@@ -118,7 +118,7 @@
   font-size:36px; /* equal to 45 px */
   
   /*background: #FF6600;*/
-  color:#d96701;
+  color:#EC8B00;
   /*padding: 0 3px 0 3px;*/
   font-family:"Helvetica";
 
@@ -160,7 +160,7 @@
   padding: 0 3px 0 3px;
   background: #ffffff;*/
   margin-top:18px;
-   text-transform:capitalize;
+   /*text-transform:capitalize;*/
 }
 /*@media (min-width: 481px) and (max-width: 767px) {
   .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub {
@@ -482,10 +482,35 @@
 	left:1.3%;
 }
 
+
+
 @media (min-width:560px) and (max-width:650px) {
     .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2
     {
         font-size: 31px !important;
     }
+}
+
+
+/**21st jan**/
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.lowerbiggerfont {
+    
+   color: #EC8B00;
+    font-size: 38px;
+    font-weight: bold;
+    
+    margin-top: 24px;
+    
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont {
+    color: #EC8B00;
+    font-size: 38px;
+    font-weight: bold;
+   
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont {
+    color: #EC8B00;
+    font-size: 23px;
+    
 }
 

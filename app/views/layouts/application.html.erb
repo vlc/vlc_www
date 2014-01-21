@@ -16,7 +16,6 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
   <%= csrf_meta_tags %>
 </head>
 <body  >
-<% if (params[:path] and params[:path].split("/")[0])  == "test" %>
     <div class="main-wrapper">
       <%= render "/refinery/header" %>
       <div class="banner-wrapper">
@@ -43,20 +42,42 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
       <div class="mainContent-wrapper">
         <div class="main-wrapper-fixed contentwrapper">
-          <div class="contentfulll">
+
             <%= yield %>
-          </div>
+
+              <div class="sidebarmenu newsidebarmenu">
+                <div class="sidebarmenuheading">
+                  <h1>Consulting Services</h1>
+                </div>
+                <div class="sidebarmenutypes activesidebarmenu">
+                  <a class="active" href="/services">Overview</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="/services/forecasting">Demand Forecasting</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="/services/planning">Transport Planning</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="services/landuse">Land Use &amp; Demographic Forecasting</a>
+                </div>
+                <div class="sidebarmenutypes">
+                  <a href="/services/other">Other Services</a>
+                </div>
+              </div>
+
+
+
+
+
+
         </div>
       </div>
+
       <%= render "/refinery/footer" %>
     </div>
-<% else%>
-    <div class="main-wrapper">
-    <%= render "/refinery/header" %>
-    <%= yield %>
-    <%= render "/refinery/footer" %>
-        </div>
-<% end %>
+
+
 </body>
 
 <script>
