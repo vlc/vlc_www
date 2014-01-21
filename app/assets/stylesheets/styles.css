@@ -2509,3 +2509,11 @@ p.margin-history{
     padding-top: 20px;
 
 }
+
+
+.breadcrumbs_menu.oldbreadcrumbs{
+    display: none;
+}
+.contentfulll .contentsection .breadcrumbs_menu.newbreadcrumbs .breadcrumbs_menu.oldbreadcrumbs{
+    display:block;
+}

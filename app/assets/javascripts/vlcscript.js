@@ -178,6 +178,11 @@ $('.submenu-box').hover(function(){
 $('.right_content_old').clone(true, true).appendTo('.right_content_ner');
   $('.contentfulll > .right_content_old').remove();
 
+
+  //cloning of breadcrums
+  $('.breadcrumbs_menu.oldbreadcrumbs').clone(true, true).appendTo('.breadcrumbs_menu.newbreadcrumbs');
+  //$('.breadcrumbs_menu.oldbreadcrumbs').remove();
+
   
  
 
