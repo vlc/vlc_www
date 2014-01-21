@@ -28,7 +28,7 @@
 # Subversion
 #############################################################
 
-set :repository,  "git@github.com:RailsCarma/VLC.git"
+set :repository,  "git@github.com:vlc/vlc_www.git"
 set :scm, 'git'
 
 #############################################################
