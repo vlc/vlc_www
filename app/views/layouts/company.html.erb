@@ -5,23 +5,84 @@
 <%#*<script src="http://code.jquery.com/jquery-1.9.0.js"></script>%>
   <!-- <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script> -->
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<%#= stylesheet_link_tag "application" %>
+<%#= stylesheet_link_tag    "application" %>
 <%#= javascript_include_tag "application", "jquery" %>
 
-<%#=stylesheet_link_tag "styles_1024", :media => "only screen and (max-width: 1024px)" %>
-<%#=stylesheet_link_tag "styles_480", :media => "only screen and (max-width: 480px)" %>
-<%#=stylesheet_link_tag "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
+<%#=stylesheet_link_tag  "styles_1024", :media => "only screen and (max-width: 1024px)" %>
+<%#=stylesheet_link_tag  "styles_480", :media => "only screen and (max-width: 480px)" %>
+<%#=stylesheet_link_tag  "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5)" %>
   <%= render '/refinery/head' %>
   <%= csrf_meta_tags %>
 </head>
-<body >
-
-    <div class="main-wrapper">
-      <%= render "/refinery/header" %>
-      <%= yield %>
-      <%= render "/refinery/footer" %>
+<body  >
+<div class="main-wrapper">
+  <%= render "/refinery/header" %>
+  <div class="banner-wrapper">
+    <div class="innerbanner">
+      <div class="main-wrapper-fixed">
+        <div class="innerImageBanner zenithInnerImageBanner">
+          <div class="innerTextDiv">
+            <div class="InnerBoxContainer">
+              <div class="innerTextDivRow">
+                Veitch Lister Counsulting,
+              </div>
+              <div class="innerTextDivRow">
+                the Transport Planning, Modelling &amp; Data Experts.
+              </div>
+            </div>
+          </div>
+          <div class="InnerzenithLogo">
+            <img title="Zenith" alt="Zenith Logo" src="../assets/zenith3.png" />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="mainContent-wrapper">
+    <div class="main-wrapper-fixed contentwrapper">
+
+      <%= yield %>
+      <div class="breadcrumbs_menu oldbreadcrumbs">
+        <ul class="breadcrumbul">
+          <li><a href="/">Home</a>
+          </li>
+          <% for bc in 0..(breadcrumbs[:count]-1) %>
+              <li><a href="/<%= breadcrumbs[:crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:crumb_array][bc] %></a></li>
+          <% end %>
+
+        </ul>
+        <hr class="horizontalLine" />
+      </div>
+
+      <% if params[:path].split("/").last == "company" or "history" or "customers" or "careers" or "current_opportunities" or "news" or "news1" %>
+          <div class="sidebarmenu newsidebarmenu">
+            <div class="sidebarmenuheading">
+              <h1>Company</h1>
+            </div>
+            <div class="sidebarmenutypes"> <a class="active" href="/company">Overview</a> </div>
+            <div class="sidebarmenutypes"> <a href="/company/history">History</a> </div>
+            <div class="sidebarmenutypes"> <a href="/company/customers">Customers</a> </div>
+            <div class="sidebarmenutypes"> <a href="/company/careers">Careers</a> </div>
+            <div class="sidebarmenutypes"> <a href="/company/news">News</a> </div>
+
+          </div>
+
+      <%end%>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <%= render "/refinery/footer" %>
+</div>
+
 
 </body>
 
@@ -165,3 +226,5 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 </script>
 
 </html>
+
+

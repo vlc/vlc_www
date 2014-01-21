@@ -5,23 +5,125 @@
 <%#*<script src="http://code.jquery.com/jquery-1.9.0.js"></script>%>
   <!-- <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script> -->
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<%#= stylesheet_link_tag "application" %>
+<%#= stylesheet_link_tag    "application" %>
 <%#= javascript_include_tag "application", "jquery" %>
 
-<%#=stylesheet_link_tag "styles_1024", :media => "only screen and (max-width: 1024px)" %>
-<%#=stylesheet_link_tag "styles_480", :media => "only screen and (max-width: 480px)" %>
-<%#=stylesheet_link_tag "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
+<%#=stylesheet_link_tag  "styles_1024", :media => "only screen and (max-width: 1024px)" %>
+<%#=stylesheet_link_tag  "styles_480", :media => "only screen and (max-width: 480px)" %>
+<%#=stylesheet_link_tag  "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5)" %>
   <%= render '/refinery/head' %>
   <%= csrf_meta_tags %>
 </head>
-<body >
-
-    <div class="main-wrapper">
-      <%= render "/refinery/header" %>
-      <%= yield %>
-      <%= render "/refinery/footer" %>
+<body  >
+<div class="main-wrapper">
+  <%= render "/refinery/header" %>
+  <div class="banner-wrapper">
+    <div class="innerbannerZenith">
+      <div class="main-wrapper-fixed">
+        <div class="innerImageBanner zenithInnerImageBanner">
+          <div class="innerTextDiv">
+            <div class="InnerBoxContainer">
+              <div class="innerTextDivRow">
+                Veitch Lister Counsulting,
+              </div>
+              <div class="innerTextDivRow">
+                the Transport Planning, Modelling &amp; Data Experts.
+              </div>
+            </div>
+          </div>
+          <div class="InnerzenithLogo">
+            <img title="Zenith" alt="Zenith Logo" src="../assets/zenith3.png" />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="mainContent-wrapper">
+    <div class="main-wrapper-fixed contentwrapper">
+
+      <%= yield %>
+      <div class="breadcrumbs_menu oldbreadcrumbs">
+        <ul class="breadcrumbul">
+          <li><a href="/">Home</a>
+          </li>
+          <% for bc in 0..(breadcrumbs[:count]-1) %>
+              <li><a href="/<%= breadcrumbs[:crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:crumb_array][bc] %></a></li>
+          <% end %>
+
+        </ul>
+        <hr class="horizontalLine" />
+      </div>
+
+      <% if params[:path].split("/").last == "documentation" or "adelaide" or "perth" or "sqn" or "sydney" or "act" or "victoria" or "ruby" %>
+          <div class="sidebarmenu newsidebarmenu">
+            <div class="sidebarmenuheading">
+              <h1>Zenith Transport Models</h1>
+            </div>
+            <div class="sidebarmenutypes">
+              <a class="active" href="/zenith">Overview</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="whatsnew">What’s New</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="features">Features</a>
+            </div>
+            <div class="sidebarmenutypes ">
+              <a href="markets">Markets</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="projects">Projects</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="documentation">Documentation</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero ">
+              <a href="/zenith/documentation">General</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="/zenith/documentation/adelaide">Adelaide</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="/zenith/documentation/perth">Perth</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="/zenith/documentation/sqn">Southeast Queensland/Northern<br /> New South Wales</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="/zenith/documentation/sydney">Sydney</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="/zenith/documentation/act">Australian Capital Territory</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+              <a href="/zenith/documentation/victoria">Victoria</a>
+            </div>
+            <div class="sidebarmenutypes activesidebarmenu subSideMenu">
+              <a href="/zenith/documentation/ruby">Ruby</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="licensing">Licensing</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="trafficestimates">Traffic Estimates</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="randd">R&amp;D</a>
+            </div>
+            <div class="sidebarmenutypes">
+              <a href="support">support</a>
+            </div>
+          </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <%= render "/refinery/footer" %>
+</div>
+
 
 </body>
 
@@ -165,3 +267,5 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 </script>
 
 </html>
+
+
