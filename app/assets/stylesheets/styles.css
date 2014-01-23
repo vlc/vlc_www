@@ -2517,3 +2517,8 @@ p.margin-history{
 .contentfulll .contentsection .breadcrumbs_menu.newbreadcrumbs .breadcrumbs_menu.oldbreadcrumbs{
     display:block;
 }
+
+.contentsection.New1{
+    width: 100%;
+    margin-right: 0%;
+}
