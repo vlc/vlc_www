@@ -59,7 +59,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
             <div class="sidebarmenuheading">
               <h1>Consulting Services</h1>
             </div>
-            <div class="sidebarmenutypes">
+            <div class="sidebarmenutypes activesidebarmenu">
               <a class="active" href="/services">Overview</a>
             </div>
             <div class="sidebarmenutypes">
@@ -111,6 +111,32 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
     // documetation tab
     $(document).ready(function() {
 
+    var page_name = $('input[name="page-referance"]').val();
+    
+   // console.log(page_name);
+
+    $('.newsidebarmenu .sidebarmenutypes a').each(function(){
+      $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes').removeClass("activesidebarmenu");
+      if($(this).text() == page_name){
+       // console.log('page');
+        $(this).parent('.sidebarmenutypes').addClass('activesidebarmenu_new');
+      }
+      else {
+       // console.log('not');
+      }
+    })
+
+     /* $('.sidebarmenutypes a').click(function(){
+        e.preventDefault();
+        $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes').removeClass("activesidebarmenu");
+        console.log('delete');
+        $(this).parent('.sidebarmenutypes').addClass('activesidebarmenu');
+         console.log('add');
+      });*/
+
+      
+
+
         $('#tab5').css("display","none");
 
         $(".tab_type li").click(function(){
@@ -129,6 +155,9 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
             $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
         });
+
+
+    
 
 
 

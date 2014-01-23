@@ -61,7 +61,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
              <div class="sidebarmenuheading">
             <h1>Zenith Transport Models</h1>
           </div>
-            <div class="sidebarmenutypes">
+            <div class="sidebarmenutypes activesidebarmenu">
               <a class="active" href="/zenith">Overview</a>
             </div>
             <div class="sidebarmenutypes">
@@ -125,6 +125,21 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 <script type="text/javascript">
     // documetation tab
     $(document).ready(function() {
+
+      var page_name = $('input[name="page-referance"]').val();
+
+   // console.log(page_name);
+
+    $('.newsidebarmenu .sidebarmenutypes a').each(function(){
+      $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes').removeClass("activesidebarmenu");
+      if($(this).text() == page_name){
+       // console.log('page');
+        $(this).parent('.sidebarmenutypes').addClass('activesidebarmenu_new');
+      }
+      else {
+       // console.log('not');
+      }
+    })
 
         $('#tab5').css("display","none");
 

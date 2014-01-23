@@ -76,10 +76,10 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
             <div class="sidebarmenutypes">
               <a href="/zenith/projects">Projects</a>
             </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero">
               <a href="/zenith/documentation">Documentation</a>
             </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero ">
+            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu activesubSidemenu">
               <a href="/zenith/documentation">General</a>
             </div>
             <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
@@ -142,6 +142,23 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 <script type="text/javascript">
     // documetation tab
     $(document).ready(function() {
+
+
+       var page_name = $('input[name="page-referance"]').val();
+      console.log(page_name);
+
+      $('.newsidebarmenu .sidebarmenutypes a').each(function(){
+        $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes.activesidebarmenu').removeClass("activesubSidemenu");
+        if($(this).text() == page_name){
+          console.log('page');
+          $(this).parent('.sidebarmenutypes').addClass('activesubSidemenu_new');
+        }
+        else {
+          console.log('not');
+        }
+      })
+
+      
 
         $('#tab5').css("display","none");
 

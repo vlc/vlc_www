@@ -15,7 +15,7 @@ $(document).ready(function()
 //var leftoffset = $(".floatleft").offset();;
 
 var projects_offset = $('div.floatleft').offset();	
-console.log(projects_offset.left);
+//console.log(projects_offset.left);
 
 var logowidth = $(".header-left").width();
 both = projects_offset.left + logowidth;
