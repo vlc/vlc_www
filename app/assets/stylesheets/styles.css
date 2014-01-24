@@ -91,12 +91,20 @@ a {
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
+/*@font-face {
     font-family: 'Helvetica';
     src: url('../fonts/Helvetica_Narrow/5342086068.eot');
     src: local('Helvetica'), url('../fonts/Helvetica_Narrow/5342086068.ttf') format('truetype'),  url('../fonts/Helvetica_Narrow/5342086068.woff') format('woff'),  url('../fonts/Helvetica_Narrow/5342086068.svg') format('svg');
     font-weight: normal;
     font-style: normal;
+}*/
+
+@font-face {
+  	font-family: 'Helvetica';
+	src: url('../fonts/Helvetica_Narrow/helvetica.eot');
+	src: local('☺'), url('../fonts/Helvetica_Narrow/helvetica.woff') format('woff'), url('../fonts/Helvetica_Narrow/helvetica.ttf') format('truetype'), url('../fonts/Helvetica_Narrow/helvetica.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 @font-face {
     font-family: 'Liberation Sans Narrow';
@@ -2536,5 +2544,8 @@ p.margin-history{
 }
 .leftheading{
     float: left;
+}
+.slider_main a{
+    text-decoration: none;
 }
     
