@@ -2548,4 +2548,32 @@ p.margin-history{
 .slider_main a{
     text-decoration: none;
 }
-    
+.NewsContiner{
+    text-decoration: none;
+}
+.InnerPlainbgRight.companynewaligment{
+    padding-left: 3%;
+}
+
+.slide-body.slider1 .caption.img-html5{
+    top: 9% !important;
+     left: -50px !important;
+}
+
+.slide-body.slider2 .caption.img-html5{
+    left: 4% !important;
+    top: 11.2% !important;
+}
+.slide-body.slider3 .caption.img-html5{
+    top: 28% !important;
+    left:3% !important;
+}
+
+.slide-body.slider4 .caption.img-html5 {
+    left: 0 !important;
+    top: 33% !important;
+}
+.slide-body.slider5 .caption.img-html5{
+    left: -6% !important;
+    top: 8% !important;
+}

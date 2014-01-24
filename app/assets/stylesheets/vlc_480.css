@@ -539,6 +539,11 @@ div.popupopen.reveal-modal {
     height:100%;
 }
 
+.slide-body.slider3 .container .caption.header .caption.sub.lowerbiggerfont{
+    width:261px !important;
+}
+
+
 /***customer testimonial**/
 
 @media (min-width:320px) and (max-width:360px) {

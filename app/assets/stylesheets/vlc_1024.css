@@ -11,9 +11,9 @@
 }
 
 .tab_type li {
-    font-size: 14px;
+    font-size: 13px;
     margin-right: 1%;
-    padding: 1% 0.9%;
+     padding: 1% 1.5%;
 }
 .testi40{
     width: 55%;
@@ -22,6 +22,30 @@
         padding-bottom: 8px;
 
  }
+ .slide-body.slider1 .caption.img-html5 {
+    left: 65% !important;
+    top: 15% !important;
+}
+.caption {
+    white-space: inherit !important;
+}
+
+.slide-body.slider2 .caption.img-html5 {
+    left: 58% !important;
+    top: 44.6% !important;
+}
+.slide-body.slider3 .caption.img-html5 {
+    left: 52% !important;
+    top: 55% !important;
+}
+.slide-body.slider4 .caption.img-html5 {
+    left: 47% !important;
+    top: 58% !important;
+}
+.slide-body.slider5 .caption.img-html5 {
+    left: 66% !important;
+    top: 25% !important;
+}
 
 @media (min-width:751px) and (max-width:1080px) {
     .header-submenu-wrap {
@@ -853,10 +877,10 @@ div.popupopen.reveal-modal {
 
 @media (min-width:548px) and (max-width:568px) {
     .tab_type li {
-        font-size: 12px;
-        margin-right: 2px;
-        padding: 2.8px;
-    }
+    font-size: 11px;
+    margin-right: 4px;
+    padding: 6px;
+}
     .InnerzenithLogo{
         width: 25%;
     }
@@ -893,6 +917,9 @@ div.popupopen.reveal-modal {
     .whitetestimonialContainer {
         display: block;
     }
+    .inner_testimonial {
+      display: none;
+    }
     .imageright{
         clear:both;
     }
@@ -906,14 +933,44 @@ div.popupopen.reveal-modal {
      .Innerpopupopen iframe{
         height:100%;
       }
+      
+.slide-body.slider1 .container .caption {
+    white-space: inherit !important;
+}
+
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
+    font-size:29px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont {
+    
+    font-size: 21px;
+}
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header {
+    left: 0;
+    top: 14%;
+}
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+          font-size: 20px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont {
+
+    font-size: 29px !important;
+
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.lowerbiggerfont{
+    font-size: 29px !important;
+}
 
 }
 @media (min-width:580px) and (max-width:605px) {
     .tab_type li {
-        font-size: 12px;
-        margin-right: 4px;
-        padding: 5px;
-    }
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 3px;
+}
     .InnerzenithLogo{
         width: 25%;
     }
@@ -940,7 +997,10 @@ div.popupopen.reveal-modal {
         display: none;
     }
     .whitetestimonialContainer {
-        display: block;
+        display: none;
+    }
+    .inner_testimonial {
+      display: block;
     }
     .imageright{
         clear:both;
@@ -955,6 +1015,18 @@ div.popupopen.reveal-modal {
      .Innerpopupopen iframe{
         height:100%;
       }
+      .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+          font-size: 21px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont {
+   
+    font-size: 30px !important;
+    
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.lowerbiggerfont{
+    font-size: 29px !important;
+}
+
 
 
 }
@@ -980,15 +1052,36 @@ div.popupopen.reveal-modal {
     .tab_type li {
         font-size: 14px;
         margin-right: 1%;
-        padding: 1% 1.6%;
+        padding: 1% 1.4%;
     }
 
-    .banner3new
-    {
+    .responsive-slider-parallax .slides-container ul li .slide-body .caption.header {
+        left: 0 !important;
+        top: 10% !important;
+     }
+    .slide-body.slider1 .caption.img-html5 {
+    left: 46% !important;
+    top: 29% !important;
+}
+.slide-body.slider2 .caption.img-html5 {
+    left: 43% !important;
+    top: 30.5% !important;
+}
+.slide-body.slider3 .caption.img-html5 {
+    left: 35% !important;
+    top: 44% !important;
+}
+.slide-body.slider4 .caption.img-html5 {
+    left: 34% !important;
+    top: 48% !important;
+}
+.slide-body.slider5 .caption.img-html5 {
+    left: 48% !important;
+    top: 8% !important;
+}
 
 
-    
-    }
+
 }
 
 

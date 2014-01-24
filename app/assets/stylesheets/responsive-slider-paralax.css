@@ -285,7 +285,7 @@
 @media (max-width: 480px) {
 	  .responsive-slider-parallax .slides-container ul li .slide-body {
 		height: 327px;
-      }
+           }
 		
 		.responsive-slider-parallax .caption.header h2 {
 	  font-size:18px !important;
@@ -348,6 +348,16 @@
     left: 5% !important;
     top: 12% !important;
 	}
+
+
+        .slide-body.slider2 .responsive-slider-parallax .slides-container ul li .slide-body .caption.header {
+           top: 5% !important;
+         }
+
+    .slide-body.slider2  .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont {
+        font-size: 20px !important;
+        line-height: 23px !important;
+    }
 }
 .responsive-slider-parallax .slider-control {
   position: absolute;
@@ -427,7 +437,7 @@
     left:0%;
    /* margin-top: 37px;*/
     min-height: 120px;
-    top: 34%;
+    top: 39%;
     width: 100%;
 	
 }
