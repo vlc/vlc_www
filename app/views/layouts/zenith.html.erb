@@ -33,7 +33,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
             </div>
           </div>
           <div class="InnerzenithLogo">
-            <img title="Zenith" alt="Zenith Logo" src="../assets/zenith3.png" />
+            <img title="Zenith" alt="Zenith Logo" src="../../assets/zenith3.png" />
           </div>
         </div>
       </div>
@@ -42,7 +42,11 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
   <div class="mainContent-wrapper">
     <div class="main-wrapper-fixed contentwrapper">
-
+      <div class="contentfulll">
+        <div class="right-menu-toggle">
+          <a href="javascript:void(0)" class="closed-view"><img src="../../assets/slide_menu.png" alt="Slide Menu" /><span>Open Side Menu</span>
+          </a>
+        </div>
       <%= yield %>
       <div class="breadcrumbs_menu oldbreadcrumbs">
         <ul class="breadcrumbul">
@@ -103,7 +107,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
     </div>
   </div>
-
+ </div>
   <%= render "/refinery/footer" %>
 </div>
 
