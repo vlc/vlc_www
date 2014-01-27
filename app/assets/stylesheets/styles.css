@@ -2499,8 +2499,15 @@ p.margin-history{
     width: 30%;
 }
 .right_content_ner .right_content_old {
-	width: 100%;
-	float: left;
+    width: 100%;
+    float: left;
+}
+
+.right_content_old{
+    display: none;
+}
+.sidebaright .right_content_old  {
+    display: block;
 }
 /***21st jan**/
 .leftrightContainer.outdoorvideo .ContentImage{
@@ -2557,7 +2564,7 @@ p.margin-history{
 
 .slide-body.slider1 .caption.img-html5{
     top: 9% !important;
-     left: -50px !important;
+    left: -50px !important;
 }
 
 .slide-body.slider2 .caption.img-html5{
