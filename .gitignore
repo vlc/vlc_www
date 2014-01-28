@@ -15,7 +15,7 @@
 /tmp/**/*
 
 # Rails
-!/vendor/bundle/ruby/1.9.1/gems/refinerycms-core-2.0.10/app/assets/stylesheets/wymeditor/skins/refinery/wymiframe.css.scss
+!vendor/bundle/ruby/1.9.1/gems/refinerycms-core-2.0.10/app/assets/stylesheets/wymeditor/skins/refinery/wymiframe.css.scss
 vendor/bundle
 config/database.yml
 config/deploy.rb
