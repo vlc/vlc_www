@@ -16,8 +16,10 @@
 /tmp/**/*
 
 # Rails
-vendor/bundle/*
+vendor/bundle/
 !vendor/bundle/ruby/1.9.1/gems/refinerycms-core-2.0.10
+
+
 config/database.yml
 config/deploy.rb
 Capfile
