@@ -21,7 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails', '~> 2.0.0'
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms', github: 'RailsCarma/refinerycms', :branch => '2-0-stable'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'globalize3', '0.3.0'
