@@ -1102,15 +1102,7 @@ div.popupopen.reveal-modal {
 }
 
 
-/***  added ***********/
-
-@media (-webkit-min-device-pixel-ratio: 1.1),
-    (min-resolution: 120dpi) {
-    .logo {
-    background:url(images/example@2x.jpg);
-    background-size: 100px 100px; // Half the size of the @2x image
-    }
-}
+/*** srividya added ***********/
 
 
 
