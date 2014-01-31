@@ -93,7 +93,7 @@
   article     { background-image: asset_url('wymeditor/skins/refinery/html5/article.png', image); }
   aside       { background-image: asset_url('wymeditor/skins/refinery/html5/aside.png', image); }
   command     { background-image: asset_url('wymeditor/skins/refinery/html5/command.png', image); }
-  details     { background-image: asset_url('wymeditor/skins/refinery/html5/details.png', image); }  
+  details     { background-image: asset_url('wymeditor/skins/refinery/html5/details.png', image); }
   summary     { background-image: asset_url('wymeditor/skins/refinery/html5/summary.png', image); }
   figure      { background-image: asset_url('wymeditor/skins/refinery/html5/figure.png', image); }
   figcaption  { background-image: asset_url('wymeditor/skins/refinery/html5/figcaption.png', image); }
@@ -134,7 +134,7 @@
   img.selected_by_wym {
     border: 1px dashed #22a7f2;
   }
-  
+
   article,
   aside,
   command,
@@ -2663,7 +2663,7 @@ p.margin-history{
 }
 
 .right_content_old{
-    display: none;
+    display: block;
 }
 .sidebaright .right_content_old  {
     display: block;
@@ -2743,3 +2743,4 @@ p.margin-history{
     left: -6% !important;
     top: 8% !important;
 }
+
