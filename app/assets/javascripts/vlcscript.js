@@ -187,21 +187,12 @@ $('.right_content_old').clone(true, true).appendTo('.right_content_ner');
 
  //new page
 
-<<<<<<< HEAD
- /*var page_name = $('input[name="news"]').val();
-     console.log(page_name);
-     $('.right-menu-toggle').remove();
- */
 
-  
-    
-=======
  //var page_name = $('input[name="news"]').val();
  //console.log(page_name);
 // $('.right-menu-toggle').remove();
 
->>>>>>> 4fd6d7a826606a77f261843bb21af9d5b56b19ad
-  
+
 
 
 
