@@ -1247,7 +1247,8 @@ textarea.comntextarea {
     margin: 10px 0;
 }
 .navi-menu.homemenu {
-    background: none repeat scroll 0 0 #EC8B00;
+    /*background: none repeat scroll 0 0 #EC8B00;  */
+    background: none;
 }
 .navi-menu.homemenu a {
     padding: 13px 8px;
