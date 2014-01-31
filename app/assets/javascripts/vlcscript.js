@@ -187,9 +187,12 @@ $('.right_content_old').clone(true, true).appendTo('.right_content_ner');
 
  //new page
 
- var page_name = $('input[name="news"]').val();
- console.log(page_name);
- $('.right-menu-toggle').remove();
+ /*var page_name = $('input[name="news"]').val();
+     console.log(page_name);
+     $('.right-menu-toggle').remove();
+ */
+
+  
     
   
 

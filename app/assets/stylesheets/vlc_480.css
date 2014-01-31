@@ -533,7 +533,7 @@ div.popupopen.reveal-modal {
    width:100%;
 }
 .navi-menu.homemenu.homeactive a{
-    background: none repeat scroll 0 0 #EC8B00;
+    /*background: none repeat scroll 0 0 #EC8B00;*/
 }
 .Innerpopupopen iframe{
     height:100%;
@@ -541,6 +541,15 @@ div.popupopen.reveal-modal {
 
 .slide-body.slider3 .container .caption.header .caption.sub.lowerbiggerfont{
     width:261px !important;
+}
+.groupsub1{
+top:10px !important;
+}
+.slide-body.slider3 .groupsub2{
+    margin-top: 11px!important;
+}
+.slide-body.slider3 .groupsub4{
+    margin-top: 8px!important;
 }
 
 

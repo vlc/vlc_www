@@ -464,8 +464,8 @@
     font-size: 16px;
     margin-left: 0px;
     padding: 7px;        
-    top: 32%;
-	left:2%;
+    top: 36%;
+    left:2%;
 }
 
 .groupsub3
@@ -521,6 +521,7 @@
 .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont {
     color: #EC8B00;
     font-size: 23px;
+    line-height: 21px;
     
 }
 
