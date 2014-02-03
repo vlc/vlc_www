@@ -2586,3 +2586,7 @@ p.margin-history{
     left: -6% !important;
     top: 8% !important;
 }
+.newstitletop a, .rightnewstitle a{
+    text-decoration: none;
+
+}
