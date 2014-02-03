@@ -964,6 +964,29 @@ div.popupopen.reveal-modal {
     font-size: 29px !important;
 }
 
+.groupsub2{
+    top:35% !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont, .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
+    font-size: 23px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.bannerupperfont{
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.bannerlowerfont{
+    font-size: 23px !important;
+}
+
+.groupsub1, .groupsub2{
+    font-size: 12px !important;
+}
+.slide-body a.whats-orange{
+    font-size:12px !important;
+}
+
 }
 @media (min-width:580px) and (max-width:605px) {
     .tab_type li {
@@ -997,7 +1020,7 @@ div.popupopen.reveal-modal {
         display: none;
     }
     .whitetestimonialContainer {
-        display: none;
+        display: block;
     }
     .inner_testimonial {
       display: block;
@@ -1025,6 +1048,28 @@ div.popupopen.reveal-modal {
 }
 .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.lowerbiggerfont{
     font-size: 29px !important;
+}
+.groupsub2{
+    top:35% !important;
+}
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont, .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
+    font-size: 23px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.bannerupperfont{
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.bannerlowerfont{
+    font-size: 23px !important;
+}
+.groupsub1, .groupsub2{
+    font-size: 12px !important;
+}
+.slide-body a.whats-orange{
+    font-size:12px !important;
 }
 
 
@@ -1078,6 +1123,9 @@ div.popupopen.reveal-modal {
 .slide-body.slider5 .caption.img-html5 {
     left: 48% !important;
     top: 8% !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+     font-size: 20px !important;
 }
 
 

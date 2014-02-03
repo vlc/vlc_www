@@ -542,14 +542,25 @@ div.popupopen.reveal-modal {
 .slide-body.slider3 .container .caption.header .caption.sub.lowerbiggerfont{
     width:261px !important;
 }
+
 .groupsub1{
-top:10px !important;
+/*top:10px !important;*/
+  top: 12px !important;
 }
 .slide-body.slider3 .groupsub2{
-    margin-top: 11px!important;
+   margin-top: 11px!important;
+    
 }
 .slide-body.slider3 .groupsub4{
     margin-top: 8px!important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.bannerupperfont {
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.bannerlowerfont {
+    font-size: 23px !important;
+    line-height: 21px;
+    width: 280px !important;
 }
 
 
@@ -627,6 +638,12 @@ top:10px !important;
     .groupsub4
     {
         top:65% !important;
+    }
+}
+
+@media (min-width:460px) and (max-width:490px) {
+    .slide-body.slider3 .groupsub2 {
+        margin-top: 5px !important;
     }
 }
 

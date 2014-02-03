@@ -2341,6 +2341,7 @@ p.emailtop{
 .sliderimageRow img{
     float:left;
     width:100%;
+    cursor: pointer;
 }
 .Innerpopupopen iframe{
     width:100%;
