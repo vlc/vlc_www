@@ -569,6 +569,9 @@ div.popupopen.reveal-modal {
     top: 41% !important;
     
 }
+.responsive-slider-parallax .slides-container ul li .slide-body.slider2 .caption.sub.normallowerfont{
+    width:100% !important;
+}
 
 
 /***customer testimonial**/
@@ -651,6 +654,11 @@ div.popupopen.reveal-modal {
 @media (min-width:460px) and (max-width:490px) {
     .slide-body.slider3 .groupsub2 {
         margin-top: 5px !important;
+    }
+}
+@media (min-width:365px) and (max-width:390px) {
+    .responsive-slider-parallax .slides-container ul li .slide-body.slider2 .caption.sub.normallowerfont{
+        width:100% !important;
     }
 }
 

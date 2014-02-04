@@ -43,6 +43,8 @@
 
 
 
+
+
 .hide-text {
   font: 0/0 a;
   color: transparent;
@@ -329,7 +331,7 @@
 	 
 	 .groupsub1,.groupsub2,.groupsub3
 	 {
-		 font-size:12px !important;
+		 font-size:11px !important;
 		 left:6% !important;
 	 }
 	 
@@ -447,7 +449,8 @@
 	background: none repeat scroll 0 0 #606060;
     color: #FFFFFF;
     float: left;
-    font-family: 'Helvetica';
+    /*font-family: 'Helvetica';*/
+    font-family: arial;
     font-size: 16px;
     margin-left: 0px;
     padding: 7px;        
@@ -460,7 +463,8 @@
 	background: none repeat scroll 0 0 #606060;
     color: #FFFFFF;
     float: left;
-    font-family: 'Helvetica';
+    /*font-family: 'Helvetica';*/
+    font-family: arial;
     font-size: 16px;
     margin-left: 0px;
     padding: 7px;        
@@ -532,4 +536,9 @@
     color: #EC8B00 !important;
     font-size: 38px !important;
      font-weight: bold;
+}
+
+.responsive-slider-parallax .slides-container ul li .slide-body.slider2 .caption.sub.normallowerfont {
+    white-space: normal !important;
+    width: 76%;
 }
