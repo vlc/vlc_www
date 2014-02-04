@@ -573,6 +573,10 @@ div.popupopen.reveal-modal {
     width:100% !important;
 }
 
+.slide-body.slider4 .groupsub1{
+    top: 0px !important;
+}
+
 
 /***customer testimonial**/
 
@@ -655,10 +659,19 @@ div.popupopen.reveal-modal {
     .slide-body.slider3 .groupsub2 {
         margin-top: 5px !important;
     }
+    .slide-body.slider4 .groupsub1{
+        top: 12px !important;
+    }
 }
 @media (min-width:365px) and (max-width:390px) {
     .responsive-slider-parallax .slides-container ul li .slide-body.slider2 .caption.sub.normallowerfont{
         width:100% !important;
+    }
+    .slide-body.slider4 .groupsub1 {
+        top: 12px !important;
+    }
+    .slide-body.slider3 .groupsub1{
+        top: 25px !important;
     }
 }
 
