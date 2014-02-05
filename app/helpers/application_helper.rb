@@ -5,7 +5,7 @@ module ApplicationHelper
     path = params[:path]
 
       count = path.split("/").count
-      crumb_array = params[:path].split("/")
+      crumb_array = params[:path].split("/").inject([]) {|array, old| array << old.gsub("-", " ")}
       @breadcrumb = {:count => count,
                      :crumb_array => crumb_array }
 
