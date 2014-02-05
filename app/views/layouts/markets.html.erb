@@ -53,7 +53,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
           <li><a href="/">home</a>
           </li>
           <% for bc in 0..(breadcrumbs[:count]-1) %>
-              <li><a href="/<%= breadcrumbs[:crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:crumb_array][bc] %></a></li>
+              <li><a href="/<%= breadcrumbs[:old_crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:new_crumb_array][bc] %></a></li>
           <% end %>
 
         </ul>
