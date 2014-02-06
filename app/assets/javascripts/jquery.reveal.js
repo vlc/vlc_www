@@ -16,9 +16,9 @@
 /*---------------------------
  Listener for data-reveal-id attributes
 ----------------------------*/
-
-	$('div[data-reveal-id]').live('click', function(e) {
-		e.preventDefault();
+	//$('div[data-reveal-id]').live('click', function(e) {
+        $(document).on('click', 'div[data-reveal-id]', function(e) {
+                e.preventDefault();
 		var modalLocation = $(this).attr('data-reveal-id');
 		$('#'+modalLocation).reveal($(this).data());
 	});
@@ -63,6 +63,7 @@
 ----------------------------*/
 			//Entrance Animations
 			modal.bind('reveal:open', function () {
+
 			  modalBG.unbind('click.modalEvent');
 				$('.' + options.dismissmodalclass).unbind('click.modalEvent');
 				if(!locked) {
@@ -87,6 +88,10 @@
 						modalBG.css({"display":"block"});	
 						unlockModal()				
 					}
+
+
+                                        $('.reveal-modal-new').fadeIn();
+
 				}
 				modal.unbind('reveal:open');
 			}); 	
@@ -117,7 +122,10 @@
 					if(options.animation == "none") {
 						modal.css({'visibility' : 'hidden', 'top' : topMeasure});
 						modalBG.css({'display' : 'none'});	
-					}		
+					}
+
+                                        $('.reveal-modal-new').fadeOut();
+
 				}
 				modal.unbind('reveal:close');
 			});     
