@@ -92,6 +92,11 @@
 
                                         $('.reveal-modal-new').fadeIn();
 
+                                        //Start a video on open
+                                        //alert($(this).attr('class'));
+                                        var iframesrc_open = $(this).find('.iframe-src').val();
+                                        $(this).find('iframe').attr('src', iframesrc_open);
+
 				}
 				modal.unbind('reveal:open');
 			}); 	
@@ -125,8 +130,13 @@
 					}
 
                                         $('.reveal-modal-new').fadeOut();
+                                        
+                                        //Stop a video on close                                        
+                                        //alert($(this).attr('class'));
+                                        $(this).find('iframe').attr('src', '');
 
 				}
+
 				modal.unbind('reveal:close');
 			});     
    	
@@ -155,7 +165,7 @@
 /*---------------------------
  Animations Locks
 ----------------------------*/
-			function unlockModal() { 
+			function unlockModal(){ 
 				locked = false;
 			}
 			function lockModal() {
