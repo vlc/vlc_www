@@ -12,7 +12,36 @@ VLC::Application.routes.draw do
     end
   end
   mount Refinery::Core::Engine, :at => '/'
+  Refinery::Core::Engine.routes.draw do
+    root :to => 'pages#home', :via => :get
+    post 'pages/preview'     => 'pages#preview', :as => :preview_pages
+    match 'pages/*path/preview' => 'pages#preview', :as => :preview_page,  :via => [:get, :put]
+    get '/pages/:id', :to => 'pages#show', :as => :page
 
+    namespace :admin, :path => 'refinery' do
+      get 'pages/*path/edit', :to => 'pages#edit'
+      get 'pages/*path/children', :to => 'pages#children', :as => 'children_pages'
+      put 'pages/*path', :to => 'pages#update'
+      delete 'pages/*path', :to => 'pages#destroy'
+      resources :pages, :except => :show do
+        post :update_positions, :on => :collection
+      end
+
+      resources :pages_dialogs, :only => [] do
+        collection do
+          get :link_to
+          get :test_url
+          get :test_email
+        end
+      end
+
+      resources :page_parts, :only => [:new, :create, :destroy]
+    end
+
+    get '/news/item/id/22.html' => redirect("/company/news/zenith-airport-link-forecasts")
+    get '/news/item/id/26.html' => redirect("/company/news/zenith-airport-link-forecasts-update")
+    get '/news/item/id/27.html' => redirect("/company/news/incorrect-reporting-by-afr")
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

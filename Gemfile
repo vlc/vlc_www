@@ -20,6 +20,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3' # Minifier
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 gem 'jquery-rails', '~> 2.0.0'
 gem 'refinerycms', '~> 2.0.0'
 # To use ActiveModel has_secure_password
