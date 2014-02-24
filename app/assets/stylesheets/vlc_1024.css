@@ -877,10 +877,10 @@ div.popupopen.reveal-modal {
 
 @media (min-width:548px) and (max-width:568px) {
     .tab_type li {
-        font-size: 11px;
-        margin-right: 4px;
-        padding: 6px;
-    }
+    font-size: 11px;
+    margin-right: 4px;
+    padding: 6px;
+}
     .InnerzenithLogo{
         width: 25%;
     }
@@ -934,85 +934,58 @@ div.popupopen.reveal-modal {
         height:100%;
       }
       
-    .slide-body.slider1 .container .caption {
-        white-space: inherit !important;
-    }
+.slide-body.slider1 .container .caption {
+    white-space: inherit !important;
+}
 
 
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
-        font-size:29px !important;
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont {
-
-        font-size: 21px;
-    }
-
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.header {
-        left: 0;
-        top: 14%;
-    }
-
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
-              font-size: 20px !important;
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont {
-
-        font-size: 29px !important;
-
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.lowerbiggerfont{
-        font-size: 29px !important;
-    }
-
-    .groupsub2{
-        top:35% !important;
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont, .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
-        font-size: 23px !important;
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
-        font-size: 14px !important;
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.bannerupperfont{
-        font-size: 14px !important;
-    }
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.bannerlowerfont{
-        font-size: 23px !important;
-    }
-
-    .groupsub1, .groupsub2{
-        font-size: 12px !important;
-    }
-    .slide-body a.whats-orange{
-        font-size:12px !important;
-    }
-
-    /****home banner****/
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
+    font-size:29px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont {
     
+    font-size: 21px;
+}
 
-    .responsive-slider-parallax .slides-container ul li .slide-body .caption.img-html5 img {
-        max-width: 33% !important;
-    }
-    .slide-body.slider1 .caption.img-html5 {
-        left: 64% !important;
-        top: 27% !important;
-    }
-    .slide-body.slider2 .caption.img-html5 {
-        left: 94% !important;
-        top: 27% !important;
-    }
-    .slide-body.slider3 .caption.img-html5 {
-        left: 110% !important;
-        top: 38% !important;
-    }
-    .slide-body.slider4 .caption.img-html5 {
-        left: 107% !important;
-        top: 41% !important;
-    }
-    .slide-body.slider5 .caption.img-html5 {
-        left: 53% !important;
-        top: 27% !important;
-    }
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header {
+    left: 0;
+    top: 14%;
+}
+
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+          font-size: 20px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont {
+
+    font-size: 29px !important;
+
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.lowerbiggerfont{
+    font-size: 29px !important;
+}
+
+.groupsub2{
+    top:35% !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.upperbiggerfont, .responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2{
+    font-size: 23px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.normallowerfont{
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.header h2.bannerupperfont{
+    font-size: 14px !important;
+}
+.responsive-slider-parallax .slides-container ul li .slide-body .caption.sub.bannerlowerfont{
+    font-size: 23px !important;
+}
+
+.groupsub1, .groupsub2{
+    font-size: 12px !important;
+}
+.slide-body a.whats-orange{
+    font-size:12px !important;
+}
 
 }
 @media (min-width:580px) and (max-width:605px) {
