@@ -58,17 +58,13 @@ module VLC
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-=begin
-    Refinery::Images.configure do |config|
+    Refinery::Core.configure do |config|
       config.s3_backend = true
-      config.s3_access_key_id = 'AKIAI5L3WU7357LCXZLA'
-      config.s3_secret_access_key = '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'
-      config.s3_bucket_name = 'vlc-website'
+      config.s3_access_key_id = ENV['S3_KEY']
+      config.s3_secret_access_key = ENV['S3_SECRET']
+      config.s3_bucket_name = ENV['S3_BUCKET']
       #config.s3_region = 'fill_in_your_buckets_region_here' # this one's not always required, default is 'us-east-1'
     end
-=end
-    ENV['S3_KEY']='AKIAI5L3WU7357LCXZLA'
-    ENV['S3_SECRET']='gwBcHI6nJaBG5rQORTchvAN9nCbos38YmL0T6uhB'
-    ENV['S3_BUCKET']='vlc-website'
+
   end
 end
