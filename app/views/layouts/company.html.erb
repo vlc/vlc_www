@@ -63,11 +63,8 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
             <div class="sidebarmenuheading">
               <h1>Company</h1>
             </div>
-            <div class="sidebarmenutypes activesidebarmenu"> <a class="active" href="/company">Overview</a> </div>
-            <div class="sidebarmenutypes"> <a href="/company/history">History</a> </div>
-            <div class="sidebarmenutypes"> <a href="/company/customers">Customers</a> </div>
-            <div class="sidebarmenutypes"> <a href="/company/careers">Careers</a> </div>
-            <div class="sidebarmenutypes"> <a href="/company/news">News</a> </div>
+            <%= render :partial => '/refinery/menu', :locals => {
+                    :roots => refinery_menu('company_menu') } %>
 
           </div>
 

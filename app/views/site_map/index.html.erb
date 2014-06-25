@@ -1,0 +1,15 @@
+<div class = "row">
+  <%@pages.live.each do |page|%>
+      <% if page.show_in_menu%>
+          <ul>
+            <li>
+              <%= link_to ( page.title),     refinery.url_for((page.url_marketable)) %>
+              <%if page.children.any?%>
+                  <%= render :partial => 'shared/page', locals: {:page_children => page} %>
+              <%-end %>
+            </li>
+          </ul>
+      <%end%>
+  <%end%>
+
+</div>

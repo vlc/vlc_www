@@ -43,3 +43,4 @@ gem 'therubyracer','>= 0.11.0beta1', :require => 'v8'
 
 # To use debugger
 # gem 'debugger'
+gem 'refinerycms-menus', '~> 2.0.7'

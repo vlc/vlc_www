@@ -11,6 +11,7 @@ VLC::Application.routes.draw do
       get :save_news_letters_email
     end
   end
+  resources :site_map
   mount Refinery::Core::Engine, :at => '/'
   Refinery::Core::Engine.routes.draw do
     root :to => 'pages#home', :via => :get

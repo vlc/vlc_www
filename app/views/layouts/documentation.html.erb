@@ -62,63 +62,10 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
       <% if params[:path].split("/").last == "documentation" or "adelaide" or "perth" or "sqn" or "sydney" or "act" or "victoria" or "ruby" %>
           <div class="sidebarmenu newsidebarmenu">
-            <div class="sidebarmenuheading">
-              <h1>Zenith Transport Models</h1>
-            </div>
-            <div class="sidebarmenutypes">
-              <a class="active" href="/zenith">Overview</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/whats-new">What’s New</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/features">Features</a>
-            </div>
-            <div class="sidebarmenutypes ">
-              <a href="/zenith/markets">Markets</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/projects">Projects</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero">
-              <a href="/zenith/documentation">Documentation</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu activesubSidemenu">
-              <a href="/zenith/documentation/general">General</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/zenith/documentation/adelaide">Adelaide</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/zenith/documentation/perth">Perth</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/zenith/documentation/sqn">Southeast Queensland/Northern<br /> New South Wales</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/zenith/documentation/sydney">Sydney</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/zenith/documentation/act">Australian Capital Territory</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/zenith/documentation/victoria">Victoria</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu subSideMenu">
-              <a href="/zenith/documentation/ruby">Ruby</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/licensing">Licensing</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/traffic-estimates">Traffic Estimates</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/research-and-development">R&amp;D</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/zenith/support">support</a>
-            </div>
+
+            <%= render :partial => '/refinery/menu', :locals => {
+                    :roots => refinery_menu('sidebar_menu') } %>
+
           </div>
       <% end %>
       </div>
@@ -162,7 +109,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
         }
       })
 
-      
+
 
         $('#tab5').css("display","none");
 
