@@ -62,7 +62,9 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
       <% if params[:path].split("/").last == "documentation" or "adelaide" or "perth" or "sqn" or "sydney" or "act" or "victoria" or "ruby" %>
           <div class="sidebarmenu newsidebarmenu">
-
+            <div class="sidebarmenuheading">
+              <h1>Zenith Transport Models</h1>
+            </div>
             <%= render :partial => '/refinery/menu', :locals => {
                     :roots => refinery_menu('sidebar_menu') } %>
 

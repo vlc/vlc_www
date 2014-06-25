@@ -65,57 +65,8 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
         <div class="sidebarmenuheading">
           <h1>Zenith Transport Models</h1>
         </div>
-        <div class="sidebarmenutypes">
-          <a class="active" href="/zenith">Overview</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/whats-new">What’s New</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/features">Features</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero">
-          <a href="/zenith/markets">Markets</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu activesubSidemenu">
-          <a href="/zenith/markets/victoria">Victoria</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-          <a href="/zenith/markets/sydney">Sydney</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-          <a href="/zenith/markets/seq">Southeast Queensland</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-          <a href="/zenith/markets/adelaide">Adelaide</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-          <a href="/zenith/markets/perth">Perth</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-          <a href="/zenith/markets/nq">North Queensland</a>
-        </div>
-        <div class="sidebarmenutypes activesidebarmenu  subSideMenu">
-          <a href="/zenith/markets/act">ACT and Surrounds</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/projects">Projects</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/documentation">Documentation</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/licensing">Licensing</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/traffic-estimates">Traffic Estimates</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/research-and-development">R&amp;D</a>
-        </div>
-        <div class="sidebarmenutypes">
-          <a href="/zenith/support">Support</a>
-        </div>
+        <%= render :partial => '/refinery/menu', :locals => {
+                :roots => refinery_menu('markets_menu') } %>
       </div>
 
       <% end %>
