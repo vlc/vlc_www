@@ -63,35 +63,8 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
             <div class="sidebarmenuheading">
               <h1>Consulting Services</h1>
             </div>
-            <div class="sidebarmenutypes">
-              <a class="active" href="/services">Overview</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/services/forecasting">Demand Forecasting</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/services/planning">Transport Planning</a>
-            </div>
-            <div class="sidebarmenutypes">
-              <a href="/services/landuse">Land Use &amp; Demographic Forecasting</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero">
-              <a href="/services/other">Other Services</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu activesubSidemenu">
-              <a href="/services/other/transport-economics">Transport Economics</a>
-            </div>
-
-
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/services/other/special-events">Special Events</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/services/other/road-development">Road Development Contribution Assessments</a>
-            </div>
-            <div class="sidebarmenutypes activesidebarmenu marginBottomZero subSideMenu">
-              <a href="/services/other/specialist-services">Other Specialist Services</a>
-            </div>
+            <%= render :partial => '/refinery/menu', :locals => {
+                    :roots => refinery_menu('otherservices_menu') } %>
 
 
           </div>

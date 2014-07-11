@@ -2590,3 +2590,169 @@ p.margin-history{
     text-decoration: none;
 
 }
+
+/*---sidebar menu ---*/
+#menu ul {
+    float: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+    width: 100%;
+}
+#menu ul li{
+    clear: both;
+    float: left;
+    margin-bottom: 1%;
+    width: 100%;
+}
+#menu ul li a{
+    background: none repeat scroll 0 0 #e1dfd3;
+    color: #333333;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    padding: 3% 0 3% 7%;
+    text-decoration: none;
+    width: 93%;
+}
+#menu ul li.selected a{
+    background: none repeat scroll 0 0 #333333;
+    border-left: 5px solid #ec8b00;
+    color: #ffffff;
+    padding: 3% 0 3% 5%;
+    width: 93.2%;
+}
+#menu ul li a:hover{
+    background: none repeat scroll 0 0 #333333;
+    border-left: 5px solid #ec8b00;
+    color: #ffffff;
+    padding: 3% 0 3% 5%;
+    width: 93.2%;
+}
+#menu ul li ul{
+    clear: both;
+    float: left;
+    width: 100%;
+}
+#menu ul li ul li{
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-bottom: 0px;
+}
+#menu ul li ul li a{
+    border-left: 5px solid #e1dfd3 !important;
+    color: #ffffff;
+    padding: 3% 0 3% 5%;
+    width: 93.2%;
+}
+
+#menu ul li ul li a:hover {
+    background: none repeat scroll 0 0 #444444;
+    color: #ec8b00;
+    border-left: 5px solid #ec8b00 !important;
+}
+
+#menu ul li ul li.selected a {
+    background: none repeat scroll 0 0 #444444;
+    color: #ec8b00;
+    
+}
+
+/*  ----new sitemap -----*/
+
+
+
+
+.sitemapMain ul {
+    float: left;
+    margin: 0 1% 10px 0;
+    padding-left: 0;
+    width: 32%;
+}
+.sitemapMain ul li{
+    float: left;
+    width: 100%;
+}
+.sitemapMain ul li ul{
+    float: left;
+    width: 98%;
+    padding-left: 2%;
+    margin:0;
+}
+.sitemapMain ul li ul li ul{
+    float: left;
+    width: 92%;
+    padding-left: 4%;
+    margin:0;
+}
+
+.sitemapMain ul li a{
+    float: left;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #333333;
+    background: url("headericon.jpg") no-repeat scroll 6px center #ebebe2;
+    width:94%;
+    padding-left: 6%;
+    padding-top:2%;
+    padding-bottom: 2%;
+}
+.sitemapMain ul li a:hover{
+    color: #ec8b00;
+}
+
+.sitemapMain ul li ul a{
+    float: left;
+    font-size: 13px;
+    text-decoration: none;
+    background: url("list.jpg") no-repeat scroll left center;
+    padding-left:4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.sitemapMain ul li ul li ul a{
+    font-size: 12px;
+
+}
+
+/*----- position of sitemap ----*/
+
+.sitemapMain{
+    position: relative;
+}
+.outdoorSitemap {
+    position: absolute;
+    top: 50px;
+}
+.contactSitemap{
+    position: absolute;
+    top: 210px;
+}
+.companySitemap{
+    position: absolute;;
+    top:260px;
+}
+
+/*  ----footer font----*/
+.copyrightcommon .floatleft{
+    font-size: 12px;
+}
+.copyrightcommon .floatright a{
+    font-size: 12px;
+}
+.footerbelow3 .inputdivdown{
+    font-size: 12px;
+}
+.footerbelow3 .linkedin{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+

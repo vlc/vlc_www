@@ -46,7 +46,15 @@
     left: 66% !important;
     top: 25% !important;
 }
-
+#menu ul li a{
+     padding: 2% 0 2% 7%;
+}
+#menu ul li a:hover{
+    padding: 2% 0 2% 5%;
+}
+#menu ul li.selected a{
+       padding: 2% 0 2% 5%;
+}
 @media (min-width:751px) and (max-width:1080px) {
     .header-submenu-wrap {
         display: none !important;
@@ -854,6 +862,13 @@ div.popupopen.reveal-modal {
     }
     .contentsection{
         width:96%;
+    }
+    .sitemapMain ul li a{
+        background-image: none;
+    }
+    .sitemapMain ul li ul a{
+        background: url("list.jpg") no-repeat scroll 0 7px rgba(0, 0, 0, 0);
+         padding-left: 5%;
     }
 }
 

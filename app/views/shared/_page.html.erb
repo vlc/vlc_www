@@ -1,0 +1,12 @@
+<% page_children.children.live.each do |children_page|%>
+    <% if children_page.show_in_menu? %>
+        <ul>
+          <li>
+            <%= link_to (children_page.title), refinery.url_for((children_page.url_marketable)) %>
+            <%if children_page.children.any?%>
+                <%= render :partial => 'shared/page', locals: {:page_children => children_page} %>
+            <%-end %>
+          </li>
+        </ul>
+    <% end %>
+<%end%>

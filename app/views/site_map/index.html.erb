@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VLC</title>
+<%#*<script src="http://code.jquery.com/jquery-1.9.0.js"></script>%>
+  <!-- <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script> -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<%#= stylesheet_link_tag    "application" %>
+<%#= javascript_include_tag "application", "jquery" %>
+
+<%#=stylesheet_link_tag  "styles_1024", :media => "only screen and (max-width: 1024px)" %>
+<%#=stylesheet_link_tag  "styles_480", :media => "only screen and (max-width: 480px)" %>
+<%#=stylesheet_link_tag  "styles_480", :media => "only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5)" %>
+  <%= render '/refinery/head' %>
+  <%= csrf_meta_tags %>
+</head>
+<body  >
+<div class="main-wrapper">
+  <%= render "/refinery/header" %>
+  <div class="banner-wrapper">
+    <div class="innerbannerZenith">
+      <div class="main-wrapper-fixed">
+        <div class="innerImageBanner zenithInnerImageBanner">
+          <div class="innerTextDiv">
+            <div class="InnerBoxContainer">
+              <div class="innerTextDivRow">
+                Veitch Lister Consulting,
+              </div>
+              <div class="innerTextDivRow">
+                the Transport Planning, Modelling &amp; Data Experts.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mainContent-wrapper">
+    <div class="main-wrapper-fixed contentwrapper">
+      <div class="contentfulll">
+        <div class="breadcrumbs_menu">
+          <ul class="breadcrumbul">
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/">sitemap</a></li>
+          </ul>
+          <hr class="horizontalLine" />
+        </div>
+        <div class = "UpperContentSection">
+          <div class="contentheading mainHeading">SiteMap</div>
+          <div class="sitemapMain"> 
+            <%@pages.live.each do |page|%>
+                <% if page.show_in_menu%>
+                    <ul>
+                      <li>
+                        <%= link_to ( page.title),     refinery.url_for((page.url_marketable)) %>
+                        <%if page.children.any?%>
+                            <%= render :partial => 'shared/page', locals: {:page_children => page} %>
+                        <%-end %>
+                      </li>
+                    </ul>
+                <%end%>
+            <%end%>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render "/refinery/footer" %>
+</div>
+
+
+</body>
+
+
+

@@ -11,6 +11,7 @@ VLC::Application.routes.draw do
       get :save_news_letters_email
     end
   end
+  resources :site_map
   mount Refinery::Core::Engine, :at => '/'
   Refinery::Core::Engine.routes.draw do
     root :to => 'pages#home', :via => :get
@@ -41,6 +42,7 @@ VLC::Application.routes.draw do
     get '/news/item/id/22.html' => redirect("/company/news/zenith-airport-link-forecasts")
     get '/news/item/id/26.html' => redirect("/company/news/zenith-airport-link-forecasts-update")
     get '/news/item/id/27.html' => redirect("/company/news/incorrect-reporting-by-afr")
+    get '/documents' => redirect("/zenith/documentation")
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
