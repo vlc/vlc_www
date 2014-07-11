@@ -578,6 +578,28 @@ div.popupopen.reveal-modal {
 }
 
 
+/*------- new sitemap------*/
+.outdoorSitemap{
+    position: relative;
+    top:0px;
+}
+.companySitemap{
+    position: relative;
+    top:0;
+}
+
+.contactSitemap{
+    position: relative;
+    top: 0;
+}
+.sitemapMain ul {
+     margin: 0 0 10px 0;
+     width: 100%;
+}
+#menu ul li a{
+    font-size: 13px;
+}
+
 /***customer testimonial**/
 
 @media (min-width:320px) and (max-width:360px) {

@@ -194,7 +194,31 @@ $('.right_content_old').clone(true, true).appendTo('.right_content_ner');
 
 
 
+//Sitemap
+$( ".sitemapMain > ul:first-child()").addClass( "homesitemap" );
+$( ".sitemapMain > ul:nth-child(2)").addClass( "zenithSitemap" );
+$( ".sitemapMain > ul:nth-child(3)").addClass( "outdoorSitemap" );
+$( ".sitemapMain > ul:nth-child(4)").addClass( "companySitemap" );
+$( ".sitemapMain > ul:nth-child(5)").addClass( "contactSitemap" );
+$( ".sitemapMain > ul:nth-child(6)").addClass( "servicesSitemap" );
+$( ".sitemapMain > ul:nth-child(7)").addClass( "legalSitemap" );
+$( ".sitemapMain > ul:nth-child(8)").addClass( "privacySitemap" );
+$( ".sitemapMain > ul:last-child").addClass( "newsSitemap" );
 
+
+// var homeheight = $('.homesitemap').outerHeight();
+// var zenithheight = $('.zenithSitemap').outerHeight();
+// var outdoorheight = $('.outdoorSitemap').outerHeight();
+// var companyheight = $('.companySitemap').outerHeight();
+// var contactheight = $('.contactSitemap').outerHeight();
+// var servicesheight = $('.servicesSitemap').outerHeight();
+// var legalheight = $('.legalSitemap').outerHeight();
+// var privacyheight = $('.privacySitemap').outerHeight();
+// var newsheight = $('.newsSitemap').outerHeight();
+
+
+//$(".companySitemap").clone().insertAfter(".outdoorSitemap");
+//$(".homesitemap").detach().insertAfter(".contactSitemap");
 
 });	
 
