@@ -58,24 +58,13 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
         <hr class="horizontalLine" />
       </div>
 
-      <% if params[:path].split("/").last == "landuse" or "services" %>
           <div class="sidebarmenu newsidebarmenu">
             <div class="sidebarmenuheading">
               <h1>Consulting Services</h1>
             </div>
             <%= render :partial => '/refinery/menu', :locals => {
                     :roots => refinery_menu('services_menu') } %>
-
-
           </div>
-
-      <%end%>
-
-
-
-
-
-
      </div>
     </div>
   </div>

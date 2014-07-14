@@ -47,39 +47,28 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
           <a href="javascript:void(0)" class="closed-view"><img src="../../assets/slide_menu.png" alt="Slide Menu" /><span>Open Side Menu</span>
           </a>
         </div>
-      <%= yield %>
-      <div class="breadcrumbs_menu oldbreadcrumbs">
-        <ul class="breadcrumbul">
-          <li><a href="/">home</a>
-          </li>
-          <% for bc in 0..(breadcrumbs[:count]-1) %>
-              <li><a href="/<%= breadcrumbs[:old_crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:new_crumb_array][bc] %></a></li>
-          <% end %>
+        <%= yield %>
+        <div class="breadcrumbs_menu oldbreadcrumbs">
+          <ul class="breadcrumbul">
+            <li><a href="/">home</a>
+            </li>
+            <% for bc in 0..(breadcrumbs[:count]-1) %>
+                <li><a href="/<%= breadcrumbs[:old_crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:new_crumb_array][bc] %></a></li>
+            <% end %>
 
-        </ul>
-        <hr class="horizontalLine" />
-      </div>
-
-      <% if params[:path].split("/").last == "zenith" or "whatsnew" or "features" or "projects" or "licensing" or "trafficestimates" or "randd" or "support" %>
-          <div class="sidebarmenu newsidebarmenu">
-             <div class="sidebarmenuheading">
+          </ul>
+          <hr class="horizontalLine" />
+        </div>
+        <div class="sidebarmenu newsidebarmenu">
+          <div class="sidebarmenuheading">
             <h1>Zenith Transport Models</h1>
           </div>
-            <%= render :partial => '/refinery/menu', :locals => {
-                    :roots => refinery_menu('zenith_menu') } %>
-          </div>
-
-      <%end%>
-
-
-
-
-
-
-
+          <%= render :partial => '/refinery/menu', :locals => {
+                  :roots => refinery_menu('zenith_menu') } %>
+        </div>
+      </div>
     </div>
   </div>
- </div>
   <%= render "/refinery/footer" %>
 </div>
 
@@ -102,20 +91,20 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
     // documetation tab
     $(document).ready(function() {
 
-      var page_name = $('input[name="page-referance"]').val();
+        var page_name = $('input[name="page-referance"]').val();
 
-   // console.log(page_name);
+        // console.log(page_name);
 
-    $('.newsidebarmenu .sidebarmenutypes a').each(function(){
-      $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes').removeClass("activesidebarmenu");
-      if($(this).text() == page_name){
-       // console.log('page');
-        $(this).parent('.sidebarmenutypes').addClass('activesidebarmenu_new');
-      }
-      else {
-       // console.log('not');
-      }
-    })
+        $('.newsidebarmenu .sidebarmenutypes a').each(function(){
+            $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes').removeClass("activesidebarmenu");
+            if($(this).text() == page_name){
+                // console.log('page');
+                $(this).parent('.sidebarmenutypes').addClass('activesidebarmenu_new');
+            }
+            else {
+                // console.log('not');
+            }
+        })
 
         $('#tab5').css("display","none");
 

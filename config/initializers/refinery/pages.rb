@@ -40,7 +40,7 @@ Refinery::Pages.configure do |config|
   # config.auto_expand_admin_tree = true
 
    config.layout_template_whitelist = ["application","home", "markets", "documentation", "zenith", "company",
-                                       "forecasting", "otherservices", "outdoor", "planning", "services"]
+                                       "forecasting", "otherservices", "outdoor", "planning", "services", "news"]
 
   # config.view_template_whitelist = ["home", "show"]
 
