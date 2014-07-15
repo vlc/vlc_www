@@ -27,6 +27,7 @@ end
 
 group :production do
   gem 'fog'
+  gem 'heroku'
 end
 
 gem 'jquery-rails', '~> 2.0.0'
