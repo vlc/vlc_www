@@ -161,12 +161,13 @@ $(document).ready(function(){
         var page_title= $.trim($('#body_content_title').text().toLowerCase());
         $('.sidebarmenu #menu > ul > li a').each(function(){
           if(($(this).text().toLowerCase()) == page_title){
-              $(this).parents('li').addClass('selected');
+              $(this).parentsUntil('.sidebarmenu').addClass('selected');
           }
         });
     }
 
 });	//Ready function ends here
+
 
 
 $(window).resize(function(){
