@@ -51,7 +51,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
         </div>
 
 <div class="sidebaright">
-  
+
   <div class="right_content_ner">
     <input name="page-referance" value="" type="hidden" />
   </div>
@@ -94,8 +94,7 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 
 
 </body>
-
-<script>
+ <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -105,153 +104,6 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
     ga('send', 'pageview');
 
 </script>
-
-
-<script type="text/javascript">
-    // documetation tab
-    $(document).ready(function() {
-
-
-       var page_name = $('input[name="page-referance"]').val();
-
-   // console.log(page_name);
-
-    $('.newsidebarmenu .sidebarmenutypes a').each(function(){
-      $(this).parents(".sidebarmenu.newsidebarmenu").find('.sidebarmenutypes').removeClass("activesidebarmenu");
-      if($(this).text() == page_name){
-       // console.log('page');
-        $(this).parent('.sidebarmenutypes').addClass('activesidebarmenu_new');
-      }
-      else {
-       // console.log('not');
-      }
-    })
-
-
-
-        $('#tab5').css("display","none");
-
-        $(".tab_type li").click(function(){
-
-            $(this).parents(".tab_type").find("li").removeClass("selected_tab");
-
-            $(this).addClass("selected_tab");
-
-            var idpass = $(this).attr("class");
-
-            idpass = idpass.replace(' selected_tab','');
-
-            //alert(idpass);
-
-            $(this).parents('.tab').next(".tab_searchContainer").find(".tab_search").fadeOut(0);
-
-            $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
-        });
-
-
-
-
-
-    });
-
-    // history under company
-
-    $(window).load(function(){
-        if($('.projectBoxContainer').length){
-            $('.projectBoxContainer').each(function(){
-                var leftheight = $(this).find('.left').outerHeight();
-                var righttheight = $(this).find('.right').outerHeight();
-                if( leftheight > righttheight){
-                    $(this).find('.right').outerHeight(leftheight);
-                }
-                else{
-                    $(this).find('.left').outerHeight(righttheight);
-                }
-            });
-        }
-    });
-    /// Js for Popup in project pages
-
-    $(document).ready( function() {
-
-        $('.projectContiner .projectImg').mouseenter(function(){
-            console.log('mouseenter');
-            $(this).next('.thumbhover').stop(true, true).slideUp("slow");
-        });
-
-        $('.projectContiner .projectImg').mouseleave(function(){
-            console.log('mouseleave');
-            $(this).next('.thumbhover').stop(true, true).slideDown("slow");
-        });
-
-        $('.projectContiner .thumbhover').mouseenter(function(){
-            $(this).stop(true, true).show();
-        })
-
-        $('.projectContiner .thumbhover').mouseleave(function(){
-            $(this).stop(true, true).hide();
-        })
-
-    });
-
-    $(window).load(function(){
-        $('.bwWrapper').BlackAndWhite({
-            hoverEffect : true, // default true
-            // set the path to BnWWorker.js for a superfast implementation
-            webworkerPath : false,
-            // for the images with a fluid width and height
-            responsive:true,
-            // to invert the hover effect
-            invertHoverEffect: false,
-            // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-            intensity:1,
-            speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-                fadeIn: 200, // 200ms for fadeIn animations
-                fadeOut: 800 // 800ms for fadeOut animations
-            },
-            onImageReady:function(img) {
-                // this callback gets executed anytime an image is converted
-            }
-        });
-    });
-
-    // Dec 19th added
-    <!-- for slider top -->
-
-
-
-
-    $( document ).ready( function() {
-        $('.projectImg').hover(function(){
-            $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");
-        });
-    });
-
-    $(window).load(function(){
-        $('.bwWrapper').BlackAndWhite({
-            hoverEffect : true, // default true
-            // set the path to BnWWorker.js for a superfast implementation
-            webworkerPath : false,
-            // for the images with a fluid width and height
-            responsive:true,
-            // to invert the hover effect
-            invertHoverEffect: false,
-            // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-            intensity:1,
-            speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-                fadeIn: 200, // 200ms for fadeIn animations
-                fadeOut: 800 // 800ms for fadeOut animations
-            },
-            onImageReady:function(img) {
-                // this callback gets executed anytime an image is converted
-            }
-        });
-    });
-
-
-
-</script>
-
 </html>
 
 
