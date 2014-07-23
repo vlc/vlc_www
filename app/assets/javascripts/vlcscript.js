@@ -133,16 +133,16 @@ $(document).ready(function(){
         $(".tab_searchContainer").find("#" + idpass ).fadeIn('slow');
     });
 
-    $('.projectImg').hover(function(){
-        $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");
-    });
+//    $('.projectImg').hover(function(){
+//        $(this).parent().find('.headerImage').next('.thumbhover').slideToggle("slow");
+//    });
 
     $('.projectContiner .projectImg').mouseenter(function(){
-        $(this).next('.thumbhover').stop(true, true).slideUp("slow");
+        $(this).next('.thumbhover').stop(true, true).slideDown("slow");
     });
 
     $('.projectContiner .projectImg').mouseleave(function(){
-        $(this).next('.thumbhover').stop(true, true).slideDown("slow");
+        $(this).next('.thumbhover').stop(true, true).slideUp("slow");
     });
 
     $('.projectContiner .thumbhover').mouseenter(function(){
