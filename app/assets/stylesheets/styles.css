@@ -2748,6 +2748,13 @@ p.margin-history{
 .footerbelow3 .linkedin{
     font-size: 12px;
 }
+
+textarea.comntextarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
  /*retina display code*/
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
