@@ -2748,6 +2748,16 @@ p.margin-history{
 .footerbelow3 .linkedin{
     font-size: 12px;
 }
+ /*retina display code*/
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    /* Retina-specific stuff here */
+
+    .main-wrapper-fixed{
+        width: 100%;
+    }
+
+}
 
 
 
