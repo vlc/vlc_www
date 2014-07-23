@@ -18,61 +18,14 @@ only screen and (min-device-pixel-ratio : 1.5)" %>
 <body  >
 <div class="main-wrapper">
   <%= render "/refinery/header" %>
-  <div class="banner-wrapper">
-    <div class="innerbanner">
-      <div class="main-wrapper-fixed">
-        <div class="innerImageBanner zenithInnerImageBanner">
-          <div class="innerTextDiv">
-            <div class="InnerBoxContainer">
-              <div class="innerTextDivRow">
-                Veitch Lister Consulting,
-              </div>
-              <div class="innerTextDivRow">
-                the Transport Planning, Modelling &amp; Data Experts.
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <%= render :partial => 'shared/zenithbanner'%>
 
   <div class="mainContent-wrapper">
     <div class="main-wrapper-fixed contentwrapper">
       <div class="contentfulll">
-        <div class="right-menu-toggle">
-          <a href="javascript:void(0)" class="closed-view"><img src="../../assets/slide_menu.png" alt="Slide Menu" /><span>Open Side Menu</span>
-          </a>
-        </div>
-        <div class="contentsection">
-          <div class="breadcrumbs_menu newbreadcrumbs">
-          </div>
-          <%= yield %>
-        </div>
-        <div class="right_content_old">
 
-        </div>
-
-        <div class="sidebaright">
-
-          <div class="right_content_ner">
-            <input name="page-referance" value="" type="hidden" />
-          </div>
-
-        </div>
-        <div class="breadcrumbs_menu oldbreadcrumbs">
-          <ul class="breadcrumbul">
-            <li><a href="/">home</a>
-            </li>
-            <% for bc in 0..(breadcrumbs[:count]-1) %>
-                <li><a href="/<%= breadcrumbs[:old_crumb_array][0..bc].join("/") %>"><%= breadcrumbs[:new_crumb_array][bc] %></a></li>
-            <% end %>
-
-          </ul>
-          <hr class="horizontalLine" />
-        </div>
+        <%= render :partial => 'shared/sidemenu'%>
 
         <div class="sidebarmenu newsidebarmenu">
           <div class="sidebarmenuheading">
