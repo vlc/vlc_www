@@ -1,0 +1,2834 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ZenithExcelReporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (Z)</a> &raquo;
+    
+    
+    <span class="title">ZenithExcelReporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ZenithExcelReporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ZenithExcelReporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Win32Utils</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">app/utils/reporting/zenith_excel_reporter.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class allows you to generate reports using ruby values/expressions via a template.
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>Using the ZenithExcelReporter</div></p>
+      
+      <pre class="example code"><code><span class='rubyid_template_example identifier id'>template_example</span><span class='dot token'>.</span><span class='rubyid_xlsx identifier id'>xlsx</span> <span class='label val'>contents:</span>
+<span class='rubyid_________________________________________ identifier id'>________________________________________</span>
+<span class='bitor op'>|</span> <span class='rubyid_ExpressionType constant id'>ExpressionType</span> <span class='bitor op'>|</span> <span class='rubyid_Expression constant id'>Expression</span>  <span class='bitor op'>|</span> <span class='rubyid_Output constant id'>Output</span> <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='integer val'>10</span> <span class='mult op'>*</span> <span class='integer val'>2</span>      <span class='bitor op'>|</span>        <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='rubyid_some_number identifier id'>some_number</span> <span class='bitor op'>|</span>        <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='rubyid_some_string identifier id'>some_string</span> <span class='bitor op'>|</span>        <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='rubyid_some_matrix identifier id'>some_matrix</span> <span class='bitor op'>|</span>        <span class='bitor op'>|</span>
+
+<span class='rubyid_Example constant id'>Example</span> <span class='rubyid_code identifier id'>code</span> <span class='rubyid_to identifier id'>to</span> <span class='rubyid_use identifier id'>use</span> <span class='rubyid_this identifier id'>this</span> <span class='label val'>template:</span>
+
+<span class='rubyid_some_number identifier id'>some_number</span> <span class='assign token'>=</span> <span class='integer val'>5</span>
+<span class='rubyid_some_string identifier id'>some_string</span> <span class='assign token'>=</span> <span class='string val'>&quot;Hello&quot;</span>
+<span class='rubyid_some_matrix identifier id'>some_matrix</span> <span class='assign token'>=</span> <span class='rubyid_OtMatrix constant id'>OtMatrix</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span>
+<span class='rubyid_b identifier id'>b</span> <span class='assign token'>=</span> <span class='rubyid_binding identifier id'>binding</span><span class='lparen token'>(</span><span class='rparen token'>)</span>                   <span class='comment val'># The created binding encapsulates the above variables</span>
+
+<span class='rubyid_reporter identifier id'>reporter</span> <span class='assign token'>=</span> <span class='rubyid_ZenithExcelReporter constant id'>ZenithExcelReporter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'y2010_V02_Working'</span><span class='rparen token'>)</span>
+<span class='rubyid_reporter identifier id'>reporter</span><span class='dot token'>.</span><span class='rubyid_outputColumn identifier id'>outputColumn</span> <span class='assign token'>=</span> <span class='string val'>'Output'</span>
+<span class='rubyid_reporter identifier id'>reporter</span><span class='dot token'>.</span><span class='rubyid_sheetName identifier id'>sheetName</span> <span class='assign token'>=</span> <span class='string val'>'Sheet1'</span>
+<span class='rubyid_reporter identifier id'>reporter</span><span class='dot token'>.</span><span class='rubyid_templateFileName identifier id'>templateFileName</span> <span class='assign token'>=</span> <span class='string val'>'D:/Temp/template_example.xlsx'</span>
+<span class='rubyid_reporter identifier id'>reporter</span><span class='dot token'>.</span><span class='rubyid_fileName identifier id'>fileName</span> <span class='assign token'>=</span> <span class='string val'>'D:/Temp/Output.xlsx'</span>
+<span class='rubyid_reporter identifier id'>reporter</span><span class='dot token'>.</span><span class='rubyid_add_binding identifier id'>add_binding</span><span class='lparen token'>(</span><span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span>        <span class='comment val'># Add the binding so the report expressions can utilise the captured variables</span>
+<span class='rubyid_reporter identifier id'>reporter</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+
+<span class='rubyid_Output constant id'>Output</span><span class='dot token'>.</span><span class='rubyid_xlsx identifier id'>xlsx</span> <span class='rubyid_is identifier id'>is</span> <span class='rubyid_created identifier id'>created</span> <span class='rubyid_with identifier id'>with</span> <span class='rubyid_the identifier id'>the</span> <span class='rubyid_following identifier id'>following</span> <span class='label val'>contents:</span>
+<span class='rubyid____________________________________________________ identifier id'>___________________________________________________</span>
+<span class='bitor op'>|</span> <span class='rubyid_ExpressionType constant id'>ExpressionType</span> <span class='bitor op'>|</span> <span class='rubyid_Expression constant id'>Expression</span>  <span class='bitor op'>|</span> <span class='rubyid_Output constant id'>Output</span> <span class='bitor op'>|</span>    <span class='bitor op'>|</span>    <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='integer val'>10</span> <span class='mult op'>*</span> <span class='integer val'>2</span>      <span class='bitor op'>|</span> <span class='integer val'>20</span>     <span class='bitor op'>|</span>    <span class='bitor op'>|</span>    <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='rubyid_some_number identifier id'>some_number</span> <span class='bitor op'>|</span> <span class='integer val'>5</span>      <span class='bitor op'>|</span>    <span class='bitor op'>|</span>    <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='rubyid_some_string identifier id'>some_string</span> <span class='bitor op'>|</span> <span class='rubyid_Hello constant id'>Hello</span>  <span class='bitor op'>|</span>    <span class='bitor op'>|</span>    <span class='bitor op'>|</span>
+<span class='bitor op'>|</span> <span class='rubyid_ruby identifier id'>ruby</span>           <span class='bitor op'>|</span> <span class='rubyid_some_matrix identifier id'>some_matrix</span> <span class='bitor op'>|</span> <span class='integer val'>0</span>      <span class='bitor op'>|</span> <span class='integer val'>0</span>  <span class='bitor op'>|</span> <span class='integer val'>0</span>  <span class='bitor op'>|</span>
+<span class='bitor op'>|</span>                <span class='bitor op'>|</span>             <span class='bitor op'>|</span> <span class='integer val'>0</span>      <span class='bitor op'>|</span> <span class='integer val'>0</span>  <span class='bitor op'>|</span> <span class='integer val'>0</span>  <span class='bitor op'>|</span>
+<span class='bitor op'>|</span>                <span class='bitor op'>|</span>             <span class='bitor op'>|</span> <span class='integer val'>0</span>      <span class='bitor op'>|</span> <span class='integer val'>0</span>  <span class='bitor op'>|</span> <span class='integer val'>0</span>  <span class='bitor op'>|</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#currentResultColumn-instance_method" title="#currentResultColumn (instance method)">- (Object) <strong>currentResultColumn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expressionColumn-instance_method" title="#expressionColumn (instance method)">- (Object) <strong>expressionColumn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expressionField-instance_method" title="#expressionField (instance method)">- (String) <strong>expressionField</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The header text of the of the expression column header.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expressionTypeColumn-instance_method" title="#expressionTypeColumn (instance method)">- (Object) <strong>expressionTypeColumn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expressionTypeField-instance_method" title="#expressionTypeField (instance method)">- (String) <strong>expressionTypeField</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The header text of the expression type column header.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fileName-instance_method" title="#fileName (instance method)">- (String) <strong>fileName</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The full path of the output spreadsheet filename.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#header_row-instance_method" title="#header_row (instance method)">- (Object) <strong>header_row</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ignore_evaluation_warnings-instance_method" title="#ignore_evaluation_warnings (instance method)">- (Boolean) <strong>ignore_evaluation_warnings</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Whether to print error to the log any execution.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#outputColumn-instance_method" title="#outputColumn (instance method)">- (String<sup>+</sup>) <strong>outputColumn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The header of the column(s) to write the output into.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sheetName-instance_method" title="#sheetName (instance method)">- (String) <strong>sheetName</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The name of the workbook sheet to be modified.</div></span>
+  
+</li>
+
+    
+      <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#spreadsheetName-instance_method" title="#spreadsheetName (instance method)">- (String) <strong>spreadsheetName</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>Use <span class='object_link'><a href="#fileName-instance_method" title="ZenithExcelReporter#fileName (method)">#fileName</a></span> instead</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#templateFileName-instance_method" title="#templateFileName (instance method)">- (String) <strong>templateFileName</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The file path of the template to base the output file on.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#writeErrorMessage-instance_method" title="#writeErrorMessage (instance method)">- (Boolean) <strong>writeErrorMessage</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Whether to write errors to the output cell.</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_binding-instance_method" title="#add_binding (instance method)">- (Object) <strong>add_binding</strong>(bind) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Add a binding, the context that the provided expressions will be evaluated in.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_bindings-instance_method" title="#clear_bindings (instance method)">- (Binding) <strong>clear_bindings</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Removes all bindings.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_outputs-instance_method" title="#clear_outputs (instance method)">- (Object) <strong>clear_outputs</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Resets all the output cells to nil.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close-instance_method" title="#close (instance method)">- (Object) <strong>close</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Closes the spreadsheet.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#convert_matrix_to_array-instance_method" title="#convert_matrix_to_array (instance method)">- (Object) <strong>convert_matrix_to_array</strong>(matrix) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_output_column-instance_method" title="#default_output_column (instance method)">- (Object) <strong>default_output_column</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#execute-instance_method" title="#execute (instance method)">- (Object) <strong>execute</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Execute the reporter to generate the report.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_binding_variables-instance_method" title="#find_binding_variables (instance method)">- (Object) <strong>find_binding_variables</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_column_and_row_positions-instance_method" title="#find_column_and_row_positions (instance method)">- (Object) <strong>find_column_and_row_positions</strong>(sheet) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#findBlankColumn-instance_method" title="#findBlankColumn (instance method)">- (Object) <strong>findBlankColumn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#findColumnNameInHeaderRow-instance_method" title="#findColumnNameInHeaderRow (instance method)">- (Object) <strong>findColumnNameInHeaderRow</strong>(output_column) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#findOutputColumn-instance_method" title="#findOutputColumn (instance method)">- (Object) <strong>findOutputColumn</strong>(outputColumn) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ZenithExcelReporter) <strong>initialize</strong>(variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>A new instance of ZenithExcelReporter.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lazy_create_excel-instance_method" title="#lazy_create_excel (instance method)">- (Object) <strong>lazy_create_excel</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_spreadsheet-instance_method" title="#open_spreadsheet (instance method)">- (Object) <strong>open_spreadsheet</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pop_binding-instance_method" title="#pop_binding (instance method)">- (Binding) <strong>pop_binding</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Removes the last binding that was added.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#readExpressions-instance_method" title="#readExpressions (instance method)">- (Object) <strong>readExpressions</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup_spreadsheet_name-instance_method" title="#setup_spreadsheet_name (instance method)">- (Object) <strong>setup_spreadsheet_name</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_data-instance_method" title="#write_data (instance method)">- (Object) <strong>write_data</strong>(clear_outputs = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="/doc/" title="ZenithExcelReporter (class)">ZenithExcelReporter</a></span></tt>) <strong>initialize</strong>(variant = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    A new instance of ZenithExcelReporter
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>variant</span>
+      
+      
+        <span class='type'></span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>The name of the variant under which the input will be evaluated.
+The current variant will be used if one is not provided.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 88</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_@expressionField ivar id'>@expressionField</span>     <span class='assign token'>=</span> <span class='string val'>'Expression'</span>
+  <span class='rubyid_@expressionTypeField ivar id'>@expressionTypeField</span> <span class='assign token'>=</span> <span class='string val'>'ExpressionType'</span>
+  <span class='rubyid_@bindings ivar id'>@bindings</span>            <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_@variant_name ivar id'>@variant_name</span>        <span class='assign token'>=</span> <span class='rubyid_variant identifier id'>variant</span>
+  <span class='rubyid_@writeErrorMessage ivar id'>@writeErrorMessage</span>   <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_@ignore_evaluation_warnings ivar id'>@ignore_evaluation_warnings</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="currentResultColumn=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="currentResultColumn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>currentResultColumn</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_currentResultColumn identifier id'>currentResultColumn</span>
+  <span class='rubyid_@currentResultColumn ivar id'>@currentResultColumn</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="expressionColumn=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expressionColumn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>expressionColumn</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_expressionColumn identifier id'>expressionColumn</span>
+  <span class='rubyid_@expressionColumn ivar id'>@expressionColumn</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="expressionField=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expressionField-instance_method">
+  
+    - (<tt>String</tt>) <strong>expressionField</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns The header text of the of the expression column header. Defaults to &quot;Expression&quot;.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The header text of the of the expression column header. Defaults to &quot;Expression&quot;.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_expressionField identifier id'>expressionField</span>
+  <span class='rubyid_@expressionField ivar id'>@expressionField</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="expressionTypeColumn=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expressionTypeColumn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>expressionTypeColumn</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_expressionTypeColumn identifier id'>expressionTypeColumn</span>
+  <span class='rubyid_@expressionTypeColumn ivar id'>@expressionTypeColumn</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="expressionTypeField=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expressionTypeField-instance_method">
+  
+    - (<tt>String</tt>) <strong>expressionTypeField</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns The header text of the expression type column header. Defaults to &quot;ExpressionType&quot;.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The header text of the expression type column header. Defaults to &quot;ExpressionType&quot;.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 65</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_expressionTypeField identifier id'>expressionTypeField</span>
+  <span class='rubyid_@expressionTypeField ivar id'>@expressionTypeField</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="fileName=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fileName-instance_method">
+  
+    - (<tt>String</tt>) <strong>fileName</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    The full path of the output spreadsheet filename.
+Alternatively provide a :file option to <span class='object_link'><a href="#execute-instance_method" title="ZenithExcelReporter#execute (method)">#execute</a></span>
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The full path of the output spreadsheet filename.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 53</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_fileName identifier id'>fileName</span>
+  <span class='rubyid_@fileName ivar id'>@fileName</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="header_row=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="header_row-instance_method">
+  
+    - (<tt>Object</tt>) <strong>header_row</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_header_row identifier id'>header_row</span>
+  <span class='rubyid_@header_row ivar id'>@header_row</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ignore_evaluation_warnings=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ignore_evaluation_warnings-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>ignore_evaluation_warnings</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns Whether to print error to the log any execution. Set false to print warnings, true to ignore.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Whether to print error to the log any execution. Set false to print warnings, true to ignore.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 68</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_ignore_evaluation_warnings identifier id'>ignore_evaluation_warnings</span>
+  <span class='rubyid_@ignore_evaluation_warnings ivar id'>@ignore_evaluation_warnings</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="outputColumn=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="outputColumn-instance_method">
+  
+    - (<tt>String</tt><sup>+</sup>) <strong>outputColumn</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns The header of the column(s) to write the output into.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The header of the column(s) to write the output into.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 59</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_outputColumn identifier id'>outputColumn</span>
+  <span class='rubyid_@outputColumn ivar id'>@outputColumn</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="sheetName=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sheetName-instance_method">
+  
+    - (<tt>String</tt>) <strong>sheetName</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns The name of the workbook sheet to be modified.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The name of the workbook sheet to be modified.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 56</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sheetName identifier id'>sheetName</span>
+  <span class='rubyid_@sheetName ivar id'>@sheetName</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="spreadsheetName=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="spreadsheetName-instance_method">
+  
+    - (<tt>String</tt>) <strong>spreadsheetName</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>Use <span class='object_link'><a href="#fileName-instance_method" title="ZenithExcelReporter#fileName (method)">#fileName</a></span> instead</div></div>
+The full path of the output spreadsheet filename.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The name of the spreadsheet.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 48</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_spreadsheetName identifier id'>spreadsheetName</span>
+  <span class='rubyid_@spreadsheetName ivar id'>@spreadsheetName</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="templateFileName=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="templateFileName-instance_method">
+  
+    - (<tt>String</tt>) <strong>templateFileName</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    The file path of the template to base the output file on. 
+This file is the file that should contain the expressions that you want executed
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The file path of the template.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 73</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_templateFileName identifier id'>templateFileName</span>
+  <span class='rubyid_@templateFileName ivar id'>@templateFileName</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="writeErrorMessage=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="writeErrorMessage-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>writeErrorMessage</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Whether to write errors to the output cell.
+If this is true, the errors will be written to the associated cell.
+If this is false, the associated cell will be left blank if the expression generates an error.
+Defaults to true.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Whether to write errors to the output cell.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 80</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_writeErrorMessage identifier id'>writeErrorMessage</span>
+  <span class='rubyid_@writeErrorMessage ivar id'>@writeErrorMessage</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_binding-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_binding</strong>(bind) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Add a binding, the context that the provided expressions will be evaluated in.
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 98</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_add_binding identifier id'>add_binding</span><span class='lparen token'>(</span><span class='rubyid_bind identifier id'>bind</span><span class='rparen token'>)</span>
+  <span class='rubyid_@bindings ivar id'>@bindings</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_bind identifier id'>bind</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_bindings-instance_method">
+  
+    - (<tt>Binding</tt>) <strong>clear_bindings</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Removes all bindings.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Binding</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the new array bindings</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 104</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_clear_bindings identifier id'>clear_bindings</span>
+  <span class='rubyid_@bindings ivar id'>@bindings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_outputs-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clear_outputs</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Resets all the output cells to nil
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 165</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_clear_outputs identifier id'>clear_outputs</span>
+  <span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:clear_outputs</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_true true kw'>true</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close-instance_method">
+  
+    - (<tt>Object</tt>) <strong>close</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Closes the spreadsheet.
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 115</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_close identifier id'>close</span>
+  <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_quit identifier id'>quit</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  <span class='rubyid_@excel ivar id'>@excel</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+  <span class='rubyid_GC constant id'>GC</span><span class='dot token'>.</span><span class='rubyid_start identifier id'>start</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="convert_matrix_to_array-instance_method">
+  
+    - (<tt>Object</tt>) <strong>convert_matrix_to_array</strong>(matrix) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+321
+322
+323
+324
+325
+326</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 321</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_convert_matrix_to_array identifier id'>convert_matrix_to_array</span><span class='lparen token'>(</span><span class='rubyid_matrix identifier id'>matrix</span><span class='rparen token'>)</span>
+  <span class='rubyid_array identifier id'>array</span> <span class='assign token'>=</span> <span class='rubyid_matrix identifier id'>matrix</span><span class='dot token'>.</span><span class='rubyid_to_a identifier id'>to_a</span>
+  <span class='rubyid_array identifier id'>array</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span> <span class='comment val'># gets rid of first item (subarray) in the array</span>
+  <span class='rubyid_array identifier id'>array</span><span class='dot token'>.</span><span class='rubyid_map! fid id'>map!</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span> <span class='rubyid_row identifier id'>row</span><span class='lbrack token'>[</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>  <span class='comment val'>#gets rid of first item in the subarray</span>
+  <span class='rubyid_array identifier id'>array</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_output_column-instance_method">
+  
+    - (<tt>Object</tt>) <strong>default_output_column</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 251</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_default_output_column identifier id'>default_output_column</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@variant_name ivar id'>@variant_name</span> <span class='question op'>?</span> <span class='rubyid_@variant_name ivar id'>@variant_name</span> <span class='plus op'>+</span> <span class='string val'>'_'</span> <span class='plus op'>+</span> <span class='rubyid_eval identifier id'>eval</span><span class='lparen token'>(</span><span class='string val'>'iter'</span><span class='comma token'>,</span> <span class='rubyid_@binding_variables ivar id'>@binding_variables</span><span class='lbrack token'>[</span><span class='string val'>'iter'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='colon op'>:</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_currentVariant identifier id'>currentVariant</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span> <span class='plus op'>+</span> <span class='string val'>'_'</span> <span class='plus op'>+</span> <span class='rubyid_eval identifier id'>eval</span><span class='lparen token'>(</span><span class='string val'>'iter'</span><span class='comma token'>,</span> <span class='rubyid_@binding_variables ivar id'>@binding_variables</span><span class='lbrack token'>[</span><span class='string val'>'iter'</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="execute-instance_method">
+  
+    - (<tt>Object</tt>) <strong>execute</strong>(opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Execute the reporter to generate the report.
+The following attribues must be set before this method can be called: sheetname, templateFileName, fileName, outputColumn
+A also binding must be added through add_binding()
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>The exection options</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:file</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>The output file path</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:clear_outputs</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>Sets the output cells to nil, instaead of evaluating the expressions. Defaults to false.</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 127</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_lazy_create_excel identifier id'>lazy_create_excel</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_@fileName ivar id'>@fileName</span>     <span class='opasgn op'>||=</span> <span class='rubyid_@spreadsheetName ivar id'>@spreadsheetName</span> <span class='comment val'># for backward compatibility with scripts that use @spreadsheetName</span>
+  <span class='rubyid_@outputColumn ivar id'>@outputColumn</span>   <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_@outputColumn ivar id'>@outputColumn</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_@outputColumn ivar id'>@outputColumn</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Array constant id'>Array</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='string val'>'Writing excel report'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_find_binding_variables identifier id'>find_binding_variables</span>
+    <span class='rubyid_open_spreadsheet identifier id'>open_spreadsheet</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_sheets_to_do identifier id'>sheets_to_do</span> <span class='assign token'>=</span> <span class='rubyid_find_sheets_matching identifier id'>find_sheets_matching</span><span class='lparen token'>(</span><span class='rubyid_@spreadsheet ivar id'>@spreadsheet</span><span class='dot token'>.</span><span class='rubyid_sheets identifier id'>sheets</span><span class='comma token'>,</span> <span class='rubyid_@sheetName ivar id'>@sheetName</span> <span class='orop op'>||</span> <span class='regexp val'>/^[0-9]/</span><span class='rparen token'>)</span> 
+      <span class='rubyid_sheets_to_do identifier id'>sheets_to_do</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_sheet identifier id'>sheet</span><span class='bitor op'>|</span>
+        <span class='rubyid_@sheet ivar id'>@sheet</span> <span class='assign token'>=</span> <span class='rubyid_sheet identifier id'>sheet</span>
+        <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Processing sheet '#{@sheet.name}'&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+          <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_select identifier id'>select</span>
+          <span class='rubyid_find_column_and_row_positions identifier id'>find_column_and_row_positions</span><span class='lparen token'>(</span><span class='rubyid_sheet identifier id'>sheet</span><span class='rparen token'>)</span>
+          <span class='rubyid_readExpressions identifier id'>readExpressions</span>
+          <span class='rubyid_@outputColumn ivar id'>@outputColumn</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_column identifier id'>column</span><span class='bitor op'>|</span>
+            <span class='rubyid_findOutputColumn identifier id'>findOutputColumn</span><span class='lparen token'>(</span><span class='rubyid_column identifier id'>column</span><span class='rparen token'>)</span>
+            <span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:clear_outputs</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+          <span class='rbrace token'>}</span>
+          <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Saving spreadsheet'</span><span class='rparen token'>)</span>
+          <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_DisplayAlerts constant id'>DisplayAlerts</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+          <span class='rubyid_@spreadsheet ivar id'>@spreadsheet</span><span class='dot token'>.</span><span class='rubyid_save identifier id'>save</span>
+          <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_DisplayAlerts constant id'>DisplayAlerts</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+        <span class='rbrace token'>}</span>
+      <span class='rbrace token'>}</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Exception constant id'>Exception</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='rubyid_e identifier id'>e</span><span class='rparen token'>)</span>
+    <span class='rubyid_ensure ensure kw'>ensure</span>
+      <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_DisplayAlerts constant id'>DisplayAlerts</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Closing spreadsheet'</span><span class='rparen token'>)</span>
+      <span class='rubyid_@spreadsheet ivar id'>@spreadsheet</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+      <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_DisplayAlerts constant id'>DisplayAlerts</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_quit identifier id'>quit</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_binding_variables-instance_method">
+  
+    - (<tt>Object</tt>) <strong>find_binding_variables</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 245</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_find_binding_variables identifier id'>find_binding_variables</span>
+  <span class='rubyid_@binding_variables ivar id'>@binding_variables</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@bindings ivar id'>@bindings</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_b identifier id'>b</span><span class='bitor op'>|</span> <span class='rubyid_eval identifier id'>eval</span><span class='lparen token'>(</span><span class='string val'>'local_variables'</span><span class='comma token'>,</span> <span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_var_name identifier id'>var_name</span><span class='bitor op'>|</span> <span class='rubyid_@binding_variables ivar id'>@binding_variables</span><span class='lbrack token'>[</span><span class='rubyid_var_name identifier id'>var_name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_b identifier id'>b</span> <span class='rbrace token'>}</span><span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_column_and_row_positions-instance_method">
+  
+    - (<tt>Object</tt>) <strong>find_column_and_row_positions</strong>(sheet) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192
+193
+194
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 192</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_find_column_and_row_positions identifier id'>find_column_and_row_positions</span><span class='lparen token'>(</span><span class='rubyid_sheet identifier id'>sheet</span><span class='rparen token'>)</span>
+  <span class='rubyid_@expressionCell ivar id'>@expressionCell</span>     <span class='assign token'>=</span> <span class='rubyid_sheet identifier id'>sheet</span><span class='dot token'>.</span><span class='rubyid_find_cell_contents identifier id'>find_cell_contents</span><span class='lparen token'>(</span><span class='rubyid_@expressionField ivar id'>@expressionField</span><span class='rparen token'>)</span>
+  <span class='rubyid_@expressionTypeCell ivar id'>@expressionTypeCell</span> <span class='assign token'>=</span> <span class='rubyid_sheet identifier id'>sheet</span><span class='dot token'>.</span><span class='rubyid_find_cell_contents identifier id'>find_cell_contents</span><span class='lparen token'>(</span><span class='rubyid_@expressionTypeField ivar id'>@expressionTypeField</span><span class='rparen token'>)</span>
+  <span class='rubyid_@header_row ivar id'>@header_row</span> <span class='assign token'>=</span> <span class='rubyid_@expressionCell ivar id'>@expressionCell</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Located header row: #{@header_row}&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="findBlankColumn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>findBlankColumn</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 232</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_findBlankColumn identifier id'>findBlankColumn</span>
+  <span class='rubyid_column_num identifier id'>column_num</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_@expressionCell ivar id'>@expressionCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_@expressionTypeCell ivar id'>@expressionTypeCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span> <span class='plus op'>+</span> <span class='integer val'>2</span>
+  <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+  <span class='rubyid_while while kw'>while</span> <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_column_num identifier id'>column_num</span> <span class='lt op'>&lt;</span> <span class='integer val'>256</span>
+    <span class='rubyid_all_blank identifier id'>all_blank</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_@header_row ivar id'>@header_row</span><span class='rbrack token'>]</span><span class='plus op'>+</span><span class='rubyid_@expressions ivar id'>@expressions</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_column_num identifier id'>column_num</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_all? fid id'>all?</span>
+    <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span> <span class='assign token'>=</span> <span class='rubyid_column_num identifier id'>column_num</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_all_blank identifier id'>all_blank</span>
+    <span class='rubyid_column_num identifier id'>column_num</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>'Could not find a blank column to write to'</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_@header_row ivar id'>@header_row</span><span class='comma token'>,</span><span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='assign token'>=</span> <span class='rubyid_@outputColumn ivar id'>@outputColumn</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="findColumnNameInHeaderRow-instance_method">
+  
+    - (<tt>Object</tt>) <strong>findColumnNameInHeaderRow</strong>(output_column) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258
+259
+260
+261
+262
+263
+264</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 256</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_findColumnNameInHeaderRow identifier id'>findColumnNameInHeaderRow</span><span class='lparen token'>(</span><span class='rubyid_output_column identifier id'>output_column</span><span class='rparen token'>)</span>
+  <span class='rubyid_column_num identifier id'>column_num</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_@expressionCell ivar id'>@expressionCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_@expressionTypeCell ivar id'>@expressionTypeCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span> <span class='plus op'>+</span> <span class='integer val'>1</span>
+  <span class='rubyid_range identifier id'>range</span> <span class='assign token'>=</span> <span class='rubyid_WIN32OLE constant id'>WIN32OLE</span><span class='dot token'>.</span><span class='rubyid_row_col_to_range identifier id'>row_col_to_range</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_@header_row ivar id'>@header_row</span><span class='comma token'>,</span> <span class='rubyid_column_num identifier id'>column_num</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='rubyid_@header_row ivar id'>@header_row</span><span class='comma token'>,</span> <span class='integer val'>256</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_cell identifier id'>cell</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Range constant id'>Range</span><span class='lparen token'>(</span><span class='rubyid_range identifier id'>range</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_Find constant id'>Find</span><span class='lparen token'>(</span><span class='rubyid_output_column identifier id'>output_column</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='string val'>'LookAt'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_xlValues identifier id'>xlValues</span> <span class='assign token'>=</span> <span class='integer val'>-4163</span>  <span class='comment val'># first look in formalas, if not found, look in values</span>
+  <span class='rubyid_cell identifier id'>cell</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Range constant id'>Range</span><span class='lparen token'>(</span><span class='rubyid_range identifier id'>range</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_Find constant id'>Find</span><span class='lparen token'>(</span><span class='rubyid_output_column identifier id'>output_column</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='string val'>'LookAt'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span> <span class='string val'>'LookIn'</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_xlValues identifier id'>xlValues</span><span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_cell identifier id'>cell</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span> <span class='assign token'>=</span> <span class='rubyid_cell identifier id'>cell</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='rubyid_cell identifier id'>cell</span> <span class='colon op'>:</span> <span class='rubyid_cell identifier id'>cell</span><span class='dot token'>.</span><span class='rubyid_Column constant id'>Column</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='notop op'>!</span><span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="findOutputColumn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>findOutputColumn</strong>(outputColumn) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+225
+226
+227
+228
+229</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 225</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_findOutputColumn identifier id'>findOutputColumn</span><span class='lparen token'>(</span><span class='rubyid_outputColumn identifier id'>outputColumn</span><span class='rparen token'>)</span>
+  <span class='rubyid_outputColumn identifier id'>outputColumn</span> <span class='opasgn op'>||=</span> <span class='rubyid_default_output_column identifier id'>default_output_column</span>
+  <span class='rubyid_findBlankColumn identifier id'>findBlankColumn</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_findColumnNameInHeaderRow identifier id'>findColumnNameInHeaderRow</span><span class='lparen token'>(</span><span class='rubyid_outputColumn identifier id'>outputColumn</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Located output column #{WIN32OLE.column_index_to_address(@outputColumnNr)}&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lazy_create_excel-instance_method">
+  
+    - (<tt>Object</tt>) <strong>lazy_create_excel</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171
+172</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 169</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_lazy_create_excel identifier id'>lazy_create_excel</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_@excel ivar id'>@excel</span> <span class='opasgn op'>||=</span> <span class='rubyid_WIN32OLE constant id'>WIN32OLE</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'excel.application'</span><span class='rparen token'>)</span>
+  <span class='rubyid_WIN32OLE constant id'>WIN32OLE</span><span class='dot token'>.</span><span class='rubyid_const_load identifier id'>const_load</span><span class='lparen token'>(</span><span class='rubyid_@excel ivar id'>@excel</span><span class='comma token'>,</span> <span class='rubyid_ExcelConst constant id'>ExcelConst</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_ExcelConst constant id'>ExcelConst</span><span class='colon2 op'>::</span><span class='rubyid_XlOn constant id'>XlOn</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='notop op'>!</span><span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_WIN32OLE constant id'>WIN32OLE</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_spreadsheet-instance_method">
+  
+    - (<tt>Object</tt>) <strong>open_spreadsheet</strong>(opts) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 180</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_open_spreadsheet identifier id'>open_spreadsheet</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_lazy_create_excel identifier id'>lazy_create_excel</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_setup_spreadsheet_name identifier id'>setup_spreadsheet_name</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>'fileName has not been set'</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_@fileName ivar id'>@fileName</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_mkdir_p identifier id'>mkdir_p</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='rubyid_@fileName ivar id'>@fileName</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='rubyid_@fileName ivar id'>@fileName</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_copy_spreadsheet identifier id'>copy_spreadsheet</span><span class='lparen token'>(</span><span class='rubyid_@templateFileName ivar id'>@templateFileName</span><span class='comma token'>,</span> <span class='rubyid_@fileName ivar id'>@fileName</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='lparen token'>(</span><span class='notop op'>!</span><span class='rubyid_@templateFileName ivar id'>@templateFileName</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_@fileName ivar id'>@fileName</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Opening spreadsheet: #{@fileName}&quot;</span><span class='rparen token'>)</span>
+  <span class='comment val'>#@excel.visible = @visibility</span>
+  <span class='rubyid_@spreadsheet ivar id'>@spreadsheet</span> <span class='assign token'>=</span> <span class='rubyid_@excel ivar id'>@excel</span><span class='dot token'>.</span><span class='rubyid_workbooks identifier id'>workbooks</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_@fileName ivar id'>@fileName</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pop_binding-instance_method">
+  
+    - (<tt>Binding</tt>) <strong>pop_binding</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Removes the last binding that was added.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Binding</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the removed binding</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 110</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_pop_binding identifier id'>pop_binding</span>
+  <span class='rubyid_@bindings ivar id'>@bindings</span><span class='dot token'>.</span><span class='rubyid_pop identifier id'>pop</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="readExpressions-instance_method">
+  
+    - (<tt>Object</tt>) <strong>readExpressions</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 200</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_readExpressions identifier id'>readExpressions</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Reading expressions'</span><span class='rparen token'>)</span>
+  <span class='rubyid_blankCellsCount identifier id'>blankCellsCount</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_row identifier id'>row</span> <span class='assign token'>=</span> <span class='rubyid_@header_row ivar id'>@header_row</span> <span class='plus op'>+</span> <span class='integer val'>1</span>
+  <span class='rubyid_@expressions ivar id'>@expressions</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_while while kw'>while</span> <span class='rubyid_blankCellsCount identifier id'>blankCellsCount</span> <span class='lt op'>&lt;</span> <span class='integer val'>200</span>
+    <span class='rubyid_expressionType identifier id'>expressionType</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@expressionTypeCell ivar id'>@expressionTypeCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span>
+    <span class='rubyid_expressionType identifier id'>expressionType</span><span class='dot token'>.</span><span class='rubyid_downcase! fid id'>downcase!</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_expressionType identifier id'>expressionType</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+
+    <span class='rubyid_value identifier id'>value</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@expressionCell ivar id'>@expressionCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span>
+    <span class='rubyid_formula identifier id'>formula</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@expressionCell ivar id'>@expressionCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_formula identifier id'>formula</span>
+    <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_expressionType identifier id'>expressionType</span> <span class='eq op'>==</span> <span class='string val'>'ruby'</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_value identifier id'>value</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span><span class='rparen token'>)</span>
+      <span class='rubyid_@expressions ivar id'>@expressions</span><span class='lbrack token'>[</span><span class='rubyid_row identifier id'>row</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_expressionType identifier id'>expressionType</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rbrack token'>]</span>
+      <span class='rubyid_blankCellsCount identifier id'>blankCellsCount</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+    <span class='rubyid_elsif elsif kw'>elsif</span> <span class='lparen token'>(</span><span class='rubyid_expressionType identifier id'>expressionType</span> <span class='eq op'>==</span> <span class='string val'>'excel'</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_formula identifier id'>formula</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span><span class='rparen token'>)</span>
+      <span class='rubyid_@expressions ivar id'>@expressions</span><span class='lbrack token'>[</span><span class='rubyid_row identifier id'>row</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_expressionType identifier id'>expressionType</span><span class='comma token'>,</span> <span class='rubyid_formula identifier id'>formula</span><span class='rbrack token'>]</span>
+      <span class='rubyid_blankCellsCount identifier id'>blankCellsCount</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_blankCellsCount identifier id'>blankCellsCount</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_row identifier id'>row</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup_spreadsheet_name-instance_method">
+  
+    - (<tt>Object</tt>) <strong>setup_spreadsheet_name</strong>(opts) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 175</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_setup_spreadsheet_name identifier id'>setup_spreadsheet_name</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_@fileName ivar id'>@fileName</span>  <span class='opasgn op'>||=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:file</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>write_data</strong>(clear_outputs = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/zenith_excel_reporter.rb', line 267</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_clear_outputs identifier id'>clear_outputs</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Calculating...'</span><span class='comma token'>,</span><span class='rubyid_@expressions ivar id'>@expressions</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span>
+    <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_expression identifier id'>expression</span> <span class='assign token'>=</span> <span class='rubyid_@expressions ivar id'>@expressions</span><span class='lbrack token'>[</span><span class='rubyid_row identifier id'>row</span><span class='rbrack token'>]</span>
+    <span class='rubyid_case case kw'>case</span> <span class='rubyid_type identifier id'>type</span><span class='dot token'>.</span><span class='rubyid_downcase identifier id'>downcase</span>
+    <span class='rubyid_when when kw'>when</span> <span class='string val'>'ruby'</span>
+      <span class='rubyid_eval_success identifier id'>eval_success</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_false false kw'>false</span><span class='comma token'>,</span> <span class='string val'>'Ruby expression failed'</span><span class='rbrack token'>]</span>
+      <span class='rubyid_raise identifier id'>raise</span> <span class='string val'>'A binding is required'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_@bindings ivar id'>@bindings</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+      <span class='rubyid_@bindings ivar id'>@bindings</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_b identifier id'>b</span><span class='bitor op'>|</span>
+        <span class='rubyid_begin begin kw'>begin</span>
+          <span class='rubyid_eval_success identifier id'>eval_success</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_true true kw'>true</span><span class='comma token'>,</span> <span class='rubyid_eval identifier id'>eval</span><span class='lparen token'>(</span><span class='rubyid_expression identifier id'>expression</span><span class='comma token'>,</span> <span class='rubyid_b identifier id'>b</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+          <span class='rubyid_break break kw'>break</span>
+        <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Exception constant id'>Exception</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+          <span class='rubyid_eval_success identifier id'>eval_success</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_false false kw'>false</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Error: #{e.message}&quot;</span><span class='rbrack token'>]</span>
+        <span class='rubyid_end end kw'>end</span>
+      <span class='rbrace token'>}</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Could not evaluate Ruby expression: #{expression}! #{eval_success.last}&quot;</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_eval_success identifier id'>eval_success</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span> <span class='orop op'>||</span> <span class='rubyid_@ignore_evaluation_warnings ivar id'>@ignore_evaluation_warnings</span>
+      <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_eval_success identifier id'>eval_success</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span>
+      <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_eval_success identifier id'>eval_success</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span> <span class='integer val'>? </span><span class='rubyid_eval_success identifier id'>eval_success</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span> <span class='colon op'>:</span> <span class='lparen token'>(</span><span class='rubyid_@writeErrorMessage ivar id'>@writeErrorMessage</span> <span class='question op'>?</span> <span class='rubyid_eval_success identifier id'>eval_success</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span> <span class='colon op'>:</span> <span class='string val'>''</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+      <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='rubyid_convert_matrix_to_array identifier id'>convert_matrix_to_array</span><span class='lparen token'>(</span><span class='rubyid_result identifier id'>result</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_result identifier id'>result</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_OtMatrix constant id'>OtMatrix</span><span class='rparen token'>)</span>
+      
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_result identifier id'>result</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Array constant id'>Array</span><span class='rparen token'>)</span>
+        <span class='rubyid_top_left identifier id'>top_left</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span> <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_Address constant id'>Address</span>
+        <span class='rubyid_rows identifier id'>rows</span> <span class='assign token'>=</span> <span class='rubyid_result identifier id'>result</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span>
+        <span class='rubyid_cols identifier id'>cols</span> <span class='assign token'>=</span> <span class='rubyid_result identifier id'>result</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='bitor op'>|</span> <span class='rubyid_e identifier id'>e</span><span class='dot token'>.</span><span class='rubyid_box identifier id'>box</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span>
+        
+        <span class='rubyid_bottom_right identifier id'>bottom_right</span> <span class='assign token'>=</span> <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span> <span class='plus op'>+</span> <span class='rubyid_rows identifier id'>rows</span> <span class='minus op'>-</span> <span class='integer val'>1</span><span class='comma token'>,</span> <span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span> <span class='plus op'>+</span> <span class='rubyid_cols identifier id'>cols</span> <span class='minus op'>-</span> <span class='integer val'>1</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_Address constant id'>Address</span>
+        
+        <span class='comment val'>#GET rid of the first column and row in the OtMatrix converted into an array (see OT manual for more info):</span>
+        
+        <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Range constant id'>Range</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{top_left}:#{bottom_right}&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='assign token'>=</span> <span class='rubyid_result identifier id'>result</span>
+      <span class='rubyid_else else kw'>else</span>
+        <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_clear_outputs identifier id'>clear_outputs</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_result identifier id'>result</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_when when kw'>when</span> <span class='string val'>'excel'</span>
+      <span class='rubyid_begin begin kw'>begin</span>
+        <span class='rubyid_if if kw'>if</span> <span class='rubyid_clear_outputs identifier id'>clear_outputs</span>
+          <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+        <span class='rubyid_else else kw'>else</span>
+          <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@expressionCell ivar id'>@expressionCell</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_copy identifier id'>copy</span>
+          <span class='rubyid_xlPasteFormulas identifier id'>xlPasteFormulas</span> <span class='assign token'>=</span> <span class='integer val'>-4123</span>  <span class='comment val'>#  see http://www.datapigtechnologies.com/downloads/Excel_Enumerations.txt</span>
+          <span class='comment val'># @sheet.Cells(row,@outputColumnNr).Activate // tim reported this line as being essential... haven't found it</span>
+          <span class='comment val'># to be the case with PasteSpecial</span>
+          <span class='rubyid_@sheet ivar id'>@sheet</span><span class='dot token'>.</span><span class='rubyid_Cells constant id'>Cells</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span><span class='rubyid_@outputColumnNr ivar id'>@outputColumnNr</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_PasteSpecial constant id'>PasteSpecial</span><span class='lparen token'>(</span><span class='rubyid_xlPasteFormulas identifier id'>xlPasteFormulas</span><span class='rparen token'>)</span>
+        <span class='rubyid_end end kw'>end</span>
+      <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Exception constant id'>Exception</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Could not evaluate Excel formula. Error message: #{e.message}.&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Unsure how to process expressions of type '#{type}'&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:35 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

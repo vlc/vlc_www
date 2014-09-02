@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: CountVerifier
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (C)</a> &raquo;
+    
+    
+    <span class="title">CountVerifier</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: CountVerifier
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">CountVerifier</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/optimiser/count_verifier.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will verify whether or not the latest counts has any inconsistencies with the underlying road network
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'optimiser/count_verifier'</span>
+<span class='comment val'># If you want to verify the counts against an OT variant's network, simply use CountVerifier.new()</span>
+<span class='rubyid_CountVerifier constant id'>CountVerifier</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_verify identifier id'>verify</span><span class='lparen token'>(</span><span class='string val'>'D:\BDK\resources\SEQ\Observed Data\Traffic\ccounts.TAB'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'optimiser/count_verifier'</span>
+<span class='comment val'># We don't always want to verify the counts against an OT variant's network, so there is the ability to specify a</span>
+<span class='comment val'># MapInfo link's layer when the CountVerifier is initialised.</span>
+<span class='rubyid_count_verifier identifier id'>count_verifier</span> <span class='assign token'>=</span> <span class='rubyid_CountVerifier constant id'>CountVerifier</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>'D:\BDK\resources\SEQ\Model\Base\links.tab'</span><span class='rparen token'>)</span>
+<span class='rubyid_count_verifier identifier id'>count_verifier</span><span class='dot token'>.</span><span class='rubyid_verify identifier id'>verify</span><span class='lparen token'>(</span><span class='string val'>'D:\BDK\resources\SEQ\Observed Data\Traffic\ccounts.TAB'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (CountVerifier) <strong>initialize</strong>(link_layer = nil) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Creates a new CountVerifier using either an OT network or MapInfo links layer.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify-instance_method" title="#verify (instance method)">- (Object) <strong>verify</strong>(count_layer, ignore_directionality = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Verifies the counts layer compared to the links layer.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="/doc/" title="CountVerifier (class)">CountVerifier</a></span></tt>) <strong>initialize</strong>(link_layer = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Creates a new CountVerifier using either an OT network or MapInfo links layer
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>link_layer</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>The directory and filename of the MapInfo links layer. If undefined, the current OT variant will be used</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/count_verifier.rb', line 25</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_link_layer identifier id'>link_layer</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_@use_ot_links ivar id'>@use_ot_links</span>       <span class='assign token'>=</span> <span class='rubyid_link_layer identifier id'>link_layer</span> <span class='integer val'>? </span><span class='rubyid_false false kw'>false</span> <span class='colon op'>:</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_@link_layer ivar id'>@link_layer</span>         <span class='assign token'>=</span> <span class='rubyid_link_layer identifier id'>link_layer</span>
+  <span class='rubyid_@ot_link_directions ivar id'>@ot_link_directions</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_link_directions identifier id'>get_link_directions</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_@use_ot_links ivar id'>@use_ot_links</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="verify-instance_method">
+  
+    - (<tt>Object</tt>) <strong>verify</strong>(count_layer, ignore_directionality = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Verifies the counts layer compared to the links layer
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>count_layer</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The directory and file name of a MapInfo counts layer.</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>ignore_directionality</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>Set to true if verifying pedestrian/cycle counts, otherwise false</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/count_verifier.rb', line 34</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_verify identifier id'>verify</span><span class='lparen token'>(</span><span class='rubyid_count_layer identifier id'>count_layer</span><span class='comma token'>,</span> <span class='rubyid_ignore_directionality identifier id'>ignore_directionality</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_ignore_directionality identifier id'>ignore_directionality</span> <span class='assign token'>=</span> <span class='rubyid_count_layer identifier id'>count_layer</span><span class='dot token'>.</span><span class='rubyid_downcase identifier id'>downcase</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='string val'>'pedestrian'</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_ignore_directionality identifier id'>ignore_directionality</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  <span class='rubyid_count_objects identifier id'>count_objects</span>         <span class='assign token'>=</span> <span class='rubyid_load_mapinfo_file identifier id'>load_mapinfo_file</span><span class='lparen token'>(</span><span class='rubyid_count_layer identifier id'>count_layer</span><span class='comma token'>,</span> <span class='string val'>'counts'</span><span class='rparen token'>)</span>
+  <span class='rubyid_link_objects identifier id'>link_objects</span>          <span class='assign token'>=</span> <span class='rubyid_@use_ot_links ivar id'>@use_ot_links</span> <span class='question op'>?</span> <span class='rubyid_load_ot_file identifier id'>load_ot_file</span><span class='lparen token'>(</span><span class='string val'>'links'</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='rubyid_load_mapinfo_file identifier id'>load_mapinfo_file</span><span class='lparen token'>(</span><span class='rubyid_@link_layer ivar id'>@link_layer</span><span class='comma token'>,</span> <span class='string val'>'links'</span><span class='rparen token'>)</span>
+  <span class='rubyid_counts_with_links identifier id'>counts_with_links</span>     <span class='assign token'>=</span> <span class='rubyid_match_links_with_counts identifier id'>match_links_with_counts</span><span class='lparen token'>(</span><span class='rubyid_link_objects identifier id'>link_objects</span><span class='comma token'>,</span> <span class='rubyid_count_objects identifier id'>count_objects</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='string val'>'Verifying the counts'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_check_all_counts_intersect_correctly identifier id'>check_all_counts_intersect_correctly</span><span class='lparen token'>(</span><span class='rubyid_count_objects identifier id'>count_objects</span><span class='comma token'>,</span> <span class='rubyid_counts_with_links identifier id'>counts_with_links</span><span class='rparen token'>)</span>
+    <span class='rubyid_check_count_directions identifier id'>check_count_directions</span><span class='lparen token'>(</span><span class='rubyid_counts_with_links identifier id'>counts_with_links</span><span class='rparen token'>)</span>                   <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_ignore_directionality identifier id'>ignore_directionality</span>
+    <span class='rubyid_check_2way_counts_intersecting_1way_link identifier id'>check_2way_counts_intersecting_1way_link</span><span class='lparen token'>(</span><span class='rubyid_counts_with_links identifier id'>counts_with_links</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_ignore_directionality identifier id'>ignore_directionality</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:30 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

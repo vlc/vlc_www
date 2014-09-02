@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ScreenlineVerifier
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">ScreenlineVerifier</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ScreenlineVerifier
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ScreenlineVerifier</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/optimiser/screenline_verifier.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will verify whether or not the latest screenlines has any inconsistencies with the underlying counts
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'optimiser/screenline_verifier'</span>
+<span class='rubyid_counts identifier id'>counts</span>      <span class='assign token'>=</span> <span class='string val'>'D:\BDK\resources\SEQ\Observed Data\Traffic\ccounts.TAB'</span>
+<span class='rubyid_screenlines identifier id'>screenlines</span> <span class='assign token'>=</span> <span class='string val'>'D:\BDK\resources\SEQ\Observed Data\Traffic\screenlines.TAB'</span>
+<span class='rubyid_ScreenlineVerifier constant id'>ScreenlineVerifier</span><span class='dot token'>.</span><span class='rubyid_verify identifier id'>verify</span><span class='lparen token'>(</span><span class='rubyid_screenlines identifier id'>screenlines</span><span class='comma token'>,</span> <span class='rubyid_counts identifier id'>counts</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify-class_method" title="verify (class method)">+ (Object) <strong>verify</strong>(screenline_layer, count_layer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Verifies the screenlines layer compared to the counts layer.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="verify-class_method">
+  
+    + (<tt>Object</tt>) <strong>verify</strong>(screenline_layer, count_layer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Verifies the screenlines layer compared to the counts layer
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>screenline_layer</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The directory and file name of a MapInfo links layer.</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>count_layer</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The directory and file name of a MapInfo screenlines layer.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/screenline_verifier.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_verify identifier id'>verify</span><span class='lparen token'>(</span><span class='rubyid_screenline_layer identifier id'>screenline_layer</span><span class='comma token'>,</span> <span class='rubyid_count_layer identifier id'>count_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_screenlines identifier id'>screenlines</span> <span class='assign token'>=</span> <span class='rubyid_load_mapinfo_file identifier id'>load_mapinfo_file</span><span class='lparen token'>(</span><span class='rubyid_screenline_layer identifier id'>screenline_layer</span><span class='comma token'>,</span> <span class='string val'>'screenline'</span><span class='rparen token'>)</span>
+  <span class='rubyid_counts identifier id'>counts</span>      <span class='assign token'>=</span> <span class='rubyid_load_mapinfo_file identifier id'>load_mapinfo_file</span><span class='lparen token'>(</span><span class='rubyid_count_layer identifier id'>count_layer</span><span class='comma token'>,</span> <span class='string val'>'counts'</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='string val'>'Verifying the screenlines'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_check_counts_with_no_screenlines identifier id'>check_counts_with_no_screenlines</span><span class='lparen token'>(</span><span class='rubyid_counts identifier id'>counts</span><span class='comma token'>,</span> <span class='rubyid_screenlines identifier id'>screenlines</span><span class='rparen token'>)</span>
+    <span class='rubyid_check_screenlines_with_no_counts identifier id'>check_screenlines_with_no_counts</span><span class='lparen token'>(</span><span class='rubyid_screenlines identifier id'>screenlines</span><span class='comma token'>,</span> <span class='rubyid_counts identifier id'>counts</span><span class='rparen token'>)</span>
+    <span class='rubyid_check_screenline_intersects_at_least_one_counts identifier id'>check_screenline_intersects_at_least_one_counts</span><span class='lparen token'>(</span><span class='rubyid_screenlines identifier id'>screenlines</span><span class='comma token'>,</span> <span class='rubyid_counts identifier id'>counts</span><span class='rparen token'>)</span>
+    <span class='rubyid_check_counts_not_intersecting_screenlines identifier id'>check_counts_not_intersecting_screenlines</span><span class='lparen token'>(</span><span class='rubyid_counts identifier id'>counts</span><span class='comma token'>,</span> <span class='rubyid_screenlines identifier id'>screenlines</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:30 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

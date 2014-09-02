@@ -1,0 +1,1071 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: MatrixSectoriser
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">MatrixSectoriser</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: MatrixSectoriser
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">MatrixSectoriser</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/MatrixSectoriser.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class aggregates matrices by specified sectors. This process transforms a matrix into a smaller n x n matrix
+where n is the number of sectors/groups specified. The values of each of the sector's members specifed are 
+aggregated (by sum or average) and stored in associated group rows/columns.
+Sectorised matrices may also then be expanded back out to a matrix of
+the original size, containing values only for representative centroids centres.
+The centres must be created for expand to work. See <span class='object_link'><a href="/doc/SpatialTypesImporter.html" title="SpatialTypesImporter (class)">SpatialTypesImporter</a></span>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_sectoriser identifier id'>sectoriser</span> <span class='assign token'>=</span> <span class='rubyid_MatrixSectoriser constant id'>MatrixSectoriser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;LGA&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_matrix identifier id'>matrix</span> <span class='assign token'>=</span> <span class='rubyid_OtMatrix constant id'>OtMatrix</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>10</span><span class='rparen token'>)</span>                                     <span class='comment val'># The matrix to sectorise. Would normally contain more useful data (i.e. from skim cube)</span>
+<span class='rubyid_matrix_sectorised identifier id'>matrix_sectorised</span> <span class='assign token'>=</span> <span class='rubyid_sectoriser identifier id'>sectoriser</span><span class='dot token'>.</span><span class='rubyid_sectorise identifier id'>sectorise</span><span class='lparen token'>(</span><span class='rubyid_matrix identifier id'>matrix</span><span class='rparen token'>)</span>
+<span class='rubyid_matrix_expanded identifier id'>matrix_expanded</span> <span class='assign token'>=</span> <span class='rubyid_sectoriser identifier id'>sectoriser</span><span class='dot token'>.</span><span class='rubyid_expand identifier id'>expand</span><span class='lparen token'>(</span><span class='rubyid_matrix_sectorised identifier id'>matrix_sectorised</span><span class='rparen token'>)</span>        <span class='comment val'># Note: The serie must have centres for expand to work.</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sector_centroids-instance_method" title="#sector_centroids (instance method)">- (Array&lt;Integer&gt;) <strong>sector_centroids</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The representative centroids of each sector.</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sectors-instance_method" title="#sectors (instance method)">- (Array&lt;Integer, Array&lt;Integer&gt;&gt;) <strong>sectors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>The centroid groupings for each sector.</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#array_of_row_headings-instance_method" title="#array_of_row_headings (instance method)">- (Object) <strong>array_of_row_headings</strong>(serie_nr) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expand-instance_method" title="#expand (instance method)">- (OtMatrix) <strong>expand</strong>(mat) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Expands a sectorised matrix into a new matrix of the pre-sectorised size, containing the aggregate values only for representative centroids (centre).</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (MatrixSectoriser) <strong>initialize</strong>(sectors, sector_centroids = nil) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Creates a new MatrixSectoriser from specified serie.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sectorise-instance_method" title="#sectorise (instance method)">- (OtMatrix) <strong>sectorise</strong>(mat, remove_undefined_centroids = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Sectorises the given matrix by totalling all the values of each specifed sector.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sectorise_and_expand-instance_method" title="#sectorise_and_expand (instance method)">- (OtMatrix) <strong>sectorise_and_expand</strong>(mat) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Sectorises and expands the given matrix.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sectorise_average-instance_method" title="#sectorise_average (instance method)">- (OtMatrix) <strong>sectorise_average</strong>(mat) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Sectorises the given matrix by averaging all the values of each specified sector.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="/doc/" title="MatrixSectoriser (class)">MatrixSectoriser</a></span></tt>) <strong>new</strong>(serie_name, serie_centre_name = nil) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="/doc/" title="MatrixSectoriser (class)">MatrixSectoriser</a></span></tt>) <strong>new</strong>(sectors, sector_centroids = nil) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Creates a new MatrixSectoriser from specified serie.
+Alternatively the sectors can be provided directly.
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="/doc/" title="MatrixSectoriser (class)">MatrixSectoriser</a></span></tt>) <strong>new</strong>(serie_name, serie_centre_name = nil) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>serie_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The name of the serie to group the centroids by.</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>serie_centre_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>The name of the sector centre serie. If this is not provided, it will default to serie_name + &quot;_centre&quot;.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="/doc/" title="MatrixSectoriser (class)">MatrixSectoriser</a></span></tt>) <strong>new</strong>(sectors, sector_centroids = nil) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sectors</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer, Array&lt;Integer&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>An array of centroid groupings, grouped by array.</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sector_centroids</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>The representative centroids of each sector.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 35</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='comma token'>,</span> <span class='rubyid_sector_centroids identifier id'>sector_centroids</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_sectors identifier id'>sectors</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_String constant id'>String</span><span class='rparen token'>)</span>
+    <span class='rubyid_@sectors ivar id'>@sectors</span> <span class='assign token'>=</span> <span class='rubyid_get_centroids_groupings_for_serie identifier id'>get_centroids_groupings_for_serie</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='rparen token'>)</span>
+    <span class='rubyid_sector_centroids identifier id'>sector_centroids</span> <span class='opasgn op'>||=</span> <span class='rubyid_find_centre_type identifier id'>find_centre_type</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='rparen token'>)</span>
+    
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_has_serie? fid id'>has_serie?</span><span class='lparen token'>(</span><span class='rubyid_sector_centroids identifier id'>sector_centroids</span><span class='rparen token'>)</span>
+      <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span> <span class='assign token'>=</span> <span class='rubyid_get_centroids_groupings_for_serie identifier id'>get_centroids_groupings_for_serie</span><span class='lparen token'>(</span><span class='rubyid_sector_centroids identifier id'>sector_centroids</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span>
+      <span class='comment val'>#raise(&quot;no defined sector centroids found for '#{sector_centroids}'&quot;) if @sector_centroids.empty?</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='comment val'>#raise(&quot;Must specify both sectors and sector centroids&quot;) if sector_centroids.nil?</span>
+    <span class='rubyid_@sectors ivar id'>@sectors</span> <span class='assign token'>=</span> <span class='rubyid_sectors identifier id'>sectors</span>
+    <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span> <span class='assign token'>=</span> <span class='rubyid_sector_centroids identifier id'>sector_centroids</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="sector_centroids=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="sector_centroids-instance_method">
+  
+    - (<tt>Array&lt;Integer&gt;</tt>) <strong>sector_centroids</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns The representative centroids of each sector.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The representative centroids of each sector.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 18</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sector_centroids identifier id'>sector_centroids</span>
+  <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="sectors=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sectors-instance_method">
+  
+    - (<tt>Array&lt;Integer, Array&lt;Integer&gt;&gt;</tt>) <strong>sectors</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns The centroid groupings for each sector.
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer, Array&lt;Integer&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The centroid groupings for each sector.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 16</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sectors identifier id'>sectors</span>
+  <span class='rubyid_@sectors ivar id'>@sectors</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="array_of_row_headings-instance_method">
+  
+    - (<tt>Object</tt>) <strong>array_of_row_headings</strong>(serie_nr) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 115</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_array_of_row_headings identifier id'>array_of_row_headings</span><span class='lparen token'>(</span><span class='rubyid_serie_nr identifier id'>serie_nr</span><span class='rparen token'>)</span>
+  <span class='rubyid_type_array identifier id'>type_array</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_sector_centroid_list identifier id'>sector_centroid_list</span><span class='bitor op'>|</span>
+  <span class='rubyid_type_array identifier id'>type_array</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_centroid_type_name identifier id'>centroid_type_name</span><span class='lparen token'>(</span><span class='rubyid_sector_centroid_list identifier id'>sector_centroid_list</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='comma token'>,</span><span class='rubyid_serie_nr identifier id'>serie_nr</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_type_array identifier id'>type_array</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="expand-instance_method">
+  
+    - (<tt>OtMatrix</tt>) <strong>expand</strong>(mat) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Expands a sectorised matrix into a new matrix of the pre-sectorised size,
+containing the aggregate values only for representative centroids (centre).
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mat</span>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>A sectorised matrix.</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>A matrix containing mat in expanded form.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 78</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_expand identifier id'>expand</span><span class='lparen token'>(</span><span class='rubyid_mat identifier id'>mat</span><span class='rparen token'>)</span>
+  <span class='rubyid_smat identifier id'>smat</span> <span class='assign token'>=</span> <span class='rubyid_OtMatrix constant id'>OtMatrix</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_num_centroids identifier id'>num_centroids</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>&quot;Sector centroids not defined - cannot expand!&quot;</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span><span class='rparen token'>)</span>
+  <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_ci identifier id'>ci</span><span class='comma token'>,</span> <span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span>
+    <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_cj identifier id'>cj</span><span class='comma token'>,</span> <span class='rubyid_j identifier id'>j</span><span class='bitor op'>|</span>
+      <span class='rubyid_smat identifier id'>smat</span><span class='lbrack token'>[</span><span class='rubyid_ci identifier id'>ci</span><span class='comma token'>,</span><span class='rubyid_cj identifier id'>cj</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_mat identifier id'>mat</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='rubyid_j identifier id'>j</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_smat identifier id'>smat</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sectorise-instance_method">
+  
+    - (<tt>OtMatrix</tt>) <strong>sectorise</strong>(mat, remove_undefined_centroids = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Sectorises the given matrix by totalling all the values of each specifed sector.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mat</span>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The matrix to sectorise</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>remove_undefined_centroids</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>Whether or not to include centroids that have not been specified inluded in the sector.</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>A matrix containing mat in sectorised form, using sum to aggregate</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sectorise identifier id'>sectorise</span><span class='lparen token'>(</span><span class='rubyid_mat identifier id'>mat</span><span class='comma token'>,</span><span class='rubyid_remove_undefined_centroids identifier id'>remove_undefined_centroids</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+  <span class='rubyid_smat identifier id'>smat</span> <span class='assign token'>=</span> <span class='rubyid_mat identifier id'>mat</span><span class='dot token'>.</span><span class='rubyid_compress identifier id'>compress</span><span class='lparen token'>(</span><span class='rubyid_@sectors ivar id'>@sectors</span><span class='comma token'>,</span> <span class='rubyid_@sectors ivar id'>@sectors</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_smat identifier id'>smat</span><span class='dot token'>.</span><span class='rubyid_rows identifier id'>rows</span> <span class='neq op'>!=</span> <span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_remove_undefined_centroids identifier id'>remove_undefined_centroids</span>
+      <span class='rubyid_smat identifier id'>smat</span> <span class='assign token'>=</span> <span class='rubyid_smat identifier id'>smat</span><span class='lbrack token'>[</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='comma token'>,</span> <span class='float val'>1</span><span class='dot2 op'>..</span><span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rbrack token'>]</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_smat identifier id'>smat</span><span class='lbrack token'>[</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='rubyid_smat identifier id'>smat</span><span class='dot token'>.</span><span class='rubyid_rows identifier id'>rows</span><span class='comma token'>,</span><span class='rubyid_smat identifier id'>smat</span><span class='dot token'>.</span><span class='rubyid_cols identifier id'>cols</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_smat identifier id'>smat</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sectorise_and_expand-instance_method">
+  
+    - (<tt>OtMatrix</tt>) <strong>sectorise_and_expand</strong>(mat) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Sectorises and expands the given matrix
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mat</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The matrix to sectorise and expand</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>A matrix containing mat when sectorised and expanded.</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 54</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sectorise_and_expand identifier id'>sectorise_and_expand</span><span class='lparen token'>(</span><span class='rubyid_mat identifier id'>mat</span><span class='rparen token'>)</span>
+  <span class='rubyid_expand identifier id'>expand</span><span class='lparen token'>(</span><span class='rubyid_sectorise identifier id'>sectorise</span><span class='lparen token'>(</span><span class='rubyid_mat identifier id'>mat</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sectorise_average-instance_method">
+  
+    - (<tt>OtMatrix</tt>) <strong>sectorise_average</strong>(mat) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Sectorises the given matrix by averaging all the values of each specified sector.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mat</span>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The matrix to sectorise</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>OtMatrix</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>A matrix containing mat in sectorised form, using average to aggregate</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 92</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sectorise_average identifier id'>sectorise_average</span><span class='lparen token'>(</span><span class='rubyid_mat identifier id'>mat</span><span class='rparen token'>)</span>
+  <span class='rubyid_smat identifier id'>smat</span> <span class='assign token'>=</span> <span class='rubyid_OtMatrix constant id'>OtMatrix</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='rparen token'>)</span>
+  <span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_each_index identifier id'>each_index</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span>
+    <span class='rubyid_zones identifier id'>zones</span> <span class='assign token'>=</span> <span class='rubyid_@sectors ivar id'>@sectors</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span>
+
+    <span class='comment val'># fill out the row</span>
+    <span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_each_index identifier id'>each_index</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_j identifier id'>j</span><span class='bitor op'>|</span>
+      <span class='rubyid_other_zones identifier id'>other_zones</span> <span class='assign token'>=</span> <span class='rubyid_@sectors ivar id'>@sectors</span><span class='lbrack token'>[</span><span class='rubyid_j identifier id'>j</span><span class='rbrack token'>]</span>
+      <span class='rubyid_total identifier id'>total</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+      <span class='rubyid_count identifier id'>count</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+
+      <span class='rubyid_zones identifier id'>zones</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_r identifier id'>r</span><span class='bitor op'>|</span>
+        <span class='rubyid_other_zones identifier id'>other_zones</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_c identifier id'>c</span><span class='bitor op'>|</span>
+          <span class='rubyid_total identifier id'>total</span> <span class='opasgn op'>+=</span> <span class='rubyid_mat identifier id'>mat</span><span class='lbrack token'>[</span><span class='rubyid_r identifier id'>r</span><span class='comma token'>,</span><span class='rubyid_c identifier id'>c</span><span class='rbrack token'>]</span>
+          <span class='rubyid_count identifier id'>count</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+        <span class='rbrace token'>}</span>
+      <span class='rbrace token'>}</span>
+
+      <span class='rubyid_smat identifier id'>smat</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='rubyid_j identifier id'>j</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_total identifier id'>total</span><span class='div op'>/</span><span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_to_f identifier id'>to_f</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_smat identifier id'>smat</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:33 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

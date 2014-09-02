@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Vista07ToGhtsImporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (V)</a> &raquo;
+    
+    
+    <span class="title">Vista07ToGhtsImporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Vista07ToGhtsImporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">GhtsImporter</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">GhtsImporter</li>
+          
+            <li class="next">Vista07ToGhtsImporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/ghts/import/Melbourne/vista07_to_ghts_importer.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class imports the VISTA07 survey into the Ghts format.
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='comment val'># in the simplest case, simply call new and execute</span>
+<span class='rubyid_Vista07ToGhtsImporter constant id'>Vista07ToGhtsImporter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='comment val'># the importer can be configured to point to a specific input database, output database and / or input tables.</span>
+<span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:input_database</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'D:/temp/vista07_db.accdb'</span><span class='comma token'>,</span> <span class='symbol val'>:output_database</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'D:/Temp/GhtsDb.accdb'</span><span class='rbrace token'>}</span>
+<span class='rubyid_Vista07ToGhtsImporter constant id'>Vista07ToGhtsImporter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='comment val'># the import of certain objects can also be switched off (object types are :person,:household,:trip,:trip_leg,:vehicle)</span>
+<span class='rubyid_Vista07ToGhtsImporter constant id'>Vista07ToGhtsImporter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span> <span class='lbrace token'>{</span> <span class='symbol val'>:skip_object_types</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:trip_leg</span><span class='comma token'>,</span><span class='symbol val'>:vehicle</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span> <span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Vista07ToGhtsImporter) <strong>initialize</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Creates a new Vista07ToGhtsImporter, with optionally defined 'opts', which can override certain default functionality.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="/doc/" title="Vista07ToGhtsImporter (class)">Vista07ToGhtsImporter</a></span></tt>) <strong>initialize</strong>(opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Creates a new Vista07ToGhtsImporter, with optionally defined 'opts', which can override certain default functionality.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>Options include: :input_database (String), :input_tables (Hash&lt;Symbol,String&gt;), :output_database (String), :skip_object_types (Array)</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/ghts/import/Melbourne/vista07_to_ghts_importer.rb', line 28</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_input_database identifier id'>input_database</span>   <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:input_database</span><span class='rbrack token'>]</span>   <span class='orop op'>||</span> <span class='rubyid_VISTA07_DATABASE constant id'>VISTA07_DATABASE</span>
+  <span class='rubyid_survey_name identifier id'>survey_name</span>      <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:survey_name</span><span class='rbrack token'>]</span>      <span class='orop op'>||</span> <span class='string val'>'VISTA07'</span>
+  <span class='rubyid_survey_id_prefix identifier id'>survey_id_prefix</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:survey_id_prefix</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='string val'>'V07'</span>
+  <span class='rubyid_model_name identifier id'>model_name</span>       <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:model_name</span><span class='rbrack token'>]</span>       <span class='orop op'>||</span> <span class='string val'>'Melbourne'</span>
+  <span class='rubyid_input_tables identifier id'>input_tables</span>     <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:input_tables</span><span class='rbrack token'>]</span>     <span class='orop op'>||</span> <span class='rubyid_VISTA07_TABLE_NAMES constant id'>VISTA07_TABLE_NAMES</span>
+
+  <span class='rubyid_setup_members identifier id'>setup_members</span><span class='lparen token'>(</span><span class='rubyid_input_database identifier id'>input_database</span><span class='comma token'>,</span> <span class='rubyid_input_tables identifier id'>input_tables</span><span class='comma token'>,</span> <span class='rubyid_model_name identifier id'>model_name</span><span class='comma token'>,</span> <span class='rubyid_survey_name identifier id'>survey_name</span><span class='comma token'>,</span> <span class='rubyid_survey_id_prefix identifier id'>survey_id_prefix</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:30 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

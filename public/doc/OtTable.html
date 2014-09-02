@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: OtTable
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (O)</a> &raquo;
+    
+    
+    <span class="title">OtTable</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: OtTable
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">OtTable</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/monkey_patches/ot_table.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_type-class_method" title="check_type (class method)">+ (Object) <strong>check_type</strong>(type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">+ (Object) <strong>create</strong>(table_name, fields = []) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>tab = OtTable.create(&quot;new_table.db&quot;, [[:field_name, &quot;char8&quot;, (optional: key?)], .... ]) will create the new_table.db table in the main variant directory available types     -&gt; CHAR(N)     -&gt; INTEGER     -&gt; DATE     -&gt; MONEY     -&gt; BLOB(N,N) Third parameter in the field list optionally denotes whether the columns is a 'key' column (true) or not (false).</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#insert-class_method" title="insert (class method)">+ (Object) <strong>insert</strong>(table_name, data, check_validity = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Uses the bulk writing feature of c++ exposed through our ZenithRubyExtensions.dll.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open-class_method" title="open (class method)">+ (Object) <strong>open</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_type-class_method">
+  
+    + (<tt>Object</tt>) <strong>check_type</strong>(type) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 109</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_check_type identifier id'>check_type</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;unknown type: #{type}&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_PARADOX_FIELD_TYPES constant id'>PARADOX_FIELD_TYPES</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_downcase identifier id'>downcase</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_type identifier id'>type</span><span class='dot token'>.</span><span class='rubyid_upcase identifier id'>upcase</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create-class_method">
+  
+    + (<tt>Object</tt>) <strong>create</strong>(table_name, fields = []) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    tab = OtTable.create(&quot;new_table.db&quot;, [[:field_name, &quot;char8&quot;, (optional: key?)], .... ])
+will create the new_table.db table in the main variant directory
+available types
+    -&gt; CHAR(N)
+    -&gt; INTEGER
+    -&gt; DATE
+    -&gt; MONEY
+    -&gt; BLOB(N,N)
+Third parameter in the field list optionally denotes whether the columns is a 'key' column (true) or not (false)
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 169</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_create identifier id'>create</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='rubyid_fields identifier id'>fields</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='string val'>'You must provide at least one field when creating a table'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_fields identifier id'>fields</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='string val'>'You must provide a non-empty table name when creating a table'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_table_name identifier id'>table_name</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_table_name identifier id'>table_name</span> <span class='opasgn op'>+=</span> <span class='string val'>'.DB'</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_table_name identifier id'>table_name</span><span class='dot token'>.</span><span class='rubyid_downcase identifier id'>downcase</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='regexp val'>/.+\.db$/</span><span class='rparen token'>)</span>
+  <span class='rubyid_str identifier id'>str</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;CREATE TABLE \&quot;#{table_name}\&quot; (#{fields.map { |name,type,key| &quot;t.'#{name.to_s}' #{type.to_s}&quot;}.join(', ')} #{&quot;, PRIMARY KEY (#{fields.map { |name,type,key| &quot;t.'#{name.to_s}'&quot; if key }.compact.join(', ') })&quot; if fields.map { |_,_,key| key }.any? })&quot;</span>
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='rubyid_str identifier id'>str</span><span class='rparen token'>)</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Exception constant id'>Exception</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{e}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="insert-class_method">
+  
+    + (<tt>Object</tt>) <strong>insert</strong>(table_name, data, check_validity = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Uses the bulk writing feature of c++ exposed through our ZenithRubyExtensions.dll
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 230</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_check_validity identifier id'>check_validity</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Array constant id'>Array</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;Table '#{table_name}' doesn't exist!&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_data identifier id'>data</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Array constant id'>Array</span><span class='rparen token'>)</span>
+  <span class='rubyid_pre_count identifier id'>pre_count</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT count(*) FROM '#{table_name}'&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_check_validity identifier id'>check_validity</span>
+  <span class='rubyid_ZenithTable constant id'>ZenithTable</span><span class='dot token'>.</span><span class='rubyid_bulk_write identifier id'>bulk_write</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='rparen token'>)</span>
+  <span class='rubyid_post_count identifier id'>post_count</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT count(*) FROM '#{table_name}'&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_check_validity identifier id'>check_validity</span>
+  
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_check_validity identifier id'>check_validity</span> <span class='orop op'>||</span> <span class='lparen token'>(</span><span class='rubyid_post_count identifier id'>post_count</span><span class='minus op'>-</span><span class='rubyid_pre_count identifier id'>pre_count</span> <span class='eq op'>==</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='rparen token'>)</span>
+  <span class='rubyid_error_filename identifier id'>error_filename</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='comma token'>,</span> <span class='string val'>'log'</span><span class='comma token'>,</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_basename identifier id'>basename</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='string val'>'.db'</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='string val'>'.error'</span><span class='rparen token'>)</span>
+  <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_mkdir_p identifier id'>mkdir_p</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span> <span class='div op'>/</span> <span class='string val'>'log'</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='dstring node'>&quot;There was an error in writing to the database #{table_name}. The data were saved into #{error_filename}.&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_write_to_csv identifier id'>write_to_csv</span><span class='lparen token'>(</span><span class='rubyid_error_filename identifier id'>error_filename</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;Not all records were inserted correctly into table #{table_name}, &quot;</span> <span class='plus op'>+</span>
+        <span class='dstring node'>&quot;expected #{data.size} new records, got #{post_count - pre_count}&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open-class_method">
+  
+    + (<tt>Object</tt>) <strong>open</strong>(name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 149</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_tbl identifier id'>tbl</span> <span class='assign token'>=</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_tbl identifier id'>tbl</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+    <span class='rubyid_yield yield kw'>yield</span> <span class='rubyid_tbl identifier id'>tbl</span>
+    <span class='rubyid_tbl identifier id'>tbl</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_tbl identifier id'>tbl</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:30 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ZenithCountsImporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (Z)</a> &raquo;
+    
+    
+    <span class="title">ZenithCountsImporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ZenithCountsImporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ZenithCountsImporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/import/counts/zenith_counts_importer.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will import the latest counts layer directly into your current variant
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/import/counts/zenith_counts_importer'</span>
+<span class='rubyid_ZenithCountsImporter constant id'>ZenithCountsImporter</span><span class='dot token'>.</span><span class='rubyid_import_counts_and_screenlines identifier id'>import_counts_and_screenlines</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:AWDT_Total</span><span class='comma token'>,</span> <span class='symbol val'>:AWDT_AM</span><span class='comma token'>,</span> <span class='symbol val'>:AWDT_PM</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/import/counts/zenith_counts_importer'</span>
+<span class='comment val'># We don't always want every count, so there is a count_filter functionality which works directly on the fields</span>
+<span class='comment val'># of the count layer, here we filter the year field to be in a three year range and specify that the</span>
+<span class='comment val'># count_is_suspect field should not be defined</span>
+<span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:count_filter</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:year</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='float val'>2005</span><span class='dot2 op'>..</span><span class='integer val'>2007</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:count_is_suspect</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span> <span class='rbrace token'>}</span><span class='rbrace token'>}</span>
+<span class='rubyid_ZenithCountsImporter constant id'>ZenithCountsImporter</span><span class='dot token'>.</span><span class='rubyid_import_counts_and_screenlines identifier id'>import_counts_and_screenlines</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:AWDT_Total</span><span class='comma token'>,</span> <span class='symbol val'>:AWDT_AM</span><span class='comma token'>,</span> <span class='symbol val'>:AWDT_PM</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#import_counts_and_screenlines-class_method" title="import_counts_and_screenlines (class method)">+ (Object) <strong>import_counts_and_screenlines</strong>(mi_count_columns, opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="import_counts_and_screenlines-class_method">
+  
+    + (<tt>Object</tt>) <strong>import_counts_and_screenlines</strong>(mi_count_columns, opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mi_count_columns</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The count columns to import - these will be mapped to the appropriate OT combination</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>the options to import with</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:count_filter</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>A filter to apply to the counts layer</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:do_screenlines</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>Should we import screenlines (true or false)</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:screenline_filter</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>A filter to apply to the screenline layer (not needed if :do_screenlines is false)</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:market</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>Which market (city) are we importing from (i.e. :sydney)</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_importer.rb', line 25</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_import_counts_and_screenlines identifier id'>import_counts_and_screenlines</span><span class='lparen token'>(</span><span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_do_screenlines identifier id'>do_screenlines</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:do_screenlines</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='rubyid_true true kw'>true</span> <span class='colon op'>:</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:do_screenlines</span><span class='rbrack token'>]</span>
+  <span class='rubyid_market identifier id'>market</span>         <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:market</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_city identifier id'>city</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='string val'>'Zenith Counts/Screenlines Importer'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_mi_counts identifier id'>mi_counts</span>          <span class='assign token'>=</span> <span class='rubyid_read_mapinfo_table identifier id'>read_mapinfo_table</span><span class='lparen token'>(</span><span class='symbol val'>:count</span><span class='comma token'>,</span> <span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+    <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_check_count_data_exists identifier id'>check_count_data_exists</span><span class='lparen token'>(</span><span class='rubyid_mi_counts identifier id'>mi_counts</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='rparen token'>)</span>
+    <span class='rubyid_filtered_mi_counts identifier id'>filtered_mi_counts</span> <span class='assign token'>=</span> <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_apply_filters identifier id'>apply_filters</span><span class='lparen token'>(</span><span class='rubyid_mi_counts identifier id'>mi_counts</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:count_filter</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'count'</span><span class='rparen token'>)</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>'The specified filter did not match any counts'</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_filtered_mi_counts identifier id'>filtered_mi_counts</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_do_screenlines identifier id'>do_screenlines</span> <span class='rubyid_then then kw'>then</span>
+      <span class='rubyid_mi_screenlines identifier id'>mi_screenlines</span> <span class='assign token'>=</span> <span class='rubyid_read_mapinfo_table identifier id'>read_mapinfo_table</span><span class='lparen token'>(</span><span class='symbol val'>:screenline</span><span class='comma token'>,</span> <span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+      <span class='rubyid_filtered_mi_screenlines identifier id'>filtered_mi_screenlines</span> <span class='assign token'>=</span> <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_apply_filters identifier id'>apply_filters</span><span class='lparen token'>(</span><span class='rubyid_mi_screenlines identifier id'>mi_screenlines</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_filter</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'screenline'</span><span class='rparen token'>)</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_filtered_mi_screenlines identifier id'>filtered_mi_screenlines</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='rubyid_CountsImporter constant id'>CountsImporter</span><span class='dot token'>.</span><span class='rubyid_import_counts_and_screenlines identifier id'>import_counts_and_screenlines</span><span class='lparen token'>(</span><span class='rubyid_filtered_mi_counts identifier id'>filtered_mi_counts</span><span class='comma token'>,</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='comma token'>,</span> <span class='rubyid_filtered_mi_screenlines identifier id'>filtered_mi_screenlines</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:32 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

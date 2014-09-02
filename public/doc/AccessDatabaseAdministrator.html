@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: AccessDatabaseAdministrator
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (A)</a> &raquo;
+    
+    
+    <span class="title">AccessDatabaseAdministrator</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: AccessDatabaseAdministrator
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">AccessDatabaseAdministrator</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/db/access_database_administrator.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will create or update an access database to a given set of table schemas.
+You define the database file name, and provide table names and schemas, and
+the class will ensure that the database exists (creating a blank database if it doesn't already exist),
+and ensure that the tables exist with the required fields.
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/db/access_database_administrator'</span>
+<span class='rubyid_database_file identifier id'>database_file</span> <span class='assign token'>=</span> <span class='string val'>&quot;D:/temp/temp.accdb&quot;</span>
+
+<span class='rubyid_schemas identifier id'>schemas</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+<span class='rubyid_schemas identifier id'>schemas</span><span class='lbrack token'>[</span><span class='symbol val'>:persons</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:PERSONID</span><span class='comma token'>,</span> <span class='symbol val'>:&quot;CHAR(10)&quot;</span><span class='comma token'>,</span>  <span class='symbol val'>:PRIMARY_KEY</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+                     <span class='lbrack token'>[</span><span class='symbol val'>:AGE</span><span class='comma token'>,</span>      <span class='symbol val'>:SHORT</span><span class='comma token'>,</span>       <span class='symbol val'>:VALUE</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+<span class='rubyid_schemas identifier id'>schemas</span><span class='lbrack token'>[</span><span class='symbol val'>:households</span><span class='rbrack token'>]</span>  <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:HHID</span><span class='comma token'>,</span>     <span class='symbol val'>:&quot;CHAR(10)&quot;</span><span class='comma token'>,</span>  <span class='symbol val'>:PRIMARY_KEY</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+                         <span class='lbrack token'>[</span><span class='symbol val'>:HHSIZE</span><span class='comma token'>,</span>   <span class='symbol val'>:SHORT</span><span class='comma token'>,</span>       <span class='symbol val'>:VALUE</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+
+<span class='rubyid_table_names identifier id'>table_names</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:persons</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;vista_people&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:households</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;vista_households&quot;</span><span class='rbrace token'>}</span>
+
+<span class='rubyid_AccessDatabaseAdministrator constant id'>AccessDatabaseAdministrator</span><span class='dot token'>.</span><span class='rubyid_create_or_update identifier id'>create_or_update</span><span class='lparen token'>(</span><span class='rubyid_database_file identifier id'>database_file</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_or_update-class_method" title="create_or_update (class method)">+ (Object) <strong>create_or_update</strong>(database_file_name, table_names, schemas) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_or_update-class_method">
+  
+    + (<tt>Object</tt>) <strong>create_or_update</strong>(database_file_name, table_names, schemas) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/db/access_database_administrator.rb', line 21</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_or_update identifier id'>create_or_update</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
+    <span class='comment val'># copy from empty template</span>
+    <span class='rubyid_empty_database_file_name identifier id'>empty_database_file_name</span> <span class='assign token'>=</span> <span class='rubyid_BedrockEnvironment constant id'>BedrockEnvironment</span><span class='dot token'>.</span><span class='rubyid_bedrock_dir identifier id'>bedrock_dir</span> <span class='div op'>/</span> <span class='string val'>&quot;../Resources/Common/Templates/EmptyDatabase.accdb&quot;</span>
+    <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_cp identifier id'>cp</span><span class='lparen token'>(</span><span class='rubyid_empty_database_file_name identifier id'>empty_database_file_name</span><span class='comma token'>,</span> <span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_db identifier id'>db</span>          <span class='assign token'>=</span> <span class='rubyid_AccessDatabase constant id'>AccessDatabase</span><span class='dot token'>.</span><span class='rubyid_connect identifier id'>connect</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_table_names identifier id'>table_names</span> <span class='assign token'>=</span> <span class='rubyid_table_names identifier id'>table_names</span>
+  <span class='rubyid_schemas identifier id'>schemas</span>     <span class='assign token'>=</span> <span class='rubyid_schemas identifier id'>schemas</span>
+
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Checking and updating database #{database_file_name}&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_update identifier id'>update</span><span class='lparen token'>(</span><span class='rubyid_db identifier id'>db</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:31 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

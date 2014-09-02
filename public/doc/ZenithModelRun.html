@@ -1,0 +1,2245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ZenithModelRun
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (Z)</a> &raquo;
+    
+    
+    <span class="title">ZenithModelRun</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ZenithModelRun
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ZenithModelRun</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/zenith_model_run_rdoc.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    The ZenithModelRun class is used to execute all Zenith Model Runs!
+It contains numerous properties which can control all aspects of the model run process, input parameters, and outputs.
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_zenith_model_run identifier id'>zenith_model_run</span> <span class='assign token'>=</span> <span class='rubyid_ZenithModelRun constant id'>ZenithModelRun</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+<span class='rubyid_zenith_model_run identifier id'>zenith_model_run</span><span class='dot token'>.</span><span class='rubyid_do_assignment identifier id'>do_assignment</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_zenith_model_run identifier id'>zenith_model_run</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Skimming
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_seed_skims%3D-instance_method" title="#do_seed_skims= (instance method)">- (Object) <strong>do_seed_skims=</strong>(toggle = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns Skim Generation on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#preassign_trip_matrix_source%3D-instance_method" title="#preassign_trip_matrix_source= (instance method)">- (Object) <strong>preassign_trip_matrix_source=</strong>(variant_and_iteration = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Specifies a location that contains assignable matrices when seed_skim_method = :preassign_and_skim.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#seed_skim_method%3D-instance_method" title="#seed_skim_method= (instance method)">- (Object) <strong>seed_skim_method=</strong>(desired_skim_method = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Defines the way seed skims are generated if do_seed_skims is set to true.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#seed_skims_source%3D-instance_method" title="#seed_skims_source= (instance method)">- (Object) <strong>seed_skims_source=</strong>(variant_and_iteration = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Overrides the default location for seed skims when do_seed_skims = false.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#seed_traffic_loads_source%3D-instance_method" title="#seed_traffic_loads_source= (instance method)">- (Object) <strong>seed_traffic_loads_source=</strong>(variant_and_iteration = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Specifies a location that contains assigned loads to be used when seed_skim_method = :skim_seed_traffic_loads.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skim_bicycle%3D-instance_method" title="#skim_bicycle= (instance method)">- (Object) <strong>skim_bicycle=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns Bicycle Skim Generation on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skim_pt%3D-instance_method" title="#skim_pt= (instance method)">- (Object) <strong>skim_pt=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns Public Transport Skim Generation on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skim_traffic%3D-instance_method" title="#skim_traffic= (instance method)">- (Object) <strong>skim_traffic=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns Traffic Skim Generation on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skim_walk%3D-instance_method" title="#skim_walk= (instance method)">- (Object) <strong>skim_walk=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns Walk Skim Generation on or off.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Four Steps
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_destination_choice%3D-instance_method" title="#do_destination_choice= (instance method)">- (Object) <strong>do_destination_choice=</strong>(toggle = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns destination choice on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_mode_choice%3D-instance_method" title="#do_mode_choice= (instance method)">- (Object) <strong>do_mode_choice=</strong>(toggle = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns mode choice on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_trip_generation%3D-instance_method" title="#do_trip_generation= (instance method)">- (Object) <strong>do_trip_generation=</strong>(toggle = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns trip generation on or off.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Assignment
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assign_bicycle%3D-instance_method" title="#assign_bicycle= (instance method)">- (Object) <strong>assign_bicycle=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns bicycle assignment on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assign_pt%3D-instance_method" title="#assign_pt= (instance method)">- (Object) <strong>assign_pt=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns public transport assignment on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assign_traffic%3D-instance_method" title="#assign_traffic= (instance method)">- (Object) <strong>assign_traffic=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns traffic assignment on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assign_walk%3D-instance_method" title="#assign_walk= (instance method)">- (Object) <strong>assign_walk=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns walk assignment on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assignable_trip_matrix_source%3D-instance_method" title="#assignable_trip_matrix_source= (instance method)">- (Object) <strong>assignable_trip_matrix_source=</strong>(variant_and_iteration = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Specifies a location that contains assignable matrices to be used in assignment.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_assignment%3D-instance_method" title="#do_assignment= (instance method)">- (Object) <strong>do_assignment=</strong>(toggle = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns assignment on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#execute-instance_method" title="#execute (instance method)">- (Object) <strong>execute</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Executes a Zenith Model Run.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fix_distribution%3D-instance_method" title="#fix_distribution= (instance method)">- (Object) <strong>fix_distribution=</strong>(toggle = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Sets the four step model to use the 'fixed distribution' methodology.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#num_iterations%3D-instance_method" title="#num_iterations= (instance method)">- (Object) <strong>num_iterations=</strong>(num = 1) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Sets the number of start iteration of the model run.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_assignment_iterations-instance_method" title="#save_assignment_iterations (instance method)">- (Object) <strong>save_assignment_iterations</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns saving assignment iterations on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_output_skims%3D-instance_method" title="#save_output_skims= (instance method)">- (Object) <strong>save_output_skims=</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns saving skims on or off.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_turning_movements-instance_method" title="#save_turning_movements (instance method)">- (Object) <strong>save_turning_movements</strong>(toggle = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Turns saving turning movements on or off.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ZenithModelRun) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Creates a new ZenithModelRun object.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="/doc/" title="ZenithModelRun (class)">ZenithModelRun</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Creates a new ZenithModelRun object
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 10</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="assign_bicycle=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>assign_bicycle=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_assignment is set to true</div>
+  </div>
+
+Turns bicycle assignment on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 119</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_assign_bicycle= identifier id'>assign_bicycle=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assign_pt=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>assign_pt=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_assignment is set to true</div>
+  </div>
+
+Turns public transport assignment on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 112</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_assign_pt= identifier id'>assign_pt=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assign_traffic=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>assign_traffic=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_assignment is set to true</div>
+  </div>
+
+Turns traffic assignment on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 98</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_assign_traffic= identifier id'>assign_traffic=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assign_walk=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>assign_walk=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_assignment is set to true</div>
+  </div>
+
+Turns walk assignment on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 105</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_assign_walk= identifier id'>assign_walk=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="assignable_trip_matrix_source=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>assignable_trip_matrix_source=</strong>(variant_and_iteration = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>if this option is not set the default location is the variant the script is run on, and the iteration will be set to current iteration.</div>
+  </div>
+
+Specifies a location that contains assignable matrices to be used in assignment.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>variant_and_iteration</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>An array of variant name and iteration.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 125</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_assignable_trip_matrix_source= identifier id'>assignable_trip_matrix_source=</span><span class='lparen token'>(</span><span class='rubyid_variant_and_iteration identifier id'>variant_and_iteration</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_assignment=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_assignment=</strong>(toggle = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns assignment on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 91</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_do_assignment= identifier id'>do_assignment=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_destination_choice=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_destination_choice=</strong>(toggle = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns destination choice on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 79</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_do_destination_choice= identifier id'>do_destination_choice=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_mode_choice=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_mode_choice=</strong>(toggle = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns mode choice on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 84</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_do_mode_choice= identifier id'>do_mode_choice=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_seed_skims=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_seed_skims=</strong>(toggle = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns Skim Generation on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_do_seed_skims= identifier id'>do_seed_skims=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_trip_generation=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>do_trip_generation=</strong>(toggle = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns trip generation on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 74</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_do_trip_generation= identifier id'>do_trip_generation=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="execute-instance_method">
+  
+    - (<tt>Object</tt>) <strong>execute</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Executes a Zenith Model Run
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 167</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_execute identifier id'>execute</span>
+
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fix_distribution=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>fix_distribution=</strong>(toggle = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>fixed distribution involves not conducting destination choice after the first full model cycle when num_iterations &gt; 1</div>
+  </div>
+
+Sets the four step model to use the 'fixed distribution' methodology.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 157</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_fix_distribution= identifier id'>fix_distribution=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="num_iterations=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>num_iterations=</strong>(num = 1) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Sets the number of start iteration of the model run.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>num</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>Specifies the 'iteration' where matrix and load outputs will be saved.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 151</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_num_iterations= identifier id'>num_iterations=</span><span class='lparen token'>(</span><span class='rubyid_num identifier id'>num</span> <span class='assign token'>=</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="preassign_trip_matrix_source=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>preassign_trip_matrix_source=</strong>(variant_and_iteration = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Specifies a location that contains assignable matrices when seed_skim_method = :preassign_and_skim.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>variant_and_iteration</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>An array of variant name and iteration.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 61</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_preassign_trip_matrix_source= identifier id'>preassign_trip_matrix_source=</span><span class='lparen token'>(</span><span class='rubyid_variant_and_iteration identifier id'>variant_and_iteration</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_assignment_iterations-instance_method">
+  
+    - (<tt>Object</tt>) <strong>save_assignment_iterations</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns saving assignment iterations on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 143</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_save_assignment_iterations identifier id'>save_assignment_iterations</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_output_skims=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>save_output_skims=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns saving skims on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 131</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_save_output_skims= identifier id'>save_output_skims=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_turning_movements-instance_method">
+  
+    - (<tt>Object</tt>) <strong>save_turning_movements</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Turns saving turning movements on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_assignment%3D-instance_method" title="ZenithModelRun#do_assignment= (method)">do_assignment</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 137</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_save_turning_movements identifier id'>save_turning_movements</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="seed_skim_method=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>seed_skim_method=</strong>(desired_skim_method = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Defines the way seed skims are generated if do_seed_skims is set to true.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>desired_skim_method</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>Sets the seed skim method. Options are :preassign_and_skim, :skim_free_flow_speeds and :skim_seed_traffic_loads</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 50</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_seed_skim_method= identifier id'>seed_skim_method=</span><span class='lparen token'>(</span><span class='rubyid_desired_skim_method identifier id'>desired_skim_method</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="seed_skims_source=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>seed_skims_source=</strong>(variant_and_iteration = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>if this option is not set while do_seed_skims = false then the default location is the variant the script is run on, and the iteration will be set to start_iteration.</div>
+  </div>
+
+Overrides the default location for seed skims when do_seed_skims = false.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>variant_and_iteration</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>An array of variant name and iteration.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 56</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_seed_skims_source= identifier id'>seed_skims_source=</span><span class='lparen token'>(</span><span class='rubyid_variant_and_iteration identifier id'>variant_and_iteration</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="seed_traffic_loads_source=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>seed_traffic_loads_source=</strong>(variant_and_iteration = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Specifies a location that contains assigned loads to be used when seed_skim_method = :skim_seed_traffic_loads
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>variant_and_iteration</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>An array of variant name and iteration.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 66</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_seed_traffic_loads_source= identifier id'>seed_traffic_loads_source=</span><span class='lparen token'>(</span><span class='rubyid_variant_and_iteration identifier id'>variant_and_iteration</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skim_bicycle=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skim_bicycle=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_seed_skims is set to true</div>
+  </div>
+
+Turns Bicycle Skim Generation on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_seed_skims%3D-instance_method" title="ZenithModelRun#do_seed_skims= (method)">do_seed_skims</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 38</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_skim_bicycle= identifier id'>skim_bicycle=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skim_pt=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skim_pt=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_seed_skims is set to true</div>
+  </div>
+
+Turns Public Transport Skim Generation on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_seed_skims%3D-instance_method" title="ZenithModelRun#do_seed_skims= (method)">do_seed_skims</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 45</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_skim_pt= identifier id'>skim_pt=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skim_traffic=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skim_traffic=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_seed_skims is set to true</div>
+  </div>
+
+Turns Traffic Skim Generation on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_seed_skims%3D-instance_method" title="ZenithModelRun#do_seed_skims= (method)">do_seed_skims</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 24</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_skim_traffic= identifier id'>skim_traffic=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skim_walk=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>skim_walk=</strong>(toggle = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>Only activated if do_seed_skims is set to true</div>
+  </div>
+
+Turns Walk Skim Generation on or off.
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>toggle</span>
+      
+      
+        <span class='type'>(<tt>Bool</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#do_seed_skims%3D-instance_method" title="ZenithModelRun#do_seed_skims= (method)">do_seed_skims</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/zenith_model_run_rdoc.rb', line 31</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_skim_walk= identifier id'>skim_walk=</span><span class='lparen token'>(</span><span class='rubyid_toggle identifier id'>toggle</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:36 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

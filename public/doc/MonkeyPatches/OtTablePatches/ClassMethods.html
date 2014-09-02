@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: MonkeyPatches::OtTablePatches::ClassMethods
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = 'MonkeyPatches/OtTablePatches/';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../MonkeyPatches.html" title="MonkeyPatches (module)">MonkeyPatches</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../OtTablePatches.html" title="MonkeyPatches::OtTablePatches (module)">OtTablePatches</a></span></span>
+     &raquo; 
+    <span class="title">ClassMethods</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: MonkeyPatches::OtTablePatches::ClassMethods
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">app/monkey_patches/ot_table.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="PARADOX_FIELD_TYPES-constant" class="">PARADOX_FIELD_TYPES =
+          
+        </dt>
+        <dd><pre class="code"><span class='dstring node'>%w(logical integer character)</span>
+</pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear-instance_method" title="#clear (instance method)">- (Object) <strong>clear</strong>(table_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_selection_table-instance_method" title="#create_selection_table (instance method)">- (String) <strong>create_selection_table</strong>(object_name, selection, opts = {}, &amp;blk) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Create a selection table to work around the limits of IN clauses in BDE.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_temp_table-instance_method" title="#create_temp_table (instance method)">- (Object) <strong>create_temp_table</strong>(db_name, field_names, records, &amp;blk) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Create a temporary table with the defined structure and insert the given records If a block is provided the temp table will be automatically cleaned up after the block finishes.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drop-instance_method" title="#drop (instance method)">- (Object) <strong>drop</strong>(table_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_data_container-instance_method" title="#get_data_container (instance method)">- (Object) <strong>get_data_container</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_data-instance_method" title="#write_data (instance method)">- (Object) <strong>write_data</strong>(desc, db_data, clear_table_first = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Note this assumes that the data being written doesn't generate key violations!!!!.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clear</strong>(table_name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 28</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_clear identifier id'>clear</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{table_name}'&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_selection_table-instance_method">
+  
+    - (<tt>String</tt>) <strong>create_selection_table</strong>(object_name, selection, opts = {}, &amp;blk) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Create a selection table to work around the limits of IN clauses in BDE
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_stops identifier id'>stops</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span>
+<span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * from stop5_4data1 WHERE stopnr IN (#{stops.join(',')})&quot;</span><span class='rparen token'>)</span>
+<span class='comment val'># ^^^^ results in an exception because the SQL is too long</span>
+
+<span class='rubyid_selection_table identifier id'>selection_table</span> <span class='assign token'>=</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_create_selection_table identifier id'>create_selection_table</span><span class='lparen token'>(</span><span class='symbol val'>:stops</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+<span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT * from stop5_4data1 s, '#{selection_table}' st WHERE s.stopnr = st.stopnr&quot;</span>
+<span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+<span class='comment val'># ^^^^ This works perfectly (IMO)</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='rubyid_selection_table identifier id'>selection_table</span> <span class='assign token'>=</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_create_selection_table identifier id'>create_selection_table</span><span class='lparen token'>(</span><span class='symbol val'>:links</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+                                                 <span class='symbol val'>:link_direction_field</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_true true kw'>true</span><span class='comma token'>,</span> <span class='symbol val'>:grouping_column</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_selection_table identifier id'>selection_table</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_field_names identifier id'>field_names</span><span class='dot token'>.</span><span class='rubyid_inspect identifier id'>inspect</span>
+<span class='comment val'># =&gt; [&quot;linknr&quot;, &quot;direction&quot;, &quot;grouping&quot;]</span>
+<span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{selection_table}'&quot;</span><span class='rparen token'>)</span>
+<span class='comment val'># =&gt; [[1,1,7], [3,1,6]]</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>object_name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the type of object, used to determine the field name (ie :links, :stops, etc)</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>selection</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the objects that are in the selection, if a String will be converted to an
+array with $Ot.network.selection(selection)</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>a customizable set of options</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:link_direction_field</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>should direction also be output along with links</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:grouping_column</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>add an additional column to allow grouping. If specified, the last
+element in each input record will be inserted in this column</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The full path to the selection table</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 65</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_create_selection_table identifier id'>create_selection_table</span><span class='lparen token'>(</span><span class='rubyid_object_name identifier id'>object_name</span><span class='comma token'>,</span> <span class='rubyid_selection identifier id'>selection</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_blk identifier id'>blk</span><span class='rparen token'>)</span>
+  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:link_direction_field</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:link_direction_field</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  <span class='rubyid_object_name identifier id'>object_name</span> <span class='assign token'>=</span> <span class='rubyid_object_name identifier id'>object_name</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_downcase identifier id'>downcase</span><span class='dot token'>.</span><span class='rubyid_singularise identifier id'>singularise</span>
+  <span class='rubyid_fields identifier id'>fields</span> <span class='assign token'>=</span>  <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='dstring node'>&quot;#{object_name}nr&quot;</span><span class='comma token'>,</span> <span class='string val'>'INTEGER'</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='rubyid_fields identifier id'>fields</span> <span class='opasgn op'>+=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='comma token'>,</span> <span class='string val'>'INTEGER'</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>  <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:link_direction_field</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_object_name identifier id'>object_name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span> <span class='eq op'>==</span> <span class='symbol val'>:link</span>
+  <span class='rubyid_fields identifier id'>fields</span> <span class='opasgn op'>+=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:grouping</span><span class='comma token'>,</span>  <span class='string val'>'INTEGER'</span><span class='comma token'>,</span> <span class='rubyid_false false kw'>false</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:grouping_column</span><span class='rbrack token'>]</span>
+  <span class='rubyid_num_fields identifier id'>num_fields</span> <span class='assign token'>=</span> <span class='rubyid_fields identifier id'>fields</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span>
+  <span class='rubyid_records identifier id'>records</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_selection identifier id'>selection</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_String constant id'>String</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_selection identifier id'>selection</span><span class='lparen token'>(</span><span class='rubyid_selection identifier id'>selection</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='rubyid_selection identifier id'>selection</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='bitor op'>|</span> <span class='rubyid_e identifier id'>e</span><span class='dot token'>.</span><span class='rubyid_box identifier id'>box</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='lparen token'>(</span><span class='rubyid_num_fields identifier id'>num_fields</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_create_temp_table identifier id'>create_temp_table</span><span class='lparen token'>(</span><span class='string val'>'selection'</span><span class='comma token'>,</span> <span class='rubyid_fields identifier id'>fields</span><span class='comma token'>,</span> <span class='rubyid_records identifier id'>records</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_blk identifier id'>blk</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_temp_table-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_temp_table</strong>(db_name, field_names, records, &amp;blk) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Create a temporary table with the defined structure and insert the given records
+If a block is provided the temp table will be automatically cleaned up after the block finishes
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_field_definition identifier id'>field_definition</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='string val'>'field1'</span><span class='comma token'>,</span><span class='string val'>'integer'</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='string val'>'field2'</span><span class='comma token'>,</span><span class='string val'>'character(5)'</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+<span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_create_temp_table identifier id'>create_temp_table</span><span class='lparen token'>(</span><span class='string val'>'temp'</span><span class='comma token'>,</span> <span class='rubyid_field_definition identifier id'>field_definition</span><span class='comma token'>,</span> <span class='rubyid_records identifier id'>records</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_table_name identifier id'>table_name</span><span class='bitor op'>|</span>
+  <span class='rubyid_do_something_with identifier id'>do_something_with</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='dot3 op'>...</span>
+<span class='rbrace token'>}</span> <span class='comment val'># table_name is automatically destroyed here</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 85</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_create_temp_table identifier id'>create_temp_table</span><span class='lparen token'>(</span><span class='rubyid_db_name identifier id'>db_name</span><span class='comma token'>,</span> <span class='rubyid_field_names identifier id'>field_names</span><span class='comma token'>,</span> <span class='rubyid_records identifier id'>records</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='rubyid_blk identifier id'>blk</span><span class='rparen token'>)</span>
+  <span class='rubyid_fields identifier id'>fields</span> <span class='assign token'>=</span> <span class='rubyid_field_names identifier id'>field_names</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_is_key identifier id'>is_key</span><span class='bitor op'>|</span>
+    <span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='comma token'>,</span> <span class='rubyid_check_type identifier id'>check_type</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_is_key identifier id'>is_key</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='rubyid_false false kw'>false</span> <span class='colon op'>:</span> <span class='rubyid_is_key identifier id'>is_key</span><span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span>
+
+  <span class='rubyid_table_name identifier id'>table_name</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_scratchDirectory identifier id'>scratchDirectory</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='rubyid_db_name identifier id'>db_name</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_drop identifier id'>drop</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_create identifier id'>create</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{table_name}.DB&quot;</span><span class='comma token'>,</span> <span class='rubyid_fields identifier id'>fields</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{table_name}.DB&quot;</span><span class='comma token'>,</span> <span class='rubyid_records identifier id'>records</span><span class='rparen token'>)</span>
+  <span class='rubyid_table_name identifier id'>table_name</span> <span class='opasgn op'>+=</span> <span class='string val'>'.DB'</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_block_given? fid id'>block_given?</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_yield yield kw'>yield</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+      <span class='rubyid_table_name identifier id'>table_name</span>
+    <span class='rubyid_ensure ensure kw'>ensure</span>
+      <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_drop identifier id'>drop</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_table_name identifier id'>table_name</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="drop-instance_method">
+  
+    - (<tt>Object</tt>) <strong>drop</strong>(table_name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 32</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_drop identifier id'>drop</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_dir identifier id'>dir</span>       <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_file_name identifier id'>file_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_basename identifier id'>basename</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='string val'>'.DB'</span><span class='rparen token'>)</span>
+  <span class='dstring node'>%w(DB PX)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_ext identifier id'>ext</span><span class='bitor op'>|</span>
+    <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_rm_rf identifier id'>rm_rf</span><span class='lparen token'>(</span><span class='rubyid_dir identifier id'>dir</span> <span class='div op'>/</span> <span class='rubyid_file_name identifier id'>file_name</span> <span class='plus op'>+</span> <span class='dstring node'>&quot;.#{ext}&quot;</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_data_container-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_data_container</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 6</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_data_container identifier id'>get_data_container</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>write_data</strong>(desc, db_data, clear_table_first = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Note this assumes that the data being written doesn't generate key violations!!!!
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 11</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_desc identifier id'>desc</span><span class='comma token'>,</span> <span class='rubyid_db_data identifier id'>db_data</span><span class='comma token'>,</span> <span class='rubyid_clear_table_first identifier id'>clear_table_first</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='rubyid_desc identifier id'>desc</span><span class='comma token'>,</span> <span class='rubyid_db_data identifier id'>db_data</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_level identifier id'>level</span><span class='comma token'>,</span><span class='rubyid_table_data identifier id'>table_data</span><span class='bitor op'>|</span>
+    <span class='rubyid_dir identifier id'>dir</span> <span class='assign token'>=</span> <span class='rubyid_case case kw'>case</span> <span class='rubyid_level identifier id'>level</span>
+            <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:level0</span> <span class='rubyid_then then kw'>then</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_projectDirectory identifier id'>projectDirectory</span>
+            <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:level1</span> <span class='rubyid_then then kw'>then</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_parentVariantDirectory identifier id'>parentVariantDirectory</span>
+            <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:level2</span> <span class='rubyid_then then kw'>then</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span>
+            <span class='rubyid_else else kw'>else</span> <span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Do not know how to handle level '#{level}'&quot;</span><span class='rparen token'>)</span>
+          <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_table_data identifier id'>table_data</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_table identifier id'>table</span><span class='comma token'>,</span><span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Writing #{data.size} records to #{dir / table.to_s}.db&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'># File.open(dir / table.to_s + &quot;.txt&quot;, &quot;w+&quot;) { |f| data.each {|l| f.puts(l.join(','))}}</span>
+      <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_clear identifier id'>clear</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{dir / table.to_s}.db&quot;</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_clear_table_first identifier id'>clear_table_first</span>
+      <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{dir / table.to_s}.db&quot;</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='rparen token'>)</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:30 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

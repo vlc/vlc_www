@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: PtvStopRouteBoardingsExporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (P)</a> &raquo;
+    
+    
+    <span class="title">PtvStopRouteBoardingsExporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: PtvStopRouteBoardingsExporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PtvStopRouteBoardingsExporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/export/ptv_stop_route_boardings_exporter.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export-class_method" title="export (class method)">+ (Object) <strong>export</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>This method will export stop boarding/alighting data in the format explicitly requested by PTV.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_default_opts-class_method" title="get_default_opts (class method)">+ (Object) <strong>get_default_opts</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#construct_csv_line-instance_method" title="#construct_csv_line (instance method)">- (Object) <strong>construct_csv_line</strong>(stopnr, time, transitlinenra, load) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export-instance_method" title="#export (instance method)">- (Object) <strong>export</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_stops_with_no_boardings-instance_method" title="#get_stops_with_no_boardings (instance method)">- (Object) <strong>get_stops_with_no_boardings</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_transitline_lookups-instance_method" title="#load_transitline_lookups (instance method)">- (Object) <strong>load_transitline_lookups</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_stop_loads-instance_method" title="#read_stop_loads (instance method)">- (Object) <strong>read_stop_loads</strong>(iteration) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>get boardings by stop,time period and transitlinenr, save to a hash using key [stopnr,time,transitlinenra].</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_column_headers-instance_method" title="#write_column_headers (instance method)">- (Object) <strong>write_column_headers</strong>(file, stop_series, route_series) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="export-class_method">
+  
+    + (<tt>Object</tt>) <strong>export</strong>(opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    This method will export stop boarding/alighting data in the format explicitly requested by PTV
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/export/ptv_stop_route_boardings_exporter'</span>
+<span class='rubyid_PtvStopRouteBoardingsExporter constant id'>PtvStopRouteBoardingsExporter</span><span class='dot token'>.</span><span class='rubyid_export identifier id'>export</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:stop_series</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'SLA'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:route_series</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'Operator'</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>the options to export with</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:iteration</span>
+          <span class="type">(<tt>Fixnum</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>the iteration to export</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:filename</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>&quot;Reports/New Stops Database - [VARIANT NAME].csv&quot;</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>The output csv filename</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:stop_series</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>%w[SLA LGA PTD_Tram_Regions]</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>Additional stop-serie information to be added to each row</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:route_series</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>%w[Operator]</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'>Additional route-serie information to be added to each row</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 12</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_export identifier id'>export</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='rubyid_get_default_opts identifier id'>get_default_opts</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_export identifier id'>export</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_default_opts-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_default_opts</strong>(opts = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_default_opts identifier id'>get_default_opts</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:iteration</span><span class='rbrack token'>]</span>      <span class='opasgn op'>||=</span> <span class='integer val'>1</span>
+  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:stop_series</span><span class='rbrack token'>]</span>    <span class='opasgn op'>||=</span> <span class='dstring node'>%w(SLA LGA PTD_Tram_Regions)</span>
+  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:route_series</span><span class='rbrack token'>]</span>   <span class='opasgn op'>||=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:filename</span><span class='rbrack token'>]</span>       <span class='opasgn op'>||=</span> <span class='dstring node'>&quot;#{$Ot.projectDirectory}reports/Stops Database - #{$Ot.variant}.csv&quot;</span>
+  <span class='rubyid_opts identifier id'>opts</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="construct_csv_line-instance_method">
+  
+    - (<tt>Object</tt>) <strong>construct_csv_line</strong>(stopnr, time, transitlinenra, load) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 57</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_construct_csv_line identifier id'>construct_csv_line</span><span class='lparen token'>(</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='comma token'>,</span> <span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='rparen token'>)</span>
+  <span class='rubyid_ordernr identifier id'>ordernr</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_transitline_stop_ordernr identifier id'>get_transitline_stop_ordernr</span><span class='lparen token'>(</span><span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='comma token'>,</span> <span class='rubyid_stopnr identifier id'>stopnr</span><span class='rparen token'>)</span>
+  <span class='rubyid_transittag identifier id'>transittag</span> <span class='assign token'>=</span> <span class='rubyid_@transitlinenr_to_transittag ivar id'>@transitlinenr_to_transittag</span><span class='lbrack token'>[</span><span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='rbrack token'>]</span>
+  <span class='rubyid_transittag identifier id'>transittag</span> <span class='match op'>=~</span> <span class='regexp val'>/(\d+)[ioud]/</span>
+  <span class='rubyid_route_number identifier id'>route_number</span> <span class='assign token'>=</span> <span class='rubyid_$1 nth_ref id'>$1</span> <span class='orop op'>||</span> <span class='rubyid_transittag identifier id'>transittag</span>
+
+  <span class='rubyid_row identifier id'>row</span> <span class='assign token'>=</span> <span class='rubyid_if if kw'>if</span> <span class='rubyid_time identifier id'>time</span>
+          <span class='lbrack token'>[</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variant identifier id'>variant</span><span class='comma token'>,</span> <span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_@stopnr_to_name ivar id'>@stopnr_to_name</span><span class='lbrack token'>[</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_ordernr identifier id'>ordernr</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='dot token'>.</span><span class='rubyid_to_time_name identifier id'>to_time_name</span><span class='comma token'>,</span> <span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='comma token'>,</span>
+           <span class='rubyid_@transitlinenr_to_mode ivar id'>@transitlinenr_to_mode</span><span class='lbrack token'>[</span><span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_transittag identifier id'>transittag</span><span class='comma token'>,</span> <span class='rubyid_route_number identifier id'>route_number</span><span class='comma token'>,</span>
+           <span class='rubyid_@transitlinenr_to_name ivar id'>@transitlinenr_to_name</span><span class='lbrack token'>[</span><span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='comma token'>,</span> <span class='rubyid_@types_by_stopnr ivar id'>@types_by_stopnr</span><span class='lbrack token'>[</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='rubyid_@types_by_transitlinenr ivar id'>@types_by_transitlinenr</span><span class='lbrack token'>[</span><span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+        <span class='rubyid_else else kw'>else</span>
+          <span class='lbrack token'>[</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variant identifier id'>variant</span><span class='comma token'>,</span> <span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_@stopnr_to_name ivar id'>@stopnr_to_name</span><span class='lbrack token'>[</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_ordernr identifier id'>ordernr</span><span class='comma token'>,</span> <span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='comma token'>,</span>
+           <span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='rubyid_@types_by_stopnr ivar id'>@types_by_stopnr</span><span class='lbrack token'>[</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='rubyid_@types_by_transitlinenr ivar id'>@types_by_transitlinenr</span><span class='lbrack token'>[</span><span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+        <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_row identifier id'>row</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;,&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export-instance_method">
+  
+    - (<tt>Object</tt>) <strong>export</strong>(opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 25</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_export identifier id'>export</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_load_transitline_lookups identifier id'>load_transitline_lookups</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span> <span class='comment val'># load all relevant stop data into some handy lookup hashes</span>
+
+  <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:filename</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>&quot;w&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_file identifier id'>file</span><span class='bitor op'>|</span>
+
+    <span class='rubyid_write_column_headers identifier id'>write_column_headers</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:stop_series</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:route_series</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Writing output'</span><span class='comma token'>,</span> <span class='rubyid_read_stop_loads identifier id'>read_stop_loads</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:iteration</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='lparen token'>(</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='comma token'>,</span> <span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='bitor op'>|</span>
+      <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_construct_csv_line identifier id'>construct_csv_line</span><span class='lparen token'>(</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='comma token'>,</span> <span class='rubyid_transitlinenra identifier id'>transitlinenra</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='rparen token'>)</span>
+    <span class='rbrace token'>}</span>
+
+    <span class='rubyid_get_stops_with_no_boardings identifier id'>get_stops_with_no_boardings</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='bitor op'>|</span> <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='rubyid_construct_csv_line identifier id'>construct_csv_line</span><span class='lparen token'>(</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_stops_with_no_boardings-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_stops_with_no_boardings</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 74</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_stops_with_no_boardings identifier id'>get_stops_with_no_boardings</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='rubyid_@all_stopnrs ivar id'>@all_stopnrs</span> <span class='minus op'>-</span> <span class='rubyid_@load_by_stopnr_time_transitline ivar id'>@load_by_stopnr_time_transitline</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='lparen token'>(</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span> <span class='rubyid_stopnr identifier id'>stopnr</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_transitline_lookups-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_transitline_lookups</strong>(opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 40</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_transitline_lookups identifier id'>load_transitline_lookups</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Loading lookups'</span><span class='rparen token'>)</span>
+  <span class='rubyid_@all_stopnrs ivar id'>@all_stopnrs</span>                 <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_stops identifier id'>get_stops</span>
+  <span class='rubyid_@all_transitlinenrs ivar id'>@all_transitlinenrs</span>          <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_transitlines identifier id'>get_transitlines</span>
+  <span class='rubyid_@stopnr_to_name ivar id'>@stopnr_to_name</span>              <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_x_to_name_hash identifier id'>get_x_to_name_hash</span><span class='lparen token'>(</span><span class='symbol val'>:stop</span><span class='rparen token'>)</span>
+  <span class='rubyid_@transitlinenr_to_name ivar id'>@transitlinenr_to_name</span>       <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_x_to_name_hash identifier id'>get_x_to_name_hash</span><span class='lparen token'>(</span><span class='symbol val'>:transitline</span><span class='rparen token'>)</span>
+  <span class='rubyid_@transitlinenr_to_transittag ivar id'>@transitlinenr_to_transittag</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_x_to_tag_hash identifier id'>get_x_to_tag_hash</span><span class='lparen token'>(</span><span class='symbol val'>:transitline</span><span class='rparen token'>)</span>
+  <span class='rubyid_@transitlinenr_to_mode ivar id'>@transitlinenr_to_mode</span>       <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_transitline_modes identifier id'>get_transitline_modes</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map_values identifier id'>map_values</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_nr identifier id'>nr</span><span class='comma token'>,</span> <span class='rubyid_m identifier id'>m</span><span class='bitor op'>|</span> <span class='rubyid_m identifier id'>m</span><span class='dot token'>.</span><span class='rubyid_to_mode_name identifier id'>to_mode_name</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_@types_by_stopnr ivar id'>@types_by_stopnr</span>             <span class='assign token'>=</span> <span class='rubyid_@all_stopnrs ivar id'>@all_stopnrs</span><span class='dot token'>.</span><span class='rubyid_as_index_for identifier id'>as_index_for</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='bitor op'>|</span>
+    <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:stop_series</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_s identifier id'>s</span><span class='bitor op'>|</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_stop_type_name identifier id'>stop_type_name</span><span class='lparen token'>(</span><span class='rubyid_stopnr identifier id'>stopnr</span><span class='comma token'>,</span> <span class='rubyid_s identifier id'>s</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='string val'>'Undefined'</span> <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+
+  <span class='rubyid_@types_by_transitlinenr ivar id'>@types_by_transitlinenr</span>      <span class='assign token'>=</span> <span class='rubyid_@all_transitlinenrs ivar id'>@all_transitlinenrs</span><span class='dot token'>.</span><span class='rubyid_as_index_for identifier id'>as_index_for</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_transitlinenr identifier id'>transitlinenr</span><span class='bitor op'>|</span>
+    <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:route_series</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_s identifier id'>s</span><span class='bitor op'>|</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_transitline_type_name identifier id'>transitline_type_name</span><span class='lparen token'>(</span><span class='rubyid_transitlinenr identifier id'>transitlinenr</span><span class='comma token'>,</span> <span class='rubyid_s identifier id'>s</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='string val'>'Undefined'</span> <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_stop_loads-instance_method">
+  
+    - (<tt>Object</tt>) <strong>read_stop_loads</strong>(iteration) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    get boardings by stop,time period and transitlinenr, save to a hash using key [stopnr,time,transitlinenra]
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 79</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_read_stop_loads identifier id'>read_stop_loads</span><span class='lparen token'>(</span><span class='rubyid_iteration identifier id'>iteration</span><span class='rparen token'>)</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='string val'>&quot;SELECT sb.'stopnr', sb.'time', sb.'transitlinenra', sb.iteration,\nsum(sb.firstboarding), sum(sb.walkboarding), sum(sb.changeboarding), sum(sb.lastalighting),\nsum(sb.walkalighting), sum(sb.changealighting)\nFROM '\#{$Ot.variantDirectory}stop5_4data1.db' sb WHERE iteration = \#{iteration}\nGROUP BY sb.stopnr, sb.'time', sb.'transitlinenra', sb.iteration\n&quot;</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Reading loads'</span><span class='rparen token'>)</span>
+  <span class='rubyid_@load_by_stopnr_time_transitline ivar id'>@load_by_stopnr_time_transitline</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_hash identifier id'>execute_to_hash</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_column_headers-instance_method">
+  
+    - (<tt>Object</tt>) <strong>write_column_headers</strong>(file, stop_series, route_series) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/export/ptv_stop_route_boardings_exporter.rb', line 92</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_write_column_headers identifier id'>write_column_headers</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_stop_series identifier id'>stop_series</span><span class='comma token'>,</span> <span class='rubyid_route_series identifier id'>route_series</span><span class='rparen token'>)</span>
+  <span class='rubyid_column_headings identifier id'>column_headings</span> <span class='assign token'>=</span> <span class='dstring node'>%w(variant_name stopnr stop_name stop_order time transitlinenr mode transittag
+                       route_number transitline_name iteration firstboarding walkboarding changeboarding
+                       lastalighting walkalighting changealighting)</span>
+  <span class='rubyid_column_headings identifier id'>column_headings</span> <span class='opasgn op'>+=</span> <span class='rubyid_stop_series identifier id'>stop_series</span>
+  <span class='rubyid_column_headings identifier id'>column_headings</span> <span class='opasgn op'>+=</span> <span class='rubyid_route_series identifier id'>route_series</span>
+  <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_column_headings identifier id'>column_headings</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;,&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:32 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

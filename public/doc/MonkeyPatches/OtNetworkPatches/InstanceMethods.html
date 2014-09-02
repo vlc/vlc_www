@@ -1,0 +1,1970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: MonkeyPatches::OtNetworkPatches::InstanceMethods
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = 'MonkeyPatches/OtNetworkPatches/';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../MonkeyPatches.html" title="MonkeyPatches (module)">MonkeyPatches</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../OtNetworkPatches.html" title="MonkeyPatches::OtNetworkPatches (module)">OtNetworkPatches</a></span></span>
+     &raquo; 
+    <span class="title">InstanceMethods</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: MonkeyPatches::OtNetworkPatches::InstanceMethods
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">app/monkey_patches/ot_network_outputs.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_output_tables-instance_method" title="#clear_output_tables (instance method)">- (Object) <strong>clear_output_tables</strong>(pmturi = nil, variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#copy_cost_and_calcspeed-instance_method" title="#copy_cost_and_calcspeed (instance method)">- (Object) <strong>copy_cost_and_calcspeed</strong>(origin_pmturis, dest_pmturi, message = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#copy_loads_on_link-instance_method" title="#copy_loads_on_link (instance method)">- (Object) <strong>copy_loads_on_link</strong>(from_linkdir, to_linkdir_list) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>This method copies all loads from a link to a list of other links within the same variant - especially useful when links have been split and the original loads need to be maintained.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#copy_traffic_load_between_variants-instance_method" title="#copy_traffic_load_between_variants (instance method)">- (Object) <strong>copy_traffic_load_between_variants</strong>(from_variant, to_variant, from_pmturi, to_pmturi = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Copy loads between variants.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#copyLoadIncludingStops-instance_method" title="#copyLoadIncludingStops (instance method)">- (Object) <strong>copyLoadIncludingStops</strong>(from, to) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_factored_speed_load-instance_method" title="#create_factored_speed_load (instance method)">- (Object) <strong>create_factored_speed_load</strong>(dest_pmturi, factor) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Create a fake load from factored freeflow speeds.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_load-instance_method" title="#delete_load (instance method)">- (Object) <strong>delete_load</strong>(pmturi, variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_unique_pmturi_for_table-instance_method" title="#find_unique_pmturi_for_table (instance method)">- (Object) <strong>find_unique_pmturi_for_table</strong>(table_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_cordon_load-instance_method" title="#get_cordon_load (instance method)">- (Object) <strong>get_cordon_load</strong>(pmturi, stops, links) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_load-instance_method" title="#get_load (instance method)">- (Object) <strong>get_load</strong>(pmturi, linknr, direction, variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_max_hwy_iteration-instance_method" title="#get_max_hwy_iteration (instance method)">- (Object) <strong>get_max_hwy_iteration</strong>(variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_max_iteration_generic-instance_method" title="#get_max_iteration_generic (instance method)">- (Object) <strong>get_max_iteration_generic</strong>(variant, table_name, modes, result) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_max_pt_iteration-instance_method" title="#get_max_pt_iteration (instance method)">- (Object) <strong>get_max_pt_iteration</strong>(variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_max_walk_iteration-instance_method" title="#get_max_walk_iteration (instance method)">- (Object) <strong>get_max_walk_iteration</strong>(variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_maximum_iteration-instance_method" title="#get_maximum_iteration (instance method)">- (Object) <strong>get_maximum_iteration</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_speed-instance_method" title="#get_speed (instance method)">- (Object) <strong>get_speed</strong>(pmturi, linknr, direction, variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_transitline_load-instance_method" title="#get_transitline_load (instance method)">- (Object) <strong>get_transitline_load</strong>(pmturi, linknr_dirn, transitlinenr) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_transitline_speed-instance_method" title="#get_transitline_speed (instance method)">- (Object) <strong>get_transitline_speed</strong>(pmturi, linknr, direction, transitlinenr, variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_turn_load-instance_method" title="#get_turn_load (instance method)">- (Object) <strong>get_turn_load</strong>(turnnr, pmturi, variant = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_exist%3F-instance_method" title="#load_exist? (instance method)">- (Boolean) <strong>load_exist?</strong>(pmturis) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#loads-instance_method" title="#loads (instance method)">- (Object) <strong>loads</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sum_attribute-instance_method" title="#sum_attribute (instance method)">- (Object) <strong>sum_attribute</strong>(pmturi, sum_clause) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sum_distance-instance_method" title="#sum_distance (instance method)">- (Object) <strong>sum_distance</strong>(pmturi) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sum_time-instance_method" title="#sum_time (instance method)">- (Object) <strong>sum_time</strong>(pmturi) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transit_loads-instance_method" title="#transit_loads (instance method)">- (Object) <strong>transit_loads</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unique_pmturis-instance_method" title="#unique_pmturis (instance method)">- (Object) <strong>unique_pmturis</strong>(table_name, no_cache = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Return a list of loads for this variant.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_output_tables-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clear_output_tables</strong>(pmturi = nil, variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+320
+321
+322
+323
+324
+325
+326</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 320</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_clear_output_tables identifier id'>clear_output_tables</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='dstring node'>%w[link5_2data1 node5data1 stop5_2data1 stop5_3data1 transitline5data1 turn5data1]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_tablename identifier id'>tablename</span><span class='bitor op'>|</span>
+    <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;DELETE FROM '#{$Ot.variantDirectory(variant)}#{tablename}' t &quot;</span>
+    <span class='rubyid_sql identifier id'>sql</span> <span class='opasgn op'>+=</span> <span class='dstring node'>&quot;WHERE #{pmturi_where_clause(pmturi,'t')}&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_pmturi identifier id'>pmturi</span>
+    <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="copy_cost_and_calcspeed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>copy_cost_and_calcspeed</strong>(origin_pmturis, dest_pmturi, message = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 135</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_copy_cost_and_calcspeed identifier id'>copy_cost_and_calcspeed</span><span class='lparen token'>(</span><span class='rubyid_origin_pmturis identifier id'>origin_pmturis</span><span class='comma token'>,</span> <span class='rubyid_dest_pmturi identifier id'>dest_pmturi</span><span class='comma token'>,</span> <span class='rubyid_message identifier id'>message</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_origin_data identifier id'>origin_data</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_link5_2data1_table_name identifier id'>link5_2data1_table_name</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span> <span class='div op'>/</span> <span class='string val'>&quot;link5_2data1.db&quot;</span>
+  <span class='rubyid_origin_pmturis identifier id'>origin_pmturis</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_origin_pmturi identifier id'>origin_pmturi</span><span class='comma token'>,</span> <span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span>
+    <span class='rubyid_origin_data identifier id'>origin_data</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+    <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='string val'>&quot;SELECT *\nFROM '\#{link5_2data1_table_name}' AS links_out\nWHERE \#{pmturi_where_clause(origin_pmturi, 'links_out')}\n&quot;</span>
+    <span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_line identifier id'>line</span><span class='bitor op'>|</span>
+      <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_line identifier id'>line</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>8</span><span class='rbrack token'>]</span>
+      <span class='rubyid_key identifier id'>key</span><span class='lbrack token'>[</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='integer val'>6</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_dest_pmturi identifier id'>dest_pmturi</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>5</span><span class='rbrack token'>]</span>
+      <span class='rubyid_origin_data identifier id'>origin_data</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_line identifier id'>line</span><span class='lbrack token'>[</span><span class='float val'>9</span><span class='dot2 op'>..</span><span class='integer val'>12</span><span class='rbrack token'>]</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_dest_data identifier id'>dest_data</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='string val'>&quot;SELECT *\nFROM '\#{link5_2data1_table_name}' AS links_out\nWHERE \#{pmturi_where_clause(dest_pmturi, 'links_out')}\n&quot;</span>
+  <span class='rparen token'>)</span>
+  
+  <span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='integer val'>0</span><span class='dot token'>.</span><span class='rubyid_upto identifier id'>upto</span><span class='lparen token'>(</span><span class='rubyid_dest_data identifier id'>dest_data</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='minus op'>-</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span>
+    <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_dest_data identifier id'>dest_data</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>8</span><span class='rbrack token'>]</span>
+    <span class='comment val'># find a record in the source pmturis</span>
+    <span class='rubyid_src identifier id'>src</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_origin_data identifier id'>origin_data</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_src_data identifier id'>src_data</span><span class='bitor op'>|</span>
+      <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_src_data identifier id'>src_data</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+      <span class='rubyid_src identifier id'>src</span> <span class='assign token'>=</span> <span class='rubyid_src_data identifier id'>src_data</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span>
+      <span class='rubyid_break break kw'>break</span>
+    <span class='rbrace token'>}</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;Something went wrong in merging calcspeeds from #{origin_pmturis.inspect} to #{dest_pmturi.inspect}. &quot;</span> <span class='plus op'>+</span> 
+          <span class='dstring node'>&quot;Could not find key: #{key.inspect} in source pmturis&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_src identifier id'>src</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+  
+    <span class='rubyid_dest_data identifier id'>dest_data</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>10</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_src identifier id'>src</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span>  <span class='comment val'># cost</span>
+    <span class='rubyid_dest_data identifier id'>dest_data</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>11</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_src identifier id'>src</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span>  <span class='comment val'># calcspeed</span>
+    <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_dest_data identifier id'>dest_data</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='float val'>9</span><span class='dot2 op'>..</span><span class='integer val'>12</span><span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span>
+  
+  <span class='rubyid_where_clause identifier id'>where_clause</span> <span class='assign token'>=</span> <span class='rubyid_pmturi_where_clause identifier id'>pmturi_where_clause</span><span class='lparen token'>(</span><span class='rubyid_dest_pmturi identifier id'>dest_pmturi</span><span class='comma token'>,</span> <span class='string val'>'t'</span><span class='rparen token'>)</span>
+  <span class='rubyid_load_data identifier id'>load_data</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{link5_2data1_table_name}' t WHERE #{where_clause}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_load_data identifier id'>load_data</span><span class='dot token'>.</span><span class='rubyid_map! fid id'>map!</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_values identifier id'>values</span><span class='bitor op'>|</span>
+    <span class='rubyid_key identifier id'>key</span> <span class='assign token'>=</span> <span class='rubyid_values identifier id'>values</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>8</span><span class='rbrack token'>]</span>
+    <span class='rubyid_d identifier id'>d</span> <span class='assign token'>=</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_d identifier id'>d</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Could not find a record for element #{key}&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_values identifier id'>values</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_values identifier id'>values</span><span class='lbrack token'>[</span><span class='float val'>10</span><span class='dot2 op'>..</span><span class='integer val'>11</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_d identifier id'>d</span><span class='lbrack token'>[</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_values identifier id'>values</span>
+  <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact! fid id'>compact!</span>
+  
+  <span class='comment val'># Use the bulk writing facility of OtTable to smash records into the table</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{link5_2data1_table_name}' t WHERE #{where_clause}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='rubyid_link5_2data1_table_name identifier id'>link5_2data1_table_name</span><span class='comma token'>,</span> <span class='rubyid_load_data identifier id'>load_data</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="copy_loads_on_link-instance_method">
+  
+    - (<tt>Object</tt>) <strong>copy_loads_on_link</strong>(from_linkdir, to_linkdir_list) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    This method copies all loads from a link to a list of other links within the same
+variant - especially useful when links have been split and the original loads need
+to be maintained
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 241</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_copy_loads_on_link identifier id'>copy_loads_on_link</span><span class='lparen token'>(</span><span class='rubyid_from_linkdir identifier id'>from_linkdir</span><span class='comma token'>,</span> <span class='rubyid_to_linkdir_list identifier id'>to_linkdir_list</span><span class='rparen token'>)</span>
+  <span class='rubyid_l521_tbl identifier id'>l521_tbl</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='string val'>'link5_2data1.DB'</span>
+  <span class='rubyid_link_data identifier id'>link_data</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{l521_tbl}' l521 WHERE l521.linknr = #{from_linkdir.first} AND l521.direction = #{from_linkdir.last}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_link_data identifier id'>link_data</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+
+  <span class='rubyid_records identifier id'>records</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_link_data identifier id'>link_data</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span>
+    <span class='rubyid_to_linkdir_list identifier id'>to_linkdir_list</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='bitor op'>|</span>
+      <span class='rubyid_data1 identifier id'>data1</span> <span class='assign token'>=</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_dup identifier id'>dup</span>
+      <span class='rubyid_data1 identifier id'>data1</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_data1 identifier id'>data1</span><span class='lbrack token'>[</span><span class='integer val'>7</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span>
+      <span class='rubyid_records identifier id'>records</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_data1 identifier id'>data1</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{l521_tbl}' l521 WHERE #{to_linkdir_list.map { |linkdir| &quot;(l521.linknr = #{linkdir.first} AND l521.direction = #{linkdir.last})&quot; }.join(&quot; OR &quot;)}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='rubyid_l521_tbl identifier id'>l521_tbl</span><span class='comma token'>,</span> <span class='rubyid_records identifier id'>records</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="copy_traffic_load_between_variants-instance_method">
+  
+    - (<tt>Object</tt>) <strong>copy_traffic_load_between_variants</strong>(from_variant, to_variant, from_pmturi, to_pmturi = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Copy loads between variants
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='comment val'># Copy all the car loads from 'another_variant' into the current variant, delete any car loads that already exist</span>
+<span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_copy_traffic_load_between_variants identifier id'>copy_traffic_load_between_variants</span><span class='lparen token'>(</span><span class='string val'>'another_variant'</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='rubyid_M_Car constant id'>M_Car</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+
+<span class='comment val'># Copy all the iteration 3 PT loads from 'another_variant'</span>
+<span class='comment val'># store them in 'yet_another_variant' with iteration translated to 1</span>
+<span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_copy_traffic_load_between_variants identifier id'>copy_traffic_load_between_variants</span><span class='lparen token'>(</span><span class='string val'>'another_variant'</span><span class='comma token'>,</span> <span class='string val'>'yet_another_variant'</span><span class='comma token'>,</span>
+                                               <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='float val'>200</span><span class='dot2 op'>..</span><span class='integer val'>210</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 106</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_copy_traffic_load_between_variants identifier id'>copy_traffic_load_between_variants</span><span class='lparen token'>(</span><span class='rubyid_from_variant identifier id'>from_variant</span><span class='comma token'>,</span> <span class='rubyid_to_variant identifier id'>to_variant</span><span class='comma token'>,</span> <span class='rubyid_from_pmturi identifier id'>from_pmturi</span><span class='comma token'>,</span> <span class='rubyid_to_pmturi identifier id'>to_pmturi</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Copying [#{from_pmturi.inspect}] from #{from_variant} -&gt; #{to_variant}&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Reading traffic loads'</span><span class='rparen token'>)</span>
+    <span class='rubyid_records identifier id'>records</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='string val'>&quot;SELECT * FROM '\#{File.join($Ot.variantDirectory(from_variant), 'link5_2data1.db')}' t\nWHERE \#{$Ot.network.pmturi_where_clause(from_pmturi, 't')}\n&quot;</span><span class='rparen token'>)</span>
+
+    <span class='comment val'># If the user specified a to_pmturi we have to translate the records to the given values</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_to_pmturi identifier id'>to_pmturi</span>
+      <span class='rubyid_translation identifier id'>translation</span> <span class='assign token'>=</span> <span class='rubyid_to_pmturi identifier id'>to_pmturi</span><span class='dot token'>.</span><span class='rubyid_map_with_index identifier id'>map_with_index</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_value identifier id'>value</span><span class='comma token'>,</span><span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span> <span class='lparen token'>(</span><span class='rubyid_value identifier id'>value</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_value identifier id'>value</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lbrack token'>[</span><span class='rubyid_value identifier id'>value</span><span class='comma token'>,</span><span class='rubyid_i identifier id'>i</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='colon op'>:</span> <span class='rubyid_nil nil kw'>nil</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span>
+      <span class='rubyid_records identifier id'>records</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span> <span class='rubyid_translation identifier id'>translation</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_value identifier id'>value</span><span class='comma token'>,</span><span class='rubyid_index identifier id'>index</span><span class='bitor op'>|</span> <span class='rubyid_row identifier id'>row</span><span class='lbrack token'>[</span><span class='rubyid_index identifier id'>index</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_value identifier id'>value</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_end end kw'>end</span>
+
+    <span class='rubyid_to_pmturi identifier id'>to_pmturi</span> <span class='opasgn op'>||=</span> <span class='rubyid_from_pmturi identifier id'>from_pmturi</span>
+    <span class='rubyid_to_pmturi identifier id'>to_pmturi</span>   <span class='assign token'>=</span> <span class='rubyid_to_pmturi identifier id'>to_pmturi</span><span class='dot token'>.</span><span class='rubyid_zip identifier id'>zip</span><span class='lparen token'>(</span><span class='rubyid_from_pmturi identifier id'>from_pmturi</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_to identifier id'>to</span><span class='comma token'>,</span><span class='rubyid_from identifier id'>from</span><span class='bitor op'>|</span> <span class='rubyid_to identifier id'>to</span> <span class='orop op'>||</span> <span class='rubyid_from identifier id'>from</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Deleting existing traffic loads'</span><span class='rparen token'>)</span>
+    <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='string val'>&quot;DELETE FROM '\#{File.join($Ot.variantDirectory(to_variant), 'link5_2data1.db')}' t\nWHERE \#{$Ot.network.pmturi_where_clause(to_pmturi, 't')}\n&quot;</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Pasting traffic loads'</span><span class='rparen token'>)</span>
+    <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='lparen token'>(</span><span class='rubyid_to_variant identifier id'>to_variant</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'link5_2data1.db'</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_records identifier id'>records</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="copyLoadIncludingStops-instance_method">
+  
+    - (<tt>Object</tt>) <strong>copyLoadIncludingStops</strong>(from, to) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 197</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_copyLoadIncludingStops identifier id'>copyLoadIncludingStops</span><span class='lparen token'>(</span><span class='rubyid_from identifier id'>from</span><span class='comma token'>,</span> <span class='rubyid_to identifier id'>to</span><span class='rparen token'>)</span>
+  <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_copyLoad identifier id'>copyLoad</span><span class='lparen token'>(</span><span class='rubyid_from identifier id'>from</span><span class='comma token'>,</span><span class='rubyid_to identifier id'>to</span><span class='rparen token'>)</span>
+  <span class='rubyid_stop5_3data1_table_name identifier id'>stop5_3data1_table_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;stop5_3data1.db&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_from_data identifier id'>from_data</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='string val'>&quot;SELECT * FROM '\#{stop5_3data1_table_name}' t\nWHERE \#{pmturi_where_clause(from, 't')}\n&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{stop5_3data1_table_name}' t WHERE #{pmturi_where_clause(to, 't')}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_tab identifier id'>tab</span> <span class='assign token'>=</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_stop5_3data1_table_name identifier id'>stop5_3data1_table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_tab identifier id'>tab</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span>
+  <span class='rubyid_from_data identifier id'>from_data</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span>
+    <span class='rubyid_tab identifier id'>tab</span><span class='dot token'>.</span><span class='rubyid_append identifier id'>append</span>
+    <span class='rubyid_row identifier id'>row</span><span class='lbrack token'>[</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='integer val'>6</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_to identifier id'>to</span>
+    <span class='rubyid_tab identifier id'>tab</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='rparen token'>)</span>
+    <span class='rubyid_tab identifier id'>tab</span><span class='dot token'>.</span><span class='rubyid_post identifier id'>post</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_tab identifier id'>tab</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_factored_speed_load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_factored_speed_load</strong>(dest_pmturi, factor) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Create a fake load from factored freeflow speeds
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 48</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_create_factored_speed_load identifier id'>create_factored_speed_load</span><span class='lparen token'>(</span><span class='rubyid_dest_pmturi identifier id'>dest_pmturi</span><span class='comma token'>,</span> <span class='rubyid_factor identifier id'>factor</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_loads identifier id'>loads</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span> <span class='rubyid_dest_pmturi identifier id'>dest_pmturi</span><span class='dot token'>.</span><span class='rubyid_to_pmturi identifier id'>to_pmturi</span> <span class='rubyid_then then kw'>then</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='string val'>&quot;Cannot overwrite an existing load when creating factored freeflow speed data&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_purpose identifier id'>purpose</span><span class='comma token'>,</span> <span class='rubyid_mode identifier id'>mode</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='comma token'>,</span> <span class='rubyid_user identifier id'>user</span><span class='comma token'>,</span> <span class='rubyid_result identifier id'>result</span><span class='comma token'>,</span> <span class='rubyid_iteration identifier id'>iteration</span> <span class='assign token'>=</span> <span class='mult op'>*</span><span class='rubyid_dest_pmturi identifier id'>dest_pmturi</span><span class='dot token'>.</span><span class='rubyid_to_pmturi identifier id'>to_pmturi</span>
+
+  <span class='comment val'># Get array of link types with defined types to add a load to</span>
+  <span class='rubyid_link_speeds identifier id'>link_speeds</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+
+  <span class='rubyid_link2_1data1_tabel_name identifier id'>link2_1data1_tabel_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_mainVariantDirectory identifier id'>mainVariantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;link2_1data1.db&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_link3_1data1_table_name identifier id'>link3_1data1_table_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_mainVariantDirectory identifier id'>mainVariantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;link3_1data1.db&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_link5_2data1_table_name identifier id'>link5_2data1_table_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;link5_2data1.db&quot;</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='string val'>&quot;SELECT speed_info.linknr, speed_info.direction, speed_info.speed\nFROM '\#{link2_1data1_tabel_name}' AS type_info, '\#{link3_1data1_table_name}' AS speed_info\nWHERE type_info.linknr = speed_info.linknr AND type_info.direction = speed_info.direction\nAND type_info.serienr = 1 AND type_info.typenr &lt;&gt; 0 AND speed_info.'mode' = \#{mode} AND speed_info.'time' = \#{time}\n&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span> <span class='rubyid_link_speeds identifier id'>link_speeds</span><span class='lbrack token'>[</span><span class='rubyid_row identifier id'>row</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_row identifier id'>row</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+
+  <span class='rubyid_loads_tbl identifier id'>loads_tbl</span> <span class='assign token'>=</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_link5_2data1_table_name identifier id'>link5_2data1_table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span>
+  <span class='rubyid_link_speeds identifier id'>link_speeds</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='rubyid_speed identifier id'>speed</span><span class='bitor op'>|</span>
+    <span class='rubyid_linknr identifier id'>linknr</span> <span class='assign token'>=</span> <span class='rubyid_key identifier id'>key</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+    <span class='rubyid_direction identifier id'>direction</span> <span class='assign token'>=</span> <span class='rubyid_key identifier id'>key</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_append identifier id'>append</span>
+
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'linknr'</span><span class='comma token'>,</span> <span class='rubyid_linknr identifier id'>linknr</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'direction'</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'purpose'</span><span class='comma token'>,</span> <span class='rubyid_purpose identifier id'>purpose</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'mode'</span><span class='comma token'>,</span> <span class='rubyid_mode identifier id'>mode</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'time'</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'user'</span><span class='comma token'>,</span> <span class='rubyid_user identifier id'>user</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'result'</span><span class='comma token'>,</span> <span class='rubyid_result identifier id'>result</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'iteration'</span><span class='comma token'>,</span> <span class='rubyid_iteration identifier id'>iteration</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'transitlinenr'</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'load'</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'cost'</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'calcspeed'</span><span class='comma token'>,</span> <span class='rubyid_speed identifier id'>speed</span> <span class='mult op'>*</span> <span class='rubyid_factor identifier id'>factor</span><span class='rparen token'>)</span>
+    <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_post identifier id'>post</span>
+  <span class='rbrace token'>}</span>
+
+  <span class='rubyid_loads_tbl identifier id'>loads_tbl</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>delete_load</strong>(pmturi, variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+315
+316
+317
+318</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 315</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_delete_load identifier id'>delete_load</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{$Ot.variantDirectory(variant)}link5_2data1' l521 &quot;</span> <span class='plus op'>+</span>
+                  <span class='dstring node'>&quot;WHERE #{pmturi_where_clause(pmturi,'l521')}&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_unique_pmturi_for_table-instance_method">
+  
+    - (<tt>Object</tt>) <strong>find_unique_pmturi_for_table</strong>(table_name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 30</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_find_unique_pmturi_for_table identifier id'>find_unique_pmturi_for_table</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT DISTINCT l.'purpose', l.'mode', l.'time', l.'user', l.'result', l.'iteration' FROM '#{table_name}' AS l&quot;</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_arr identifier id'>arr</span><span class='comma token'>,</span><span class='rubyid_row identifier id'>row</span><span class='bitor op'>|</span> <span class='rubyid_arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_row identifier id'>row</span><span class='semicolon token'>;</span> <span class='rubyid_arr identifier id'>arr</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_cordon_load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_cordon_load</strong>(pmturi, stops, links) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 297</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_cordon_load identifier id'>get_cordon_load</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_stops identifier id'>stops</span><span class='comma token'>,</span><span class='rubyid_links identifier id'>links</span><span class='rparen token'>)</span>
+  <span class='rubyid_total_load identifier id'>total_load</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.0</span>
+  <span class='rubyid_stops identifier id'>stops</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_String constant id'>String</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_stops identifier id'>stops</span><span class='dot token'>.</span><span class='rubyid_map! fid id'>map!</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_stops_with_name identifier id'>stops_with_name</span><span class='lparen token'>(</span><span class='rubyid_k identifier id'>k</span><span class='rparen token'>)</span><span class='rbrace token'>}</span> <span class='colon op'>:</span> <span class='rubyid_stops identifier id'>stops</span>
+  <span class='rubyid_transitlines identifier id'>transitlines</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_stops identifier id'>stops</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_stop identifier id'>stop</span><span class='bitor op'>|</span>
+    <span class='rubyid_transitlines identifier id'>transitlines</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_transitlines_by_stops identifier id'>get_transitlines_by_stops</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_stop identifier id'>stop</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_transitlines identifier id'>transitlines</span> <span class='assign token'>=</span> <span class='rubyid_transitlines identifier id'>transitlines</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_a identifier id'>a</span><span class='comma token'>,</span><span class='rubyid_b identifier id'>b</span><span class='bitor op'>|</span> <span class='rubyid_a identifier id'>a</span> <span class='bitand op'>&amp;</span> <span class='rubyid_b identifier id'>b</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_links identifier id'>links</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_link identifier id'>link</span><span class='bitor op'>|</span>
+      <span class='rubyid_transitlines identifier id'>transitlines</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_tl identifier id'>tl</span><span class='bitor op'>|</span>
+        <span class='rubyid_current_load identifier id'>current_load</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_transitline_load identifier id'>get_transitline_load</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span><span class='rubyid_tl identifier id'>tl</span><span class='rparen token'>)</span>
+        <span class='rubyid_total_load identifier id'>total_load</span> <span class='opasgn op'>+=</span> <span class='rubyid_current_load identifier id'>current_load</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_total_load identifier id'>total_load</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_load</strong>(pmturi, linknr, direction, variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 216</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_load identifier id'>get_load</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_direction identifier id'>direction</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_@link_loads ivar id'>@link_loads</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@link_loads ivar id'>@link_loads</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.0</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_@link_loads ivar id'>@link_loads</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT linknr, direction, sum(load) FROM '#{$Ot.variantDirectory(variant)}link5_2data1.db' l521 WHERE #{pmturi_where_clause(pmturi, &quot;l521&quot;)} GROUP BY linknr,direction&quot;</span>
+    <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+    <span class='rubyid_a identifier id'>a</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='bitor op'>|</span>
+      <span class='rubyid_@link_loads ivar id'>@link_loads</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_load identifier id'>load</span>
+    <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@link_loads ivar id'>@link_loads</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_max_hwy_iteration-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_max_hwy_iteration</strong>(variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+341
+342
+343</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 341</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_max_hwy_iteration identifier id'>get_max_hwy_iteration</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_get_max_iteration_generic identifier id'>get_max_iteration_generic</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span><span class='comma token'>,</span> <span class='string val'>'link5_2data1'</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='string val'>'Car'</span><span class='comma token'>,</span><span class='string val'>'CommVeh'</span><span class='comma token'>,</span><span class='string val'>'TotalLoad'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Load'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_max_iteration_generic-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_max_iteration_generic</strong>(variant, table_name, modes, result) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+335
+336
+337
+338
+339</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 335</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_max_iteration_generic identifier id'>get_max_iteration_generic</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span><span class='comma token'>,</span> <span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='rubyid_modes identifier id'>modes</span><span class='comma token'>,</span> <span class='rubyid_result identifier id'>result</span><span class='rparen token'>)</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT MAX(iteration) FROM '#{$Ot.variantDirectory(variant) / table_name}' &quot;</span> <span class='plus op'>+</span>
+        <span class='dstring node'>&quot;WHERE mode IN (#{modes.to_mode.join(',')}) AND result = #{result.to_result}&quot;</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_max_pt_iteration-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_max_pt_iteration</strong>(variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+345
+346
+347</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 345</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_max_pt_iteration identifier id'>get_max_pt_iteration</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_get_max_iteration_generic identifier id'>get_max_iteration_generic</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span><span class='comma token'>,</span> <span class='string val'>'transitline5data1'</span><span class='comma token'>,</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_pt_sub_modes identifier id'>pt_sub_modes</span><span class='comma token'>,</span> <span class='string val'>'PTLoad'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_max_walk_iteration-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_max_walk_iteration</strong>(variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+349
+350
+351</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 349</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_max_walk_iteration identifier id'>get_max_walk_iteration</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_get_max_iteration_generic identifier id'>get_max_iteration_generic</span><span class='lparen token'>(</span><span class='rubyid_variant identifier id'>variant</span><span class='comma token'>,</span> <span class='string val'>'link5_2data1'</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='string val'>'Walk'</span><span class='comma token'>,</span><span class='string val'>'Bicycle'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Load'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_maximum_iteration-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_maximum_iteration</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+328
+329
+330
+331
+332
+333</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 328</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_maximum_iteration identifier id'>get_maximum_iteration</span>
+  <span class='rubyid_iters identifier id'>iters</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_get_max_walk_iteration identifier id'>get_max_walk_iteration</span><span class='comma token'>,</span> <span class='rubyid_get_max_hwy_iteration identifier id'>get_max_hwy_iteration</span><span class='comma token'>,</span> <span class='rubyid_get_max_pt_iteration identifier id'>get_max_pt_iteration</span><span class='rbrack token'>]</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>'There is an inconsistency in the max iteration between the modes'</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_iters identifier id'>iters</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='neq op'>!=</span> <span class='integer val'>1</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>'Unable to determine any of the modes max iteration'</span><span class='rparen token'>)</span>               <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_iters identifier id'>iters</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_iters identifier id'>iters</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_speed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_speed</strong>(pmturi, linknr, direction, variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 258</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_speed identifier id'>get_speed</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_direction identifier id'>direction</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_@link_speed ivar id'>@link_speed</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@link_speed ivar id'>@link_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.0</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_@link_speed ivar id'>@link_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+      <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT linknr, direction, avg(calcspeed) FROM '#{$Ot.variantDirectory(variant)}link5_2data1.db' l521 WHERE #{pmturi_where_clause(pmturi, &quot;l521&quot;)} GROUP BY linknr,direction&quot;</span>
+      <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='rubyid_speed identifier id'>speed</span><span class='bitor op'>|</span>
+        <span class='rubyid_@link_speed ivar id'>@link_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_speed identifier id'>speed</span>
+      <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@link_speed ivar id'>@link_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_transitline_load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_transitline_load</strong>(pmturi, linknr_dirn, transitlinenr) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 283</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_transitline_load identifier id'>get_transitline_load</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_linknr_dirn identifier id'>linknr_dirn</span><span class='comma token'>,</span><span class='rubyid_transitlinenr identifier id'>transitlinenr</span><span class='rparen token'>)</span>
+  <span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_direction identifier id'>direction</span> <span class='assign token'>=</span> <span class='mult op'>*</span><span class='rubyid_linknr_dirn identifier id'>linknr_dirn</span>
+  <span class='rubyid_@transitline_link_loads ivar id'>@transitline_link_loads</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@transitline_link_loads ivar id'>@transitline_link_loads</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.0</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_@transitline_link_loads ivar id'>@transitline_link_loads</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT linknr, direction, transitlinenr, sum(load) FROM '#{$Ot.variantDirectory}link5_2data1.db' l521 WHERE #{pmturi_where_clause(pmturi, &quot;l521&quot;)} GROUP BY linknr,direction, transitlinenr&quot;</span>
+    <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+    <span class='rubyid_a identifier id'>a</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='rubyid_transitline identifier id'>transitline</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='bitor op'>|</span>
+      <span class='rubyid_@transitline_link_loads ivar id'>@transitline_link_loads</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span><span class='rubyid_transitline identifier id'>transitline</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_load identifier id'>load</span>
+    <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@transitline_link_loads ivar id'>@transitline_link_loads</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='comma token'>,</span><span class='rubyid_transitlinenr identifier id'>transitlinenr</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_transitline_speed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_transitline_speed</strong>(pmturi, linknr, direction, transitlinenr, variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 270</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_transitline_speed identifier id'>get_transitline_speed</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_direction identifier id'>direction</span><span class='comma token'>,</span><span class='rubyid_transitlinenr identifier id'>transitlinenr</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_@tl_speed ivar id'>@tl_speed</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@tl_speed ivar id'>@tl_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.0</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_@tl_speed ivar id'>@tl_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT transitlinenr, linknr, direction, avg(calcspeed) FROM '#{$Ot.variantDirectory(variant)}link5_2data1.db' l521 WHERE #{pmturi_where_clause(pmturi, &quot;l521&quot;)} GROUP BY transitlinenr,linknr,direction&quot;</span>
+    <span class='rubyid_a identifier id'>a</span> <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+    <span class='rubyid_a identifier id'>a</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_transitline identifier id'>transitline</span><span class='comma token'>,</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='rubyid_speed identifier id'>speed</span><span class='bitor op'>|</span>
+      <span class='rubyid_@tl_speed ivar id'>@tl_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_transitline identifier id'>transitline</span><span class='comma token'>,</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_speed identifier id'>speed</span>
+    <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@tl_speed ivar id'>@tl_speed</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_transitlinenr identifier id'>transitlinenr</span><span class='comma token'>,</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_turn_load-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_turn_load</strong>(turnnr, pmturi, variant = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+229
+230
+231
+232
+233
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 229</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_turn_load identifier id'>get_turn_load</span><span class='lparen token'>(</span><span class='rubyid_turnnr identifier id'>turnnr</span><span class='comma token'>,</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_@turn_loads ivar id'>@turn_loads</span> <span class='opasgn op'>||=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT turnnr, sum(load) FROM '#{$Ot.variantDirectory(variant)}turn5data1.db' t51 WHERE #{pmturi_where_clause(pmturi, &quot;t51&quot;)} GROUP BY turnnr&quot;</span>
+  <span class='rubyid_@turn_loads ivar id'>@turn_loads</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_hsh identifier id'>hsh</span><span class='comma token'>,</span> <span class='lparen token'>(</span><span class='rubyid_turn identifier id'>turn</span><span class='comma token'>,</span> <span class='rubyid_load identifier id'>load</span><span class='rparen token'>)</span><span class='bitor op'>|</span>
+    <span class='rubyid_hsh identifier id'>hsh</span><span class='lbrack token'>[</span><span class='rubyid_turn identifier id'>turn</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_load identifier id'>load</span><span class='semicolon token'>;</span> <span class='rubyid_hsh identifier id'>hsh</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@turn_loads ivar id'>@turn_loads</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span><span class='rubyid_variant identifier id'>variant</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_turnnr identifier id'>turnnr</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_exist?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>load_exist?</strong>(pmturis) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 39</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_load_exist? fid id'>load_exist?</span><span class='lparen token'>(</span><span class='rubyid_pmturis identifier id'>pmturis</span><span class='rparen token'>)</span>
+  <span class='rubyid_pmturis identifier id'>pmturis</span><span class='dot token'>.</span><span class='rubyid_combine identifier id'>combine</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='bitor op'>|</span> <span class='rubyid_loads identifier id'>loads</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='dot token'>.</span><span class='rubyid_to_pmturi identifier id'>to_pmturi</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_all? fid id'>all?</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="loads-instance_method">
+  
+    - (<tt>Object</tt>) <strong>loads</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 35</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_loads identifier id'>loads</span>
+  <span class='rubyid_unique_pmturis identifier id'>unique_pmturis</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;link5_2data1.db&quot;</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sum_attribute-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sum_attribute</strong>(pmturi, sum_clause) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 4</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sum_attribute identifier id'>sum_attribute</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_sum_clause identifier id'>sum_clause</span><span class='rparen token'>)</span>
+  <span class='rubyid_link_table_name identifier id'>link_table_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_mainVariantDirectory identifier id'>mainVariantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;link.db&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_link5_2data1_table_name identifier id'>link5_2data1_table_name</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;link5_2data1.db&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='string val'>&quot;SELECT SUM(\#{sum_clause}) as attribute\nFROM '\#{link5_2data1_table_name}' AS linkloads, '\#{link_table_name}' AS link\nWHERE linkloads.linknr = link.linknr AND \#{pmturi_where_clause(pmturi, 'linkloads')}\n&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sum_distance-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sum_distance</strong>(pmturi) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 15</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sum_distance identifier id'>sum_distance</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_sum_attribute identifier id'>sum_attribute</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='string val'>&quot;load * link.'length'&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sum_time-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sum_time</strong>(pmturi) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 19</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_sum_time identifier id'>sum_time</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_sum_attribute identifier id'>sum_attribute</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='string val'>&quot;link.'length' * load / calcspeed&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transit_loads-instance_method">
+  
+    - (<tt>Object</tt>) <strong>transit_loads</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 43</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_transit_loads identifier id'>transit_loads</span>
+  <span class='rubyid_unique_pmturis identifier id'>unique_pmturis</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span><span class='comma token'>,</span> <span class='string val'>&quot;transitline5data1.db&quot;</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unique_pmturis-instance_method">
+  
+    - (<tt>Object</tt>) <strong>unique_pmturis</strong>(table_name, no_cache = true) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Return a list of loads for this variant
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_network_outputs.rb', line 24</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_unique_pmturis identifier id'>unique_pmturis</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='rubyid_no_cache identifier id'>no_cache</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+  <span class='rubyid_@unique_pmturis ivar id'>@unique_pmturis</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='rubyid_@unique_pmturis ivar id'>@unique_pmturis</span><span class='lbrack token'>[</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_find_unique_pmturi_for_table identifier id'>find_unique_pmturi_for_table</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_@unique_pmturis ivar id'>@unique_pmturis</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='rubyid_no_cache identifier id'>no_cache</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_@unique_pmturis ivar id'>@unique_pmturis</span><span class='lbrack token'>[</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:29 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

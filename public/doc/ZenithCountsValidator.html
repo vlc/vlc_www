@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ZenithCountsValidator
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (Z)</a> &raquo;
+    
+    
+    <span class="title">ZenithCountsValidator</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ZenithCountsValidator
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ZenithCountsValidator</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/import/counts/zenith_counts_validator.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will validate your assignment results against the latest counts layer
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/import/counts/zenith_counts_validator'</span>
+<span class='comment val'># We don't always want every count, so there is a count_filter functionality which works directly on the fields</span>
+<span class='comment val'># of the count layer, here we filter the year field to be in a three year range and specify that the</span>
+<span class='comment val'># count_is_suspect field should not be defined</span>
+<span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:columns</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:AWDT_Total</span><span class='comma token'>,</span> <span class='symbol val'>:AWDT_AM</span><span class='comma token'>,</span> <span class='symbol val'>:AWDT_PM</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+         <span class='symbol val'>:count_filter</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:year</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='float val'>2005</span><span class='dot2 op'>..</span><span class='integer val'>2007</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:count_is_suspect</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span> <span class='rbrace token'>}</span>
+       <span class='rbrace token'>}</span>
+<span class='rubyid_validation identifier id'>validation</span> <span class='assign token'>=</span> <span class='rubyid_ZenithCountsValidator constant id'>ZenithCountsValidator</span><span class='dot token'>.</span><span class='rubyid_get_validation identifier id'>get_validation</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='comment val'># Generally you'll want to do something with the validation object you've just created</span>
+<span class='comment val'># The CSV writer is a good general purpose data dumper so you can work with your validation in excel</span>
+<span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/import/counts/counts_validation_csv_writer'</span>
+<span class='rubyid_validation_csv_file identifier id'>validation_csv_file</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span> <span class='div op'>/</span> <span class='string val'>'Reports'</span> <span class='div op'>/</span> <span class='string val'>'validation.csv'</span>
+<span class='rubyid_CountsValidationCsvWriter constant id'>CountsValidationCsvWriter</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='rubyid_validation_csv_file identifier id'>validation_csv_file</span><span class='comma token'>,</span> <span class='rubyid_validation identifier id'>validation</span><span class='comma token'>,</span>
+                                <span class='symbol val'>:descriptor_cols</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:year</span><span class='comma token'>,</span> <span class='symbol val'>:screenline_id</span><span class='comma token'>,</span> <span class='symbol val'>:Point_No</span><span class='comma token'>,</span> <span class='symbol val'>:road_name</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+</code></pre>
+    
+      
+      <pre class="example code"><code><span class='comment val'># Now lets extend the above example to do some PT validation</span>
+<span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='symbol val'>:stops</span>
+<span class='rubyid_CountsValidationExcelWriter constant id'>CountsValidationExcelWriter</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='rubyid_ZenithCountsValidator constant id'>ZenithCountsValidator</span><span class='dot token'>.</span><span class='rubyid_get_validation identifier id'>get_validation</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#counts_layer_exists%3F-class_method" title="counts_layer_exists? (class method)">+ (Boolean) <strong>counts_layer_exists?</strong>(market, counts_layer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_default_columns-class_method" title="get_default_columns (class method)">+ (Object) <strong>get_default_columns</strong>(validation_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_validation-class_method" title="get_validation (class method)">+ (Object) <strong>get_validation</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_validator-class_method" title="get_validator (class method)">+ (Object) <strong>get_validator</strong>(validation_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_and_filter_counts-class_method" title="load_and_filter_counts (class method)">+ (Object) <strong>load_and_filter_counts</strong>(counts_layer, filter, mi_count_columns, validation_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup_validation_args-class_method" title="setup_validation_args (class method)">+ (Object) <strong>setup_validation_args</strong>(filter, counts_layer, columns, validation_type, limit = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="counts_layer_exists?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>counts_layer_exists?</strong>(market, counts_layer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 59</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_counts_layer_exists? fid id'>counts_layer_exists?</span><span class='lparen token'>(</span><span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_exclaim identifier id'>exclaim</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{market} has no counts!! [#{counts_layer}]&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_false false kw'>false</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_default_columns-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_default_columns</strong>(validation_type) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 79</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_default_columns identifier id'>get_default_columns</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='symbol val'>:AWDT_Total</span><span class='rbrack token'>]</span>                      <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:traffic</span>
+  <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='symbol val'>:total_boardings</span><span class='comma token'>,</span> <span class='symbol val'>:total_entries</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:stops</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_validation-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_validation</strong>(opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>the options to validate with</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:columns</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>The count columns to validate against</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:count_filter</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>A filter to apply to the counts layer</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:market</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>Which market (city) are we importing from (i.e. :sydney)</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:counts_layer</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>An alternate count layer to draw counts from</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:counts_file</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>A counts csv file used for pt route validation</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:variant</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>The variant to draw load information from</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:iteration</span>
+          <span class="type">(<tt>Fixnum</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>The iteration to draw load information from</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:validation_type</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>The type of  validation to do (:traffic (default), :stops, :routes, :pedestrian)</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 43</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_validation identifier id'>get_validation</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_market identifier id'>market</span>           <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:market</span><span class='rbrack token'>]</span>          <span class='orop op'>||</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_city identifier id'>city</span>
+  <span class='rubyid_validation_type identifier id'>validation_type</span>  <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='symbol val'>:traffic</span>
+  <span class='rubyid_counts_layer identifier id'>counts_layer</span>     <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:counts_layer</span><span class='rbrack token'>]</span>    <span class='orop op'>||</span> <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_get_default_counts_layer identifier id'>get_default_counts_layer</span><span class='lparen token'>(</span><span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_@@iteration ivar id'>@@iteration</span>      <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:iteration</span><span class='rbrack token'>]</span>       <span class='orop op'>||</span> <span class='integer val'>1</span>
+  <span class='rubyid_@@variant ivar id'>@@variant</span>        <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:variant</span><span class='rbrack token'>]</span>         <span class='orop op'>||</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variant identifier id'>variant</span>
+  <span class='rubyid_filter identifier id'>filter</span>           <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:count_filter</span><span class='rbrack token'>]</span>    <span class='orop op'>||</span> <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_get_default_count_filter identifier id'>get_default_count_filter</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:columns</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_sym</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:columns</span><span class='rbrack token'>]</span>
+
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='string val'>'Zenith Counts Validator'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_counts_layer_exists? fid id'>counts_layer_exists?</span><span class='lparen token'>(</span><span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+    <span class='rubyid_args identifier id'>args</span> <span class='assign token'>=</span> <span class='rubyid_setup_validation_args identifier id'>setup_validation_args</span><span class='lparen token'>(</span><span class='rubyid_filter identifier id'>filter</span><span class='comma token'>,</span> <span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='comma token'>,</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:limit</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    <span class='rubyid_get_validator identifier id'>get_validator</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_get_validation identifier id'>get_validation</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='rubyid_args identifier id'>args</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_validator-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_validator</strong>(validation_type) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 84</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_validator identifier id'>get_validator</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_case case kw'>case</span> <span class='rubyid_validation_type identifier id'>validation_type</span>
+  <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:stops</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_StopCountValidator constant id'>StopCountValidator</span>
+  <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:routes</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_RouteCountValidator constant id'>RouteCountValidator</span>
+  <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:traffic</span><span class='comma token'>,</span> <span class='symbol val'>:pedestrian</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_CountsValidator constant id'>CountsValidator</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Do not know how to validate #{validation_type}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_and_filter_counts-class_method">
+  
+    + (<tt>Object</tt>) <strong>load_and_filter_counts</strong>(counts_layer, filter, mi_count_columns, validation_type) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 97</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_load_and_filter_counts identifier id'>load_and_filter_counts</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='comma token'>,</span> <span class='rubyid_filter identifier id'>filter</span><span class='comma token'>,</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;counts layer does not exist [#{counts_layer}]&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:routes</span>
+    <span class='rubyid_counts identifier id'>counts</span> <span class='assign token'>=</span> <span class='rubyid_RouteCountValidator constant id'>RouteCountValidator</span><span class='dot token'>.</span><span class='rubyid_read_counts identifier id'>read_counts</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Reading counts table '#{counts_layer}'&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_counts identifier id'>counts</span> <span class='assign token'>=</span> <span class='rubyid_TabFileLoader constant id'>TabFileLoader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_loadToArray identifier id'>loadToArray</span>
+    <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_check_count_data_exists identifier id'>check_count_data_exists</span><span class='lparen token'>(</span><span class='rubyid_counts identifier id'>counts</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_ZenithCountsUtils constant id'>ZenithCountsUtils</span><span class='dot token'>.</span><span class='rubyid_apply_filters identifier id'>apply_filters</span><span class='lparen token'>(</span><span class='rubyid_counts identifier id'>counts</span><span class='comma token'>,</span> <span class='rubyid_filter identifier id'>filter</span><span class='comma token'>,</span> <span class='string val'>'count'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup_validation_args-class_method">
+  
+    + (<tt>Object</tt>) <strong>setup_validation_args</strong>(filter, counts_layer, columns, validation_type, limit = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 65</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_setup_validation_args identifier id'>setup_validation_args</span><span class='lparen token'>(</span><span class='rubyid_filter identifier id'>filter</span><span class='comma token'>,</span> <span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='comma token'>,</span> <span class='rubyid_limit identifier id'>limit</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_columns identifier id'>columns</span> <span class='opasgn op'>||=</span> <span class='rubyid_get_default_columns identifier id'>get_default_columns</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_filtered_counts identifier id'>filtered_counts</span> <span class='assign token'>=</span> <span class='rubyid_load_and_filter_counts identifier id'>load_and_filter_counts</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='comma token'>,</span> <span class='rubyid_filter identifier id'>filter</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_filtered_counts identifier id'>filtered_counts</span> <span class='assign token'>=</span> <span class='rubyid_filtered_counts identifier id'>filtered_counts</span><span class='dot token'>.</span><span class='rubyid_sample identifier id'>sample</span><span class='lparen token'>(</span><span class='rubyid_limit identifier id'>limit</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_limit identifier id'>limit</span>
+
+  <span class='rubyid_case case kw'>case</span> <span class='rubyid_validation_type identifier id'>validation_type</span>
+  <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:traffic</span><span class='comma token'>,</span> <span class='symbol val'>:pedestrian</span><span class='comma token'>,</span> <span class='symbol val'>:stops</span>
+    <span class='lbrack token'>[</span><span class='rubyid_@@iteration ivar id'>@@iteration</span><span class='comma token'>,</span> <span class='rubyid_@@variant ivar id'>@@variant</span><span class='comma token'>,</span> <span class='rubyid_filtered_counts identifier id'>filtered_counts</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='rbrack token'>]</span>
+  <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:routes</span>
+    <span class='lbrack token'>[</span><span class='rubyid_@@iteration ivar id'>@@iteration</span><span class='comma token'>,</span> <span class='rubyid_@@variant ivar id'>@@variant</span><span class='comma token'>,</span> <span class='rubyid_filtered_counts identifier id'>filtered_counts</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:32 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

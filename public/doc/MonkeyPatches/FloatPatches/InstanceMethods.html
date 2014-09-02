@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: MonkeyPatches::FloatPatches::InstanceMethods
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = 'MonkeyPatches/FloatPatches/';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../MonkeyPatches.html" title="MonkeyPatches (module)">MonkeyPatches</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../FloatPatches.html" title="MonkeyPatches::FloatPatches (module)">FloatPatches</a></span></span>
+     &raquo; 
+    <span class="title">InstanceMethods</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="" target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: MonkeyPatches::FloatPatches::InstanceMethods
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">app/monkey_patches/float.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#commify-instance_method" title="#commify (instance method)">- (Object) <strong>commify</strong> </a>
+    
+
+    
+      (also: #commafy)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Generate a comma separated string from a floating point number.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#days-instance_method" title="#days (instance method)">- (Object) <strong>days</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Convert from seconds (default unit of time) to days.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hours-instance_method" title="#hours (instance method)">- (Object) <strong>hours</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Convert from seconds (default unit of time) to hours.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#infinite%3F-instance_method" title="#infinite? (instance method)">- (Boolean) <strong>infinite?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Check if a float is infinite or not (simplistic implementation).</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#minutes-instance_method" title="#minutes (instance method)">- (Object) <strong>minutes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Convert from seconds (default unit of time) to minutes.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#months-instance_method" title="#months (instance method)">- (Object) <strong>months</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Convert from seconds (default unit of time) to weeks.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#round_at-instance_method" title="#round_at (instance method)">- (Float) <strong>round_at</strong>(decimal_places = 0) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Rounds to 'decimal_places' decimal places.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#weeks-instance_method" title="#weeks (instance method)">- (Object) <strong>weeks</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Convert from seconds (default unit of time) to weeks.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="commify-instance_method">
+  
+    - (<tt>Object</tt>) <strong>commify</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='commafy-instance_method'>commafy</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Generate a comma separated string from a floating point number
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='float val'>10000000.0</span><span class='dot token'>.</span><span class='rubyid_commify identifier id'>commify</span>   <span class='comment val'># &lt;= &quot;10,000,000.0&quot;</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 24</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_commify identifier id'>commify</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_reverse identifier id'>reverse</span><span class='dot token'>.</span><span class='rubyid_gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/(\d\d\d)(?=\d)(?!\d*\.)/</span><span class='comma token'>,</span><span class='string val'>'\1,'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_reverse identifier id'>reverse</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="days-instance_method">
+  
+    - (<tt>Object</tt>) <strong>days</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Convert from seconds (default unit of time) to days
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='float val'>172800</span><span class='dot token'>.</span><span class='rubyid_days identifier id'>days</span>   <span class='comment val'># &lt;= 2.0</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 44</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_days identifier id'>days</span><span class='semicolon token'>;</span>    <span class='rubyid_self self kw'>self</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>24</span>      <span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hours-instance_method">
+  
+    - (<tt>Object</tt>) <strong>hours</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Convert from seconds (default unit of time) to hours
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='float val'>3600</span><span class='dot token'>.</span><span class='rubyid_hours identifier id'>hours</span>   <span class='comment val'># &lt;= 1.0</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 39</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_hours identifier id'>hours</span><span class='semicolon token'>;</span>   <span class='rubyid_self self kw'>self</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>60</span>           <span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="infinite?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>infinite?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Check if a float is infinite or not (simplistic implementation)
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_infinite? fid id'>infinite?</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_self self kw'>self</span> <span class='gt op'>&gt;</span> <span class='integer val'>99999999999999999</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="minutes-instance_method">
+  
+    - (<tt>Object</tt>) <strong>minutes</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Convert from seconds (default unit of time) to minutes
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='float val'>60</span><span class='dot token'>.</span><span class='rubyid_minutes identifier id'>minutes</span>   <span class='comment val'># &lt;= 1.0</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 34</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_minutes identifier id'>minutes</span><span class='semicolon token'>;</span> <span class='rubyid_self self kw'>self</span> <span class='div op'>/</span> <span class='integer val'>60</span>                <span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="months-instance_method">
+  
+    - (<tt>Object</tt>) <strong>months</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Convert from seconds (default unit of time) to weeks
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='float val'>604800</span><span class='dot token'>.</span><span class='rubyid_months identifier id'>months</span>   <span class='comment val'># &lt;= 0.2333</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 54</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_months identifier id'>months</span><span class='semicolon token'>;</span>  <span class='rubyid_self self kw'>self</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>24</span> <span class='div op'>/</span> <span class='integer val'>30</span> <span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="round_at-instance_method">
+  
+    - (<tt>Float</tt>) <strong>round_at</strong>(decimal_places = 0) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Rounds to 'decimal_places' decimal places
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='lparen token'>(</span><span class='float val'>10.52651</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_round_at identifier id'>round_at</span>    <span class='comment val'># &lt;= 11.0</span>
+<span class='lparen token'>(</span><span class='float val'>10.52651</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_round_at identifier id'>round_at</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span> <span class='comment val'># &lt;= 10.527</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>decimal_places</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>The number of decimal places to round to</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The rounded number</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 11</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_round_at identifier id'>round_at</span><span class='lparen token'>(</span><span class='rubyid_decimal_places identifier id'>decimal_places</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='rubyid_scale identifier id'>scale</span> <span class='assign token'>=</span> <span class='float val'>10.0</span> <span class='pow op'>**</span> <span class='rubyid_decimal_places identifier id'>decimal_places</span>
+  <span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span> <span class='mult op'>*</span> <span class='rubyid_scale identifier id'>scale</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_round identifier id'>round</span><span class='div op'>/</span><span class='rubyid_scale identifier id'>scale</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="weeks-instance_method">
+  
+    - (<tt>Object</tt>) <strong>weeks</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Convert from seconds (default unit of time) to weeks
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='float val'>604800</span><span class='dot token'>.</span><span class='rubyid_weeks identifier id'>weeks</span>   <span class='comment val'># &lt;= 1.0</span>
+</code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/float.rb', line 49</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_weeks identifier id'>weeks</span><span class='semicolon token'>;</span>   <span class='rubyid_self self kw'>self</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>60</span> <span class='div op'>/</span> <span class='integer val'>24</span> <span class='div op'>/</span> <span class='integer val'>7</span>  <span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:28 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

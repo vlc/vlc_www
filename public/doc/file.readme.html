@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  File: readme
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index</a> &raquo; 
+    <span class="title">File: readme</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Zenith</h1>
+
+<p><strong>Welcome to the online documentation for the <a href="http://zenith.veitchlister.com.au" title="Zenith Homepage">Zenith Transport Modelling engine</a>:target=&quot;_blank&quot;.</strong></p>
+
+<p>There are a lot of powerful features in Zenith, if you already know what you&#39;re looking for you can get started by
+browsing (or searching) the class list there on the left hand side. If this is your first time here, you&#39;re probably
+looking for help with the ZenithModelRun class. A good tutorial video is available at
+<a href="http://zenith.veitchlister.com.au/videos">the main video page</a>:target=&quot;_blank&quot;.</p>
+
+<h2>ZenithModelRun</h2>
+
+<p>In it&#39;s simplest form, a Zenith assignment run can be invoked using this simple script:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='rubyid_zenith_model_run identifier id'>zenith_model_run</span> <span class='assign token'>=</span> <span class='rubyid_ZenithModelRun constant id'>ZenithModelRun</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+<span class='rubyid_zenith_model_run identifier id'>zenith_model_run</span><span class='dot token'>.</span><span class='rubyid_do_assignment identifier id'>do_assignment</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_zenith_model_run identifier id'>zenith_model_run</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span>
+</code></pre>
+
+<p>If you&#39;d like to see more of the features available to you, go directly to the
+<a href="/doc/./ZenithModelRun.html" title="ZenithModelRun class reference">ZenithModelRun</a> class documentation</p>
+
+<h2>SpatialTypesImporter</h2>
+
+<p>In order to do some good looking visualisations you&#39;ll probably need to import some spatial types to your
+OT project (i.e. LGAs, Suburbs, etc). You can do this with the SpatialTypesImporter; for example to import
+LGA names into a Suburb type and attach that information to each of your centroids you could do this:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='rubyid_filename identifier id'>filename</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_modelResourcesDirectory identifier id'>modelResourcesDirectory</span><span class='comma token'>,</span> <span class='string val'>'Model\Geography\Sectors\Suburbs.TAB'</span><span class='rparen token'>)</span>
+<span class='comment val'># import the suburbs for all centroids, creating centres based on centre of mass</span>
+<span class='rubyid_SpatialTypesImporter constant id'>SpatialTypesImporter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_import identifier id'>import</span><span class='lparen token'>(</span><span class='symbol val'>:centroids</span><span class='comma token'>,</span> <span class='rubyid_filename identifier id'>filename</span><span class='comma token'>,</span> <span class='lbrace token'>{</span><span class='symbol val'>:create_centres</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:centre_of_mass</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+</code></pre>
+
+<h2>MatrixSectoriser</h2>
+
+<p>Now that you&#39;ve got spatial data, let&#39;s do something useful with it. In this example we are going to sectorise</p>
+
+<pre class="code ruby"><code class="ruby"><span class='rubyid_sectoriser identifier id'>sectoriser</span> <span class='assign token'>=</span> <span class='rubyid_MatrixSectoriser constant id'>MatrixSectoriser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;LGA&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_sc identifier id'>sc</span> <span class='assign token'>=</span> <span class='rubyid_SkimCube constant id'>SkimCube</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+<span class='rubyid_pmturi identifier id'>pmturi</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>'Total'</span><span class='comma token'>,</span> <span class='string val'>'Car'</span><span class='comma token'>,</span> <span class='string val'>'AM'</span><span class='comma token'>,</span> <span class='string val'>'Total'</span><span class='comma token'>,</span> <span class='string val'>'ODMat'</span><span class='comma token'>,</span> <span class='string val'>'Iteration1'</span><span class='rbrack token'>]</span>  <span class='comment val'># Car AM Demand Matrix</span>
+<span class='rubyid_matrix identifier id'>matrix</span> <span class='assign token'>=</span> <span class='rubyid_sc identifier id'>sc</span><span class='lbrack token'>[</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rbrack token'>]</span>                                              <span class='comment val'># The matrix to sectorise</span>
+<span class='rubyid_matrix_sectorised identifier id'>matrix_sectorised</span> <span class='assign token'>=</span> <span class='rubyid_sectoriser identifier id'>sectoriser</span><span class='dot token'>.</span><span class='rubyid_sectorise identifier id'>sectorise</span><span class='lparen token'>(</span><span class='rubyid_matrix identifier id'>matrix</span><span class='rparen token'>)</span>
+<span class='rubyid_matrix_expanded identifier id'>matrix_expanded</span> <span class='assign token'>=</span> <span class='rubyid_sectoriser identifier id'>sectoriser</span><span class='dot token'>.</span><span class='rubyid_expand identifier id'>expand</span><span class='lparen token'>(</span><span class='rubyid_matrix_sectorised identifier id'>matrix_sectorised</span><span class='rparen token'>)</span>           <span class='comment val'># Note: The serie must have centres for</span>
+                                                                 <span class='comment val'>#       expand to work.</span>
+
+<span class='comment val'># Now save the sectorised and expanded matrix back to the skim cube at a slightly different location</span>
+<span class='rubyid_pmturi_sectorised identifier id'>pmturi_sectorised</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>'Total'</span><span class='comma token'>,</span> <span class='string val'>'Car'</span><span class='comma token'>,</span> <span class='string val'>'AM'</span><span class='comma token'>,</span> <span class='string val'>'Sectorised_LGA'</span><span class='comma token'>,</span> <span class='string val'>'ODMat'</span><span class='comma token'>,</span> <span class='string val'>'Iteration1'</span><span class='rbrack token'>]</span>
+<span class='rubyid_sc identifier id'>sc</span><span class='lbrack token'>[</span><span class='rubyid_pmturi_sectorised identifier id'>pmturi_sectorised</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_matrix_expanded identifier id'>matrix_expanded</span>
+</code></pre>
+</div></div>
+
+    <div id="footer">
+  Generated on 02/04/14 12:04:27 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
