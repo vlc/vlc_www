@@ -1,0 +1,868 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: EmmeMatrixExporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (E)</a> &raquo;
+    
+    
+    <span class="title">EmmeMatrixExporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: EmmeMatrixExporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">EmmeMatrixExporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/emme/emme_matrix_exporter.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will export an OmniTRANS matrix to EMME/2 format
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/emme/emme_matrix_exporter'</span>
+<span class='rubyid_EmmeMatrixExporter constant id'>EmmeMatrixExporter</span><span class='dot token'>.</span><span class='rubyid_export_matrix identifier id'>export_matrix</span><span class='lparen token'>(</span><span class='rubyid_file_name identifier id'>file_name</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_nr_of_columns identifier id'>nr_of_columns</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="/doc/EmmeMatrixExporter/CordonEquivalences.html" title="EmmeMatrixExporter::CordonEquivalences (class)">CordonEquivalences</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_cordon-class_method" title="export_cordon (class method)">+ (Object) <strong>export_cordon</strong>(file, pmturi, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_cordon_matrix-class_method" title="export_cordon_matrix (class method)">+ (Object) <strong>export_cordon_matrix</strong>(file, pmturi, centroid_equivalence = nil, link_equivalence = nil, columns = 1) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_matrix-class_method" title="export_matrix (class method)">+ (Object) <strong>export_matrix</strong>(file, pmturi, columns = 1) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_cordon_data-class_method" title="write_cordon_data (class method)">+ (Object) <strong>write_cordon_data</strong>(unit, pmturi, columns, precision, delete_zeros, link_to_zone_equivalence, centroid_to_zone_equivalence) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_data-class_method" title="write_data (class method)">+ (Object) <strong>write_data</strong>(unit, pmturi, columns) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>unit is the output file pmturi is the pmturi columns is the number of.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_file-class_method" title="write_file (class method)">+ (Object) <strong>write_file</strong>(file, pmturi, columns) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_header-class_method" title="write_header (class method)">+ (Object) <strong>write_header</strong>(unit, pmturi) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_matrix-class_method" title="write_matrix (class method)">+ (Object) <strong>write_matrix</strong>(unit, matrix, columns, delete_zeros, precision, zone_equiv = proc{ |x| x }) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="export_cordon-class_method">
+  
+    + (<tt>Object</tt>) <strong>export_cordon</strong>(file, pmturi, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The path + filename of the export file</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>pmturi</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Matrix to be exported</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>:columns - number of destination columns in output file, default 1
+:precision - number of decimal places in output data, default 2
+:include_zeros - whether to include OD pairs with no data. default false
+:link_equivalence - link to zone equivalence. defaults to LinkTag
+:centroid_equivalence - centroid equivalence. defaults to CentroidTag.</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 45</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_export_cordon identifier id'>export_cordon</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_centroid_equivalence identifier id'>centroid_equivalence</span> <span class='assign token'>=</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:centroid_equivalence</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_CordonEquivalences constant id'>CordonEquivalences</span><span class='dot token'>.</span><span class='rubyid_build_centroid_to_tag identifier id'>build_centroid_to_tag</span>
+  <span class='rubyid_link_equivalence identifier id'>link_equivalence</span> <span class='assign token'>=</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:link_equivalence</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_CordonEquivalences constant id'>CordonEquivalences</span><span class='dot token'>.</span><span class='rubyid_build_link_to_tag identifier id'>build_link_to_tag</span>
+  <span class='rubyid_columns identifier id'>columns</span> <span class='assign token'>=</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:columns</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>1</span>
+  <span class='rubyid_precision identifier id'>precision</span> <span class='assign token'>=</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:precision</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='integer val'>2</span>
+  <span class='rubyid_include_zeros identifier id'>include_zeros</span> <span class='assign token'>=</span> <span class='rubyid_options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:include_zeros</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_false false kw'>false</span>
+
+  <span class='rubyid_unit identifier id'>unit</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='string val'>'w+'</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_header identifier id'>write_header</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_cordon_data identifier id'>write_cordon_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_precision identifier id'>precision</span><span class='comma token'>,</span> <span class='notop op'>!</span><span class='rubyid_include_zeros identifier id'>include_zeros</span><span class='comma token'>,</span> <span class='rubyid_link_equivalence identifier id'>link_equivalence</span><span class='comma token'>,</span> <span class='rubyid_centroid_equivalence identifier id'>centroid_equivalence</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export_cordon_matrix-class_method">
+  
+    + (<tt>Object</tt>) <strong>export_cordon_matrix</strong>(file, pmturi, centroid_equivalence = nil, link_equivalence = nil, columns = 1) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The path + filename of the export file</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>pmturi</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Matrix to be exported</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>link</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>to zone equivalence. Can be nil, in which case `LinkTag` is used (from the link1_1data1 table)</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>nr_of_columns</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Number of destination columns in output file</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 28</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_export_cordon_matrix identifier id'>export_cordon_matrix</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_centroid_equivalence identifier id'>centroid_equivalence</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_link_equivalence identifier id'>link_equivalence</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span> <span class='assign token'>=</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='string val'>'w+'</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_header identifier id'>write_header</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_cordon_data identifier id'>write_cordon_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='comma token'>,</span>
+                    <span class='rubyid_link_equivalence identifier id'>link_equivalence</span> <span class='orop op'>||</span> <span class='rubyid_CordonEquivalences constant id'>CordonEquivalences</span><span class='dot token'>.</span><span class='rubyid_build_link_to_tag identifier id'>build_link_to_tag</span><span class='comma token'>,</span>
+                    <span class='rubyid_centroid_equivalence identifier id'>centroid_equivalence</span> <span class='orop op'>||</span> <span class='rubyid_CordonEquivalences constant id'>CordonEquivalences</span><span class='dot token'>.</span><span class='rubyid_build_centroid_to_tag identifier id'>build_centroid_to_tag</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export_matrix-class_method">
+  
+    + (<tt>Object</tt>) <strong>export_matrix</strong>(file, pmturi, columns = 1) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The path + filename of the export file</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>pmturi</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Matrix to be exported</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>nr_of_columns</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>Number of destination columns in output file</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 13</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_export_matrix identifier id'>export_matrix</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span> <span class='assign token'>=</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_file identifier id'>write_file</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_cordon_data-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_cordon_data</strong>(unit, pmturi, columns, precision, delete_zeros, link_to_zone_equivalence, centroid_to_zone_equivalence) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 75</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_cordon_data identifier id'>write_cordon_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_precision identifier id'>precision</span><span class='comma token'>,</span> <span class='rubyid_delete_zeros identifier id'>delete_zeros</span><span class='comma token'>,</span> <span class='rubyid_link_to_zone_equivalence identifier id'>link_to_zone_equivalence</span><span class='comma token'>,</span> <span class='rubyid_centroid_to_zone_equivalence identifier id'>centroid_to_zone_equivalence</span><span class='rparen token'>)</span>
+  <span class='rubyid_cc identifier id'>cc</span> <span class='assign token'>=</span> <span class='rubyid_OtCordonCube constant id'>OtCordonCube</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_matrix identifier id'>matrix</span> <span class='assign token'>=</span> <span class='rubyid_cc identifier id'>cc</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_index_to_cordon identifier id'>index_to_cordon</span> <span class='assign token'>=</span> <span class='rubyid_cc identifier id'>cc</span><span class='dot token'>.</span><span class='rubyid_selection identifier id'>selection</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_equiv identifier id'>equiv</span> <span class='assign token'>=</span> <span class='rubyid_CordonEquivalences constant id'>CordonEquivalences</span><span class='dot token'>.</span><span class='rubyid_build_cordon_equivalence identifier id'>build_cordon_equivalence</span><span class='lparen token'>(</span><span class='rubyid_index_to_cordon identifier id'>index_to_cordon</span><span class='comma token'>,</span> <span class='rubyid_link_to_zone_equivalence identifier id'>link_to_zone_equivalence</span><span class='comma token'>,</span> <span class='rubyid_centroid_to_zone_equivalence identifier id'>centroid_to_zone_equivalence</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_matrix identifier id'>write_matrix</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_matrix identifier id'>matrix</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_delete_zeros identifier id'>delete_zeros</span><span class='comma token'>,</span> <span class='rubyid_precision identifier id'>precision</span><span class='comma token'>,</span> <span class='rubyid_equiv identifier id'>equiv</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_data-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_data</strong>(unit, pmturi, columns) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    unit is the output file
+pmturi is the pmturi
+columns is the number of
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 69</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='rparen token'>)</span>
+  <span class='rubyid_sc identifier id'>sc</span> <span class='assign token'>=</span> <span class='rubyid_OtSkimCube constant id'>OtSkimCube</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_matrix identifier id'>matrix</span> <span class='assign token'>=</span> <span class='rubyid_sc identifier id'>sc</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span><span class='lparen token'>(</span><span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_matrix identifier id'>write_matrix</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_matrix identifier id'>matrix</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_file-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_file</strong>(file, pmturi, columns) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_file identifier id'>write_file</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='string val'>'w+'</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_header identifier id'>write_header</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_header-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_header</strong>(unit, pmturi) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 58</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_header identifier id'>write_header</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_pmturi identifier id'>pmturi</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'c Project:  13-032 M1 Managed Motorways'</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='dstring node'>&quot;c Variant:  #{$Ot.variant}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='rubyid_Time constant id'>Time</span><span class='dot token'>.</span><span class='rubyid_now identifier id'>now</span><span class='dot token'>.</span><span class='rubyid_strftime identifier id'>strftime</span><span class='lparen token'>(</span><span class='string val'>&quot;c Created:  %d/%m/%Y %I:%M%p&quot;</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'t matrices'</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>&quot;a matrix&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_matrix-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_matrix</strong>(unit, matrix, columns, delete_zeros, precision, zone_equiv = proc{ |x| x }) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_matrix_exporter.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_matrix identifier id'>write_matrix</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_matrix identifier id'>matrix</span><span class='comma token'>,</span> <span class='rubyid_columns identifier id'>columns</span><span class='comma token'>,</span> <span class='rubyid_delete_zeros identifier id'>delete_zeros</span><span class='comma token'>,</span> <span class='rubyid_precision identifier id'>precision</span><span class='comma token'>,</span> <span class='rubyid_zone_equiv identifier id'>zone_equiv</span> <span class='assign token'>=</span> <span class='rubyid_proc identifier id'>proc</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_x identifier id'>x</span><span class='bitor op'>|</span> <span class='rubyid_x identifier id'>x</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_vs identifier id'>vs</span> <span class='assign token'>=</span> <span class='rubyid_matrix identifier id'>matrix</span><span class='dot token'>.</span><span class='rubyid_to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='rubyid_drop identifier id'>drop</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_r identifier id'>r</span><span class='bitor op'>|</span> <span class='rubyid_r identifier id'>r</span><span class='dot token'>.</span><span class='rubyid_drop identifier id'>drop</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_vs identifier id'>vs</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row identifier id'>row</span><span class='comma token'>,</span> <span class='rubyid_index_i identifier id'>index_i</span><span class='bitor op'>|</span>
+    <span class='rubyid_o_zone identifier id'>o_zone</span> <span class='assign token'>=</span> <span class='rubyid_zone_equiv identifier id'>zone_equiv</span><span class='dot token'>.</span><span class='rubyid_call identifier id'>call</span><span class='lparen token'>(</span><span class='rubyid_index_i identifier id'>index_i</span> <span class='plus op'>+</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
+    <span class='comment val'># clean_row is [(dest, value)]</span>
+    <span class='rubyid_clean_row identifier id'>clean_row</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='rubyid_row identifier id'>row</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_to_a identifier id'>to_a</span><span class='dot token'>.</span>
+        <span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_p_zone identifier id'>p_zone</span><span class='bitor op'>|</span> <span class='rubyid_zone_equiv identifier id'>zone_equiv</span><span class='dot token'>.</span><span class='rubyid_call identifier id'>call</span><span class='lparen token'>(</span><span class='rubyid_p_zone identifier id'>p_zone</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='dot token'>.</span>
+        <span class='rubyid_zip identifier id'>zip</span><span class='lparen token'>(</span><span class='rubyid_row identifier id'>row</span><span class='rparen token'>)</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_delete_zeros identifier id'>delete_zeros</span>
+        <span class='rubyid_clean_row identifier id'>clean_row</span> <span class='assign token'>=</span> <span class='rubyid_clean_row identifier id'>clean_row</span><span class='dot token'>.</span><span class='rubyid_delete_if identifier id'>delete_if</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='bitor op'>|</span> <span class='rubyid_value identifier id'>value</span> <span class='eq op'>==</span> <span class='integer val'>0</span><span class='integer val'>.0</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_clean_row identifier id'>clean_row</span><span class='dot token'>.</span><span class='rubyid_in_groups_of identifier id'>in_groups_of</span><span class='lparen token'>(</span><span class='rubyid_columns identifier id'>columns</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_row_slice_data identifier id'>row_slice_data</span><span class='bitor op'>|</span>
+      <span class='rubyid_row_slice_data identifier id'>row_slice_data</span><span class='dot token'>.</span><span class='rubyid_compact! fid id'>compact!</span>
+      <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='string val'>&quot;%7d&quot;</span> <span class='plus op'>+</span> <span class='dstring node'>&quot; %6d#{':' if columns&gt;1} %10.#{precision}f&quot;</span> <span class='mult op'>*</span> <span class='rubyid_row_slice_data identifier id'>row_slice_data</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='rparen token'>)</span> <span class='mod op'>%</span> <span class='lbrack token'>[</span><span class='rubyid_o_zone identifier id'>o_zone</span><span class='comma token'>,</span> <span class='rubyid_row_slice_data identifier id'>row_slice_data</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='rparen token'>)</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 09/03/14 10:33:48 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

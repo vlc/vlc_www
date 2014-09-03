@@ -488,7 +488,7 @@ Alternatively the sectors can be provided directly.
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='comma token'>,</span> <span class='rubyid_sector_centroids identifier id'>sector_centroids</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
   <span class='rubyid_if if kw'>if</span> <span class='rubyid_sectors identifier id'>sectors</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_String constant id'>String</span><span class='rparen token'>)</span>
-    <span class='rubyid_@sectors ivar id'>@sectors</span> <span class='assign token'>=</span> <span class='rubyid_get_centroids_groupings_for_serie identifier id'>get_centroids_groupings_for_serie</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='rparen token'>)</span>
+    <span class='rubyid_@sectors ivar id'>@sectors</span> <span class='assign token'>=</span> <span class='rubyid_get_centroids_groupings_for_serie_ identifier id'>get_centroids_groupings_for_serie_</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='rparen token'>)</span>
     <span class='rubyid_sector_centroids identifier id'>sector_centroids</span> <span class='opasgn op'>||=</span> <span class='rubyid_find_centre_type identifier id'>find_centre_type</span><span class='lparen token'>(</span><span class='rubyid_sectors identifier id'>sectors</span><span class='rparen token'>)</span>
     
     <span class='rubyid_if if kw'>if</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_has_serie? fid id'>has_serie?</span><span class='lparen token'>(</span><span class='rubyid_sector_centroids identifier id'>sector_centroids</span><span class='rparen token'>)</span>
@@ -650,16 +650,16 @@ Alternatively the sectors can be provided directly.
       <pre class="lines">
 
 
-115
 116
 117
 118
 119
 120
-121</pre>
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 116</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_array_of_row_headings identifier id'>array_of_row_headings</span><span class='lparen token'>(</span><span class='rubyid_serie_nr identifier id'>serie_nr</span><span class='rparen token'>)</span>
   <span class='rubyid_type_array identifier id'>type_array</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
@@ -742,7 +742,8 @@ containing the aggregate values only for representative centroids (centre).
 84
 85
 86
-87</pre>
+87
+88</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 78</span>
@@ -752,6 +753,7 @@ containing the aggregate values only for representative centroids (centre).
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>&quot;Sector centroids not defined - cannot expand!&quot;</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span><span class='rparen token'>)</span>
   <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_ci identifier id'>ci</span><span class='comma token'>,</span> <span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span>
     <span class='rubyid_@sector_centroids ivar id'>@sector_centroids</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_cj identifier id'>cj</span><span class='comma token'>,</span> <span class='rubyid_j identifier id'>j</span><span class='bitor op'>|</span>
+      <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_ci identifier id'>ci</span> <span class='eq op'>==</span> <span class='integer val'>0</span> <span class='orop op'>||</span> <span class='rubyid_cj identifier id'>cj</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
       <span class='rubyid_smat identifier id'>smat</span><span class='lbrack token'>[</span><span class='rubyid_ci identifier id'>ci</span><span class='comma token'>,</span><span class='rubyid_cj identifier id'>cj</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_mat identifier id'>mat</span><span class='lbrack token'>[</span><span class='rubyid_i identifier id'>i</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='rubyid_j identifier id'>j</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
     <span class='rbrace token'>}</span>
   <span class='rbrace token'>}</span>
@@ -1001,7 +1003,6 @@ containing the aggregate values only for representative centroids (centre).
       <pre class="lines">
 
 
-92
 93
 94
 95
@@ -1023,10 +1024,11 @@ containing the aggregate values only for representative centroids (centre).
 111
 112
 113
-114</pre>
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'app/utils/MatrixSectoriser.rb', line 93</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_sectorise_average identifier id'>sectorise_average</span><span class='lparen token'>(</span><span class='rubyid_mat identifier id'>mat</span><span class='rparen token'>)</span>
   <span class='rubyid_smat identifier id'>smat</span> <span class='assign token'>=</span> <span class='rubyid_OtMatrix constant id'>OtMatrix</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@sectors ivar id'>@sectors</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='rparen token'>)</span>
@@ -1062,7 +1064,7 @@ containing the aggregate values only for representative centroids (centre).
 </div>
 
     <div id="footer">
-  Generated on 02/04/14 12:04:33 by
+  Generated on 09/03/14 10:33:51 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

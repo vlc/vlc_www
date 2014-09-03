@@ -1,0 +1,1137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: EmmeNetworkExporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (E)</a> &raquo;
+    
+    
+    <span class="title">EmmeNetworkExporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: EmmeNetworkExporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">EmmeNetworkExporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/emme/emme_network_exporter.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will export an OmniTRANS network to EMME/2 format
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/emme/emme_network_exporter'</span>
+<span class='rubyid_EmmeNetworkExporter constant id'>EmmeNetworkExporter</span><span class='dot token'>.</span><span class='rubyid_export_network identifier id'>export_network</span><span class='lparen token'>(</span><span class='rubyid_filename identifier id'>filename</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#banned_turn%3F-class_method" title="banned_turn? (class method)">+ (Boolean) <strong>banned_turn?</strong>(turnnr, mode, time) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_centroids-class_method" title="get_centroids (class method)">+ (Object) <strong>get_centroids</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_emme_mode-class_method" title="get_emme_mode (class method)">+ (Object) <strong>get_emme_mode</strong>(linknr, dirn) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_links-class_method" title="get_links (class method)">+ (Object) <strong>get_links</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_nodes-class_method" title="get_nodes (class method)">+ (Object) <strong>get_nodes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_turns-class_method" title="get_turns (class method)">+ (Object) <strong>get_turns</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_links-class_method" title="process_links (class method)">+ (Object) <strong>process_links</strong>(params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#valid_link%3F-class_method" title="valid_link? (class method)">+ (Boolean) <strong>valid_link?</strong>(linknr, dirn) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_centroids-class_method" title="write_centroids (class method)">+ (Object) <strong>write_centroids</strong>(unit) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_data-class_method" title="write_data (class method)">+ (Object) <strong>write_data</strong>(unit, type, params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_file-class_method" title="write_file (class method)">+ (Object) <strong>write_file</strong>(type, file, params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_header-class_method" title="write_header (class method)">+ (Object) <strong>write_header</strong>(unit) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_links-class_method" title="write_links (class method)">+ (Object) <strong>write_links</strong>(unit, params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_nodes-class_method" title="write_nodes (class method)">+ (Object) <strong>write_nodes</strong>(unit, params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_turns-class_method" title="write_turns (class method)">+ (Object) <strong>write_turns</strong>(unit, params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="banned_turn?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>banned_turn?</strong>(turnnr, mode, time) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 151</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_banned_turn? fid id'>banned_turn?</span><span class='lparen token'>(</span><span class='rubyid_turnnr identifier id'>turnnr</span><span class='comma token'>,</span> <span class='rubyid_mode identifier id'>mode</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='rparen token'>)</span>
+  <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_banned_turns identifier id'>get_banned_turns</span><span class='lparen token'>(</span><span class='rubyid_mode identifier id'>mode</span><span class='comma token'>,</span> <span class='rubyid_time identifier id'>time</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_turnnr identifier id'>turnnr</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_centroids-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_centroids</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 113</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_centroids identifier id'>get_centroids</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT pointnr, x, y
+           FROM '#{$Ot.projectDirectory()}point' p,
+                '#{$Ot.parentVariantDirectory()}centroid' c
+          WHERE p.pointtype = 1 AND p.pointnr = c.centroidnr&quot;</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_emme_mode-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_emme_mode</strong>(linknr, dirn) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 137</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_emme_mode identifier id'>get_emme_mode</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span>
+  <span class='rubyid_typenr identifier id'>typenr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_link_type identifier id'>to_link_type</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_link_type_serienr identifier id'>link_type_serienr</span><span class='rparen token'>)</span>
+  <span class='rubyid_allowed_modes identifier id'>allowed_modes</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_project identifier id'>project</span><span class='dot token'>.</span><span class='rubyid_get_default_modes_for_link_type identifier id'>get_default_modes_for_link_type</span><span class='lparen token'>(</span><span class='rubyid_typenr identifier id'>typenr</span><span class='rparen token'>)</span>
+  <span class='rubyid_emme_mode identifier id'>emme_mode</span> <span class='assign token'>=</span> <span class='string val'>''</span>
+  <span class='rubyid_emme_mode identifier id'>emme_mode</span> <span class='opasgn op'>+=</span> <span class='string val'>'c'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_allowed_modes identifier id'>allowed_modes</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_M_Car constant id'>M_Car</span><span class='rparen token'>)</span>
+  <span class='rubyid_emme_mode identifier id'>emme_mode</span> <span class='opasgn op'>+=</span> <span class='string val'>'b'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_allowed_modes identifier id'>allowed_modes</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_M_PT constant id'>M_PT</span><span class='rparen token'>)</span>
+  <span class='rubyid_emme_mode identifier id'>emme_mode</span> <span class='opasgn op'>+=</span> <span class='string val'>'p'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_allowed_modes identifier id'>allowed_modes</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_M_Walk constant id'>M_Walk</span><span class='rparen token'>)</span>
+  <span class='rubyid_emme_mode identifier id'>emme_mode</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_links-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_links</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 105</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_links identifier id'>get_links</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT linenr, pointnra, pointtypea, pointnrb, pointtypeb, lk.'length'
+           FROM '#{$Ot.projectDirectory()}line' l,
+                '#{$Ot.parentVariantDirectory()}link' lk
+          WHERE l.linenr = lk.linknr AND l.linetype = 1&quot;</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_nodes-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_nodes</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 121</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_nodes identifier id'>get_nodes</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT pointnr, x, y
+           FROM '#{$Ot.projectDirectory()}point' p,
+                '#{$Ot.parentVariantDirectory()}node' n
+          WHERE p.pointtype = 2 AND p.pointnr = n.nodenr&quot;</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_turns-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_turns</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 129</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_turns identifier id'>get_turns</span>
+  <span class='rubyid_sql identifier id'>sql</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;SELECT turnnr, pointnra, pointnrb, pointnrc
+           FROM '#{$Ot.projectDirectory()}triline' t,
+                '#{$Ot.parentVariantDirectory()}turn' tn
+          WHERE t.trilinenr = tn.turnnr AND t.trilinetype = 1&quot;</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='rubyid_sql identifier id'>sql</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_links-class_method">
+  
+    + (<tt>Object</tt>) <strong>process_links</strong>(params) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 76</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_process_links identifier id'>process_links</span><span class='lparen token'>(</span><span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Processing links'</span><span class='comma token'>,</span> <span class='rubyid_get_links identifier id'>get_links</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_pa identifier id'>pa</span><span class='comma token'>,</span><span class='rubyid_pta identifier id'>pta</span><span class='comma token'>,</span><span class='rubyid_pb identifier id'>pb</span><span class='comma token'>,</span><span class='rubyid_ptb identifier id'>ptb</span><span class='comma token'>,</span><span class='rubyid_length identifier id'>length</span><span class='bitor op'>|</span>
+    <span class='rubyid_type identifier id'>type</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_pta identifier id'>pta</span><span class='eq op'>==</span><span class='integer val'>1</span> <span class='orop op'>||</span> <span class='rubyid_ptb identifier id'>ptb</span><span class='eq op'>==</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='integer val'>1</span> <span class='colon op'>:</span> <span class='integer val'>2</span>  <span class='comment val'># connector (1)  normal link (2)</span>
+    <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_dirn identifier id'>dirn</span><span class='bitor op'>|</span>
+      <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_dirn identifier id'>dirn</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_type identifier id'>type</span> <span class='eq op'>==</span> <span class='integer val'>1</span>
+      <span class='rubyid_next next kw'>next</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_valid_link? fid id'>valid_link?</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span>
+      <span class='rubyid_nodea identifier id'>nodea</span>     <span class='assign token'>=</span> <span class='rubyid_dirn identifier id'>dirn</span> <span class='eq op'>==</span> <span class='integer val'>1</span> <span class='question op'>?</span> <span class='rubyid_pa identifier id'>pa</span> <span class='colon op'>:</span> <span class='rubyid_pb identifier id'>pb</span>
+      <span class='rubyid_nodeb identifier id'>nodeb</span>     <span class='assign token'>=</span> <span class='rubyid_dirn identifier id'>dirn</span> <span class='eq op'>==</span> <span class='integer val'>1</span> <span class='question op'>?</span> <span class='rubyid_pb identifier id'>pb</span> <span class='colon op'>:</span> <span class='rubyid_pa identifier id'>pa</span>
+      <span class='rubyid_mode identifier id'>mode</span>      <span class='assign token'>=</span> <span class='rubyid_get_emme_mode identifier id'>get_emme_mode</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span>
+      <span class='rubyid_lt identifier id'>lt</span>        <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_link_type identifier id'>to_link_type</span><span class='lparen token'>(</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:link_type</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='integer val'>-1</span>
+      <span class='rubyid_lanes identifier id'>lanes</span>     <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_lanes identifier id'>get_lanes</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span>
+      <span class='rubyid_freespeed identifier id'>freespeed</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_freespeed identifier id'>get_freespeed</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:network</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+      <span class='rubyid_satflow identifier id'>satflow</span>   <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_satflow identifier id'>get_satflow</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:network</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+      <span class='rubyid_data identifier id'>data</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_nodea identifier id'>nodea</span><span class='comma token'>,</span> <span class='rubyid_nodeb identifier id'>nodeb</span><span class='comma token'>,</span> <span class='rubyid_length identifier id'>length</span><span class='comma token'>,</span> <span class='rubyid_mode identifier id'>mode</span><span class='comma token'>,</span> <span class='rubyid_lt identifier id'>lt</span><span class='comma token'>,</span> <span class='rubyid_lanes identifier id'>lanes</span><span class='comma token'>,</span> <span class='rubyid_freespeed identifier id'>freespeed</span><span class='comma token'>,</span> <span class='rubyid_satflow identifier id'>satflow</span><span class='rbrack token'>]</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid_link?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>valid_link?</strong>(linknr, dirn) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 147</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_valid_link? fid id'>valid_link?</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span>
+  <span class='rubyid_get_emme_mode identifier id'>get_emme_mode</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='string val'>'c'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_centroids-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_centroids</strong>(unit) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 58</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_centroids identifier id'>write_centroids</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Writing centroids'</span><span class='comma token'>,</span> <span class='rubyid_get_centroids identifier id'>get_centroids</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span> <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>&quot;a* %d %f %f 0 0 0 0&quot;</span> <span class='mod op'>%</span> <span class='rubyid_data identifier id'>data</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_data-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_data</strong>(unit, type, params) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 37</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_case case kw'>case</span> <span class='rubyid_type identifier id'>type</span>
+    <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:nodes</span>
+      <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'t nodes init'</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_centroids identifier id'>write_centroids</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_nodes identifier id'>write_nodes</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='rparen token'>)</span>
+    <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:links</span>
+      <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'t links init'</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_links identifier id'>write_links</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+    <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:turns</span>
+      <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'t turns init'</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_turns identifier id'>write_turns</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+    <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:network</span>
+      <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'t nodes init'</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_centroids identifier id'>write_centroids</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_nodes identifier id'>write_nodes</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+      <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>&quot;\nt links init&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_write_links identifier id'>write_links</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_file-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_file</strong>(type, file, params) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 24</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_file identifier id'>write_file</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_file identifier id'>file</span><span class='comma token'>,</span> <span class='string val'>'w+'</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_header identifier id'>write_header</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_header-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_header</strong>(unit) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 31</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_header identifier id'>write_header</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>'c Project:  13-032 M1 Managed Motorways'</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='dstring node'>&quot;c Variant:  #{$Ot.variant}&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='rubyid_Time constant id'>Time</span><span class='dot token'>.</span><span class='rubyid_now identifier id'>now</span><span class='dot token'>.</span><span class='rubyid_strftime identifier id'>strftime</span><span class='lparen token'>(</span><span class='string val'>&quot;c Created:  %d/%m/%Y %I:%M%p&quot;</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_links-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_links</strong>(unit, params) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 69</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_links identifier id'>write_links</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Writing links'</span><span class='comma token'>,</span> <span class='rubyid_process_links identifier id'>process_links</span><span class='lparen token'>(</span><span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span>
+    <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='integer val'>1</span> <span class='question op'>?</span> <span class='string val'>'a='</span> <span class='colon op'>:</span> <span class='string val'>'a'</span><span class='rparen token'>)</span>
+    <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>&quot;%s %d %d %.3f %s %d %d 0 %d %d 0&quot;</span> <span class='mod op'>%</span> <span class='rubyid_data identifier id'>data</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_nodes-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_nodes</strong>(unit, params) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_nodes identifier id'>write_nodes</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Writing nodes'</span><span class='comma token'>,</span> <span class='rubyid_get_nodes identifier id'>get_nodes</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span>
+    <span class='rubyid_nt identifier id'>nt</span> <span class='assign token'>=</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_node_type identifier id'>to_node_type</span><span class='lparen token'>(</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:node_type</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='integer val'>0</span>
+    <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>&quot;a %d %f %f %d 0 0 0&quot;</span> <span class='mod op'>%</span> <span class='lbrack token'>[</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_nt identifier id'>nt</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_turns-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_turns</strong>(unit, params) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/emme/emme_network_exporter.rb', line 96</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_turns identifier id'>write_turns</span><span class='lparen token'>(</span><span class='rubyid_unit identifier id'>unit</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Writing turns'</span><span class='comma token'>,</span> <span class='rubyid_get_turns identifier id'>get_turns</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_turnnr identifier id'>turnnr</span><span class='comma token'>,</span> <span class='rubyid_pointnra identifier id'>pointnra</span><span class='comma token'>,</span> <span class='rubyid_pointnrb identifier id'>pointnrb</span><span class='comma token'>,</span> <span class='rubyid_pointnrc identifier id'>pointnrc</span><span class='bitor op'>|</span>
+    <span class='rubyid_turn_ban identifier id'>turn_ban</span> <span class='assign token'>=</span> <span class='rubyid_banned_turn? fid id'>banned_turn?</span><span class='lparen token'>(</span><span class='rubyid_turnnr identifier id'>turnnr</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:network</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='string val'>'-1'</span> <span class='colon op'>:</span> <span class='string val'>'0'</span>
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:exclude_simple_turns</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_turn_ban identifier id'>turn_ban</span> <span class='eq op'>==</span> <span class='string val'>'0'</span>
+    <span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rubyid_pointnrb identifier id'>pointnrb</span><span class='comma token'>,</span> <span class='rubyid_pointnra identifier id'>pointnra</span><span class='comma token'>,</span> <span class='rubyid_pointnrc identifier id'>pointnrc</span><span class='comma token'>,</span> <span class='rubyid_turn_ban identifier id'>turn_ban</span><span class='rbrack token'>]</span>
+    <span class='rubyid_unit identifier id'>unit</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span><span class='lparen token'>(</span><span class='string val'>&quot;a %5d %6d %6d     0 %6d&quot;</span> <span class='mod op'>%</span> <span class='rubyid_data identifier id'>data</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 09/03/14 10:33:49 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

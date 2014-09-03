@@ -146,7 +146,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#import-instance_method" title="#import (instance method)">- (Object) <strong>import</strong>(object_type, areas_mapinfo_layer, opts = {}) </a>
+      <a href="#import-instance_method" title="#import (instance method)">- (Object) <strong>import</strong>(object_type, geography_layer, opts = {}) </a>
     
 
     
@@ -180,7 +180,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="import-instance_method">
   
-    - (<tt>Object</tt>) <strong>import</strong>(object_type, areas_mapinfo_layer, opts = {}) 
+    - (<tt>Object</tt>) <strong>import</strong>(object_type, geography_layer, opts = {}) 
   
 
   
@@ -217,7 +217,7 @@
   
     <li>
       
-        <span class='name'>areas_mapinfo_layer</span>
+        <span class='name'>geography_layer</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -278,9 +278,10 @@ importing information to</div>
           
             &mdash; <div class='inline'>how should zone centres be imported, allowable options are
 :centre_of_mass (will calculate the centre of mass and use the closest OT object),
-:from_associated_file (will use TAB file in same directory as areas_mapinfo_layer with the
+:from_associated_file (will use TAB file in same directory as geography_layer with the
                        extension &quot;_centre.tab&quot;),
-&quot;an_explicit_file.TAB&quot; (will use the specified TAB file and will import the OT object closest to it's centre)</div>
+&quot;an_explicit_file.TAB&quot; (will use the specified TAB file and will import the OT object closest to it's centre)
+:actual_centre_of_mass</div>
           
         </li>
       
@@ -294,7 +295,6 @@ importing information to</div>
       <pre class="lines">
 
 
-30
 31
 32
 33
@@ -314,23 +314,22 @@ importing information to</div>
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/import/spatial_types_importer.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'app/utils/import/spatial_types_importer.rb', line 31</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_import identifier id'>import</span><span class='lparen token'>(</span><span class='rubyid_object_type identifier id'>object_type</span><span class='comma token'>,</span> <span class='rubyid_areas_mapinfo_layer identifier id'>areas_mapinfo_layer</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_import identifier id'>import</span><span class='lparen token'>(</span><span class='rubyid_object_type identifier id'>object_type</span><span class='comma token'>,</span> <span class='rubyid_geography_layer identifier id'>geography_layer</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
   <span class='rubyid_@opts ivar id'>@opts</span>           <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span>
   <span class='rubyid_@object_type ivar id'>@object_type</span>    <span class='assign token'>=</span> <span class='rubyid_object_type identifier id'>object_type</span>
-  <span class='rubyid_@object_is_link ivar id'>@object_is_link</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='rubyid_object_type identifier id'>object_type</span> <span class='eq op'>==</span> <span class='symbol val'>:links</span> <span class='orop op'>||</span> <span class='rubyid_object_type identifier id'>object_type</span> <span class='eq op'>==</span> <span class='symbol val'>:centroid_connectors</span><span class='rparen token'>)</span>
-  <span class='rubyid_@table_name ivar id'>@table_name</span>     <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_mainVariantDirectory identifier id'>mainVariantDirectory</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='rubyid_@@object_tables ivar id'>@@object_tables</span><span class='lbrack token'>[</span><span class='rubyid_object_type identifier id'>object_type</span><span class='rbrack token'>]</span>
-  <span class='rubyid_@type_nr ivar id'>@type_nr</span>        <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:type_nr</span><span class='rbrack token'>]</span>    <span class='orop op'>||</span> <span class='symbol val'>:TypeNr</span>
-  <span class='rubyid_@type_name ivar id'>@type_name</span>      <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:type_name</span><span class='rbrack token'>]</span>  <span class='orop op'>||</span> <span class='symbol val'>:TypeName</span>
-  <span class='rubyid_@seriename ivar id'>@seriename</span>      <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:serie_name</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_determine_serie_name identifier id'>determine_serie_name</span><span class='lparen token'>(</span><span class='rubyid_areas_mapinfo_layer identifier id'>areas_mapinfo_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_@table_name ivar id'>@table_name</span>     <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_mainVariantDirectory identifier id'>mainVariantDirectory</span> <span class='div op'>/</span> <span class='rubyid_@@object_tables ivar id'>@@object_tables</span><span class='lbrack token'>[</span><span class='rubyid_object_type identifier id'>object_type</span><span class='rbrack token'>]</span>
+  <span class='rubyid_@type_nr ivar id'>@type_nr</span>        <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='dot token'>.</span><span class='rubyid_fetch identifier id'>fetch</span><span class='lparen token'>(</span><span class='symbol val'>:type_nr</span><span class='comma token'>,</span>   <span class='symbol val'>:TypeNr</span><span class='rparen token'>)</span>
+  <span class='rubyid_@type_name ivar id'>@type_name</span>      <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='dot token'>.</span><span class='rubyid_fetch identifier id'>fetch</span><span class='lparen token'>(</span><span class='symbol val'>:type_name</span><span class='comma token'>,</span> <span class='symbol val'>:TypeName</span><span class='rparen token'>)</span>
+  <span class='rubyid_@seriename ivar id'>@seriename</span>      <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='dot token'>.</span><span class='rubyid_fetch identifier id'>fetch</span><span class='lparen token'>(</span><span class='symbol val'>:serie_name</span><span class='comma token'>,</span> <span class='rubyid_determine_serie_name identifier id'>determine_serie_name</span><span class='lparen token'>(</span><span class='rubyid_geography_layer identifier id'>geography_layer</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
 
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Importing #{@seriename} for #{@object_type}&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
-    <span class='rubyid_equivalences identifier id'>equivalences</span>         <span class='assign token'>=</span> <span class='rubyid_AreaToOtEquivalenceCalculator constant id'>AreaToOtEquivalenceCalculator</span><span class='dot token'>.</span><span class='rubyid_calculate identifier id'>calculate</span><span class='lparen token'>(</span><span class='rubyid_areas_mapinfo_layer identifier id'>areas_mapinfo_layer</span><span class='comma token'>,</span> <span class='rubyid_object_type identifier id'>object_type</span><span class='rparen token'>)</span>
-    <span class='rubyid_centre_equivalence identifier id'>centre_equivalence</span>   <span class='assign token'>=</span> <span class='rubyid_find_centre_equivalence identifier id'>find_centre_equivalence</span><span class='lparen token'>(</span><span class='rubyid_areas_mapinfo_layer identifier id'>areas_mapinfo_layer</span><span class='rparen token'>)</span> <span class='comment val'># this may be nil :(</span>
-    <span class='rubyid_type_names_to_import identifier id'>type_names_to_import</span> <span class='assign token'>=</span> <span class='rubyid_equivalences identifier id'>equivalences</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_gis_object identifier id'>gis_object</span><span class='comma token'>,</span><span class='rubyid_ot_object identifier id'>ot_object</span><span class='bitor op'>|</span> <span class='rubyid_gis_object identifier id'>gis_object</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='rubyid_@type_name ivar id'>@type_name</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span>
+    <span class='rubyid_equivalences identifier id'>equivalences</span>         <span class='assign token'>=</span> <span class='rubyid_AreaToOtEquivalenceCalculator constant id'>AreaToOtEquivalenceCalculator</span><span class='dot token'>.</span><span class='rubyid_maybe_calculate identifier id'>maybe_calculate</span><span class='lparen token'>(</span><span class='rubyid_geography_layer identifier id'>geography_layer</span><span class='comma token'>,</span> <span class='rubyid_get_equivalence_object_type identifier id'>get_equivalence_object_type</span><span class='rparen token'>)</span>
+    <span class='rubyid_type_names_to_import identifier id'>type_names_to_import</span> <span class='assign token'>=</span> <span class='rubyid_equivalences identifier id'>equivalences</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_gis_object identifier id'>gis_object</span><span class='comma token'>,</span> <span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span> <span class='rubyid_gis_object identifier id'>gis_object</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='rubyid_@type_name ivar id'>@type_name</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span>
 
     <span class='rubyid_add_serie_and_types identifier id'>add_serie_and_types</span><span class='lparen token'>(</span><span class='rubyid_type_names_to_import identifier id'>type_names_to_import</span><span class='comma token'>,</span> <span class='rubyid_get_area_name_to_type_nr identifier id'>get_area_name_to_type_nr</span><span class='lparen token'>(</span><span class='rubyid_equivalences identifier id'>equivalences</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='rubyid_centre_equivalence identifier id'>centre_equivalence</span>   <span class='assign token'>=</span> <span class='rubyid_find_centre_equivalence identifier id'>find_centre_equivalence</span><span class='lparen token'>(</span><span class='rubyid_geography_layer identifier id'>geography_layer</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='dot token'>.</span><span class='rubyid_fetch identifier id'>fetch</span><span class='lparen token'>(</span><span class='symbol val'>:create_centres</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
     <span class='rubyid_import_types identifier id'>import_types</span><span class='lparen token'>(</span><span class='rubyid_get_area_name_to_ot_numbers identifier id'>get_area_name_to_ot_numbers</span><span class='lparen token'>(</span><span class='rubyid_equivalences identifier id'>equivalences</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_get_area_name_to_ot_numbers identifier id'>get_area_name_to_ot_numbers</span><span class='lparen token'>(</span><span class='rubyid_centre_equivalence identifier id'>centre_equivalence</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
   <span class='rbrace token'>}</span>
 <span class='rubyid_end end kw'>end</span>
@@ -345,7 +344,7 @@ importing information to</div>
 </div>
 
     <div id="footer">
-  Generated on 02/04/14 12:04:33 by
+  Generated on 09/03/14 10:33:50 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

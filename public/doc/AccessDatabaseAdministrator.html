@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
 
 
@@ -125,7 +125,7 @@ and ensure that the tables exist with the required fields.
 
 <span class='rubyid_table_names identifier id'>table_names</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:persons</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;vista_people&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:households</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;vista_households&quot;</span><span class='rbrace token'>}</span>
 
-<span class='rubyid_AccessDatabaseAdministrator constant id'>AccessDatabaseAdministrator</span><span class='dot token'>.</span><span class='rubyid_create_or_update identifier id'>create_or_update</span><span class='lparen token'>(</span><span class='rubyid_database_file identifier id'>database_file</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='rparen token'>)</span>
+<span class='rubyid_AccessDatabaseAdministrator constant id'>AccessDatabaseAdministrator</span><span class='dot token'>.</span><span class='rubyid_create_or_update identifier id'>create_or_update</span><span class='lparen token'>(</span><span class='rubyid_database_file identifier id'>database_file</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
 </code></pre>
     
   </div>
@@ -149,7 +149,7 @@ and ensure that the tables exist with the required fields.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_or_update-class_method" title="create_or_update (class method)">+ (Object) <strong>create_or_update</strong>(database_file_name, table_names, schemas) </a>
+      <a href="#create_or_update-class_method" title="create_or_update (class method)">+ (Object) <strong>create_or_update</strong>(database_file_name, schemas, opts = {}) </a>
     
 
     
@@ -180,7 +180,7 @@ and ensure that the tables exist with the required fields.
       <div class="method_details first">
   <h3 class="signature first" id="create_or_update-class_method">
   
-    + (<tt>Object</tt>) <strong>create_or_update</strong>(database_file_name, table_names, schemas) 
+    + (<tt>Object</tt>) <strong>create_or_update</strong>(database_file_name, schemas, opts = {}) 
   
 
   
@@ -211,19 +211,19 @@ and ensure that the tables exist with the required fields.
     <td>
       <pre class="code"><span class="info file"># File 'app/utils/db/access_database_administrator.rb', line 21</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_or_update identifier id'>create_or_update</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_or_update identifier id'>create_or_update</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_table_names identifier id'>table_names</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:table_names</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='dot token'>.</span><span class='rubyid_map_values identifier id'>map_values</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span> <span class='rubyid_k identifier id'>k</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='rbrace token'>}</span>
   <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
     <span class='comment val'># copy from empty template</span>
-    <span class='rubyid_empty_database_file_name identifier id'>empty_database_file_name</span> <span class='assign token'>=</span> <span class='rubyid_BedrockEnvironment constant id'>BedrockEnvironment</span><span class='dot token'>.</span><span class='rubyid_bedrock_dir identifier id'>bedrock_dir</span> <span class='div op'>/</span> <span class='string val'>&quot;../Resources/Common/Templates/EmptyDatabase.accdb&quot;</span>
+    <span class='rubyid_empty_database_file_name identifier id'>empty_database_file_name</span> <span class='assign token'>=</span> <span class='rubyid_BedrockEnvironment constant id'>BedrockEnvironment</span><span class='dot token'>.</span><span class='rubyid_bedrock_dir identifier id'>bedrock_dir</span> <span class='div op'>/</span> <span class='string val'>'../Resources/Common/Templates/EmptyDatabase.accdb'</span>
+    <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_mkdir_p identifier id'>mkdir_p</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
     <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_cp identifier id'>cp</span><span class='lparen token'>(</span><span class='rubyid_empty_database_file_name identifier id'>empty_database_file_name</span><span class='comma token'>,</span> <span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
   <span class='rubyid_end end kw'>end</span>
 
-  <span class='rubyid_db identifier id'>db</span>          <span class='assign token'>=</span> <span class='rubyid_AccessDatabase constant id'>AccessDatabase</span><span class='dot token'>.</span><span class='rubyid_connect identifier id'>connect</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
-  <span class='rubyid_table_names identifier id'>table_names</span> <span class='assign token'>=</span> <span class='rubyid_table_names identifier id'>table_names</span>
-  <span class='rubyid_schemas identifier id'>schemas</span>     <span class='assign token'>=</span> <span class='rubyid_schemas identifier id'>schemas</span>
-
-  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Checking and updating database #{database_file_name}&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
-    <span class='rubyid_update identifier id'>update</span><span class='lparen token'>(</span><span class='rubyid_db identifier id'>db</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Checking and updating database [#{database_file_name}]&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
+    <span class='rubyid_db identifier id'>db</span> <span class='assign token'>=</span> <span class='rubyid_AccessDatabase constant id'>AccessDatabase</span><span class='dot token'>.</span><span class='rubyid_connect identifier id'>connect</span><span class='lparen token'>(</span><span class='rubyid_database_file_name identifier id'>database_file_name</span><span class='rparen token'>)</span>
+    <span class='rubyid_update identifier id'>update</span><span class='lparen token'>(</span><span class='rubyid_db identifier id'>db</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:skip_update</span><span class='rbrack token'>]</span>
+    <span class='rubyid_db identifier id'>db</span>
   <span class='rbrace token'>}</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
@@ -237,7 +237,7 @@ and ensure that the tables exist with the required fields.
 </div>
 
     <div id="footer">
-  Generated on 02/04/14 12:04:31 by
+  Generated on 09/03/14 10:33:47 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

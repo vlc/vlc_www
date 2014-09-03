@@ -1,0 +1,1162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ControlsImporter
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (C)</a> &raquo;
+    
+    
+    <span class="title">ControlsImporter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: ControlsImporter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ControlsImporter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/utils/import/controls_importer.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    This class will import controls from a mapinfo layer directly into the active variant. The mapinfo
+layer needs to be an intersect layer. This layer should contain similar objects to count layers.
+Use trilines (3 points) for directional controls and simple lines (2 points) or polylines (&gt; 3 points)
+for two-way controls.
+
+Required Columns: 'Control_ID', 'Tag', 'Label_position', 'Text_justification'
+Optional Columns: 'Xcoord', 'Ycoord'
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/import/controls_importer.rb'</span>
+<span class='rubyid_ControlsImporter constant id'>ControlsImporter</span><span class='dot token'>.</span><span class='rubyid_import identifier id'>import</span><span class='lparen token'>(</span><span class='string val'>'d:\data\ccontrols.TAB'</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="DIRECTIONS-constant" class="">DIRECTIONS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace token'>{</span> <span class='symbol val'>:same_direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:opposite_direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:two_way_count</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+</pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_controls-class_method" title="clear_controls (class method)">+ (Object) <strong>clear_controls</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_control_by_id-class_method" title="find_control_by_id (class method)">+ (Object) <strong>find_control_by_id</strong>(controls_list, control_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_control_coordinates-class_method" title="get_control_coordinates (class method)">+ (Object) <strong>get_control_coordinates</strong>(control) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_link_control_intersections-class_method" title="get_link_control_intersections (class method)">+ (Object) <strong>get_link_control_intersections</strong>(ot_links, mi_controls) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_link_with_directions-class_method" title="get_link_with_directions (class method)">+ (Object) <strong>get_link_with_directions</strong>(link, direction) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_max_pointnr_for_control-class_method" title="get_max_pointnr_for_control (class method)">+ (Object) <strong>get_max_pointnr_for_control</strong>(controls_data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#import-class_method" title="import (class method)">+ (Object) <strong>import</strong>(controls_tab, opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#merge_with_existing_controls-class_method" title="merge_with_existing_controls (class method)">+ (Object) <strong>merge_with_existing_controls</strong>(existing_controls, intersected_controls) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_existing_controls-class_method" title="read_existing_controls (class method)">+ (Object) <strong>read_existing_controls</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_mapinfo_layer-class_method" title="read_mapinfo_layer (class method)">+ (Object) <strong>read_mapinfo_layer</strong>(controls_mi_layer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_ot_links-class_method" title="read_ot_links (class method)">+ (Object) <strong>read_ot_links</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_project_controls-class_method" title="read_project_controls (class method)">+ (Object) <strong>read_project_controls</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_variant_controls-class_method" title="read_variant_controls (class method)">+ (Object) <strong>read_variant_controls</strong>(controls_list) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_database-class_method" title="write_database (class method)">+ (Object) <strong>write_database</strong>(controls_data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_controls-class_method">
+  
+    + (<tt>Object</tt>) <strong>clear_controls</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 133</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_clear_controls identifier id'>clear_controls</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{$Ot.projectDirectory}control2object'&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{$Ot.projectDirectory}point' WHERE pointtype = 7&quot;</span><span class='rparen token'>)</span>
+  <span class='dstring node'>%w{control control1data1 control2data1}</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_tbl identifier id'>tbl</span><span class='bitor op'>|</span>
+    <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='dstring node'>&quot;DELETE FROM '#{$Ot.parentVariantDirectory}#{tbl}'&quot;</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_control_by_id-class_method">
+  
+    + (<tt>Object</tt>) <strong>find_control_by_id</strong>(controls_list, control_id) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 71</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_find_control_by_id identifier id'>find_control_by_id</span><span class='lparen token'>(</span><span class='rubyid_controls_list identifier id'>controls_list</span><span class='comma token'>,</span> <span class='rubyid_control_id identifier id'>control_id</span><span class='rparen token'>)</span>
+  <span class='rubyid_controls_list identifier id'>controls_list</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_xy identifier id'>xy</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span> <span class='rubyid_return return kw'>return</span> <span class='rubyid_controls_list identifier id'>controls_list</span><span class='lbrack token'>[</span><span class='rubyid_xy identifier id'>xy</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_control_id identifier id'>control_id</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_false false kw'>false</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_control_coordinates-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_control_coordinates</strong>(control) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 121</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_control_coordinates identifier id'>get_control_coordinates</span><span class='lparen token'>(</span><span class='rubyid_control identifier id'>control</span><span class='rparen token'>)</span>
+  <span class='rubyid_data identifier id'>data</span> <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:data</span><span class='rbrack token'>]</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='symbol val'>:Xcoord</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='symbol val'>:Ycoord</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Xcoord</span><span class='rbrack token'>]</span> <span class='neq op'>!=</span> <span class='integer val'>0</span><span class='integer val'>.0</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Ycoord</span><span class='rbrack token'>]</span> <span class='neq op'>!=</span> <span class='integer val'>0</span><span class='integer val'>.0</span>
+    <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Xcoord</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_f identifier id'>to_f</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Ycoord</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_f identifier id'>to_f</span><span class='rbrack token'>]</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:anchor_xy</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_reject! fid id'>reject!</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:empty?</span><span class='rparen token'>)</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:anchor_xy</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='integer val'>.0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='integer val'>.0</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_ary identifier id'>ary</span><span class='comma token'>,</span><span class='rubyid_xy identifier id'>xy</span><span class='bitor op'>|</span>
+      <span class='rubyid_ary identifier id'>ary</span><span class='dot token'>.</span><span class='rubyid_numerical_add! fid id'>numerical_add!</span><span class='lparen token'>(</span><span class='rubyid_xy identifier id'>xy</span><span class='rparen token'>)</span><span class='semicolon token'>;</span> <span class='rubyid_ary identifier id'>ary</span>
+    <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='bitor op'>|</span> <span class='rubyid_e identifier id'>e</span> <span class='div op'>/</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:anchor_xy</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span><span class='dot token'>.</span><span class='rubyid_to_f identifier id'>to_f</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_link_control_intersections-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_link_control_intersections</strong>(ot_links, mi_controls) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 85</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_link_control_intersections identifier id'>get_link_control_intersections</span><span class='lparen token'>(</span><span class='rubyid_ot_links identifier id'>ot_links</span><span class='comma token'>,</span> <span class='rubyid_mi_controls identifier id'>mi_controls</span><span class='rparen token'>)</span>
+  <span class='rubyid_intersected_controls identifier id'>intersected_controls</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_GISLayerIntersectionCalculator constant id'>GISLayerIntersectionCalculator</span><span class='dot token'>.</span><span class='rubyid_calculate identifier id'>calculate</span><span class='lparen token'>(</span><span class='rubyid_ot_links identifier id'>ot_links</span><span class='comma token'>,</span> <span class='rubyid_mi_controls identifier id'>mi_controls</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_control identifier id'>control</span><span class='bitor op'>|</span>
+    <span class='rubyid_direction identifier id'>direction</span> <span class='assign token'>=</span> <span class='rubyid_CountToLinkDirectionCalculator constant id'>CountToLinkDirectionCalculator</span><span class='dot token'>.</span><span class='rubyid_calculate identifier id'>calculate</span><span class='lparen token'>(</span><span class='rubyid_control identifier id'>control</span><span class='comma token'>,</span> <span class='rubyid_link identifier id'>link</span><span class='rparen token'>)</span>
+    <span class='rubyid_linkdirs identifier id'>linkdirs</span>  <span class='assign token'>=</span> <span class='rubyid_get_link_with_directions identifier id'>get_link_with_directions</span><span class='lparen token'>(</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='rparen token'>)</span>
+    <span class='rubyid_key identifier id'>key</span>       <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:Control_ID</span><span class='rbrack token'>]</span>
+    <span class='rubyid_intersected_controls identifier id'>intersected_controls</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:data</span><span class='rbrack token'>]</span>      <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span>
+    <span class='rubyid_intersected_controls identifier id'>intersected_controls</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span>     <span class='opasgn op'>+=</span> <span class='rubyid_linkdirs identifier id'>linkdirs</span>
+    <span class='rubyid_intersected_controls identifier id'>intersected_controls</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:anchor_xy</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_link identifier id'>link</span><span class='dot token'>.</span><span class='rubyid_intersection_point identifier id'>intersection_point</span><span class='lparen token'>(</span><span class='rubyid_control identifier id'>control</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_geo identifier id'>geo</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_linkdirs identifier id'>linkdirs</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_intersected_controls identifier id'>intersected_controls</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_link_with_directions-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_link_with_directions</strong>(link, direction) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 98</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_link_with_directions identifier id'>get_link_with_directions</span><span class='lparen token'>(</span><span class='rubyid_link identifier id'>link</span><span class='comma token'>,</span> <span class='rubyid_direction identifier id'>direction</span><span class='rparen token'>)</span>
+  <span class='rubyid_DIRECTIONS constant id'>DIRECTIONS</span><span class='lbrack token'>[</span><span class='rubyid_direction identifier id'>direction</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_dirn identifier id'>dirn</span><span class='bitor op'>|</span>
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_network identifier id'>network</span><span class='dot token'>.</span><span class='rubyid_get_link_directions identifier id'>get_link_directions</span><span class='lbrack token'>[</span><span class='rubyid_link identifier id'>link</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Linknr</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span>
+    <span class='lbrack token'>[</span><span class='rubyid_link identifier id'>link</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Linknr</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_max_pointnr_for_control-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_max_pointnr_for_control</strong>(controls_data) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 167</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_max_pointnr_for_control identifier id'>get_max_pointnr_for_control</span><span class='lparen token'>(</span><span class='rubyid_controls_data identifier id'>controls_data</span><span class='rparen token'>)</span>
+  <span class='rubyid_max_of_list identifier id'>max_of_list</span> <span class='assign token'>=</span> <span class='rubyid_controls_data identifier id'>controls_data</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span><span class='rubyid_data identifier id'>data</span><span class='bitor op'>|</span> <span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='symbol val'>:id</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span>
+  <span class='rubyid_max_of_list identifier id'>max_of_list</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='integer val'>1</span> <span class='colon op'>:</span> <span class='rubyid_max_of_list identifier id'>max_of_list</span><span class='plus op'>+</span><span class='integer val'>1</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="import-class_method">
+  
+    + (<tt>Object</tt>) <strong>import</strong>(controls_tab, opts = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>controls_tab</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>The controls MapInfo layer to import</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>Optional parameters, the following are used</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">remove_existing_controls</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>Set to true to clear controls in the current variant</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 26</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_import identifier id'>import</span><span class='lparen token'>(</span><span class='rubyid_controls_tab identifier id'>controls_tab</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_existing_controls identifier id'>existing_controls</span> <span class='assign token'>=</span> <span class='rubyid_read_existing_controls identifier id'>read_existing_controls</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_ot_links identifier id'>ot_links</span>          <span class='assign token'>=</span> <span class='rubyid_read_ot_links identifier id'>read_ot_links</span>
+  <span class='rubyid_mi_controls identifier id'>mi_controls</span>       <span class='assign token'>=</span> <span class='rubyid_read_mapinfo_layer identifier id'>read_mapinfo_layer</span><span class='lparen token'>(</span><span class='rubyid_controls_tab identifier id'>controls_tab</span><span class='rparen token'>)</span>
+  <span class='rubyid_intersections identifier id'>intersections</span>     <span class='assign token'>=</span> <span class='rubyid_get_link_control_intersections identifier id'>get_link_control_intersections</span><span class='lparen token'>(</span><span class='rubyid_ot_links identifier id'>ot_links</span><span class='comma token'>,</span> <span class='rubyid_mi_controls identifier id'>mi_controls</span><span class='rparen token'>)</span>
+  <span class='rubyid_all_controls identifier id'>all_controls</span>      <span class='assign token'>=</span> <span class='rubyid_merge_with_existing_controls identifier id'>merge_with_existing_controls</span><span class='lparen token'>(</span><span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='comma token'>,</span> <span class='rubyid_intersections identifier id'>intersections</span><span class='rparen token'>)</span>
+  <span class='rubyid_write_database identifier id'>write_database</span><span class='lparen token'>(</span><span class='rubyid_all_controls identifier id'>all_controls</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="merge_with_existing_controls-class_method">
+  
+    + (<tt>Object</tt>) <strong>merge_with_existing_controls</strong>(existing_controls, intersected_controls) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 105</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_merge_with_existing_controls identifier id'>merge_with_existing_controls</span><span class='lparen token'>(</span><span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='comma token'>,</span> <span class='rubyid_intersected_controls identifier id'>intersected_controls</span><span class='rparen token'>)</span>
+  <span class='rubyid_intersected_controls identifier id'>intersected_controls</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span> <span class='rubyid_control identifier id'>control</span><span class='bitor op'>|</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+      <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_warn identifier id'>warn</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Control with ID #{control[:data][:Control_ID]} doesn't intersect any valid links&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_xy identifier id'>xy</span> <span class='assign token'>=</span> <span class='rubyid_get_control_coordinates identifier id'>get_control_coordinates</span><span class='lparen token'>(</span><span class='rubyid_control identifier id'>control</span><span class='rparen token'>)</span>
+      <span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='lbrack token'>[</span><span class='rubyid_xy identifier id'>xy</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span>     <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='rubyid_xy identifier id'>xy</span><span class='rparen token'>)</span>
+      <span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='lbrack token'>[</span><span class='rubyid_xy identifier id'>xy</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:variant</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+      <span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='lbrack token'>[</span><span class='rubyid_xy identifier id'>xy</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:tag</span><span class='rbrack token'>]</span>       <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:data</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:Tag</span><span class='rbrack token'>]</span>
+      <span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='lbrack token'>[</span><span class='rubyid_xy identifier id'>xy</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:label_pos</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:data</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:Label_position</span><span class='rbrack token'>]</span>
+      <span class='rubyid_existing_controls identifier id'>existing_controls</span><span class='lbrack token'>[</span><span class='rubyid_xy identifier id'>xy</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:text_just</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:data</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:Text_justification</span><span class='rbrack token'>]</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_existing_controls identifier id'>existing_controls</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_existing_controls-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_existing_controls</strong>(opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 35</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_existing_controls identifier id'>read_existing_controls</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_controls identifier id'>controls</span> <span class='assign token'>=</span> <span class='rubyid_read_project_controls identifier id'>read_project_controls</span>
+  <span class='rubyid_controls identifier id'>controls</span> <span class='assign token'>=</span> <span class='rubyid_read_variant_controls identifier id'>read_variant_controls</span><span class='lparen token'>(</span><span class='rubyid_controls identifier id'>controls</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:remove_existing_controls</span><span class='rbrack token'>]</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_controls identifier id'>controls</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_mapinfo_layer-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_mapinfo_layer</strong>(controls_mi_layer) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 80</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_mapinfo_layer identifier id'>read_mapinfo_layer</span><span class='lparen token'>(</span><span class='rubyid_controls_mi_layer identifier id'>controls_mi_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Reading controls from '#{controls_mi_layer}'&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_TabFileLoader constant id'>TabFileLoader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_controls_mi_layer identifier id'>controls_mi_layer</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_loadToArray identifier id'>loadToArray</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_ot_links-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_ot_links</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 76</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_ot_links identifier id'>read_ot_links</span>
+  <span class='rubyid_SpatialTypesCopier constant id'>SpatialTypesCopier</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_load_ot_objects identifier id'>load_ot_objects</span><span class='lparen token'>(</span><span class='symbol val'>:links_without_connectors</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_project_controls-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_project_controls</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 41</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_project_controls identifier id'>read_project_controls</span>
+  <span class='rubyid_existing_controls_hash identifier id'>existing_controls_hash</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_h identifier id'>h</span><span class='comma token'>,</span><span class='rubyid_k identifier id'>k</span><span class='bitor op'>|</span> <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_control_points_list identifier id'>control_points_list</span>    <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{$Ot.projectDirectory}point' WHERE pointtype = 7&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_control_objects_list identifier id'>control_objects_list</span>   <span class='assign token'>=</span> <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{$Ot.projectDirectory}control2object'&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new_with_default identifier id'>new_with_default</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_hsh identifier id'>hsh</span><span class='comma token'>,</span><span class='lparen token'>(</span><span class='rubyid_id identifier id'>id</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='rparen token'>)</span><span class='bitor op'>|</span> <span class='rubyid_hsh identifier id'>hsh</span><span class='lbrack token'>[</span><span class='rubyid_id identifier id'>id</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rbrack token'>]</span><span class='semicolon token'>;</span> <span class='rubyid_hsh identifier id'>hsh</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_control_points_list identifier id'>control_points_list</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_pointnr identifier id'>pointnr</span><span class='comma token'>,</span> <span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span> <span class='rubyid_x identifier id'>x</span><span class='comma token'>,</span> <span class='rubyid_y identifier id'>y</span><span class='comma token'>,</span> <span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span>
+    <span class='rubyid_existing_controls_hash identifier id'>existing_controls_hash</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_x identifier id'>x</span><span class='comma token'>,</span><span class='rubyid_y identifier id'>y</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span> <span class='rubyid_control_objects_list identifier id'>control_objects_list</span><span class='lbrack token'>[</span><span class='rubyid_pointnr identifier id'>pointnr</span><span class='rbrack token'>]</span>
+    <span class='rubyid_existing_controls_hash identifier id'>existing_controls_hash</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_x identifier id'>x</span><span class='comma token'>,</span><span class='rubyid_y identifier id'>y</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span>      <span class='assign token'>=</span> <span class='rubyid_pointnr identifier id'>pointnr</span>
+    <span class='rubyid_existing_controls_hash identifier id'>existing_controls_hash</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_x identifier id'>x</span><span class='comma token'>,</span><span class='rubyid_y identifier id'>y</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:variant</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_existing_controls_hash identifier id'>existing_controls_hash</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_variant_controls-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_variant_controls</strong>(controls_list) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 53</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_variant_controls identifier id'>read_variant_controls</span><span class='lparen token'>(</span><span class='rubyid_controls_list identifier id'>controls_list</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{$Ot.parentVariantDirectory}control'&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_control_id identifier id'>control_id</span><span class='comma token'>,</span> <span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span>
+    <span class='rubyid_control identifier id'>control</span> <span class='assign token'>=</span> <span class='rubyid_find_control_by_id identifier id'>find_control_by_id</span><span class='lparen token'>(</span><span class='rubyid_controls_list identifier id'>controls_list</span><span class='comma token'>,</span> <span class='rubyid_control_id identifier id'>control_id</span><span class='rparen token'>)</span>
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:variant</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_control identifier id'>control</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{$Ot.parentVariantDirectory}control1data1'&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_control_id identifier id'>control_id</span><span class='comma token'>,</span> <span class='rubyid_tag identifier id'>tag</span><span class='bitor op'>|</span>
+    <span class='rubyid_control identifier id'>control</span> <span class='assign token'>=</span> <span class='rubyid_find_control_by_id identifier id'>find_control_by_id</span><span class='lparen token'>(</span><span class='rubyid_controls_list identifier id'>controls_list</span><span class='comma token'>,</span> <span class='rubyid_control_id identifier id'>control_id</span><span class='rparen token'>)</span>
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:tag</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_tag identifier id'>tag</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_control identifier id'>control</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute_to_a identifier id'>execute_to_a</span><span class='lparen token'>(</span><span class='dstring node'>&quot;SELECT * FROM '#{$Ot.parentVariantDirectory}control2data1'&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_control_id identifier id'>control_id</span><span class='comma token'>,</span> <span class='rubyid_serienr identifier id'>serienr</span><span class='comma token'>,</span> <span class='rubyid_typenr identifier id'>typenr</span><span class='bitor op'>|</span>
+    <span class='rubyid_control identifier id'>control</span> <span class='assign token'>=</span> <span class='rubyid_find_control_by_id identifier id'>find_control_by_id</span><span class='lparen token'>(</span><span class='rubyid_controls_list identifier id'>controls_list</span><span class='comma token'>,</span> <span class='rubyid_control_id identifier id'>control_id</span><span class='rparen token'>)</span>
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_control identifier id'>control</span>
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:label_pos</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_typenr identifier id'>typenr</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_serienr identifier id'>serienr</span> <span class='eq op'>==</span> <span class='string val'>'Labels_Location'</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span>
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:text_just</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_typenr identifier id'>typenr</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_serienr identifier id'>serienr</span> <span class='eq op'>==</span> <span class='string val'>'Labels_TextJustification'</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_controls_list identifier id'>controls_list</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_database-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_database</strong>(controls_data) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/controls_importer.rb', line 141</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_database identifier id'>write_database</span><span class='lparen token'>(</span><span class='rubyid_controls_data identifier id'>controls_data</span><span class='rparen token'>)</span>
+  <span class='rubyid_db_data identifier id'>db_data</span> <span class='assign token'>=</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_get_data_container identifier id'>get_data_container</span>
+
+  <span class='rubyid_controls_data identifier id'>controls_data</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='lparen token'>(</span><span class='rubyid_x identifier id'>x</span><span class='comma token'>,</span><span class='rubyid_y identifier id'>y</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_control identifier id'>control</span><span class='bitor op'>|</span>
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='notop op'>!</span><span class='rubyid_control identifier id'>control</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='symbol val'>:links</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_get_max_pointnr_for_control identifier id'>get_max_pointnr_for_control</span><span class='lparen token'>(</span><span class='rubyid_controls_data identifier id'>controls_data</span><span class='rparen token'>)</span>
+
+    <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:links</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each_with_index identifier id'>each_with_index</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='lparen token'>(</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span><span class='rubyid_dirn identifier id'>dirn</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_index identifier id'>index</span><span class='bitor op'>|</span>
+      <span class='rubyid_db_data identifier id'>db_data</span><span class='lbrack token'>[</span><span class='symbol val'>:level0</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:control2object</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>1</span><span class='comma token'>,</span> <span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_dirn identifier id'>dirn</span><span class='comma token'>,</span> <span class='rubyid_index identifier id'>index</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='integer val'>.48</span><span class='rbrack token'>]</span>
+    <span class='rbrace token'>}</span>
+
+    <span class='rubyid_db_data identifier id'>db_data</span><span class='lbrack token'>[</span><span class='symbol val'>:level0</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:point</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='integer val'>7</span><span class='comma token'>,</span> <span class='rubyid_x identifier id'>x</span><span class='comma token'>,</span> <span class='rubyid_y identifier id'>y</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='rbrack token'>]</span>
+
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:variant</span><span class='rbrack token'>]</span>
+
+    <span class='rubyid_db_data identifier id'>db_data</span><span class='lbrack token'>[</span><span class='symbol val'>:level1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:control</span><span class='rbrack token'>]</span>       <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='integer val'>1</span><span class='rbrack token'>]</span>
+    <span class='rubyid_db_data identifier id'>db_data</span><span class='lbrack token'>[</span><span class='symbol val'>:level1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:control1data1</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:tag</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+    <span class='rubyid_db_data identifier id'>db_data</span><span class='lbrack token'>[</span><span class='symbol val'>:level1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:control2data1</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Labels_Location'</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='comma token'>,</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:label_pos</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+    <span class='rubyid_db_data identifier id'>db_data</span><span class='lbrack token'>[</span><span class='symbol val'>:level1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:control2data1</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='string val'>'Labels_TextJustification'</span><span class='dot token'>.</span><span class='rubyid_to_serie identifier id'>to_serie</span><span class='comma token'>,</span> <span class='rubyid_control identifier id'>control</span><span class='lbrack token'>[</span><span class='symbol val'>:text_just</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='rbrace token'>}</span>
+
+  <span class='rubyid_clear_controls identifier id'>clear_controls</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='string val'>'Writing controls'</span><span class='comma token'>,</span> <span class='rubyid_db_data identifier id'>db_data</span><span class='comma token'>,</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 09/03/14 10:33:49 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

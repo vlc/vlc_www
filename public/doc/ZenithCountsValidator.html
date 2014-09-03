@@ -124,7 +124,7 @@
       
       <pre class="example code"><code><span class='comment val'># Generally you'll want to do something with the validation object you've just created</span>
 <span class='comment val'># The CSV writer is a good general purpose data dumper so you can work with your validation in excel</span>
-<span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/import/counts/counts_validation_csv_writer'</span>
+<span class='rubyid_require identifier id'>require</span> <span class='string val'>'utils/reporting/validation/counts_validation_csv_writer'</span>
 <span class='rubyid_validation_csv_file identifier id'>validation_csv_file</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_variantDirectory identifier id'>variantDirectory</span> <span class='div op'>/</span> <span class='string val'>'Reports'</span> <span class='div op'>/</span> <span class='string val'>'validation.csv'</span>
 <span class='rubyid_CountsValidationCsvWriter constant id'>CountsValidationCsvWriter</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='rubyid_validation_csv_file identifier id'>validation_csv_file</span><span class='comma token'>,</span> <span class='rubyid_validation identifier id'>validation</span><span class='comma token'>,</span>
                                 <span class='symbol val'>:descriptor_cols</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:year</span><span class='comma token'>,</span> <span class='symbol val'>:screenline_id</span><span class='comma token'>,</span> <span class='symbol val'>:Point_No</span><span class='comma token'>,</span> <span class='symbol val'>:road_name</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
@@ -342,7 +342,7 @@
       <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 59</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_counts_layer_exists? fid id'>counts_layer_exists?</span><span class='lparen token'>(</span><span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
-  <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_exclaim identifier id'>exclaim</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{market} has no counts!! [#{counts_layer}]&quot;</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='rubyid_false false kw'>false</span>
 <span class='rubyid_end end kw'>end</span>
@@ -370,7 +370,8 @@
 79
 80
 81
-82</pre>
+82
+83</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 79</span>
@@ -378,6 +379,7 @@
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_default_columns identifier id'>get_default_columns</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='symbol val'>:AWDT_Total</span><span class='rbrack token'>]</span>                      <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:traffic</span>
   <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='symbol val'>:total_boardings</span><span class='comma token'>,</span> <span class='symbol val'>:total_entries</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:stops</span>
+  <span class='rubyid_return return kw'>return</span> <span class='lbrack token'>[</span><span class='symbol val'>:passengers</span><span class='rbrack token'>]</span>                      <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:routes</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -581,7 +583,6 @@
       <pre class="lines">
 
 
-84
 85
 86
 87
@@ -592,10 +593,11 @@
 92
 93
 94
-95</pre>
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 85</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_validator identifier id'>get_validator</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
   <span class='rubyid_case case kw'>case</span> <span class='rubyid_validation_type identifier id'>validation_type</span>
@@ -630,7 +632,6 @@
       <pre class="lines">
 
 
-97
 98
 99
 100
@@ -642,13 +643,14 @@
 106
 107
 108
-109</pre>
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_validator.rb', line 98</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_load_and_filter_counts identifier id'>load_and_filter_counts</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='comma token'>,</span> <span class='rubyid_filter identifier id'>filter</span><span class='comma token'>,</span> <span class='rubyid_mi_count_columns identifier id'>mi_count_columns</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
-  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;counts layer does not exist [#{counts_layer}]&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;counts layer does not exist [#{counts_layer}]&quot;</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
 
   <span class='rubyid_if if kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:routes</span>
     <span class='rubyid_counts identifier id'>counts</span> <span class='assign token'>=</span> <span class='rubyid_RouteCountValidator constant id'>RouteCountValidator</span><span class='dot token'>.</span><span class='rubyid_read_counts identifier id'>read_counts</span><span class='lparen token'>(</span><span class='rubyid_counts_layer identifier id'>counts_layer</span><span class='rparen token'>)</span>
@@ -722,7 +724,7 @@
 </div>
 
     <div id="footer">
-  Generated on 02/04/14 12:04:32 by
+  Generated on 09/03/14 10:33:50 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>
