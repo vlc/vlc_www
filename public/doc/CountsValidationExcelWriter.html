@@ -1439,7 +1439,7 @@
                 <span class='rbrace token'>}</span>
 
   <span class='lbrack token'>[</span><span class='symbol val'>:grouping_columns</span><span class='comma token'>,</span> <span class='symbol val'>:sorting_columns</span><span class='comma token'>,</span> <span class='symbol val'>:descriptor_cols</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_col identifier id'>col</span><span class='bitor op'>|</span>
-    <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='rubyid_col identifier id'>col</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='lparen token'>(</span><span class='rubyid_column_hash identifier id'>column_hash</span><span class='lbrack token'>[</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_col identifier id'>col</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_column_hash identifier id'>column_hash</span><span class='lbrack token'>[</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_col identifier id'>col</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='rubyid_col identifier id'>col</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_column_hash identifier id'>column_hash</span><span class='lbrack token'>[</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_col identifier id'>col</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_column_hash identifier id'>column_hash</span><span class='lbrack token'>[</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='rubyid_col identifier id'>col</span><span class='rparen token'>)</span>
   <span class='rbrace token'>}</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
@@ -1793,7 +1793,7 @@
 </div>
 
     <div id="footer">
-  Generated on 09/25/14 14:01:06 by
+  Generated on 09/26/14 09:12:42 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>
