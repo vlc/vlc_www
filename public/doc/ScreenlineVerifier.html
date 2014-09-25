@@ -138,6 +138,116 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#check_counts_not_intersecting_screenlines-class_method" title="check_counts_not_intersecting_screenlines (class method)">+ (Object) <strong>check_counts_not_intersecting_screenlines</strong>(counts, screenlines) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_counts_with_no_screenlines-class_method" title="check_counts_with_no_screenlines (class method)">+ (Object) <strong>check_counts_with_no_screenlines</strong>(counts, screenlines) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_screenline_intersects_at_least_one_counts-class_method" title="check_screenline_intersects_at_least_one_counts (class method)">+ (Object) <strong>check_screenline_intersects_at_least_one_counts</strong>(screenlines, counts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_screenlines_with_no_counts-class_method" title="check_screenlines_with_no_counts (class method)">+ (Object) <strong>check_screenlines_with_no_counts</strong>(screenlines, counts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_mapinfo_file-class_method" title="load_mapinfo_file (class method)">+ (Object) <strong>load_mapinfo_file</strong>(mi_file, layer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#verify-class_method" title="verify (class method)">+ (Object) <strong>verify</strong>(screenline_layer, count_layer) </a>
     
 
@@ -167,7 +277,208 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="verify-class_method">
+  <h3 class="signature first" id="check_counts_not_intersecting_screenlines-class_method">
+  
+    + (<tt>Object</tt>) <strong>check_counts_not_intersecting_screenlines</strong>(counts, screenlines) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/screenline_verifier.rb', line 54</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_check_counts_not_intersecting_screenlines identifier id'>check_counts_not_intersecting_screenlines</span><span class='lparen token'>(</span><span class='rubyid_counts identifier id'>counts</span><span class='comma token'>,</span> <span class='rubyid_screenlines identifier id'>screenlines</span><span class='rparen token'>)</span>
+  <span class='rubyid_errors identifier id'>errors</span> <span class='assign token'>=</span> <span class='rubyid_counts identifier id'>counts</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_count identifier id'>count</span><span class='bitor op'>|</span>
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_strip identifier id'>strip</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_screenlines identifier id'>screenlines</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_screenline identifier id'>screenline</span><span class='bitor op'>|</span>
+      <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_screenline identifier id'>screenline</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='rubyid_screenline identifier id'>screenline</span><span class='rparen token'>)</span>
+    <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_count identifier id'>count</span>
+  <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_error identifier id'>error</span><span class='bitor op'>|</span> <span class='rubyid_error identifier id'>error</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:count_id</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_message identifier id'>message</span> <span class='assign token'>=</span> <span class='string val'>'There were %d count(s) that do not intersect their respective screenline'</span>
+  <span class='rubyid_OptimiserUtils constant id'>OptimiserUtils</span><span class='dot token'>.</span><span class='rubyid_report_generic identifier id'>report_generic</span><span class='lparen token'>(</span><span class='rubyid_errors identifier id'>errors</span><span class='comma token'>,</span> <span class='rubyid_message identifier id'>message</span><span class='comma token'>,</span> <span class='string val'>'count_id(s)'</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_errors identifier id'>errors</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_counts_with_no_screenlines-class_method">
+  
+    + (<tt>Object</tt>) <strong>check_counts_with_no_screenlines</strong>(counts, screenlines) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/screenline_verifier.rb', line 29</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_check_counts_with_no_screenlines identifier id'>check_counts_with_no_screenlines</span><span class='lparen token'>(</span><span class='rubyid_counts identifier id'>counts</span><span class='comma token'>,</span> <span class='rubyid_screenlines identifier id'>screenlines</span><span class='rparen token'>)</span>
+  <span class='rubyid_errors identifier id'>errors</span> <span class='assign token'>=</span> <span class='rubyid_counts identifier id'>counts</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_count identifier id'>count</span><span class='bitor op'>|</span>
+    <span class='rubyid_next next kw'>next</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_strip identifier id'>strip</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_screenlines identifier id'>screenlines</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_screenline identifier id'>screenline</span><span class='bitor op'>|</span> <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_screenline identifier id'>screenline</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_count identifier id'>count</span>
+  <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_error identifier id'>error</span><span class='bitor op'>|</span> <span class='rubyid_error identifier id'>error</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:count_id</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_message identifier id'>message</span> <span class='assign token'>=</span> <span class='string val'>'There were %d count(s) that do not have any screenlines'</span>
+  <span class='rubyid_OptimiserUtils constant id'>OptimiserUtils</span><span class='dot token'>.</span><span class='rubyid_report_generic identifier id'>report_generic</span><span class='lparen token'>(</span><span class='rubyid_errors identifier id'>errors</span><span class='comma token'>,</span> <span class='rubyid_message identifier id'>message</span><span class='comma token'>,</span> <span class='string val'>'count_id(s)'</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_errors identifier id'>errors</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_screenline_intersects_at_least_one_counts-class_method">
+  
+    + (<tt>Object</tt>) <strong>check_screenline_intersects_at_least_one_counts</strong>(screenlines, counts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/screenline_verifier.rb', line 46</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_check_screenline_intersects_at_least_one_counts identifier id'>check_screenline_intersects_at_least_one_counts</span><span class='lparen token'>(</span><span class='rubyid_screenlines identifier id'>screenlines</span><span class='comma token'>,</span> <span class='rubyid_counts identifier id'>counts</span><span class='rparen token'>)</span>
+  <span class='rubyid_errors identifier id'>errors</span> <span class='assign token'>=</span> <span class='rubyid_screenlines identifier id'>screenlines</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_screenline identifier id'>screenline</span><span class='bitor op'>|</span>
+    <span class='rubyid_counts identifier id'>counts</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_count identifier id'>count</span><span class='bitor op'>|</span> <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='rubyid_screenline identifier id'>screenline</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_screenline identifier id'>screenline</span>
+  <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_error identifier id'>error</span><span class='bitor op'>|</span> <span class='rubyid_error identifier id'>error</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_message identifier id'>message</span> <span class='assign token'>=</span> <span class='string val'>'There were %d screenline(s) that do not intersect at least one count'</span>
+  <span class='rubyid_OptimiserUtils constant id'>OptimiserUtils</span><span class='dot token'>.</span><span class='rubyid_report_generic identifier id'>report_generic</span><span class='lparen token'>(</span><span class='rubyid_errors identifier id'>errors</span><span class='comma token'>,</span> <span class='rubyid_message identifier id'>message</span><span class='comma token'>,</span> <span class='string val'>'screenline_id(s)'</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_errors identifier id'>errors</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_screenlines_with_no_counts-class_method">
+  
+    + (<tt>Object</tt>) <strong>check_screenlines_with_no_counts</strong>(screenlines, counts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/screenline_verifier.rb', line 38</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_check_screenlines_with_no_counts identifier id'>check_screenlines_with_no_counts</span><span class='lparen token'>(</span><span class='rubyid_screenlines identifier id'>screenlines</span><span class='comma token'>,</span> <span class='rubyid_counts identifier id'>counts</span><span class='rparen token'>)</span>
+  <span class='rubyid_errors identifier id'>errors</span> <span class='assign token'>=</span> <span class='rubyid_screenlines identifier id'>screenlines</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_screenline identifier id'>screenline</span><span class='bitor op'>|</span>
+    <span class='rubyid_counts identifier id'>counts</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_count identifier id'>count</span><span class='bitor op'>|</span> <span class='rubyid_count identifier id'>count</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_screenline identifier id'>screenline</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_screenline identifier id'>screenline</span>
+  <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_error identifier id'>error</span><span class='bitor op'>|</span> <span class='rubyid_error identifier id'>error</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:screenline_id</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_message identifier id'>message</span> <span class='assign token'>=</span> <span class='string val'>'There were %d screenline(s) that do not have any counts'</span>
+  <span class='rubyid_OptimiserUtils constant id'>OptimiserUtils</span><span class='dot token'>.</span><span class='rubyid_report_generic identifier id'>report_generic</span><span class='lparen token'>(</span><span class='rubyid_errors identifier id'>errors</span><span class='comma token'>,</span> <span class='rubyid_message identifier id'>message</span><span class='comma token'>,</span> <span class='string val'>'screenline_id(s)'</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_errors identifier id'>errors</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_mapinfo_file-class_method">
+  
+    + (<tt>Object</tt>) <strong>load_mapinfo_file</strong>(mi_file, layer) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/optimiser/screenline_verifier.rb', line 65</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_load_mapinfo_file identifier id'>load_mapinfo_file</span><span class='lparen token'>(</span><span class='rubyid_mi_file identifier id'>mi_file</span><span class='comma token'>,</span> <span class='rubyid_layer identifier id'>layer</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Reading #{layer.capitalize}: [#{mi_file}]&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_objects identifier id'>objects</span> <span class='assign token'>=</span> <span class='rubyid_TabFileLoader constant id'>TabFileLoader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_mi_file identifier id'>mi_file</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_loadToArray identifier id'>loadToArray</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='dstring node'>&quot;No #{layer.pluralise} loaded&quot;</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_objects identifier id'>objects</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_objects identifier id'>objects</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify-class_method">
   
     + (<tt>Object</tt>) <strong>verify</strong>(screenline_layer, count_layer) 
   
@@ -259,7 +570,7 @@
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:56 by
+  Generated on 09/25/14 14:01:03 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

@@ -287,7 +287,10 @@ Third parameter in the field list optionally denotes whether the columns is a 'k
 177
 178
 179
-180</pre>
+180
+181
+182
+183</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 169</span>
@@ -296,7 +299,10 @@ Third parameter in the field list optionally denotes whether the columns is a 'k
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='string val'>'You must provide at least one field when creating a table'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_fields identifier id'>fields</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='string val'>'You must provide a non-empty table name when creating a table'</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_table_name identifier id'>table_name</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
   <span class='rubyid_table_name identifier id'>table_name</span> <span class='opasgn op'>+=</span> <span class='string val'>'.DB'</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_table_name identifier id'>table_name</span><span class='dot token'>.</span><span class='rubyid_downcase identifier id'>downcase</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='regexp val'>/.+\.db$/</span><span class='rparen token'>)</span>
-  <span class='rubyid_str identifier id'>str</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;CREATE TABLE \&quot;#{table_name}\&quot; (#{fields.map { |name,type,key| &quot;t.'#{name.to_s}' #{type.to_s}&quot;}.join(', ')} #{&quot;, PRIMARY KEY (#{fields.map { |name,type,key| &quot;t.'#{name.to_s}'&quot; if key }.compact.join(', ') })&quot; if fields.map { |_,_,key| key }.any? })&quot;</span>
+  <span class='rubyid_field_names identifier id'>field_names</span>     <span class='assign token'>=</span> <span class='rubyid_fields identifier id'>fields</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid__key identifier id'>_key</span><span class='bitor op'>|</span> <span class='dstring node'>&quot;t.'#{name}' #{type}&quot;</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>', '</span><span class='rparen token'>)</span>
+  <span class='rubyid_field_keys identifier id'>field_keys</span>      <span class='assign token'>=</span> <span class='rubyid_fields identifier id'>fields</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid__type identifier id'>_type</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span> <span class='dstring node'>&quot;t.'#{name}'&quot;</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_key identifier id'>key</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>', '</span><span class='rparen token'>)</span>
+  <span class='rubyid_has_a_field_key identifier id'>has_a_field_key</span> <span class='assign token'>=</span> <span class='rubyid_fields identifier id'>fields</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span> <span class='rubyid__ identifier id'>_</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span> <span class='rubyid_key identifier id'>key</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_any? fid id'>any?</span>
+  <span class='rubyid_str identifier id'>str</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;CREATE TABLE \&quot;#{table_name}\&quot; (#{field_names} #{&quot;, PRIMARY KEY (#{field_keys })&quot; if has_a_field_key })&quot;</span>
   <span class='rubyid_begin begin kw'>begin</span>
     <span class='rubyid_OtQuery constant id'>OtQuery</span><span class='dot token'>.</span><span class='rubyid_execute identifier id'>execute</span><span class='lparen token'>(</span><span class='rubyid_str identifier id'>str</span><span class='rparen token'>)</span>
   <span class='rubyid_rescue rescue kw'>rescue</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
@@ -334,9 +340,6 @@ Third parameter in the field list optionally denotes whether the columns is a 'k
       <pre class="lines">
 
 
-230
-231
-232
 233
 234
 235
@@ -349,10 +352,13 @@ Third parameter in the field list optionally denotes whether the columns is a 'k
 242
 243
 244
-245</pre>
+245
+246
+247
+248</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'app/monkey_patches/ot_table.rb', line 233</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_insert identifier id'>insert</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='comma token'>,</span> <span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_check_validity identifier id'>check_validity</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='rubyid_Array constant id'>Array</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span>
@@ -426,7 +432,7 @@ Third parameter in the field list optionally denotes whether the columns is a 'k
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:55 by
+  Generated on 09/25/14 14:01:03 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

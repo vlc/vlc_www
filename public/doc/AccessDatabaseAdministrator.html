@@ -168,6 +168,28 @@ and ensure that the tables exist with the required fields.
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-class_method" title="update (class method)">+ (Object) <strong>update</strong>(db, schemas, table_names) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -232,12 +254,45 @@ and ensure that the tables exist with the required fields.
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="update-class_method">
+  
+    + (<tt>Object</tt>) <strong>update</strong>(db, schemas, table_names) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/db/access_database_administrator.rb', line 37</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_update identifier id'>update</span><span class='lparen token'>(</span><span class='rubyid_db identifier id'>db</span><span class='comma token'>,</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='comma token'>,</span> <span class='rubyid_table_names identifier id'>table_names</span><span class='rparen token'>)</span>
+  <span class='rubyid_fixed_names identifier id'>fixed_names</span> <span class='assign token'>=</span> <span class='rubyid_schemas identifier id'>schemas</span><span class='dot token'>.</span><span class='rubyid_to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span> <span class='rubyid_schema identifier id'>schema</span><span class='rparen token'>)</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='rubyid_table_names identifier id'>table_names</span><span class='lbrack token'>[</span><span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_schema identifier id'>schema</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_db identifier id'>db</span><span class='dot token'>.</span><span class='rubyid_add_many_tables_or_fields identifier id'>add_many_tables_or_fields</span><span class='lparen token'>(</span><span class='rubyid_fixed_names identifier id'>fixed_names</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:56 by
+  Generated on 09/25/14 14:01:03 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

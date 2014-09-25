@@ -137,7 +137,117 @@ link tags layer needs to be an intersect layer and should at least contain a Lin
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#check_required_column-class_method" title="check_required_column (class method)">+ (Object) <strong>check_required_column</strong>(link_tags) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#import-class_method" title="import (class method)">+ (Object) <strong>import</strong>(link_tags_tab, links_tab = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process-class_method" title="process (class method)">+ (Object) <strong>process</strong>(link_tags_tab, links_tab) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_links-class_method" title="read_links (class method)">+ (Object) <strong>read_links</strong>(links_tab) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_tags-class_method" title="read_tags (class method)">+ (Object) <strong>read_tags</strong>(link_tags_tab) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write_data-class_method" title="write_data (class method)">+ (Object) <strong>write_data</strong>(data) </a>
     
 
     
@@ -166,7 +276,40 @@ link tags layer needs to be an intersect layer and should at least contain a Lin
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="import-class_method">
+  <h3 class="signature first" id="check_required_column-class_method">
+  
+    + (<tt>Object</tt>) <strong>check_required_column</strong>(link_tags) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/link_tags_importer.rb', line 40</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_check_required_column identifier id'>check_required_column</span><span class='lparen token'>(</span><span class='rubyid_link_tags identifier id'>link_tags</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_link_tags identifier id'>link_tags</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='string val'>'column LinkTag not found in linktags layer'</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_link_tags identifier id'>link_tags</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='symbol val'>:LinkTag</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="import-class_method">
   
     + (<tt>Object</tt>) <strong>import</strong>(link_tags_tab, links_tab = nil) 
   
@@ -243,12 +386,164 @@ link tags layer needs to be an intersect layer and should at least contain a Lin
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="process-class_method">
+  
+    + (<tt>Object</tt>) <strong>process</strong>(link_tags_tab, links_tab) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/link_tags_importer.rb', line 21</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_process identifier id'>process</span><span class='lparen token'>(</span><span class='rubyid_link_tags_tab identifier id'>link_tags_tab</span><span class='comma token'>,</span> <span class='rubyid_links_tab identifier id'>links_tab</span><span class='rparen token'>)</span>
+  <span class='rubyid_intersections identifier id'>intersections</span> <span class='assign token'>=</span> <span class='rubyid_GISLayerIntersectionCalculator constant id'>GISLayerIntersectionCalculator</span><span class='dot token'>.</span><span class='rubyid_calculate identifier id'>calculate</span><span class='lparen token'>(</span><span class='rubyid_read_links identifier id'>read_links</span><span class='lparen token'>(</span><span class='rubyid_links_tab identifier id'>links_tab</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_read_tags identifier id'>read_tags</span><span class='lparen token'>(</span><span class='rubyid_link_tags_tab identifier id'>link_tags_tab</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_intersections identifier id'>intersections</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_link_object identifier id'>link_object</span><span class='comma token'>,</span><span class='rubyid_link_tag identifier id'>link_tag</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='rubyid_link_object identifier id'>link_object</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:Linknr</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_link_tag identifier id'>link_tag</span><span class='dot token'>.</span><span class='rubyid_data identifier id'>data</span><span class='lbrack token'>[</span><span class='symbol val'>:LinkTag</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_links-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_links</strong>(links_tab) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/link_tags_importer.rb', line 32</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_links identifier id'>read_links</span><span class='lparen token'>(</span><span class='rubyid_links_tab identifier id'>links_tab</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_links_tab identifier id'>links_tab</span><span class='rparen token'>)</span>
+    <span class='rubyid_TabFileLoader constant id'>TabFileLoader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_links_tab identifier id'>links_tab</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_loadToArray identifier id'>loadToArray</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_OtSpatialReader constant id'>OtSpatialReader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_readLinksWithNoCentroids identifier id'>readLinksWithNoCentroids</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="read_tags-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_tags</strong>(link_tags_tab) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/link_tags_importer.rb', line 26</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_tags identifier id'>read_tags</span><span class='lparen token'>(</span><span class='rubyid_link_tags_tab identifier id'>link_tags_tab</span><span class='rparen token'>)</span>
+  <span class='rubyid_link_tags identifier id'>link_tags</span> <span class='assign token'>=</span> <span class='rubyid_TabFileLoader constant id'>TabFileLoader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_link_tags_tab identifier id'>link_tags_tab</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_loadToArray identifier id'>loadToArray</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_check_required_column identifier id'>check_required_column</span><span class='lparen token'>(</span><span class='rubyid_link_tags identifier id'>link_tags</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_link_tags identifier id'>link_tags</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="write_data-class_method">
+  
+    + (<tt>Object</tt>) <strong>write_data</strong>(data) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/link_tags_importer.rb', line 45</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_data identifier id'>write_data</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Writing #{data.size} records ...&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_OtTable constant id'>OtTable</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_parentVariantDirectory identifier id'>parentVariantDirectory</span><span class='lparen token'>(</span><span class='rparen token'>)</span> <span class='div op'>/</span> <span class='string val'>'link1data1.DB'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_tbl identifier id'>tbl</span><span class='bitor op'>|</span>
+    <span class='rubyid_data identifier id'>data</span><span class='dot token'>.</span><span class='rubyid_uniq identifier id'>uniq</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_linknr identifier id'>linknr</span><span class='comma token'>,</span> <span class='rubyid_link_tag identifier id'>link_tag</span><span class='bitor op'>|</span>
+      <span class='rubyid_tbl identifier id'>tbl</span><span class='dot token'>.</span><span class='rubyid_edit_or_append identifier id'>edit_or_append</span><span class='lparen token'>(</span><span class='string val'>'linknr'</span><span class='comma token'>,</span> <span class='rubyid_linknr identifier id'>linknr</span><span class='rparen token'>)</span>
+      <span class='rubyid_tbl identifier id'>tbl</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='string val'>'linktag'</span><span class='comma token'>,</span> <span class='rubyid_link_tag identifier id'>link_tag</span><span class='rparen token'>)</span>
+      <span class='rubyid_tbl identifier id'>tbl</span><span class='dot token'>.</span><span class='rubyid_post identifier id'>post</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:58 by
+  Generated on 09/25/14 14:01:05 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

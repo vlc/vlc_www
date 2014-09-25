@@ -172,6 +172,94 @@ ITransport,PostalandWarehousing)</span>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#add_trip_hash_to_zenith_matrix-class_method" title="add_trip_hash_to_zenith_matrix (class method)">+ (Object) <strong>add_trip_hash_to_zenith_matrix</strong>(zenith_matrix, trip_hash, zone_equivalence) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_files_for_period-class_method" title="get_files_for_period (class method)">+ (Object) <strong>get_files_for_period</strong>(fmm_period, file_prefix, file_suffix, industries, vehicle_types) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_geo_equivalence-class_method" title="get_geo_equivalence (class method)">+ (Object) <strong>get_geo_equivalence</strong>(fmm_zoning_system) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_trip_hash_from_file-class_method" title="get_trip_hash_from_file (class method)">+ (Object) <strong>get_trip_hash_from_file</strong>(file_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#import-class_method" title="import (class method)">+ (Object) <strong>import</strong>(input_directory, fmm_zoning_system, file_prefix = 'Trips-TZ-', file_suffix = 'IC-Cube-2009-v17.1c') </a>
     
 
@@ -223,7 +311,169 @@ ITransport,PostalandWarehousing)</span>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="import-class_method">
+  <h3 class="signature first" id="add_trip_hash_to_zenith_matrix-class_method">
+  
+    + (<tt>Object</tt>) <strong>add_trip_hash_to_zenith_matrix</strong>(zenith_matrix, trip_hash, zone_equivalence) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/melbourne_fmm_matrix_importer.rb', line 90</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_add_trip_hash_to_zenith_matrix identifier id'>add_trip_hash_to_zenith_matrix</span><span class='lparen token'>(</span><span class='rubyid_zenith_matrix identifier id'>zenith_matrix</span><span class='comma token'>,</span> <span class='rubyid_trip_hash identifier id'>trip_hash</span><span class='comma token'>,</span> <span class='rubyid_zone_equivalence identifier id'>zone_equivalence</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='string val'>'Adding hash to accumulation matrix'</span><span class='comma token'>,</span> <span class='rubyid_trip_hash identifier id'>trip_hash</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_od identifier id'>od</span><span class='comma token'>,</span><span class='rubyid_trips identifier id'>trips</span><span class='bitor op'>|</span>
+    <span class='rubyid_zenith_o identifier id'>zenith_o</span><span class='comma token'>,</span><span class='rubyid_zenith_d identifier id'>zenith_d</span> <span class='assign token'>=</span> <span class='rubyid_od identifier id'>od</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_fmm_zone identifier id'>fmm_zone</span><span class='bitor op'>|</span> <span class='rubyid_zone_equivalence identifier id'>zone_equivalence</span><span class='lbrack token'>[</span><span class='rubyid_fmm_zone identifier id'>fmm_zone</span><span class='minus op'>-</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_zenith_matrix identifier id'>zenith_matrix</span><span class='lbrack token'>[</span><span class='rubyid_zenith_o identifier id'>zenith_o</span><span class='comma token'>,</span><span class='rubyid_zenith_d identifier id'>zenith_d</span><span class='rbrack token'>]</span> <span class='opasgn op'>+=</span> <span class='rubyid_trips identifier id'>trips</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_files_for_period-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_files_for_period</strong>(fmm_period, file_prefix, file_suffix, industries, vehicle_types) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/melbourne_fmm_matrix_importer.rb', line 69</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_files_for_period identifier id'>get_files_for_period</span><span class='lparen token'>(</span><span class='rubyid_fmm_period identifier id'>fmm_period</span><span class='comma token'>,</span> <span class='rubyid_file_prefix identifier id'>file_prefix</span><span class='comma token'>,</span> <span class='rubyid_file_suffix identifier id'>file_suffix</span><span class='comma token'>,</span> <span class='rubyid_industries identifier id'>industries</span><span class='comma token'>,</span> <span class='rubyid_vehicle_types identifier id'>vehicle_types</span><span class='rparen token'>)</span>
+  <span class='lbrack token'>[</span><span class='rubyid_industries identifier id'>industries</span><span class='comma token'>,</span> <span class='rubyid_vehicle_types identifier id'>vehicle_types</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_combine identifier id'>combine</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_industry identifier id'>industry</span><span class='comma token'>,</span><span class='rubyid_vehicle_type identifier id'>vehicle_type</span><span class='bitor op'>|</span>
+    <span class='dstring node'>&quot;#{file_prefix}#{fmm_period}-#{vehicle_type}-#{industry}#{file_suffix}.dat&quot;</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_geo_equivalence-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_geo_equivalence</strong>(fmm_zoning_system) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/melbourne_fmm_matrix_importer.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_geo_equivalence identifier id'>get_geo_equivalence</span><span class='lparen token'>(</span><span class='rubyid_fmm_zoning_system identifier id'>fmm_zoning_system</span><span class='rparen token'>)</span>
+  <span class='rubyid_geo_equivalence identifier id'>geo_equivalence</span> <span class='assign token'>=</span> <span class='rubyid_$Ot gvar id'>$Ot</span><span class='dot token'>.</span><span class='rubyid_geography identifier id'>geography</span><span class='dot token'>.</span><span class='rubyid_equivalence identifier id'>equivalence</span><span class='lparen token'>(</span><span class='rubyid_fmm_zoning_system identifier id'>fmm_zoning_system</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Zone#{$Ot.project.num_centroids}&quot;</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># turn into array</span>
+  <span class='lparen token'>(</span><span class='float val'>1</span><span class='dot2 op'>..</span><span class='rubyid_geo_equivalence identifier id'>geo_equivalence</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_fmm_zone identifier id'>fmm_zone</span><span class='bitor op'>|</span> <span class='rubyid_geo_equivalence identifier id'>geo_equivalence</span><span class='lbrack token'>[</span><span class='rubyid_fmm_zone identifier id'>fmm_zone</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span> <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_trip_hash_from_file-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_trip_hash_from_file</strong>(file_name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/melbourne_fmm_matrix_importer.rb', line 75</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_trip_hash_from_file identifier id'>get_trip_hash_from_file</span><span class='lparen token'>(</span><span class='rubyid_file_name identifier id'>file_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_trip_hash identifier id'>trip_hash</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new_with_default identifier id'>new_with_default</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='integer val'>.0</span><span class='rparen token'>)</span>
+  <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_file_name identifier id'>file_name</span><span class='comma token'>,</span> <span class='string val'>'r'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_file identifier id'>file</span><span class='bitor op'>|</span>
+    <span class='rubyid_lines identifier id'>lines</span> <span class='assign token'>=</span> <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_readlines identifier id'>readlines</span>
+
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_showProgress identifier id'>showProgress</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Processing file #{file_name}&quot;</span><span class='comma token'>,</span> <span class='rubyid_lines identifier id'>lines</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_line identifier id'>line</span><span class='bitor op'>|</span>
+      <span class='rubyid_tokens identifier id'>tokens</span> <span class='assign token'>=</span> <span class='rubyid_line identifier id'>line</span><span class='dot token'>.</span><span class='rubyid_strip identifier id'>strip</span><span class='dot token'>.</span><span class='rubyid_split identifier id'>split</span>
+      <span class='rubyid_o identifier id'>o</span><span class='comma token'>,</span><span class='rubyid_d identifier id'>d</span>    <span class='assign token'>=</span> <span class='rubyid_tokens identifier id'>tokens</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='dot2 op'>..</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_i</span><span class='rparen token'>)</span>
+      <span class='rubyid_trips identifier id'>trips</span>  <span class='assign token'>=</span> <span class='rubyid_tokens identifier id'>tokens</span><span class='lbrack token'>[</span><span class='float val'>2</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_f</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_sum identifier id'>sum</span>
+      <span class='rubyid_trip_hash identifier id'>trip_hash</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rubyid_o identifier id'>o</span><span class='comma token'>,</span><span class='rubyid_d identifier id'>d</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='opasgn op'>+=</span> <span class='rubyid_trips identifier id'>trips</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_trips identifier id'>trips</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
+    <span class='rbrace token'>}</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_trip_hash identifier id'>trip_hash</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="import-class_method">
   
     + (<tt>Object</tt>) <strong>import</strong>(input_directory, fmm_zoning_system, file_prefix = 'Trips-TZ-', file_suffix = 'IC-Cube-2009-v17.1c') 
   
@@ -366,7 +616,7 @@ ITransport,PostalandWarehousing)</span>
       <span class='rubyid_merge_with_accumulation_hash identifier id'>merge_with_accumulation_hash</span><span class='lparen token'>(</span><span class='rubyid_total_hash identifier id'>total_hash</span><span class='comma token'>,</span> <span class='rubyid_trip_hash identifier id'>trip_hash</span><span class='rparen token'>)</span>
     <span class='rbrace token'>}</span>
 
-    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>&quot;Adding trip hash to zenith matrix&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Adding trip hash to zenith matrix'</span><span class='rparen token'>)</span>
     <span class='rubyid_add_trip_hash_to_zenith_matrix identifier id'>add_trip_hash_to_zenith_matrix</span><span class='lparen token'>(</span><span class='rubyid_zenith_matrix identifier id'>zenith_matrix</span><span class='comma token'>,</span> <span class='rubyid_total_hash identifier id'>total_hash</span><span class='comma token'>,</span> <span class='rubyid_zone_equivalence identifier id'>zone_equivalence</span><span class='rparen token'>)</span>
 
     <span class='rubyid_sc identifier id'>sc</span><span class='dot token'>.</span><span class='rubyid_set identifier id'>set</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='rubyid_M_HCV constant id'>M_HCV</span><span class='comma token'>,</span><span class='rubyid_zenith_period identifier id'>zenith_period</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='rubyid_R_ODMat constant id'>R_ODMat</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_pmturi identifier id'>to_pmturi</span><span class='comma token'>,</span> <span class='rubyid_zenith_matrix identifier id'>zenith_matrix</span> <span class='mult op'>*</span> <span class='rubyid_factor identifier id'>factor</span><span class='rparen token'>)</span>
@@ -401,7 +651,7 @@ ITransport,PostalandWarehousing)</span>
       <pre class="code"><span class="info file"># File 'app/utils/import/melbourne_fmm_matrix_importer.rb', line 58</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_merge_with_accumulation_hash identifier id'>merge_with_accumulation_hash</span><span class='lparen token'>(</span><span class='rubyid_total_hash identifier id'>total_hash</span><span class='comma token'>,</span> <span class='rubyid_new_hash identifier id'>new_hash</span><span class='rparen token'>)</span>
-  <span class='rubyid_total_hash identifier id'>total_hash</span><span class='dot token'>.</span><span class='rubyid_merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='rubyid_new_hash identifier id'>new_hash</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_od identifier id'>od</span><span class='comma token'>,</span><span class='rubyid_total_val identifier id'>total_val</span><span class='comma token'>,</span> <span class='rubyid_new_val identifier id'>new_val</span><span class='bitor op'>|</span> <span class='rubyid_total_val identifier id'>total_val</span> <span class='plus op'>+</span> <span class='rubyid_new_val identifier id'>new_val</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_total_hash identifier id'>total_hash</span><span class='dot token'>.</span><span class='rubyid_merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='rubyid_new_hash identifier id'>new_hash</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__od identifier id'>_od</span><span class='comma token'>,</span> <span class='rubyid_total_val identifier id'>total_val</span><span class='comma token'>,</span> <span class='rubyid_new_val identifier id'>new_val</span><span class='bitor op'>|</span> <span class='rubyid_total_val identifier id'>total_val</span> <span class='plus op'>+</span> <span class='rubyid_new_val identifier id'>new_val</span> <span class='rbrace token'>}</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -414,7 +664,7 @@ ITransport,PostalandWarehousing)</span>
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:58 by
+  Generated on 09/25/14 14:01:05 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

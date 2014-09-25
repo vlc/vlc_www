@@ -145,7 +145,51 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#get_table_name-class_method" title="get_table_name (class method)">+ (Object) <strong>get_table_name</strong>(type, market, opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#import_counts_and_screenlines-class_method" title="import_counts_and_screenlines (class method)">+ (Object) <strong>import_counts_and_screenlines</strong>(mi_count_columns, opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_mapinfo_table-class_method" title="read_mapinfo_table (class method)">+ (Object) <strong>read_mapinfo_table</strong>(table_type, market, opts) </a>
     
 
     
@@ -174,7 +218,52 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="import_counts_and_screenlines-class_method">
+  <h3 class="signature first" id="get_table_name-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_table_name</strong>(type, market, opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_importer.rb', line 45</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_table_name identifier id'>get_table_name</span><span class='lparen token'>(</span><span class='rubyid_type identifier id'>type</span><span class='comma token'>,</span> <span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_default_name identifier id'>default_name</span> <span class='assign token'>=</span> <span class='rubyid_BedrockEnvironment constant id'>BedrockEnvironment</span><span class='dot token'>.</span><span class='rubyid_resources_dir identifier id'>resources_dir</span> <span class='div op'>/</span> <span class='rubyid_market identifier id'>market</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='div op'>/</span> <span class='string val'>'Observed Data'</span> <span class='div op'>/</span> <span class='string val'>'Traffic'</span> <span class='div op'>/</span> <span class='dstring node'>&quot;#{type.to_s.pluralise}.TAB&quot;</span>
+  <span class='rubyid_table_name identifier id'>table_name</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='dstring node'>&quot;#{type}s_table&quot;</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='rbrack token'>]</span> <span class='orop op'>||</span> <span class='rubyid_default_name identifier id'>default_name</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_exist? fid id'>exist?</span><span class='lparen token'>(</span><span class='rubyid_table_name identifier id'>table_name</span><span class='rparen token'>)</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Reading from mapinfo table [#{table_name}]&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span> <span class='dstring node'>&quot;The specified table does not exist [#{table_name}]&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_table_name identifier id'>table_name</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="import_counts_and_screenlines-class_method">
   
     + (<tt>Object</tt>) <strong>import_counts_and_screenlines</strong>(mi_count_columns, opts = {}) 
   
@@ -334,12 +423,43 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="read_mapinfo_table-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_mapinfo_table</strong>(table_type, market, opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/counts/zenith_counts_importer.rb', line 56</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_mapinfo_table identifier id'>read_mapinfo_table</span><span class='lparen token'>(</span><span class='rubyid_table_type identifier id'>table_type</span><span class='comma token'>,</span> <span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_TabFileLoader constant id'>TabFileLoader</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_get_table_name identifier id'>get_table_name</span><span class='lparen token'>(</span><span class='rubyid_table_type identifier id'>table_type</span><span class='comma token'>,</span> <span class='rubyid_market identifier id'>market</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_loadToArray identifier id'>loadToArray</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:58 by
+  Generated on 09/25/14 14:01:05 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

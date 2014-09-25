@@ -348,7 +348,29 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_validation_column_names-class_method" title="get_validation_column_names (class method)">+ (Object) <strong>get_validation_column_names</strong>(headers) </a>
+      <a href="#get_validation_column_names-class_method" title="get_validation_column_names (class method)">+ (Object) <strong>get_validation_column_names</strong>(headers, opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_validation_names-class_method" title="get_validation_names (class method)">+ (Object) <strong>get_validation_names</strong>(count_header_matches) </a>
     
 
     
@@ -677,14 +699,14 @@
       <pre class="lines">
 
 
-136
-137
-138
-139
-140</pre>
+140
+141
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 140</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_clean_data_set identifier id'>clean_data_set</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='rparen token'>)</span>
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='string val'>'Cleaning data set'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
@@ -712,19 +734,19 @@
       <pre class="lines">
 
 
-130
-131
-132
-133
-134</pre>
+134
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 134</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_charts identifier id'>create_charts</span><span class='lparen token'>(</span><span class='rubyid_excel_object identifier id'>excel_object</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_formats_yaml_file identifier id'>formats_yaml_file</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
-  <span class='rubyid_validation_pairs identifier id'>validation_pairs</span> <span class='assign token'>=</span> <span class='rubyid_get_validation_column_names identifier id'>get_validation_column_names</span><span class='lparen token'>(</span><span class='rubyid_headers identifier id'>headers</span><span class='rparen token'>)</span>
+  <span class='rubyid_validation_sets identifier id'>validation_sets</span>  <span class='assign token'>=</span> <span class='rubyid_get_validation_column_names identifier id'>get_validation_column_names</span><span class='lparen token'>(</span><span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
   <span class='rubyid_chart_factory identifier id'>chart_factory</span>    <span class='assign token'>=</span> <span class='rubyid_ExcelValidationChartFactory constant id'>ExcelValidationChartFactory</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_excel_object identifier id'>excel_object</span><span class='comma token'>,</span> <span class='rubyid_formats_yaml_file identifier id'>formats_yaml_file</span><span class='rparen token'>)</span>
-  <span class='rubyid_chart_factory identifier id'>chart_factory</span><span class='dot token'>.</span><span class='rubyid_setup_charts identifier id'>setup_charts</span><span class='lparen token'>(</span><span class='rubyid_validation_pairs identifier id'>validation_pairs</span><span class='comma token'>,</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_chart_factory identifier id'>chart_factory</span><span class='dot token'>.</span><span class='rubyid_setup_charts identifier id'>setup_charts</span><span class='lparen token'>(</span><span class='rubyid_validation_sets identifier id'>validation_sets</span><span class='comma token'>,</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -747,13 +769,13 @@
       <pre class="lines">
 
 
-75
-76
 77
-78</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 77</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_output_file_name identifier id'>create_output_file_name</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
   <span class='rubyid_file_name identifier id'>file_name</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;#{$Ot.variant}_#{validation_type}_count_validation.xlsx&quot;</span>
@@ -802,14 +824,14 @@
       <pre class="lines">
 
 
-69
-70
 71
 72
-73</pre>
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 71</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_data_exists? fid id'>data_exists?</span><span class='lparen token'>(</span><span class='rubyid_count_load_objects identifier id'>count_load_objects</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='rubyid_true true kw'>true</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_count_load_objects identifier id'>count_load_objects</span> <span class='andop op'>&amp;&amp;</span> <span class='notop op'>!</span><span class='rubyid_count_load_objects identifier id'>count_load_objects</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
@@ -837,17 +859,17 @@
       <pre class="lines">
 
 
-233
-234
-235
-236
-237
-238
-239
-240</pre>
+246
+247
+248
+249
+250
+251
+252
+253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 233</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 246</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_ensure_same_extension identifier id'>ensure_same_extension</span><span class='lparen token'>(</span><span class='rubyid_template_excel_file identifier id'>template_excel_file</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
   <span class='rubyid_file identifier id'>file</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:output_filename</span><span class='rbrack token'>]</span>
@@ -878,13 +900,13 @@
       <pre class="lines">
 
 
-183
-184
-185
-186</pre>
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 187</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_all_group_keys identifier id'>get_all_group_keys</span><span class='lparen token'>(</span><span class='rubyid_grouping_columns identifier id'>grouping_columns</span><span class='rparen token'>)</span>
   <span class='rubyid_split_grouping_columns identifier id'>split_grouping_columns</span> <span class='assign token'>=</span> <span class='rubyid_grouping_columns identifier id'>grouping_columns</span><span class='dot token'>.</span><span class='rubyid_permutation identifier id'>permutation</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_to_a identifier id'>to_a</span>
@@ -911,19 +933,21 @@
       <pre class="lines">
 
 
-198
-199
-200
-201
-202
-203</pre>
+207
+208
+209
+210
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 207</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_level_1 identifier id'>get_level_1</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
   <span class='rubyid_case case kw'>case</span> <span class='rubyid_name identifier id'>name</span>
-  <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/awdt/i</span> <span class='semicolon token'>;</span> <span class='integer val'>1</span>
+  <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/awdt/i</span>   <span class='semicolon token'>;</span> <span class='integer val'>1</span>
+  <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/posted/i</span> <span class='semicolon token'>;</span> <span class='integer val'>2</span>
   <span class='rubyid_else else kw'>else</span> <span class='integer val'>9</span>
   <span class='rubyid_end end kw'>end</span>
 <span class='rubyid_end end kw'>end</span>
@@ -948,23 +972,25 @@
       <pre class="lines">
 
 
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214</pre>
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 215</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_level_2 identifier id'>get_level_2</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
   <span class='rubyid_case case kw'>case</span> <span class='rubyid_name identifier id'>name</span>
   <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/total/i</span><span class='comma token'>,</span> <span class='regexp val'>/daily/i</span> <span class='semicolon token'>;</span> <span class='integer val'>1</span>
+  <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/pre/i</span>             <span class='semicolon token'>;</span> <span class='float val'>1.5</span>
   <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/am/i</span>              <span class='semicolon token'>;</span> <span class='integer val'>2</span>
   <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/md/i</span>              <span class='semicolon token'>;</span> <span class='integer val'>3</span>
   <span class='rubyid_when when kw'>when</span> <span class='regexp val'>/pm/i</span>              <span class='semicolon token'>;</span> <span class='integer val'>4</span>
@@ -993,14 +1019,14 @@
       <pre class="lines">
 
 
-124
-125
-126
-127
-128</pre>
+128
+129
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 128</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_summed_data_from_grouped_data identifier id'>get_summed_data_from_grouped_data</span><span class='lparen token'>(</span><span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_grouping_columns identifier id'>grouping_columns</span><span class='rparen token'>)</span>
   <span class='rubyid_summed_rows identifier id'>summed_rows</span> <span class='assign token'>=</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_arrays identifier id'>arrays</span><span class='bitor op'>|</span> <span class='rubyid_arrays identifier id'>arrays</span><span class='dot token'>.</span><span class='rubyid_select identifier id'>select</span><span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_array identifier id'>array</span><span class='bitor op'>|</span> <span class='rubyid_array identifier id'>array</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='string val'>'Total'</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span><span class='dot token'>.</span><span class='rubyid_flatten identifier id'>flatten</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span>
@@ -1028,23 +1054,27 @@
       <pre class="lines">
 
 
-224
-225
-226
-227
-228
-229
-230
-231</pre>
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 224</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 235</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_template_excel_file identifier id'>get_template_excel_file</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:template_filename</span><span class='rbrack token'>]</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:template_filename</span><span class='rbrack token'>]</span>
   <span class='rubyid_if if kw'>if</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='symbol val'>:traffic</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:use_old_outdated_excel_template</span><span class='rbrack token'>]</span>
+    <span class='comment val'># TODO: this spreadsheet no longer exists in bedrock!!!</span>
     <span class='rubyid_BE constant id'>BE</span><span class='dot token'>.</span><span class='rubyid_resources_directory identifier id'>resources_directory</span> <span class='div op'>/</span> <span class='string val'>'Common/Templates/Validation/traffic_count_validation.xlsm'</span>
   <span class='rubyid_else else kw'>else</span>
+    <span class='comment val'># this spreadsheet is completely blank, and can be used as the basis for any validation spreadsheet</span>
     <span class='rubyid_BE constant id'>BE</span><span class='dot token'>.</span><span class='rubyid_resources_directory identifier id'>resources_directory</span> <span class='div op'>/</span> <span class='string val'>'Common/Templates/Validation/count_validation.xlsx'</span>
   <span class='rubyid_end end kw'>end</span>
 <span class='rubyid_end end kw'>end</span>
@@ -1057,7 +1087,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_validation_column_names-class_method">
   
-    + (<tt>Object</tt>) <strong>get_validation_column_names</strong>(headers) 
+    + (<tt>Object</tt>) <strong>get_validation_column_names</strong>(headers, opts = {}) 
   
 
   
@@ -1069,19 +1099,52 @@
       <pre class="lines">
 
 
-188
-189
-190
-191
-192</pre>
+192
+193
+194
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 192</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_validation_column_names identifier id'>get_validation_column_names</span><span class='lparen token'>(</span><span class='rubyid_headers identifier id'>headers</span><span class='rparen token'>)</span>
-  <span class='rubyid_count_header_matches identifier id'>count_header_matches</span> <span class='assign token'>=</span> <span class='rubyid_headers identifier id'>headers</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_header identifier id'>header</span><span class='bitor op'>|</span> <span class='rubyid_header identifier id'>header</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='regexp val'>/(.*)(_modelled|_observed)/</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span>
-  <span class='rubyid_validation_names identifier id'>validation_names</span> <span class='assign token'>=</span> <span class='rubyid_count_header_matches identifier id'>count_header_matches</span><span class='dot token'>.</span><span class='rubyid_group_by identifier id'>group_by</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_match identifier id'>match</span><span class='bitor op'>|</span> <span class='rubyid_match identifier id'>match</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_map_values identifier id'>map_values</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='rubyid_matches identifier id'>matches</span><span class='bitor op'>|</span> <span class='rubyid_matches identifier id'>matches</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_s</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_validation_column_names identifier id'>get_validation_column_names</span><span class='lparen token'>(</span><span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_column_split_regex identifier id'>column_split_regex</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='symbol val'>:travel_time</span> <span class='question op'>?</span> <span class='regexp val'>/(.*)_(speed|travel_time|cumulative_time)_(model|obs)/</span> <span class='colon op'>:</span> <span class='regexp val'>/(.*)_(count|model)/</span>
+  <span class='rubyid_count_header_matches identifier id'>count_header_matches</span> <span class='assign token'>=</span> <span class='rubyid_headers identifier id'>headers</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_header identifier id'>header</span><span class='bitor op'>|</span> <span class='rubyid_header identifier id'>header</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_column_split_regex identifier id'>column_split_regex</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_compact identifier id'>compact</span>
+  <span class='rubyid_validation_names identifier id'>validation_names</span>     <span class='assign token'>=</span> <span class='rubyid_get_validation_names identifier id'>get_validation_names</span><span class='lparen token'>(</span><span class='rubyid_count_header_matches identifier id'>count_header_matches</span><span class='rparen token'>)</span>
   <span class='rubyid_sort_validation_name_keys identifier id'>sort_validation_name_keys</span><span class='lparen token'>(</span><span class='rubyid_validation_names identifier id'>validation_names</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_validation_names-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_validation_names</strong>(count_header_matches) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+199
+200
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 199</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_get_validation_names identifier id'>get_validation_names</span><span class='lparen token'>(</span><span class='rubyid_count_header_matches identifier id'>count_header_matches</span><span class='rparen token'>)</span>
+  <span class='rubyid_count_header_matches identifier id'>count_header_matches</span><span class='dot token'>.</span><span class='rubyid_group_by identifier id'>group_by</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_match identifier id'>match</span><span class='bitor op'>|</span> <span class='rubyid_match identifier id'>match</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_map_values identifier id'>map_values</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__key identifier id'>_key</span><span class='comma token'>,</span> <span class='rubyid_matches identifier id'>matches</span><span class='bitor op'>|</span> <span class='rubyid_matches identifier id'>matches</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_s</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -1104,17 +1167,17 @@
       <pre class="lines">
 
 
-148
-149
-150
-151
 152
 153
 154
-155</pre>
+155
+156
+157
+158
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 152</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_group_and_sum_data identifier id'>group_and_sum_data</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_grouping_columns identifier id'>grouping_columns</span><span class='comma token'>,</span> <span class='rubyid_sorting_columns identifier id'>sorting_columns</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
   <span class='rubyid_grouped_data identifier id'>grouped_data</span> <span class='assign token'>=</span> <span class='rubyid_group_data_by_columns identifier id'>group_data_by_columns</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_grouping_columns identifier id'>grouping_columns</span><span class='rparen token'>)</span>
@@ -1145,18 +1208,18 @@
       <pre class="lines">
 
 
-168
-169
-170
-171
 172
 173
 174
 175
-176</pre>
+176
+177
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 172</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_group_data_by_columns identifier id'>group_data_by_columns</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_grouping_columns identifier id'>grouping_columns</span><span class='rparen token'>)</span>
   <span class='rubyid_grouped_data identifier id'>grouped_data</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
@@ -1197,15 +1260,15 @@
       <pre class="lines">
 
 
-217
-218
-219
-220
-221
-222</pre>
+228
+229
+230
+231
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 228</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_make_output_file identifier id'>make_output_file</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
   <span class='rubyid_template_excel_file identifier id'>template_excel_file</span>    <span class='assign token'>=</span> <span class='rubyid_get_template_excel_file identifier id'>get_template_excel_file</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
@@ -1234,19 +1297,19 @@
       <pre class="lines">
 
 
-157
-158
-159
-160
 161
 162
 163
 164
 165
-166</pre>
+166
+167
+168
+169
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 161</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_remove_duplicate_values identifier id'>remove_duplicate_values</span><span class='lparen token'>(</span><span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:traffic</span>
@@ -1255,7 +1318,7 @@
 
   <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='dot token'>.</span><span class='rubyid_each_with_object identifier id'>each_with_object</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='lparen token'>(</span><span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span><span class='rubyid_values identifier id'>values</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_h identifier id'>h</span><span class='bitor op'>|</span>
     <span class='rubyid_values_by_linknr_dirn identifier id'>values_by_linknr_dirn</span> <span class='assign token'>=</span> <span class='rubyid_values identifier id'>values</span><span class='dot token'>.</span><span class='rubyid_group_by identifier id'>group_by</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_value_set identifier id'>value_set</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='rubyid_value_set identifier id'>value_set</span><span class='lbrack token'>[</span><span class='rubyid_linknr_index identifier id'>linknr_index</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_value_set identifier id'>value_set</span><span class='lbrack token'>[</span><span class='rubyid_dirn_index identifier id'>dirn_index</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
-    <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_values_by_linknr_dirn identifier id'>values_by_linknr_dirn</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_linknr_dirn identifier id'>linknr_dirn</span><span class='comma token'>,</span> <span class='rubyid_value_sets identifier id'>value_sets</span><span class='bitor op'>|</span> <span class='rubyid_value_sets identifier id'>value_sets</span><span class='dot token'>.</span><span class='rubyid_sort_by identifier id'>sort_by</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='bitor op'>|</span> <span class='rubyid_e identifier id'>e</span><span class='lbrack token'>[</span><span class='rubyid_year_index identifier id'>year_index</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span> <span class='rbrace token'>}</span>
+    <span class='rubyid_h identifier id'>h</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_values_by_linknr_dirn identifier id'>values_by_linknr_dirn</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid__linknr_dirn identifier id'>_linknr_dirn</span><span class='comma token'>,</span> <span class='rubyid_value_sets identifier id'>value_sets</span><span class='bitor op'>|</span> <span class='rubyid_value_sets identifier id'>value_sets</span><span class='dot token'>.</span><span class='rubyid_sort_by identifier id'>sort_by</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_e identifier id'>e</span><span class='bitor op'>|</span> <span class='rubyid_e identifier id'>e</span><span class='lbrack token'>[</span><span class='rubyid_year_index identifier id'>year_index</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span> <span class='rbrace token'>}</span>
   <span class='rbrace token'>}</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
@@ -1279,14 +1342,14 @@
       <pre class="lines">
 
 
-142
-143
-144
-145
-146</pre>
+146
+147
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 146</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_remove_negative_ones identifier id'>remove_negative_ones</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='rparen token'>)</span>
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_log identifier id'>log</span><span class='lparen token'>(</span><span class='string val'>'Replacing -1 values with nil'</span><span class='rparen token'>)</span>
@@ -1314,17 +1377,15 @@
       <pre class="lines">
 
 
-113
-114
-115
-116</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 118</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_reposition_all_counts_sheet identifier id'>reposition_all_counts_sheet</span><span class='lparen token'>(</span><span class='rubyid_excel_object identifier id'>excel_object</span><span class='rparen token'>)</span>
   <span class='rubyid_excel_object identifier id'>excel_object</span><span class='dot token'>.</span><span class='rubyid_move_sheet_position identifier id'>move_sheet_position</span><span class='lparen token'>(</span><span class='string val'>'All Counts'</span><span class='comma token'>,</span> <span class='integer val'>1</span><span class='rparen token'>)</span>
-  <span class='rubyid_excel_object identifier id'>excel_object</span><span class='dot token'>.</span><span class='rubyid_save_and_close identifier id'>save_and_close</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -1359,7 +1420,9 @@
 63
 64
 65
-66</pre>
+66
+67
+68</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 54</span>
@@ -1370,7 +1433,9 @@
                                    <span class='symbol val'>:descriptor_cols</span>  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:count_location</span><span class='comma token'>,</span> <span class='symbol val'>:year</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
                   <span class='symbol val'>:pedestrian</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:sorting_columns</span>  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:order_nr</span><span class='rbrack token'>]</span>    <span class='rbrace token'>}</span><span class='comma token'>,</span>
                   <span class='symbol val'>:stops</span>      <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:grouping_columns</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:time</span><span class='comma token'>,</span> <span class='symbol val'>:mode</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
-                  <span class='symbol val'>:routes</span>     <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:grouping_columns</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:time</span><span class='comma token'>,</span> <span class='symbol val'>:mode</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
+                  <span class='symbol val'>:routes</span>     <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:grouping_columns</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:time</span><span class='comma token'>,</span> <span class='symbol val'>:mode</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span><span class='comma token'>,</span>
+                  <span class='symbol val'>:travel_time</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:grouping_columns</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:route_nr</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+                                    <span class='symbol val'>:sorting_columns</span>  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:order_nr</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
                 <span class='rbrace token'>}</span>
 
   <span class='lbrack token'>[</span><span class='symbol val'>:grouping_columns</span><span class='comma token'>,</span> <span class='symbol val'>:sorting_columns</span><span class='comma token'>,</span> <span class='symbol val'>:descriptor_cols</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_col identifier id'>col</span><span class='bitor op'>|</span>
@@ -1414,7 +1479,7 @@
   <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='symbol val'>:traffic</span>
   <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
   <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:output_filename</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_create_output_file_name identifier id'>create_output_file_name</span><span class='lparen token'>(</span><span class='rubyid_validation_type identifier id'>validation_type</span><span class='rparen token'>)</span>
-  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:sheet_name</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='string val'>'input'</span>
+  <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:sheet_name</span><span class='rbrack token'>]</span>      <span class='opasgn op'>||=</span> <span class='string val'>'input'</span>
   <span class='rubyid_yaml_file_name identifier id'>yaml_file_name</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;#{validation_type}_validation_chart_formats.yaml&quot;</span>
   <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:chart_formats_yaml_file</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='rubyid_BE constant id'>BE</span><span class='dot token'>.</span><span class='rubyid_resources_dir identifier id'>resources_dir</span> <span class='div op'>/</span> <span class='string val'>'Common/Templates/Validation'</span> <span class='div op'>/</span> <span class='rubyid_yaml_file_name identifier id'>yaml_file_name</span>
 <span class='rubyid_end end kw'>end</span>
@@ -1439,14 +1504,14 @@
       <pre class="lines">
 
 
-118
-119
-120
-121
-122</pre>
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 122</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_setup_traffic_summary_data identifier id'>setup_traffic_summary_data</span><span class='lparen token'>(</span><span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
   <span class='rubyid_summed_data identifier id'>summed_data</span> <span class='assign token'>=</span> <span class='rubyid_get_summed_data_from_grouped_data identifier id'>get_summed_data_from_grouped_data</span><span class='lparen token'>(</span><span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:grouping_columns</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
@@ -1474,13 +1539,13 @@
       <pre class="lines">
 
 
-178
-179
-180
-181</pre>
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 182</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_sort_data identifier id'>sort_data</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_sorting_columns identifier id'>sorting_columns</span><span class='rparen token'>)</span>
   <span class='rubyid_return return kw'>return</span> <span class='rubyid_data identifier id'>data</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_sorting_columns identifier id'>sorting_columns</span>
@@ -1507,12 +1572,12 @@
       <pre class="lines">
 
 
-194
-195
-196</pre>
+203
+204
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 203</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_sort_validation_name_keys identifier id'>sort_validation_name_keys</span><span class='lparen token'>(</span><span class='rubyid_validation_names identifier id'>validation_names</span><span class='rparen token'>)</span>
   <span class='rubyid_validation_names identifier id'>validation_names</span><span class='dot token'>.</span><span class='rubyid_to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='rubyid_sort_by identifier id'>sort_by</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='rubyid_get_level_1 identifier id'>get_level_1</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_get_level_2 identifier id'>get_level_2</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_name identifier id'>name</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
@@ -1643,8 +1708,6 @@
       <pre class="lines">
 
 
-80
-81
 82
 83
 84
@@ -1674,12 +1737,18 @@
 108
 109
 110
-111</pre>
+111
+112
+113
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'app/utils/reporting/validation/counts_validation_excel_writer.rb', line 82</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_write_validation_to_excel identifier id'>write_validation_to_excel</span><span class='lparen token'>(</span><span class='rubyid_data identifier id'>data</span><span class='comma token'>,</span> <span class='rubyid_output_xlsx identifier id'>output_xlsx</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_excel_object identifier id'>excel_object</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span>
   <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:validation_type</span><span class='rbrack token'>]</span>
   <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_indent identifier id'>indent</span><span class='lparen token'>(</span><span class='dstring node'>&quot;Writing validation to excel file: [#{output_xlsx}]&quot;</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span>
     <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_mkdir_p identifier id'>mkdir_p</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='rubyid_output_xlsx identifier id'>output_xlsx</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
@@ -1700,7 +1769,7 @@
       <span class='rubyid_else else kw'>else</span>
         <span class='rubyid_create_charts identifier id'>create_charts</span><span class='lparen token'>(</span><span class='rubyid_excel_object identifier id'>excel_object</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:chart_formats_yaml_file</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
       <span class='rubyid_end end kw'>end</span>
-      <span class='rubyid_if if kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:traffic</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_validation_type identifier id'>validation_type</span> <span class='eq op'>==</span> <span class='symbol val'>:traffic</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='gt op'>&gt;</span> <span class='integer val'>1</span>
         <span class='rubyid_excel_object identifier id'>excel_object</span> <span class='assign token'>=</span> <span class='rubyid_Excel constant id'>Excel</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_output_xlsx identifier id'>output_xlsx</span><span class='rparen token'>)</span>
         <span class='rubyid_summed_data identifier id'>summed_data</span> <span class='assign token'>=</span> <span class='rubyid_setup_traffic_summary_data identifier id'>setup_traffic_summary_data</span><span class='lparen token'>(</span><span class='rubyid_grouped_data identifier id'>grouped_data</span><span class='comma token'>,</span> <span class='rubyid_headers identifier id'>headers</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
         <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:group_summary</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='dot token'>.</span><span class='rubyid_fetch identifier id'>fetch</span><span class='lparen token'>(</span><span class='symbol val'>:group_summary</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
@@ -1710,6 +1779,8 @@
       <span class='rubyid_reposition_all_counts_sheet identifier id'>reposition_all_counts_sheet</span><span class='lparen token'>(</span><span class='rubyid_excel_object identifier id'>excel_object</span><span class='rparen token'>)</span>
     <span class='rubyid_end end kw'>end</span>
   <span class='rbrace token'>}</span>
+<span class='rubyid_ensure ensure kw'>ensure</span>
+  <span class='rubyid_excel_object identifier id'>excel_object</span><span class='dot token'>.</span><span class='rubyid_save_and_close identifier id'>save_and_close</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_excel_object identifier id'>excel_object</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -1722,7 +1793,7 @@
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:59 by
+  Generated on 09/25/14 14:01:06 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>

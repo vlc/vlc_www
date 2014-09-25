@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: MapinfoNetworkLoader
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="/doc/css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="/doc/css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="/doc/_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">MapinfoNetworkLoader</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="/doc/." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="/doc/class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="/doc/method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="/doc/file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: MapinfoNetworkLoader
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">MapinfoNetworkLoader</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/network/mapinfo_network_loader.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="/doc/MapinfoNetworkLoader/LayerSource.html" title="MapinfoNetworkLoader::LayerSource (class)">LayerSource</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_by_searching_directory-class_method" title="create_by_searching_directory (class method)">+ (MapinfoNetwork) <strong>create_by_searching_directory</strong>(directory, prefix = nil, suffix = nil, required_layers = []) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Create a mapinfo network by searching for files in the specified directory with the pattern directory/prefix*layer_type*suffix.TAB.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_from_other_network_and_directory-class_method" title="create_from_other_network_and_directory (class method)">+ (MapinfoNetwork) <strong>create_from_other_network_and_directory</strong>(other_network, directory) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>Create a mapinfo network with the same filename as each layer in other_network, but in the specified directory.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_by_searching_directory-class_method">
+  
+    + (<tt>MapinfoNetwork</tt>) <strong>create_by_searching_directory</strong>(directory, prefix = nil, suffix = nil, required_layers = []) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Create a mapinfo network by searching for files in the specified directory with the pattern
+directory/prefix*layer_type*suffix.TAB
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='rubyid_require identifier id'>require</span> <span class='string val'>'network/mapinfo_network_loader'</span>
+<span class='rubyid_network identifier id'>network</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoNetworkLoader constant id'>MapinfoNetworkLoader</span><span class='dot token'>.</span><span class='rubyid_create_by_searching_directory identifier id'>create_by_searching_directory</span><span class='lparen token'>(</span><span class='string val'>&quot;d:/a_directory_with_MI_files&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_network identifier id'>network</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoNetworkLoader constant id'>MapinfoNetworkLoader</span><span class='dot token'>.</span><span class='rubyid_create_by_searching_directory identifier id'>create_by_searching_directory</span><span class='lparen token'>(</span><span class='string val'>&quot;d:/a_directory_with_MI_files&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;y2011&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_network identifier id'>network</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoNetworkLoader constant id'>MapinfoNetworkLoader</span><span class='dot token'>.</span><span class='rubyid_create_by_searching_directory identifier id'>create_by_searching_directory</span><span class='lparen token'>(</span><span class='string val'>&quot;d:/a_directory_with_MI_files&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;y2011&quot;</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='symbol val'>:highway</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>directory</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the directory to search for MI layers</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>prefix</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>the prefix that should prepend the filename</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>suffix</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>the suffix that should append the filename</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>required_layers</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>[]</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>the set of layers that *MUST* be found (i.e. [:highway, :pt, :links])</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>MapinfoNetwork</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/network/mapinfo_network_loader.rb', line 20</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_by_searching_directory identifier id'>create_by_searching_directory</span><span class='lparen token'>(</span><span class='rubyid_directory identifier id'>directory</span><span class='comma token'>,</span> <span class='rubyid_prefix identifier id'>prefix</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_suffix identifier id'>suffix</span> <span class='assign token'>=</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_required_layers identifier id'>required_layers</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_mapinfo_network identifier id'>mapinfo_network</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoNetwork constant id'>MapinfoNetwork</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_required_layers identifier id'>required_layers</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoNetwork constant id'>MapinfoNetwork</span><span class='dot token'>.</span><span class='rubyid_expand_layers_from_grouping identifier id'>expand_layers_from_grouping</span><span class='lparen token'>(</span><span class='rubyid_required_layers identifier id'>required_layers</span><span class='rparen token'>)</span>
+  <span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_raise identifier id'>raise</span><span class='lparen token'>(</span><span class='dstring node'>&quot;No such directory #{directory}&quot;</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_directory? fid id'>directory?</span><span class='lparen token'>(</span><span class='rubyid_directory identifier id'>directory</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_mapinfo_network identifier id'>mapinfo_network</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_object_type identifier id'>object_type</span><span class='comma token'>,</span> <span class='rubyid__ identifier id'>_</span><span class='bitor op'>|</span>
+    <span class='rubyid_pattern identifier id'>pattern</span>         <span class='assign token'>=</span> <span class='rubyid_directory identifier id'>directory</span> <span class='div op'>/</span> <span class='dstring node'>&quot;#{prefix}*#{object_type}*#{suffix}.tab&quot;</span>
+    <span class='rubyid_required identifier id'>required</span>        <span class='assign token'>=</span> <span class='rubyid_required_layers identifier id'>required_layers</span><span class='dot token'>.</span><span class='rubyid_include? fid id'>include?</span><span class='lparen token'>(</span><span class='rubyid_object_type identifier id'>object_type</span><span class='rparen token'>)</span>
+    <span class='rubyid_exclude_pattern identifier id'>exclude_pattern</span> <span class='assign token'>=</span> <span class='rubyid_object_type identifier id'>object_type</span> <span class='eq op'>==</span> <span class='symbol val'>:stops</span> <span class='question op'>?</span> <span class='regexp val'>/route_stops/</span> <span class='colon op'>:</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_mapinfo_network identifier id'>mapinfo_network</span><span class='lbrack token'>[</span><span class='rubyid_object_type identifier id'>object_type</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_LayerSource constant id'>LayerSource</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_pattern identifier id'>pattern</span><span class='comma token'>,</span> <span class='rubyid_exclude_pattern identifier id'>exclude_pattern</span><span class='comma token'>,</span> <span class='rubyid_required identifier id'>required</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_mapinfo_network identifier id'>mapinfo_network</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_from_other_network_and_directory-class_method">
+  
+    + (<tt>MapinfoNetwork</tt>) <strong>create_from_other_network_and_directory</strong>(other_network, directory) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Create a mapinfo network with the same filename as each layer in other_network, but in the specified directory
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other_network</span>
+      
+      
+        <span class='type'>(<tt>MapinfoNetwork</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the mapinfo network to use as a template for the filenames</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>directory</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>the actual directory that the resulting layers should be in</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>MapinfoNetwork</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/network/mapinfo_network_loader.rb', line 38</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_from_other_network_and_directory identifier id'>create_from_other_network_and_directory</span><span class='lparen token'>(</span><span class='rubyid_other_network identifier id'>other_network</span><span class='comma token'>,</span> <span class='rubyid_directory identifier id'>directory</span><span class='rparen token'>)</span>
+  <span class='rubyid_network identifier id'>network</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoNetwork constant id'>MapinfoNetwork</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_other_network identifier id'>other_network</span><span class='dot token'>.</span><span class='rubyid_each_defined identifier id'>each_defined</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_object_type identifier id'>object_type</span><span class='comma token'>,</span> <span class='rubyid_layer identifier id'>layer</span><span class='bitor op'>|</span>
+    <span class='rubyid_network identifier id'>network</span><span class='lbrack token'>[</span><span class='rubyid_object_type identifier id'>object_type</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_MapinfoLayer constant id'>MapinfoLayer</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_change_directory identifier id'>change_directory</span><span class='lparen token'>(</span><span class='rubyid_layer identifier id'>layer</span><span class='comma token'>,</span> <span class='rubyid_directory identifier id'>directory</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_network identifier id'>network</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on 09/25/14 14:01:03 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

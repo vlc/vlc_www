@@ -155,7 +155,95 @@ to each market (eg. Melbourne, Sydney, SEQ etc.).
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#create_mapinfo_files_from_gis_dataset-class_method" title="create_mapinfo_files_from_gis_dataset (class method)">+ (Object) <strong>create_mapinfo_files_from_gis_dataset</strong>(pt_import_gis_dataset, additional_routes_dir, layer_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#generate_gis_stops-class_method" title="generate_gis_stops (class method)">+ (Object) <strong>generate_gis_stops</strong>(opts) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#import-class_method" title="import (class method)">+ (Object) <strong>import</strong>(opts = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_pt_data-class_method" title="read_pt_data (class method)">+ (Object) <strong>read_pt_data</strong>(directory, scenario_file) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup_pt_importer_object-class_method" title="setup_pt_importer_object (class method)">+ (Object) <strong>setup_pt_importer_object</strong>(opts) </a>
     
 
     
@@ -184,7 +272,81 @@ to each market (eg. Melbourne, Sydney, SEQ etc.).
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="import-class_method">
+  <h3 class="signature first" id="create_mapinfo_files_from_gis_dataset-class_method">
+  
+    + (<tt>Object</tt>) <strong>create_mapinfo_files_from_gis_dataset</strong>(pt_import_gis_dataset, additional_routes_dir, layer_name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/pt_importer/zenith_pt_importer.rb', line 52</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_create_mapinfo_files_from_gis_dataset identifier id'>create_mapinfo_files_from_gis_dataset</span><span class='lparen token'>(</span><span class='rubyid_pt_import_gis_dataset identifier id'>pt_import_gis_dataset</span><span class='comma token'>,</span> <span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span><span class='comma token'>,</span> <span class='rubyid_layer_name identifier id'>layer_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_pt_import_gis_dataset identifier id'>pt_import_gis_dataset</span><span class='dot token'>.</span><span class='rubyid_route_gis_objs identifier id'>route_gis_objs</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+  <span class='rubyid_FileUtils constant id'>FileUtils</span><span class='dot token'>.</span><span class='rubyid_mkdir identifier id'>mkdir</span><span class='lparen token'>(</span><span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span><span class='rparen token'>)</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_directory? fid id'>directory?</span><span class='lparen token'>(</span><span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span><span class='rparen token'>)</span>
+  <span class='dstring node'>%w[stops routes]</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_layer_type identifier id'>layer_type</span><span class='bitor op'>|</span>
+    <span class='rubyid_gis_array identifier id'>gis_array</span> <span class='assign token'>=</span> <span class='rubyid_layer_type identifier id'>layer_type</span> <span class='eq op'>==</span> <span class='string val'>'routes'</span> <span class='question op'>?</span> <span class='rubyid_pt_import_gis_dataset identifier id'>pt_import_gis_dataset</span><span class='dot token'>.</span><span class='rubyid_route_gis_objs identifier id'>route_gis_objs</span> <span class='colon op'>:</span> <span class='rubyid_pt_import_gis_dataset identifier id'>pt_import_gis_dataset</span><span class='dot token'>.</span><span class='rubyid_stop_gis_objs identifier id'>stop_gis_objs</span>
+    <span class='rubyid_file_name identifier id'>file_name</span> <span class='assign token'>=</span> <span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span> <span class='div op'>/</span> <span class='rubyid_layer_name identifier id'>layer_name</span> <span class='plus op'>+</span> <span class='string val'>'_'</span> <span class='plus op'>+</span> <span class='rubyid_layer_type identifier id'>layer_type</span> <span class='plus op'>+</span> <span class='string val'>'.TAB'</span>
+    <span class='rubyid_TabFileWriter constant id'>TabFileWriter</span><span class='dot token'>.</span><span class='rubyid_writeFromArray identifier id'>writeFromArray</span><span class='lparen token'>(</span><span class='rubyid_file_name identifier id'>file_name</span><span class='comma token'>,</span> <span class='rubyid_gis_array identifier id'>gis_array</span><span class='comma token'>,</span> <span class='rubyid_layer_type identifier id'>layer_type</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="generate_gis_stops-class_method">
+  
+    + (<tt>Object</tt>) <strong>generate_gis_stops</strong>(opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/pt_importer/zenith_pt_importer.rb', line 66</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_generate_gis_stops identifier id'>generate_gis_stops</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_setup_pt_importer_object identifier id'>setup_pt_importer_object</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_generate_gis_stops identifier id'>generate_gis_stops</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="import-class_method">
   
     + (<tt>Object</tt>) <strong>import</strong>(opts = {}) 
   
@@ -222,12 +384,90 @@ to each market (eg. Melbourne, Sydney, SEQ etc.).
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="read_pt_data-class_method">
+  
+    + (<tt>Object</tt>) <strong>read_pt_data</strong>(directory, scenario_file) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/pt_importer/zenith_pt_importer.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_read_pt_data identifier id'>read_pt_data</span><span class='lparen token'>(</span><span class='rubyid_directory identifier id'>directory</span><span class='comma token'>,</span> <span class='rubyid_scenario_file identifier id'>scenario_file</span><span class='rparen token'>)</span>
+  <span class='rubyid_scenario_file identifier id'>scenario_file</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='rubyid_PtDirectoryReader constant id'>PtDirectoryReader</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span><span class='lparen token'>(</span><span class='rubyid_directory identifier id'>directory</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='rubyid_PtScenarioReader constant id'>PtScenarioReader</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span><span class='lparen token'>(</span><span class='rubyid_scenario_file identifier id'>scenario_file</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup_pt_importer_object-class_method">
+  
+    + (<tt>Object</tt>) <strong>setup_pt_importer_object</strong>(opts) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/utils/import/pt_importer/zenith_pt_importer.rb', line 40</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_setup_pt_importer_object identifier id'>setup_pt_importer_object</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_import_year identifier id'>import_year</span>       <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:pt_import_year</span><span class='rbrack token'>]</span>
+  <span class='rubyid_directory identifier id'>directory</span>         <span class='assign token'>=</span> <span class='rubyid_import_year identifier id'>import_year</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span> <span class='integer val'>? </span><span class='rubyid_nil nil kw'>nil</span> <span class='colon op'>:</span> <span class='rubyid_ZenithPtFileLocations constant id'>ZenithPtFileLocations</span><span class='dot token'>.</span><span class='rubyid_get_directory identifier id'>get_directory</span><span class='lparen token'>(</span><span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:city</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_import_year identifier id'>import_year</span><span class='rparen token'>)</span>
+  <span class='rubyid_pt_scenario_file identifier id'>pt_scenario_file</span>  <span class='assign token'>=</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:pt_scenario_file</span><span class='rbrack token'>]</span>
+  <span class='rubyid_pt_import_dataset identifier id'>pt_import_dataset</span><span class='comma token'>,</span> <span class='rubyid_pt_import_gis_dataset identifier id'>pt_import_gis_dataset</span> <span class='assign token'>=</span> <span class='rubyid_read_pt_data identifier id'>read_pt_data</span><span class='lparen token'>(</span><span class='rubyid_directory identifier id'>directory</span><span class='comma token'>,</span> <span class='rubyid_pt_scenario_file identifier id'>pt_scenario_file</span><span class='rparen token'>)</span>
+  <span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span> <span class='assign token'>=</span> <span class='rubyid_BE constant id'>BE</span><span class='dot token'>.</span><span class='rubyid_resources_dir identifier id'>resources_dir</span> <span class='div op'>/</span> <span class='rubyid_opts identifier id'>opts</span><span class='lbrack token'>[</span><span class='symbol val'>:city</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='div op'>/</span> <span class='string val'>'Model/PT/Additional Routes'</span>
+  <span class='rubyid_create_mapinfo_files_from_gis_dataset identifier id'>create_mapinfo_files_from_gis_dataset</span><span class='lparen token'>(</span><span class='rubyid_pt_import_gis_dataset identifier id'>pt_import_gis_dataset</span><span class='comma token'>,</span> <span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span><span class='comma token'>,</span> <span class='string val'>'ADD'</span><span class='rparen token'>)</span>
+  <span class='rubyid_pti identifier id'>pti</span> <span class='assign token'>=</span> <span class='rubyid_PtImporter constant id'>PtImporter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_pt_import_dataset identifier id'>pt_import_dataset</span><span class='comma token'>,</span> <span class='rubyid_opts identifier id'>opts</span><span class='rparen token'>)</span>
+  <span class='rubyid_pti identifier id'>pti</span><span class='dot token'>.</span><span class='rubyid_import_additional_routes identifier id'>import_additional_routes</span><span class='lparen token'>(</span><span class='rubyid_additional_routes_dir identifier id'>additional_routes_dir</span><span class='comma token'>,</span> <span class='string val'>'ADD'</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_pti identifier id'>pti</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on 09/03/14 12:10:58 by
+  Generated on 09/25/14 14:01:05 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.8.7).
 </div>
