@@ -2756,15 +2756,15 @@ textarea.comntextarea {
 }
 
  /*retina display code*/
-@media (-webkit-min-device-pixel-ratio: 2),
+/* @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    /* Retina-specific stuff here */
+    // Retina-specific stuff here 
 
     .main-wrapper-fixed{
-        width: 100%;
+        width: 90%;
     }
 
-}
+}*/
 
 
 
