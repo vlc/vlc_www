@@ -1,4 +1,6 @@
-This is VLC's main website, it runs refinery for the backend and is currently deployed to heroku 
+This is VLC's main website: www.veitchlister.com.au
+
+It is a rails application running refinery for the backend and is currently deployed to heroku 
 
 * https://dashboard.heroku.com/apps/vlc-web
 * https://devcenter.heroku.com/articles/using-the-cli
